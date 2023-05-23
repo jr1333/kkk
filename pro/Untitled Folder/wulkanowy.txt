@@ -1,0 +1,2814 @@
+Add foojay-resolver and update dependencies (#2212)
+Bump org.jetbrains.kotlinx:kotlinx-serialization-json (#2209)
+Bump coroutines from 1.7.0 to 1.7.1 (#2207)
+Bump androidx.core:core-ktx from 1.10.0 to 1.10.1 (#2208)
+Bump ru.cian:huawei-publish-gradle-plugin from 1.3.5 to 1.4.0 (#2185)
+Bump com.android.tools.build:gradle from 7.4.2 to 8.0.1 (#2187)
+Bump hilt_version from 2.45 to 2.46.1 (#2205)
+Fix delete user homework button visibility (#2204)
+Merge branch 'release/2.0.3' into develop
+Version 2.0.3
+New Crowdin updates (#2201)
+Fix button color in high priority admin message (#2202)
+Bump coroutines from 1.6.4 to 1.7.0 (#2186)
+Bump org.robolectric:robolectric from 4.10 to 4.10.2 (#2188)
+Bump about_libraries from 10.6.2 to 10.6.3 (#2189)
+Bump com.google.android.material:material from 1.8.0 to 1.9.0 (#2191)
+Bump com.google.firebase:firebase-bom from 31.5.0 to 32.0.0 (#2190)
+Merge branch 'release/2.0.2' into develop
+Version 2.0.2
+New Crowdin updates (#2193)
+Merge branch 'release/2.0.1' into develop
+Version 2.0.1
+Add auth dialog (#2198)
+
+Co-authored-by: Mikołaj Pich <m.pich@outlook.com>
+Fix ime overlaping message content (#2199)
+Merge branch 'release/2.0.0' into develop
+Version 2.0.0
+SDK update (#2168)
+Bump androidx.activity:activity-ktx from 1.7.0 to 1.7.1 (#2181)
+Bump androidx.fragment:fragment-ktx from 1.5.6 to 1.5.7 (#2176)
+Bump com.jakewharton.retrofit:retrofit2-kotlinx-serialization-converter (#2175)
+Bump com.huawei.agconnect:agconnect-crash from 1.8.1.300 to 1.9.0.300 (#2178)
+Bump kotlin_version from 1.8.20 to 1.8.21 (#2182)
+Bump com.huawei.agconnect:agcp from 1.8.1.300 to 1.9.0.300 (#2179)
+Bump com.squareup.okhttp3:logging-interceptor from 4.10.0 to 4.11.0 (#2177)
+Bump androidx.core:core-splashscreen from 1.0.0 to 1.0.1 (#2180)
+Bump com.fredporciuncula:flow-preferences from 1.9.0 to 1.9.1 (#2172)
+Bump mockk from 1.13.4 to 1.13.5 (#2170)
+Bump org.robolectric:robolectric from 4.9.2 to 4.10 (#2169)
+Bump com.google.firebase:firebase-bom from 31.4.0 to 31.5.0 (#2173)
+Bump com.google.firebase:firebase-crashlytics-gradle from 2.9.4 to 2.9.5 (#2174)
+Bump about_libraries from 10.6.1 to 10.6.2 (#2166)
+Bump androidx.core:core-ktx from 1.9.0 to 1.10.0 (#2167)
+Disable error dialog for admin messages (#2165)
+Use segmented toggle buttons instead of option group in grades statistics (#2164)
+Set error tint to password toggle icon when error occured (#2163)
+New Crowdin updates (#2159)
+Bump kotlin_version from 1.8.10 to 1.8.20 (#2160)
+Bump com.google.android.gms:play-services-ads from 21.5.0 to 22.0.0 (#2161)
+Bump com.android.tools:desugar_jdk_libs from 2.0.2 to 2.0.3 (#2162)
+Fix collapse garde subject when grade is unread (#2158)
+Migrate to material3 (#1660)
+
+Co-authored-by: Rafał Borcz <RafalBO99@outlook.com>
+Co-authored-by: doteq <doteeqq@gmail.com>
+Co-authored-by: Bartosz Bieniek <itsbk20@gmail.com>
+Remove deprecated code (#2157)
+Bump androidx.fragment:fragment-ktx from 1.5.5 to 1.5.6 (#2154)
+Bump work_manager from 2.8.0 to 2.8.1 (#2152)
+Bump room from 2.5.0 to 2.5.1 (#2150)
+Bump com.google.firebase:firebase-bom from 31.2.3 to 31.4.0 (#2151)
+Bump io.coil-kt:coil from 2.2.2 to 2.3.0 (#2153)
+Bump androidx.activity:activity-ktx from 1.6.1 to 1.7.0 (#2155)
+Bump androidx.lifecycle:lifecycle-livedata-ktx from 2.6.0 to 2.6.1 (#2156)
+Make GradeAverageProvider reactive to configuration changes (#1698)
+
+Co-authored-by: Mikołaj Pich <m.pich@outlook.com>
+Fix crash on deserialize parcelable array (#2149)
+Bump androidx.recyclerview:recyclerview from 1.2.1 to 1.3.0 (#2145)
+Bump androidx.lifecycle:lifecycle-livedata-ktx from 2.5.1 to 2.6.0 (#2146)
+New Crowdin updates (#2138)
+Merge branch 'hotfix/1.9.2' into develop
+Version 1.9.2
+Show invalid symbol message when nonexistent symbol entered  (#2143)
+Add missing override to RemoteConfigHelper.initialize()
+Use user agent template from firebase remote config (#2139)
+
+* Use user agent template from firebase remote config
+
+* Improve base class usage, activation refactor
+Bump com.google.firebase:firebase-bom from 31.2.2 to 31.2.3 (#2141)
+Bump com.android.tools.build:gradle from 7.4.1 to 7.4.2 (#2140)
+Fix saving attachements with same url but from different messages (#2137)
+Fix marking message as read (#2102)
+New Crowdin updates (#2109)
+Bump com.google.firebase:firebase-bom from 31.2.1 to 31.2.2 (#2125)
+Bump androidx.test:runner from 1.5.1 to 1.5.2 (#2133)
+Bump org.sonarsource.scanner.gradle:sonarqube-gradle-plugin (#2127)
+Bump com.fredporciuncula:flow-preferences from 1.8.0 to 1.9.0 (#2126)
+Bump about_libraries from 10.5.2 to 10.6.1 (#2130)
+Bump org.jetbrains.kotlinx:kotlinx-serialization-json (#2132)
+Bump com.huawei.agconnect:agcp from 1.8.0.300 to 1.8.1.300 (#2131)
+Bump androidx.annotation:annotation from 1.5.0 to 1.6.0 (#2134)
+Bump androidx.test.ext:junit from 1.1.4 to 1.1.5 (#2135)
+Bump com.huawei.agconnect:agconnect-crash from 1.8.0.300 to 1.8.1.300 (#2136)
+Bump hilt_version from 2.44.2 to 2.45 (#2120)
+Bump kotlin_version from 1.8.0 to 1.8.10 (#2117)
+Bump com.android.tools:desugar_jdk_libs from 1.1.8 to 2.0.2 (#2118)
+Bump com.google.android.gms:play-services-ads from 21.4.0 to 21.5.0 (#2116)
+Bump com.android.tools.build:gradle from 7.4.0 to 7.4.1 (#2115)
+Bump work_manager from 2.7.1 to 2.8.0 (#2119)
+Bump com.google.firebase:firebase-crashlytics-gradle from 2.9.2 to 2.9.4 (#2121)
+Bump androidx.appcompat:appcompat from 1.6.0 to 1.6.1 (#2122)
+Bump com.google.firebase:firebase-bom from 31.2.0 to 31.2.1 (#2123)
+Bump mockk from 1.13.3 to 1.13.4 (#2112)
+Bump material from 1.7.0 to 1.8.0 (#2113)
+Bump google-services from 4.3.14 to 4.3.15 (#2110)
+Bump firebase-bom from 31.1.1 to 31.2.0 (#2111)
+Add menu order settings (#1924)
+Bump room from 2.4.3 to 2.5.0 (#2105)
+Bump gradle from 7.3.1 to 7.4.0 (#2106)
+Bump appcompat from 1.5.1 to 1.6.0 (#2107)
+Bump agconnect-crash from 1.7.3.302 to 1.8.0.300 (#2104)
+Bump agcp from 1.7.3.302 to 1.8.0.300 (#2108)
+Fix marking message as read (#2102)
+Bump junit from 1.1.4 to 1.1.5 (#2098)
+Bump runner from 1.5.1 to 1.5.2 (#2099)
+Bump hianalytics from 6.9.0.301 to 6.9.1.200 (#2100)
+Bump huawei-publish-gradle-plugin from 1.3.4 to 1.3.5 (#2101)
+Bump kotlin_version from 1.7.21 to 1.8.0 (#2092)
+Merge branch 'release/1.9.1' into develop
+Merge branch 'release/1.9.1'
+Version 1.9.1
+Add missing info to student selection email reports (#2096)
+Fix school name text wrap in dashboard and student details (#2095)
+Bump robolectric from 4.9.1 to 4.9.2 (#2093)
+Merge branch 'release/1.9.0' into develop
+Merge branch 'release/1.9.0'
+Version 1.9.0
+New Crowdin updates (#2068)
+Refactor student selection screen (#2087)
+Fix NPE when trying to remove a message from mailbox that doesn't match any student (#2090)
+Update date in LICENSE file (#2089)
+Bump robolectric from 4.9 to 4.9.1 (#2088)
+Fix html entities parsing in school announcements (#2086)
+Merge branch 'hotfix/1.8.3' into develop
+Merge branch 'hotfix/1.8.3'
+Version 1.8.3
+Automatically show current student mailbox only when there is only one mailbox available (#2085)
+
+* Automatically show current student mailbox only when there is only one mailbox for this student available
+
+* Fallback to 'unknown' mailbox key if there is no matching mailbox to message
+Automatically show current student mailbox only when there is only one mailbox available (#2085)
+
+* Automatically show current student mailbox only when there is only one mailbox for this student available
+
+* Fallback to 'unknown' mailbox key if there is no matching mailbox to message
+Merge branch 'hotfix/1.8.2' into develop
+Merge branch 'hotfix/1.8.2'
+Version 1.8.2
+Bump sdk
+Revert "Fix app name in french (#2072)"
+
+This reverts commit 277ffd22be786cfa429ea1d61827e8cb62d1ea56.
+Add support for new ADFS light instances (#2084)
+
+* Update known symbols
+
+* Update resman host details
+
+* Add adfslight from tomaszowmazowiecki
+
+* Bump sdk to 1.8.2-SNAPSHOT
+
+* Add migration 54 with tests
+
+* Close db in migration tests
+
+* Run tests workflow on every pull request
+Fix a typo in excuse message subject (#2071)
+Fix app name in french (#2072)
+Bump play-services-ads from 21.3.0 to 21.4.0 (#2083)
+Bump firebase-bom from 31.1.0 to 31.1.1 (#2079)
+Bump hianalytics from 6.9.0.300 to 6.9.0.301 (#2080)
+Bump fragment-ktx from 1.5.4 to 1.5.5 (#2077)
+Fix app name in french (#2072)
+Fix a typo in excuse message subject (#2071)
+Fix conference details strings (#2070)
+Bump hianalytics from 6.8.0.300 to 6.9.0.300 (#2069)
+Bump mockk from 1.13.2 to 1.13.3 (#2067)
+Update project to Android SDK 33 (#2011)
+Suppress menu deprecations (#2031)
+Change fakelog to https (#2063)
+Bump about_libraries from 10.5.1 to 10.5.2 (#2066)
+Bump hilt_version from 2.44.1 to 2.44.2 (#2058)
+Bump firebase-bom from 31.0.3 to 31.1.0 (#2057)
+Bump agcp from 1.7.3.301 to 1.7.3.302 (#2059)
+Bump agconnect-crash from 1.7.3.300 to 1.7.3.302 (#2060)
+Merge branch 'release/1.8.1' into develop
+Merge branch 'release/1.8.1'
+Version 1.8.1
+Improve error handling in horizontal tile on dashboard  (#2053)
+Add info about optional ads in README (#2054)
+ Add support for reversed student name mailbox matching  (#2051)
+
+* Add support for reversed student name mailbox matching
+
+* Add additional log stmt to mailbox matching in all mailbox load
+
+* Revert changes in mapper
+Fallback to subject name from timetable when attendance item doesn't have it (#2052)
+
+* Fallback to subject name from timetable when attendance item doesn't have it
+
+* Fix tests
+
+* Add some unit tests
+Merge branch 'release/1.8.0' into develop
+Merge branch 'release/1.8.0'
+Version 1.8.0
+New Crowdin updates (#2049)
+
+Co-authored-by: Mikołaj Pich <m.pich@outlook.com>
+Add mailbox chooser to messages (#2002)
+Fix unread status in sent messages (#2048)
+Bump junit from 1.1.3 to 1.1.4 (#2043)
+Bump kotlin_version from 1.7.20 to 1.7.21 (#2042)
+Bump core from 1.4.0 to 1.5.0 (#2045)
+Bump hilt_version from 2.44 to 2.44.1 (#2044)
+Bump firebase-bom from 31.0.2 to 31.0.3 (#2041)
+Bump agcp from 1.7.3.300 to 1.7.3.301 (#2046)
+Bump runner from 1.4.0 to 1.5.1 (#2047)
+Fix unexpected error in support ad when no internet (#2030)
+New Crowdin updates (#1966)
+Bump firebase-bom from 31.0.1 to 31.0.2 (#2032)
+Bump sonarqube-gradle-plugin from 3.4.0.2513 to 3.5.0.2730 (#2033)
+Bump agcp from 1.7.2.300 to 1.7.3.300 (#2034)
+Bump agconnect-crash from 1.7.2.300 to 1.7.3.300 (#2035)
+Bump CircularImageView from 4.2.0 to 4.3.0 (#2036)
+Langs placement in README adjustments (#2029)
+Add Crowdin badges to README (#2025)
+Fix SSL certificate out-of-date detection (#2028)
+Use text color, font face and red dot to differentiate unread messages  (#2027)
+Hide room view in timetable item if there is no room in API (#2026)
+Add installation id to crashlytics and bug report emails (#2024)
+Add missing CS and SK links in German README (#2018)
+Bump firebase-bom from 31.0.0 to 31.0.1 (#2019)
+Bump fragment-ktx from 1.5.3 to 1.5.4 (#2020)
+Bump material from 1.6.1 to 1.7.0 (#2022)
+Bump firebase-bom from 30.5.0 to 31.0.0 (#2013)
+Bump about_libraries from 10.5.0 to 10.5.1 (#2012)
+Bump kotlinx-serialization-json from 1.4.0 to 1.4.1 (#2014)
+Bump gradle from 7.3.0 to 7.3.1 (#2015)
+Bump play-services-ads from 21.2.0 to 21.3.0 (#2016)
+Fix grade weight text truncation in grade dialog with large font set (#2009)
+Bump about_libraries from 10.4.0 to 10.5.0 (#2005)
+Bump kotlin_version from 1.7.10 to 1.7.20 (#2003)
+Reorder action buttons on the message preview screen to hide the forward button in overflow menu (#2000)
+Bump coil from 2.2.1 to 2.2.2 (#2004)
+Bump mockk from 1.13.1 to 1.13.2 (#2006)
+Bump robolectric from 4.8.2 to 4.9 (#2007)
+Bump gradle from 7.2.2 to 7.3.0 (#1985)
+Bump annotation from 1.4.0 to 1.5.0 (#1998)
+Fix student average calculation error in grade statistics (#1981)
+
+Co-authored-by: Mikołaj Pich <m.pich@outlook.com>
+Bump hilt_version from 2.43.2 to 2.44 (#1994)
+Bump hianalytics from 6.7.0.300 to 6.8.0.300 (#1995)
+Bump mockk from 1.12.8 to 1.13.1 (#1996)
+Bump fragment-ktx from 1.5.2 to 1.5.3 (#1997)
+Bump google-services from 4.3.13 to 4.3.14 (#1992)
+Bump agcp from 1.7.1.300 to 1.7.2.300 (#1989)
+Bump agconnect-crash from 1.7.1.300 to 1.7.2.300 (#1990)
+Bump firebase-crashlytics-gradle from 2.9.1 to 2.9.2 (#1988)
+Bump firebase-bom from 30.4.1 to 30.5.0 (#1991)
+Bump mockk from 1.12.7 to 1.12.8 (#1986)
+Bump coil from 2.2.0 to 2.2.1 (#1973)
+Bump play-services-ads from 21.1.0 to 21.2.0 (#1972)
+Bump firebase-bom from 30.4.0 to 30.4.1 (#1971)
+Bump appcompat from 1.5.0 to 1.5.1 (#1975)
+Bump firebase-bom from 30.3.2 to 30.4.0 (#1968)
+Merge branch 'release/1.7.5' into develop
+Merge branch 'release/1.7.5'
+Version 1.7.5
+Display lesson number in attendance notification if subject is blank (#1965)
+Fix matching mailboxes when there is more than one space between words (#1964)
+Merge branch 'release/1.7.4' into develop
+Merge branch 'release/1.7.4'
+Version 1.7.4
+Add support for matching last kingergarten semester if there is no any current (#1962)
+Fix showing empty view in grade details when there is no grades (#1963)
+Add support for match mailboxes with more different names (#1961)
+Merge branch 'release/1.7.3' into develop
+Merge branch 'release/1.7.3'
+Version 1.7.3
+Fix marking message as read (#1960)
+
+* Fix marking message as read
+
+* Update sdk
+
+* Update sdk
+
+* Fix tests
+
+* Use many recipients strings instead of first recipient
+Merge branch 'release/1.7.2' into develop
+Merge branch 'release/1.7.2'
+Version 1.7.2
+New Crowdin updates (#1953)
+
+Co-authored-by: Mikołaj Pich <m.pich@outlook.com>
+Update row in mailboxes table on primary key conflict (#1954)
+Fix selecting student mailbox based on studentName field (#1958)
+Change message draft key in shared preferences (#1959)
+Bump kotlinx-serialization-json from 1.3.3 to 1.4.0 (#1950)
+Bump mockk from 1.12.5 to 1.12.7 (#1955)
+Bump robolectric from 4.8.1 to 4.8.2 (#1956)
+Bump desugar_jdk_libs from 1.1.6 to 1.1.8 (#1957)
+Merge branch 'release/1.7.1' into develop
+Merge branch 'release/1.7.1'
+Version 1.7.1
+New Crowdin updates (#1952)
+Fix ads translations (#1951)
+Merge branch 'release/1.7.0' into develop
+Merge branch 'release/1.7.0'
+Version 1.7.0
+New Crowdin updates (#1895)
+Bump desugar_jdk_libs from 1.1.5 to 1.1.6 (#1948)
+Bump coil from 2.1.0 to 2.2.0 (#1949)
+Add support for messages plus API (#1945)
+Bump appcompat from 1.4.2 to 1.5.0 (#1946)
+Bump fragment-ktx from 1.5.1 to 1.5.2 (#1947)
+Fix typo in README DE.md (#1936)
+
+* Update README.de.md
+
+* Change in README-DE.md file
+Bump hianalytics from 6.6.0.300 to 6.7.0.300 (#1944)
+Bump agconnect-crash from 1.7.0.300 to 1.7.1.300 (#1943)
+Bump agcp from 1.7.0.300 to 1.7.1.300 (#1938)
+Bump about_libraries from 10.3.1 to 10.4.0 (#1941)
+Update workflow dependency (#1937)
+
+Co-authored-by: Mikołaj Pich <m.pich@outlook.com>
+Bump firebase-bom from 30.3.1 to 30.3.2 (#1940)
+Bump gradle from 7.2.1 to 7.2.2 (#1942)
+Bump flow-preferences from 1.7.0 to 1.8.0 (#1925)
+Bump core-splashscreen from 1.0.0-rc01 to 1.0.0 (#1929)
+Bump room from 2.4.2 to 2.4.3 (#1928)
+Bump activity-ktx from 1.5.0 to 1.5.1 (#1926)
+Bump huawei-publish-gradle-plugin from 1.3.3 to 1.3.4 (#1934)
+Bump hilt_version from 2.43 to 2.43.1 (#1927)
+Bump fragment-ktx from 1.5.0 to 1.5.1 (#1930)
+Bump firebase-bom from 30.3.0 to 30.3.1 (#1931)
+Bump lifecycle-livedata-ktx from 2.5.0 to 2.5.1 (#1932)
+Bump mockk from 1.12.4 to 1.12.5 (#1933)
+Bump hilt_version from 2.42 to 2.43 (#1923)
+Bump firebase-bom from 30.2.0 to 30.3.0 (#1920)
+Bump coroutines from 1.6.3 to 1.6.4 (#1921)
+Bump play-services-ads from 21.0.0 to 21.1.0 (#1922)
+Add auto refresh to reporting units (#1916)
+Bump hianalytics from 6.5.0.300 to 6.6.0.300 (#1919)
+Bump kotlin_version from 1.7.0 to 1.7.10 (#1918)
+Bump activity-ktx from 1.4.0 to 1.5.0 (#1912)
+Bump lifecycle-livedata-ktx from 2.4.1 to 2.5.0 (#1911)
+Bump google-services from 4.3.10 to 4.3.13 (#1913)
+Bump fragment-ktx from 1.4.1 to 1.5.0 (#1915)
+Fix no mobile devices on parent account (#1896)
+Bump firebase-bom from 30.1.0 to 30.2.0 (#1909)
+Bump firebase-crashlytics-gradle from 2.9.0 to 2.9.1 (#1910)
+Bump about_libraries from 10.3.0 to 10.3.1 (#1907)
+Fix ads tile (#1905)
+Bump agconnect-crash from 1.6.6.200 to 1.7.0.300 (#1899)
+Add ads to dashboard (#1815)
+Fix timetable widget day reset (#1862)
+
+Co-authored-by: Rafał Borcz <RafalBO99@outlook.com>
+Fix doubled announcements (#1897)
+Bump annotation from 1.3.0 to 1.4.0 (#1900)
+Bump coroutines from 1.6.2 to 1.6.3 (#1902)
+Fix jumping point in notes on refresh (#1898)
+Fix multiline address in student info (#1891)
+Fix typo in average description (#1892)
+Fix date in attendance and timetable when day is changing (#1893)
+Fix case sensitive domain checker (#1894)
+Bump sonarqube-gradle-plugin from 3.3 to 3.4.0.2513 (#1888)
+Bump logging-interceptor from 4.9.3 to 4.10.0 (#1889)
+New Crowdin updates (#1873)
+Update dependencies (#1887)
+Bump core-ktx from 1.7.0 to 1.8.0 (#1882)
+Bump appcompat from 1.4.1 to 1.4.2 (#1883)
+Bump material from 1.6.0 to 1.6.1 (#1884)
+Bump coroutines from 1.6.1 to 1.6.2 (#1875)
+Bump firebase-crashlytics-gradle from 2.8.1 to 2.9.0 (#1874)
+Bump about_libraries from 10.2.0 to 10.3.0 (#1876)
+Bump play-services-ads from 20.6.0 to 21.0.0 (#1877)
+Bump firebase-bom from 30.0.2 to 30.1.0 (#1878)
+Hide account selector in MessagePreviewView and SendMessageView (#1866)
+
+Co-authored-by: Rafał Borcz <RafalBO99@outlook.com>
+Add grade sorting by average (#1863)
+Bump gradle from 7.1.3 to 7.2.0 (#1857)
+Bump material from 1.5.0 to 1.6.0 (#1846)
+Bump constraintlayout from 2.1.3 to 2.1.4 (#1869)
+Bump coil from 2.0.0 to 2.1.0 (#1870)
+Bump core-splashscreen from 1.0.0-beta02 to 1.0.0-rc01 (#1871)
+Bump firebase-bom from 30.0.1 to 30.0.2 (#1872)
+Merge branch 'release/1.6.4' into develop
+Merge branch 'release/1.6.4'
+Version 1.6.4
+Set "no data" string if attendance subject is blank (#1864)
+Bump coil from 1.4.0 to 2.0.0 (#1855)
+Bump flow-preferences from 1.6.0 to 1.7.0 (#1859)
+Bump about_libraries from 8.9.4 to 10.2.0 (#1858)
+Bump hianalytics from 6.4.1.302 to 6.5.0.300 (#1852)
+Bump firebase-bom from 30.0.0 to 30.0.1 (#1851)
+Bump kotlinx-serialization-json from 1.3.2 to 1.3.3 (#1853)
+Bump mockk from 1.12.2 to 1.12.4 (#1854)
+Bump hilt_version from 2.41 to 2.42 (#1856)
+New Crowdin updates (#1840)
+Bump agcp from 1.6.5.300 to 1.6.6.200 (#1845)
+Bump agconnect-crash from 1.6.5.300 to 1.6.6.200 (#1843)
+Bump firebase-bom from 29.3.1 to 30.0.0 (#1844)
+Bump robolectric from 4.8 to 4.8.1 (#1842)
+Bump kotlin_version from 1.6.20 to 1.6.21 (#1837)
+Bump robolectric from 4.7.3 to 4.8 (#1839)
+Merge branch 'release/1.6.3' into develop
+Merge branch 'release/1.6.3'
+Version 1.6.3
+Display timetable header as HTML on dashboard tile (#1835)
+Bump firebase-bom from 29.3.0 to 29.3.1 (#1836)
+Replace destination parcelable with destination json string (#1833)
+Bump agconnect-crash from 1.6.5.200 to 1.6.5.300 (#1830)
+Bump gradle from 7.1.2 to 7.1.3 (#1829)
+Bump coroutines from 1.6.0 to 1.6.1 (#1828)
+Bump agcp from 1.6.5.200 to 1.6.5.300 (#1831)
+Bump hianalytics from 6.4.1.301 to 6.4.1.302 (#1832)
+Merge branch 'release/1.6.2' into develop
+Merge branch 'release/1.6.2'
+Version 1.6.2
+Another attempt to fix destination crash (#1826)
+Merge branch 'release/1.6.1' into develop
+Merge branch 'release/1.6.1'
+Version 1.6.1
+New Crowdin updates (#1817)
+Replace Serializable to Parcelable in Destination (#1823)
+Fix text in lucky number widget (#1825)
+Add standard register variant as translatable string (#1824)
+Fix text aligment in exam dialog (#1821)
+Bump kotlin_version from 1.6.10 to 1.6.20 (#1818)
+Bump hianalytics from 6.4.1.300 to 6.4.1.301 (#1819)
+Merge branch 'release/1.6.0' into develop
+Merge branch 'release/1.6.0'
+Version 1.6.0
+New Crowdin updates (#1783)
+Add option to select multiple messages to delete (#1780)
+Bump agcp from 1.6.4.300 to 1.6.5.200 (#1812)
+Bump agconnect-crash from 1.6.4.300 to 1.6.5.200 (#1811)
+Resource refactor (#1589)
+Bump core-splashscreen from 1.0.0-beta01 to 1.0.0-beta02 (#1810)
+Bump firebase-bom from 29.2.1 to 29.3.0 (#1809)
+Bump WhatTheStack from 1.0.0-alpha03 to 1.0.0-alpha04 (#1807)
+Bump huawei-publish-gradle-plugin from 1.3.1 to 1.3.3 (#1806)
+Bump hianalytics from 6.4.0.300 to 6.4.1.300 (#1805)
+Bump firebase-bom from 29.2.0 to 29.2.1 (#1804)
+Bump firebase-bom from 29.1.0 to 29.2.0 (#1803)
+Add the option to quickly add a calendar event from the exam details (#1802)
+
+* Extract intent utils to separate file
+
+* Add add to calendar button in exam details dialog
+
+* Set 8:00-8:45 start/end time
+Add exam date field to exam details dialog (#1801)
+Login improvements (#1800)
+
+* Update sdk
+
+* Change default register variant name
+
+* Change symbol hint message and email template
+Timetable timer refactor (#1785)
+Bump gradle from 7.1.1 to 7.1.2 (#1790)
+Bump play-services-ads from 20.5.0 to 20.6.0 (#1792)
+Bump agcp from 1.6.4.200 to 1.6.4.300 (#1791)
+Bump agconnect-crash from 1.6.4.200 to 1.6.4.300 (#1793)
+Bump room from 2.4.1 to 2.4.2 (#1794)
+Bump hilt_version from 2.40.5 to 2.41 (#1786)
+Add information about student in grade statistics pie chart (#1749)
+
+Co-authored-by: Mikołaj Pich <m.pich@outlook.com>
+Bump lifecycle-livedata-ktx from 2.4.0 to 2.4.1 (#1781)
+Bump firebase-bom from 29.0.4 to 29.1.0 (#1782)
+Fix calc vulcan average in second semester (#1779)
+New Crowdin updates (#1776)
+Fix blank description in exam details (#1778)
+Bump gradle from 7.1.0 to 7.1.1 (#1777)
+Update date in LICENSE file (#1775)
+Keep reacting to live changes in dashboard after a force refresh (#1594)
+
+Co-authored-by: Rafał Borcz <RafalBO99@outlook.com>
+Bump fragment-ktx from 1.4.0 to 1.4.1 (#1774)
+Bump preference-ktx from 1.1.1 to 1.2.0 (#1773)
+Bump hianalytics from 6.3.2.300 to 6.4.0.300 (#1771)
+Bump agconnect-crash from 1.6.3.300 to 1.6.4.200 (#1770)
+Bump gradle from 7.0.4 to 7.1.0 (#1769)
+Bump agcp from 1.6.3.300 to 1.6.4.200 (#1772)
+Bump WhatTheStack from 1.0.0-alpha02 to 1.0.0-alpha03 (#1768)
+Refactor notification destinations (#1709)
+
+Co-authored-by: Rafał Borcz <RafalBO99@outlook.com>
+Add what-the-stack library (#1767)
+Bump fuzzywuzzy from 1.3.3 to 1.4.0 (#1765)
+Bump firebase-bom from 29.0.3 to 29.0.4 (#1766)
+New translations strings.xml (German) (#1746)
+Bump material from 1.4.0 to 1.5.0 (#1757)
+Bump coordinatorlayout from 1.1.0 to 1.2.0 (#1756)
+Bump core-splashscreen from 1.0.0-alpha02 to 1.0.0-beta01 (#1752)
+Bump fuzzywuzzy from 1.3.1 to 1.3.3 (#1754)
+Bump core from 1.10.2 to 1.10.3 (#1753)
+Bump room from 2.4.0 to 2.4.1 (#1755)
+Bump agconnect-crash from 1.6.3.200 to 1.6.3.300 (#1758)
+Bump appcompat from 1.4.0 to 1.4.1 (#1759)
+Bump agcp from 1.6.3.200 to 1.6.3.300 (#1760)
+Bump constraintlayout from 2.1.2 to 2.1.3 (#1761)
+Bump huawei-publish-gradle-plugin from 1.3.0 to 1.3.1 (#1750)
+Bump mockk from 1.12.1 to 1.12.2 (#1747)
+Merge branch 'release/1.5.0' into develop
+Merge branch 'release/1.5.0'
+Version 1.5.0
+New Crowdin updates (#1745)
+Add a custom error message for ssl errors due to invalid clock setting (#1742)
+Differentiate school announcements by userLoginId (#1744)
+Strip html from school announcements notifications (#1743)
+Display comment after entry in grade notifications (#1741)
+Add basic support for kindergarten students (#1738)
+Fix play flavor build (#1740)
+Block app timezone to polish timezone (#1598)
+Move webview locale fix to account recovery fragment (#1739)
+Fix timetable widget crash when there are no lessons for the day (#1737)
+Remove HiltBroadcastReceiver (#1736)
+If only one student exists, don't show student name in timetable notification (#1711)
+
+Co-authored-by: Rafał Borcz <RafalBO99@outlook.com>
+New Crowdin updates (#1734)
+Fix notification spam after login (#1715)
+Remove admin message offline first cache (#1735)
+Fix overlapping text in the error dialog (#1708)
+New Crowdin updates (#1729)
+Add option to remove notifications captured from vulcan.hebe (#1716)
+Fix that an incorrect day would be selected in MaterialDatePicker (#1723)
+Replace view pager in login activity with simple fragment transactions (#1686)
+Bump coroutines from 1.5.2 to 1.6.0 (#1731)
+Bump agcp from 1.6.2.300 to 1.6.3.200 (#1730)
+Bump agconnect-crash from 1.6.2.300 to 1.6.3.200 (#1732)
+Bump kotlinx-serialization-json from 1.3.1 to 1.3.2 (#1733)
+Update timetable to next day if there is no more lessons today (#1551)
+Fix state restoring in GradeStatistics (#1667)
+
+Co-authored-by: Mikołaj Pich <m.pich@outlook.com>
+Add additional lessons feature (#1550)
+Bump firebase-bom from 29.0.2 to 29.0.3 (#1728)
+New Crowdin updates (#1687)
+Merge branch 'release/1.4.4' into develop
+Merge branch 'release/1.4.4'
+Version 1.4.4
+ Update template of login issue email  (#1724)
+
+* Update sdk
+
+* Update template of login issue email
+Fix exception in TimetableAdapter (#1721)
+Bump gradle from 7.0.3 to 7.0.4 (#1718)
+Bump hilt_version from 2.40.4 to 2.40.5 (#1719)
+Bump firebase-bom from 29.0.1 to 29.0.2 (#1720)
+After deselecting fakelog, clear credentials from login form (#1713)
+Fix invalid order of school announcements (#1689)
+More strongly typed data in preferences (#1697)
+Remove useless group property from NotificationType (#1714)
+Deduplicate timetable time left string (#1710)
+Fix grade sorting by date (#1717)
+When replying to a message use `Re` instead of `RE` (#1712)
+Bump agcp from 1.6.2.200 to 1.6.2.300 (#1693)
+Bump firebase-bom from 29.0.0 to 29.0.1 (#1696)
+Bump robolectric from 4.7.2 to 4.7.3 (#1695)
+Bump agconnect-crash from 1.6.2.200 to 1.6.2.300 (#1694)
+Bump firebase-crashlytics-gradle from 2.8.0 to 2.8.1 (#1692)
+Bump hilt_version from 2.40.2 to 2.40.4 (#1691)
+Convert from a stringly typed grade color to enum GradeColorTheme (#1672)
+Merge branch 'release/1.4.3' into develop
+Merge branch 'release/1.4.3'
+Version 1.4.3
+New Crowdin updates (#1669)
+Fix snackbar crash in grade statistics view (#1682)
+Bump hianalytics from 6.3.0.303 to 6.3.2.300 (#1684)
+Bump hilt_version from 2.40.1 to 2.40.2 (#1683)
+Update viewpager2 library to fix duplicated menu bug (#1681)
+Bump play-services-ads from 20.4.0 to 20.5.0 (#1675)
+Bump agcp from 1.6.1.300 to 1.6.2.200 (#1674)
+Bump logging-interceptor from 4.9.2 to 4.9.3 (#1676)
+Bump agconnect-crash from 1.6.1.300 to 1.6.2.200 (#1677)
+Bump robolectric from 4.7 to 4.7.2 (#1678)
+Merge branch 'release/1.4.2' into develop
+Merge branch 'release/1.4.2'
+Version 1.4.2
+New Crowdin updates (#1658)
+Make admin messages dissmisable (#1661)
+Fix empty student list in LoginStudentSelect view (#1668)
+Add ads limit (#1662)
+Disable personalized ads in single support advert (#1665)
+Probably fix snackbar crash in grade statistics view (#1663)
+Fix nul login data in login symbol view (#1664)
+Add multiline to support ad preference (#1651)
+Fix upcoming lesson notifications on Android 12 (#1650)
+Add Czech and Slovak README (#1631)
+German readme version (#1629)
+Bump appcompat from 1.4.0-rc01 to 1.4.0 (#1654)
+Bump mockk from 1.12.0 to 1.12.1 (#1653)
+Bump flow-preferences from 1.5.0 to 1.6.0 (#1657)
+Bump constraintlayout from 2.1.1 to 2.1.2 (#1656)
+Bump fragment-ktx from 1.4.0-rc01 to 1.4.0 (#1655)
+Bump work_manager from 2.7.0 to 2.7.1 (#1652)
+Bump kotlin_version from 1.5.31 to 1.6.0 (#1635)
+Merge branch 'release/1.4.1' into develop
+Merge branch 'release/1.4.1'
+Version 1.4.1
+Add missing env for google play build (#1647)
+Merge branch 'release/1.4.0' into develop
+Merge branch 'release/1.4.0'
+Version 1.4.0
+New Crowdin updates (#1646)
+Login improvements (#1645)
+School and teachers UI fixes (#1644)
+Fix displaying errors in GradeDetailsPresenter (#1600)
+Fix saved state in main and splash activity (#1633)
+Remove deprecated usage of LifecycleObserver (#1641)
+Sort items in homework and grade tiles on the dashboard  (#1634)
+Bump hianalytics from 6.3.0.302 to 6.3.0.303 (#1636)
+Bump hilt_version from 2.40 to 2.40.1 (#1637)
+Bump kotlinx-serialization-json from 1.3.0 to 1.3.1 (#1638)
+Bump robolectric from 4.6.1 to 4.7 (#1639)
+Bump appcompat from 1.4.0-beta01 to 1.4.0-rc01 (#1640)
+Prevent changing the current day by accident when excusing absences (#1599)
+Fix admin messages caching (#1632)
+New Crowdin updates (#1630)
+Do not show student's name in notifications if there's only one student (#1609)
+Bump activity-ktx from 1.3.1 to 1.4.0 (#1620)
+Bump lifecycle-livedata-ktx from 2.3.1 to 2.4.0 (#1618)
+New Crowdin updates (#1566)
+Fix homework sync (#1627)
+Bump core-ktx from 1.6.0 to 1.7.0 (#1622)
+Bump annotation from 1.2.0 to 1.3.0 (#1628)
+Bump coil from 1.3.2 to 1.4.0 (#1573)
+Update project to Android SDK 31 (#1570)
+Add timetable changes, attendance notifications and refactor notification deeplinks (#1547)
+Migrate from ViewPager to ViewPager2 (#1601)
+Add support for user ca in debug flavor(#1624)
+Notifications settings reorganize and strings update (#1616)
+Bump hilt_version from 2.39.1 to 2.40 (#1617)
+Bump firebase-crashlytics-gradle from 2.7.1 to 2.8.0 (#1623)
+Bump firebase-bom from 28.4.2 to 29.0.0 (#1619)
+Bump hianalytics from 6.3.0.301 to 6.3.0.302 (#1621)
+Allow selecting text in error dialog (#1615)
+Error messages content wrap in error dialog (#1577)
+Fix about header layout to support long app names (for DEV builds) (#1602)
+
+Co-authored-by: Mikołaj Pich <m.pich@outlook.com>
+Fix excuse button showing up despite no lessons available to excuse (#1607)
+
+This was happening when there was an unexcused lesson that you excused until the teacher sent a response (accepted or denied it)
+Bump agconnect-crash from 1.6.1.200 to 1.6.1.300 (#1605)
+Bump agcp from 1.6.1.200 to 1.6.1.300 (#1606)
+Bump about_libraries from 8.9.3 to 8.9.4 (#1604)
+Allow expanding multiple subject' grades at once (#1584)
+Add single support advert (#1484)
+Fix last sync date to save only successful sync (#1595)
+Bump hianalytics from 6.3.0.300 to 6.3.0.301 (#1593)
+Mi Band notification improvements (#1579)
+Use FloatingActionButton.{show,hide} instead of using setVisibility (#1591)
+Fix infinite refresh when admin messages list is empty (#1587)
+Bump gradle from 7.0.2 to 7.0.3 (#1586)
+Fix NPE in SyncPresenter (#1582)
+Add admin messages (#1553)
+Set upcoming lesson notification visibility to public (#1581)
+Bump firebase-bom from 28.4.1 to 28.4.2 (#1574)
+Bump Treessence from 1.0.4 to 1.0.5 (#1575)
+Bump hianalytics from 6.2.0.301 to 6.3.0.300 (#1576)
+Fix text color of time left indicator on dashboard timetable card (#1572)
+Add build timestamp as build config field (#1567)
+Change text when there are no lessons today and tomorrow in dashboard (#1571)
+Separate calculated average settings (#1558)
+Fix homework last item padding (#1568)
+Add "add homework" feature (#1564)
+Migrate from moshi to kotlinx serialization (#1557)
+Bump hilt_version from 2.38.1 to 2.39.1 (#1561)
+Bump about_libraries from 8.9.1 to 8.9.3 (#1560)
+Bump agcp from 1.6.0.300 to 1.6.1.200 (#1562)
+Bump agconnect-crash from 1.6.0.300 to 1.6.1.200 (#1563)
+Change text to bold in notifications center (#1546)
+Set buildTimestamp through manifest meta (#1556)
+Add coroutines scope to presenter (#1554)
+Add Czech and Slovak listings (#1555)
+Merge branch 'release/1.3.0' into develop
+Merge branch 'release/1.3.0'
+Version 1.3.0
+New Crowdin updates (#1544)
+Remove disappearing teachers workaround from timetable repository (#1545)
+New Crowdin updates (#1522)
+Add missing auto refresh to recipients, subjects and teachers (#1540)
+Update License (#1542)
+Add option to make upcoming lesson notification not persistent (#1537)
+Remove seconds from timetable timer (#1539)
+Add notifications center (#1524)
+Fix hiding last element in messages (#1538)
+Bump constraintlayout from 2.1.0 to 2.1.1 (#1535)
+Bump core from 1.10.1 to 1.10.2 (#1536)
+Add calculated average help dialog (#1379)
+
+Co-authored-by: Rafał Borcz <RafalBO99@outlook.com>
+Don't stop loading the timetable when error occurs in upcoming lessons notification scheduling (#1532)
+Add notification piggyback (#1503)
+Add transparency to lucky number widget (#1530)
+Mark teacher with yellow when new and old are the same (#1529)
+Display bad credentials error in the message box above login form (#1525)
+Bump kotlin_version from 1.5.30 to 1.5.31 (#1528)
+Always include all language resources in app bundle (#1527)
+ Upgrade Gradle Play Publisher to 3.6.0  (#1526)
+Merge branch 'release/1.2.3' into develop
+Merge branch 'release/1.2.3'
+Version 1.2.3
+Display info in timetable as-is when lesson has change flag (#1521)
+New Crowdin updates (#1482)
+Fix ghost account after logout not current student (#1518)
+Fix bugs in dashboard (#1517)
+Add conference dialog (#1519)
+Bump firebase-bom from 28.4.0 to 28.4.1 (#1520)
+Merge branch 'release/1.2.2' into develop
+Merge branch 'release/1.2.2'
+Version 1.2.2
+Fix login process after was interrupted (#1505)
+Unlock sunday in navigation datepicker (#1506)
+Update help email pre-filled content (#1507)
+Fix date picker crash after saved state (#1502)
+Restore lucky number in more view (#1504)
+Fix empty list on excuse submit (#1501)
+Fix crash in school info when dialer is unavailable (#1500)
+Fix error view in attendance summary (#1492)
+Fix overlapping error view (#1493)
+Fix NPE in timetable dashboard tile (#1498)
+Fix overlapping shadow in dashboard (#1494)
+Update material chips input (#1495)
+Bump work_manager from 2.5.0 to 2.6.0 (#1478)
+Change AppGallery deploy format to aab (#1483)
+Merge branch 'release/1.2.1' into develop
+Merge branch 'release/1.2.1'
+Version 1.2.1
+Dashboard fixes (#1463)
+New translations strings.xml (Polish) (#1474)
+Fix overlaping empty and error view in grade statistics (#1475)
+
+Co-authored-by: Mikołaj Pich <m.pich@outlook.com>
+Bump hianalytics from 6.2.0.300 to 6.2.0.301 (#1476)
+Bump kotlinx-coroutines-test from 1.5.1 to 1.5.2 (#1477)
+Bump kotlinx-coroutines-android from 1.5.1 to 1.5.2 (#1479)
+Bump core from 1.10.0 to 1.10.1 (#1480)
+ Fix preview of second student guardian when first guardian is null  (#1473)
+ Add missing school announcement dialog  (#1470)
+Fix showing error view in timetable (#1472)
+Bump agp to 7.0.2 (#1469)
+Fix opening twitter link from about on android 11 (#1460)
+Bump hianalytics from 6.1.1.300 to 6.2.0.300 (#1457)
+Bump huawei-publish-gradle-plugin from 1.2.4 to 1.3.0 (#1458)
+Merge branch 'release/1.2.0' into develop
+Merge branch 'release/1.2.0'
+Version 1.2.0
+New Crowdin updates (#1459)
+New Crowdin updates (#1321)
+Add excuse function to "not excusable" account (#1429)
+Fix crash on opening date pickers during holidays  (#1456)
+Hide keyboard on opening login host dropdown (#1455)
+Update readBy and unreadBy fields during message list fetch (#1452)
+Change display name for MRmlik12 (#1451)
+Add in app review (#1435)
+Exams and homework notification fixes (#1292)
+Add missing dashboard item in default view settings (#1450)
+Remove lithuanian lang (#1449)
+Add change password snackbar (#1336)
+Update dependencies (#1448)
+Remove Zachowanie from all count of subjects (#1447)
+Show information when the recipient has read the message (#1430)
+New timetable widget design (#1384)
+Bump gradle from 7.0.0 to 7.0.1 (#1445)
+Add captions for averages from how many items have been counted (#1437)
+Bump firebase-bom from 28.3.1 to 28.4.0 (#1446)
+Fix buggy timers in timetable (#1428)
+
+Co-authored-by: Rafał Borcz <RafalBO99@outlook.com>
+Bump timber from 4.7.1 to 5.0.1 (#1440)
+Bump google-services from 4.3.9 to 4.3.10 (#1439)
+Bump hianalytics from 6.1.0.300 to 6.1.1.300 (#1441)
+Add last sync date in sync settings (#1436)
+Add drag and drop to dashboard tiles (#1415)
+Bump firebase-bom from 28.3.0 to 28.3.1 (#1431)
+Bump google-services from 4.3.8 to 4.3.9 (#1432)
+Bump coil from 1.3.1 to 1.3.2 (#1433)
+Bump activity-ktx from 1.3.0 to 1.3.1 (#1434)
+Fix filter search bug (#1427)
+
+* Fix filter search bug
+
+* refractor
+Add messages sorting (#1262)
+Change dashboard no data strings (#1426)
+ Add student nick-or-name to notification summary  (#1425)
+Bump gradle from 4.2.2 to 7.0.0 (#1419)
+Bump agcp from 1.5.3.200 to 1.6.0.300 (#1424)
+Bump agconnect-crash from 1.5.3.200 to 1.6.0.300 (#1423)
+Bump activity-ktx from 1.2.4 to 1.3.0 (#1422)
+Bump chucker from 3.5.1 to 3.5.2 (#1417)
+Bump hilt_version from 2.38 to 2.38.1 (#1418)
+Bump constraintlayout from 2.1.0-beta02 to 2.1.0 (#1420)
+Bump coil from 1.3.0 to 1.3.1 (#1421)
+Send mutltiple notifications instead of summary notification (#1365)
+Fix margin and attedance destination (#1414)
+Fix sorting notes in loading state (#1413)
+Add draft message (#1306)
+Add twitter page link to about fragment (#1411)
+Add dashboard (#1267)
+Bump hilt_version from 2.37 to 2.38 (#1405)
+Bump appcompat from 1.3.0 to 1.3.1 (#1409)
+Bump fragment-ktx from 1.3.5 to 1.3.6 (#1404)
+Bump appcompat-resources from 1.3.0 to 1.3.1 (#1403)
+Bump about_libraries from 8.9.0 to 8.9.1 (#1406)
+Bump chucker from 3.5.0 to 3.5.1 (#1407)
+Bump firebase-bom from 28.2.1 to 28.3.0 (#1408)
+Bump activity-ktx from 1.2.3 to 1.2.4 (#1410)
+Bump hianalytics from 6.0.0.301 to 6.1.0.300 (#1402)
+Bump kotlin_version from 1.5.20 to 1.5.21 (#1401)
+Bump firebase-bom from 28.2.0 to 28.2.1 (#1400)
+Bump kotlinx-coroutines-android from 1.5.0 to 1.5.1-native-mt (#1395)
+Bump agconnect-crash from 1.5.2.300 to 1.5.3.200 (#1399)
+Bump robolectric from 4.5.1 to 4.6.1 (#1392)
+Bump junit from 1.1.2 to 1.1.3 (#1389)
+Bump mockk from 1.11.0 to 1.12.0 (#1387)
+Bump agcp from 1.5.2.300 to 1.5.3.200 (#1398)
+Bump coil from 1.2.2 to 1.3.0 (#1397)
+Bump runner from 1.3.0 to 1.4.0 (#1386)
+Bump material from 1.3.0 to 1.4.0 (#1390)
+Bump hianalytics from 5.3.1.300 to 6.0.0.301 (#1394)
+Bump core-ktx from 1.5.0 to 1.6.0 (#1388)
+Bump chucker from 3.4.0 to 3.5.0 (#1385)
+Bump gradle from 4.2.1 to 4.2.2 (#1393)
+Bump core from 1.3.0 to 1.4.0 (#1391)
+Bump kotlin_version from 1.5.10 to 1.5.20 (#1381)
+Bump firebase-crashlytics-gradle from 2.7.0 to 2.7.1 (#1382)
+Bump firebase-bom from 28.1.0 to 28.2.0 (#1383)
+Bump fragment-ktx from 1.3.4 to 1.3.5 (#1380)
+ Add notifications debug screen  (#1370)
+Bump hilt_version from 2.36 to 2.37 (#1376)
+Bump sonarqube-gradle-plugin from 3.2.0 to 3.3 (#1378)
+Add "I forgot my password" button in upper bar (#1375)
+Upgrade gradle to 6.9 (#1371)
+Bump recyclerview from 1.2.0 to 1.2.1 (#1366)
+Bump firebase-bom from 28.0.1 to 28.1.0 (#1367)
+Bump firebase-crashlytics-gradle from 2.6.1 to 2.7.0 (#1368)
+Bump coil from 1.2.1 to 1.2.2 (#1369)
+Fix treessence upgrade (#1361)
+Bump hilt_version from 2.35.1 to 2.36 (#1362)
+Bump about_libraries from 8.8.5 to 8.9.0 (#1363)
+Remove jcenter repository and unused code from gradle config (#1360)
+Bump appcompat from 1.2.0 to 1.3.0 (#1357)
+Bump appcompat-resources from 1.2.0 to 1.3.0 (#1359)
+Bump core-ktx from 1.3.2 to 1.5.0 (#1356)
+Bump fragment-ktx from 1.3.3 to 1.3.4 (#1358)
+Merge branch 'hotfix/messages-send' into develop
+Merge branch 'hotfix/messages-send'
+Version 1.1.6
+Bump sdk
+Bump huawei-publish-gradle-plugin from 1.2.2 to 1.2.4 (#1314)
+
+Signed-off-by: dependabot[bot] <support@github.com>
+Co-authored-by: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>
+Co-authored-by: Mikołaj Pich <m.pich@outlook.com>
+(cherry picked from commit 022a4d1ea21769f2c727fe2bfc39e7619de24d79)
+Bump gradle from 4.1.3 to 4.2.1 (#1339)
+Update dependabot config (#1353)
+Add arrows to student family list items (#1338)
+Add conferences and announcements notifications (#1330)
+Bump kotlinx-coroutines-android from 1.5.0-RC to 1.5.0 (#1348)
+Bump firebase-crashlytics-gradle from 2.5.2 to 2.6.1 (#1342)
+Bump agcp from 1.5.2.201 to 1.5.2.300 (#1349)
+Bump agconnect-crash from 1.5.2.201 to 1.5.2.300 (#1350)
+Bump firebase-bom from 27.1.0 to 28.0.1 (#1341)
+Bump google-services from 4.3.5 to 4.3.8 (#1344)
+Bump hianalytics from 5.3.0.300 to 5.3.1.300 (#1332)
+Bump kotlin_version from 1.4.32 to 1.5.0 (#1310)
+Bump work_hilt from 1.0.0-beta01 to 1.0.0 (#1329)
+Bump activity-ktx from 1.2.2 to 1.2.3 (#1328)
+Fix no info text position in school announcements (#1327)
+Add notification icons (#1276)
+
+Co-authored-by: Mikołaj Pich <m.pich@outlook.com>
+Change mobile devices item order (#1324)
+
+* Change more items order
+
+* Resolve conflicts
+Add school announcements (#1323)
+Fix missing snackbar in sync settings fragment (#1325)
+Fix homework dialog attachments margin (#1322)
+Change titles in Student Info (#1121)
+Bump huawei-publish-gradle-plugin from 1.2.2 to 1.2.4 (#1314)
+
+Signed-off-by: dependabot[bot] <support@github.com>
+Co-authored-by: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>
+Co-authored-by: Mikołaj Pich <m.pich@outlook.com>
+New Crowdin updates (#1268)
+Probably fix list divider color (#1270)
+
+Co-authored-by: Rafał Borcz <RafalBO99@outlook.com>
+Bump hilt_version from 2.35 to 2.35.1 (#1313)
+Bump sonarqube-gradle-plugin from 3.1.1 to 3.2.0 (#1315)
+Bump agcp from 1.5.1.300 to 1.5.2.201 (#1311)
+Bump coil from 1.2.0 to 1.2.1 (#1312)
+Bump hianalytics from 5.2.0.301 to 5.3.0.300 (#1319)
+Bump agconnect-crash from 1.5.1.300 to 1.5.2.201 (#1316)
+Upgrade to GitHub-native Dependabot (#1309)
+Bump room from 2.3.0-rc01 to 2.3.0 (#1302)
+Bump hilt_version from 2.34.1-beta to 2.35 (#1303)
+Bump fragment-ktx from 1.3.2 to 1.3.3 (#1304)
+Bump firebase-bom from 27.0.0 to 27.1.0 (#1305)
+Fix Homework dialog buttons layout (#1297)
+Merge branch 'hotfix/all-year-average' into develop
+Merge branch 'hotfix/all-year-average'
+Version 1.1.5
+Fix all year average
+Merge pull request #1295 from wulkanowy/rbo/update-workflow
+
+Update github action workflow
+Bump hilt_version from 2.34-beta to 2.34.1-beta (#1293)
+Bump recyclerview from 1.1.0 to 1.2.0 (#1287)
+Bump moshi from 1.11.0 to 1.12.0 (#1284)
+Bump about_libraries from 8.8.4 to 8.8.5 (#1281)
+Bump agconnect-crash from 1.5.1.200 to 1.5.1.300 (#1283)
+Bump firebase-bom from 26.8.0 to 27.0.0 (#1285)
+Bump agcp from 1.5.1.200 to 1.5.1.300 (#1286)
+Bump coil from 1.1.1 to 1.2.0 (#1282)
+Bump hilt_version from 2.33-beta to 2.34-beta (#1280)
+Dialogs adjustments to meet MD rules (#1227)
+Student info and Teachers screens unification (#1279)
+Migrate material date picker (#1277)
+Ignore all throwable from WebView (#1275)
+Add system settings shortcut (#1271)
+Cleanup github workflows (#1272)
+Display day header from website in timetable (#1269)
+Add new notifications (#1243)
+Drop support for android 4.x (#1232)
+Migrate to material components bottom navigation (#1244)
+Merge branch 'hotfix/fix-recovery-visibility' into develop
+Merge branch 'hotfix/fix-recovery-visibility'
+Change version in changelog
+Version 1.1.4
+Fix content visibility in login recovery
+Implement a toggleable setting to count an arithmetic average of grades when all weights are equal to zero (#1186)
+Bump firebase-crashlytics-gradle from 2.5.1 to 2.5.2 (#1264)
+Bump firebase-bom from 26.7.0 to 26.8.0 (#1263)
+Update issue templates (#1257)
+Add deploy to AppGallery github actions config (#1259)
+Merge branch 'release/1.1.3' into develop
+Merge branch 'release/1.1.3'
+Version 1.1.3
+New Crowdin updates (#1233)
+Allow special login format in login form (#1258)
+Fixing README.md (#1255)
+Fix clearing no existing dialog fragment (#1242)
+Use db student id to distinguish reporting units and recipients (#1254)
+Bump annotation from 1.1.0 to 1.2.0 (#1245)
+Bump agconnect-crash from 1.5.0.300 to 1.5.1.200 (#1247)
+Bump room from 2.3.0-beta03 to 2.3.0-rc01 (#1246)
+Bump kotlin_version from 1.4.31 to 1.4.32 (#1253)
+Bump fragment-ktx from 1.3.1 to 1.3.2 (#1248)
+Bump activity-ktx from 1.2.1 to 1.2.2 (#1249)
+Bump hianalytics from 5.2.0.300 to 5.2.0.301 (#1250)
+Bump agcp from 1.5.0.300 to 1.5.1.200 (#1251)
+Bump lifecycle-livedata-ktx from 2.3.0 to 2.3.1 (#1252)
+Fix colorPrimary and class name in widget account manager (#1241)
+Fix missing avatars in widgets (#1238)
+Add dialog with info about dropping support for android 4 (#1221)
+Fix very rare crash in login recovery (#1231)
+Remove listenablefuture from dependencies (#1237)
+Bump gradle from 4.1.2 to 4.1.3 (#1234)
+Remove firebase inappmessage dependency (#1235)
+Bump mockk from 1.10.6 to 1.11.0 (#1229)
+Merge branch 'release/1.1.2' into develop
+Merge branch 'release/1.1.2'
+Version 1.1.2
+Disable optimization in r8 config and fix crash in grade fragment (#1226)
+Fix show error details button in additional lessons (#1225)
+Merge branch 'release/1.1.1' into develop
+Merge branch 'release/1.1.1'
+Version 1.1.1
+New Crowdin updates (#1204)
+Fix semester switch when student have only one semester (#1215)
+Add github actions config to deploy apk to App Center (#1220)
+Fix empty view in attendance (#1217)
+Maybe fix fragment commits after activity state is saved (#1216)
+Update material chips input (#1214)
+Fix and clean proguard/r8 file (#1213)
+Change the absence request confirmation message string (#1212)
+Update kotlin coroutines (#1211)
+Ignore no current student during avatar loading (#1210)
+Bump fragment-ktx from 1.3.0 to 1.3.1 (#1205)
+Bump room from 2.3.0-beta02 to 2.3.0-beta03 (#1207)
+Use new kotlin compiler backend (#1202)
+Bump activity-ktx from 1.2.0 to 1.2.1 (#1206)
+Bump work_hilt from 1.0.0-alpha03 to 1.0.0-beta01 (#1208)
+Bump firebase-bom from 26.6.0 to 26.7.0 (#1209)
+Replace dash mark with no data string in SchoolFragment (#1203)
+Merge branch 'release/1.1.0' into develop
+Merge branch 'release/1.1.0'
+Version 1.1.0
+New Crowdin updates (#1167)
+Add studzinskik to contributors (#1198)
+Fix duplicate items after running automatic and manual sync at the same time  (#1197)
+Add lucky number history (#1184)
+Fix notification and status bars colors (#1196)
+Fix date picker theme (#1194)
+Fix typo (#1193)
+Settings revamp (#1160)
+Fix OOM in grade statistics (#1192)
+Migrate database migrations from androidTest to roboelectric (#1191)
+Bump agconnect-crash from 1.5.0.200 to 1.5.0.300 (#1190)
+Fix grade fragment subtitle (#1185)
+Fix empty license dialogs (#1182)
+Bump firebase-bom from 26.5.0 to 26.6.0 (#1189)
+Bump agcp from 1.5.0.200 to 1.5.0.300 (#1187)
+Fix API host key capitalisation for powiat krasnostawski (#1181)
+Add early validation for special mail domains (#1000) (#1176)
+Remove hardcoded strings (#1177)
+Fix no system theme option in Czech and Slovak (#1178)
+Add avatars (#1146)
+Remove deprecations (#1170)
+Bump firebase-crashlytics-gradle from 2.5.0 to 2.5.1 (#1171)
+Fix calling of binding outside lifecycle (#1169)
+Add exception ignoring to UpdateHelper when PendingIntent is duplicated (#1168)
+Bump hilt_version from 2.32-alpha to 2.33-beta (#1163)
+
+* Bump hilt_version from 2.32-alpha to 2.33-beta
+
+Bumps `hilt_version` from 2.32-alpha to 2.33-beta.
+
+Updates `hilt-android-gradle-plugin` from 2.32-alpha to 2.33-beta
+- [Release notes](https://github.com/google/dagger/releases)
+- [Changelog](https://github.com/google/dagger/blob/master/CHANGELOG.md)
+- [Commits](https://github.com/google/dagger/commits)
+
+Updates `hilt-android` from 2.32-alpha to 2.33-beta
+- [Release notes](https://github.com/google/dagger/releases)
+- [Changelog](https://github.com/google/dagger/blob/master/CHANGELOG.md)
+- [Commits](https://github.com/google/dagger/commits)
+
+Updates `hilt-android-compiler` from 2.32-alpha to 2.33-beta
+- [Release notes](https://github.com/google/dagger/releases)
+- [Changelog](https://github.com/google/dagger/blob/master/CHANGELOG.md)
+- [Commits](https://github.com/google/dagger/commits)
+
+Signed-off-by: dependabot-preview[bot] <support@dependabot.com>
+
+* Add inject before super.onCreate() in activity
+
+* Fix format
+
+Co-authored-by: dependabot-preview[bot] <27856297+dependabot-preview[bot]@users.noreply.github.com>
+Co-authored-by: Rafał Borcz <RafalBO99@outlook.com>
+Bump kotlin_version from 1.4.30 to 1.4.31 (#1166)
+Bump desugar_jdk_libs from 1.1.1 to 1.1.5 (#1164)
+Bump about_libraries from 8.8.2 to 8.8.3 (#1165)
+Bump hianalytics from 5.1.0.301 to 5.2.0.300 (#1161)
+Bump room from 2.3.0-beta01 to 2.3.0-beta02 (#1158)
+Add Daxxxis to contributors (#1156)
+Add Slovak to dialog (#1154)
+Change background color of navigation and notification bars (#1120)
+Bump activity-ktx from 1.1.0 to 1.2.0 (#1134)
+Bump firebase-crashlytics-gradle from 2.4.1 to 2.5.0 (#1147)
+Bump fragment-ktx from 1.2.5 to 1.3.0 (#1148)
+Bump hilt_version from 2.31.2-alpha to 2.32-alpha (#1133)
+Bump lifecycle-livedata-ktx from 2.2.0 to 2.3.0 (#1136)
+Bump firebase-bom from 26.4.0 to 26.5.0 (#1151)
+Merge tag '1.0.1' into develop
+
+Version 1.0.1
+Merge branch 'release/1.0.1'
+Version 1.0.1
+New Crowdin updates (#1152)
+Bump junit from 4.13.1 to 4.13.2 (#1150)
+Bump mockk from 1.10.5 to 1.10.6 (#1149)
+Fix EOF error in messages  (#1145)
+Add checking vulcan average from both semesters (#1140)
+Revert "Bump fragment-ktx from 1.2.5 to 1.3.0 (#1138)" (#1144)
+
+This reverts commit cac76857c4cd2b5b72e515888edf94fed6e1390e.
+Update README (#1143)
+New Crowdin updates (#1131)
+Bump fragment-ktx from 1.2.5 to 1.3.0 (#1138)
+Bump material from 1.3.0-rc01 to 1.3.0 (#1137)
+Bump about_libraries from 8.7.0 to 8.8.2 (#1135)
+Bump kotlin_version from 1.4.21 to 1.4.30 (#1139)
+Merge branch 'release/1.0.0' into develop
+Merge branch 'release/1.0.0'
+Version 1.0.0
+Update screenshots (#1130)
+New Crowdin updates (#1129)
+Merge branch 'release/0.25.1' into develop
+Merge branch 'release/0.25.1'
+Version 0.25.1
+Fix nullable student guardians (#1128)
+Add MRmlik12 to contributors (#1126)
+Add final average grades calculation with modifiers (#1125)
+Ignore webview init exceptions (#1124)
+Merge branch 'release/0.25.0' into develop
+Merge branch 'release/0.25.0'
+Version 0.25.0
+New Crowdin updates (#1095)
+Fix empty message bug (#1122)
+Add nick for student (#1119)
+Add dark mode to swipe refresh layout (#1118)
+Change timetable icon (#1115)
+Replace progressBar with CircularProgressIndicator (#1117)
+Fix follow system language setting (#1113)
+Update auto update priority policy (#1051)
+Add build date to version info (#1114)
+Fix null data in Status.SUCCESS in emission from average provider (#1105)
+Update gradle and build tools (#1108)
+Bump room from 2.3.0-alpha04 to 2.3.0-beta01 (#1112)
+Bump about_libraries from 8.6.9 to 8.7.0 (#1111)
+Bump agcp from 1.4.2.301 to 1.5.0.200 (#1109)
+Bump agconnect-crash from 1.4.2.301 to 1.5.0.200 (#1110)
+Bump hilt-work from 1.0.0-alpha02 to 1.0.0-alpha03 (#1099)
+Add account manager (#671)
+Bump work_manager from 2.4.0 to 2.5.0 (#1103)
+Bump sonarqube-gradle-plugin from 3.1 to 3.1.1 (#1100)
+Bump about_libraries from 8.6.7 to 8.6.9 (#1098)
+Bump google-services from 4.3.4 to 4.3.5 (#1104)
+Bump firebase-bom from 26.3.0 to 26.4.0 (#1102)
+Fix selected semester after change account (#1097)
+Disable vibrations in data picker (#1093)
+Bump hilt_version from 2.30.1-alpha to 2.31.2-alpha (#1094)
+Fix translations of month name in attendance summary (#1091)
+Make strings in grade class stats translatable (#1092)
+Merge branch 'release/0.24.3' into develop
+Merge branch 'release/0.24.3'
+Version 0.24.3
+Merge branch 'release/0.24.2' into develop
+Merge branch 'release/0.24.2'
+Version 0.24.2
+Merge branch 'release/0.24.1' into develop
+Merge branch 'release/0.24.1'
+Version 0.24.1
+Fix google play deploy config (#1089)
+Merge branch 'release/0.24.0' into develop
+Merge branch 'release/0.24.0'
+Version 0.24.0
+New Crowdin updates (#1088)
+Fix endless loading in grades (#1084)
+Bump gradle from 4.1.1 to 4.1.2 (#1086)
+Bump about_libraries from 8.6.6 to 8.6.7 (#1085)
+Show appropriate message when message does not exist (#1083)
+Bump about_libraries from 8.6.5 to 8.6.6 (#1080)
+Bump hianalytics from 5.1.0.300 to 5.1.0.301 (#1082)
+Bump sonarqube-gradle-plugin from 3.0 to 3.1 (#1081)
+Bump mockk from 1.10.4 to 1.10.5 (#1077)
+Bump firebase-bom from 26.2.0 to 26.3.0 (#1078)
+Use senderId to differentiate saved recipients between accounts (#1075)
+Use userLoginId to differentiate saved mobiles devices between accounts (#1076)
+Auto-refresh displayed data after some time (#1068)
+
+* Auto-refresh displayed data after some time
+
+* Use refresh interval from settings
+
+* Auto-refresh exams
+
+* Add refresh utils
+
+* Auto-refresh timetable
+
+* Auto-refresh grade details and summary
+
+* Auto-refresh grades
+
+* Auto-refresh attendance summary
+
+* Add cacheKey variables
+
+* Auto-refres completed lessons
+
+* Auto-refres conferences
+
+* Auto-refres homework
+
+* Auto-refresh messages
+
+* Auto-refresh mobile devices
+
+* Auto-refresh notes
+
+* Fix tests
+
+* Fix instrumentation tests
+
+* Create AutoRefreshHelper
+Bump coil from 1.1.0 to 1.1.1 (#1072)
+Bump about_libraries from 8.6.3 to 8.6.5 (#1074)
+Handle URLs from FCM push notification (#1070)
+Disable force dark theme on Android >9 (#1071)
+Use work-gcm dependency in play flavor only (#1069)
+Bump hianalytics from 5.0.5.301 to 5.1.0.300 (#1060)
+Use Firebase Android BoM (#1064)
+
+* Use Firebase Android BoM
+
+* Use androidx-bom to resolve androidx versions
+
+* Revert "Use androidx-bom to resolve androidx versions"
+
+This reverts commit 55a79a61cfa55090e157c66d4aed94322d44ac69.
+Remove remote and local repositories (#1065)
+
+* Remove remote and local repos
+
+* Move repositories out of sub-packages
+
+* Update chucker config
+
+* Move repositories tests from androidTest to unit tests
+
+* Rewrite grades tests
+
+* Fix more tests
+
+* Update grade statistics tests
+Bump room from 2.2.5 to 2.2.6 (#1058)
+Bump mockk from 1.10.3-jdk8 to 1.10.4 (#1059)
+New Crowdin updates (#1053)
+Github workflow config improvements (#1056)
+Configure github actions (#1055)
+
+* Create test.yml
+
+* Change list of emulator api levels
+
+* Downgrade emulator with api 30 to 29
+
+* Exclude jdk.internal in jacoco config
+
+* Use jdk 15
+
+* Downgrade jdk to 11 due to jacoco incompatibility
+
+gradle/gradle#15038
+
+* Fix tests on jdk11
+
+* Add codecov
+
+* Add missing jacoco report generaction command
+
+* Add flags to codecov uploads
+
+* Add deploy config
+
+* Replace travis badge with gh actions badge
+
+* Add info about coroutines to readme, replace dagger with hilt
+
+* Decrease instrumentation tests to 15 minutes
+
+* Skip duplicate actions
+
+* Remove comment
+
+* Change os of instrumentation tests
+
+* Downgrade android emulator runner to v2.13.0
+
+* Add pre-build job
+
+* Pass prebuild files between jobs
+
+* Fix gh actions yaml config
+
+* Tar build cache
+
+* Fix upload-artifact filename
+
+* Fix prebuild cache name
+
+* Add more to cache, change cache key
+Add additional lessons to timetable (#1019)
+Add language event (#1052)
+
+* Add log event to language
+
+* Add log event to app
+Merge branch 'release/0.23.1' into develop
+Merge branch 'release/0.23.1'
+Version 0.23.1
+Fix username label on registers other than default (#1050)
+Disable recordException in HMS (#1048)
+New translations strings.xml (Czech) (#1049)
+Bump kotlin_version from 1.4.20 to 1.4.21 (#1047)
+Merge branch 'release/0.23.0' into develop
+Merge branch 'release/0.23.0'
+Version 0.23.0
+Add register variant auto-matching based on email (#1041)
+Fix HMS analytics and crashlytics (#1042)
+Bump hilt_version from 2.29.1-alpha to 2.30.1-alpha (#1035)
+Bump desugar_jdk_libs from 1.0.10 to 1.1.1 (#1039)
+Bump coil from 1.0.0 to 1.1.0 (#1040)
+Bump firebase-crashlytics from 17.2.2 to 17.3.0 (#1038)
+Bump about_libraries from 8.6.2 to 8.6.3 (#1037)
+Bump kotlinx-coroutines-test from 1.4.0 to 1.4.2-native-mt (#1031)
+Bump kotlinx-coroutines-android from 1.4.0 to 1.4.2-native-mt (#1032)
+New Crowdin updates (#1033)
+Bump mockk from 1.10.2 to 1.10.3-jdk8 (#1034)
+Bump chucker from 3.3.0 to 3.4.0 (#1027)
+Bump agconnect-crash from 1.4.1.300 to 1.4.2.301 (#1030)
+Bump agcp from 1.4.1.300 to 1.4.2.301 (#1024)
+Bump about_libraries from 8.4.3 to 8.6.2 (#1025)
+Bump hianalytics from 5.0.4.301 to 5.0.5.301 (#1023)
+Bump firebase-crashlytics-gradle from 2.3.0 to 2.4.1 (#1029)
+Bump kotlin_version from 1.4.10 to 1.4.20 (#1026)
+New Crowdin updates (#1022)
+Add facebook link to about (#1021)
+Update contributor's username (#1020)
+Add average in class grades statistics (#1017)
+New Crowdin updates (#1013)
+Bump firebase-analytics from 17.6.0 to 18.0.0 (#1009)
+Bump kotlinx-coroutines-android from 1.3.9 to 1.4.0 (#1005)
+Bump kotlinx-coroutines-test from 1.3.9 to 1.4.0 (#1012)
+Update english strings (#1014)
+Bump firebase-messaging from 20.3.0 to 21.0.0 (#1008)
+Bump about_libraries from 8.4.2 to 8.4.3 (#1011)
+Bump firebase-inappmessaging-display-ktx from 19.1.1 to 19.1.2 (#1007)
+Bump firebase-inappmessaging-ktx from 19.1.1 to 19.1.2 (#1010)
+Bump coil from 1.0.0-rc3 to 1.0.0 (#1006)
+Add conferences (#1004)
+Merge branch 'release/0.22.2' into develop
+Merge branch 'release/0.22.2' into master
+Version 0.22.2
+Update hianalytics to 5.0.4.301 (#1003)
+Merge branch 'release/0.22.1' into develop
+Merge branch 'release/0.22.1' into master
+Version 0.22.1
+New Crowdin updates (#1002)
+Add HMS flavor (#998)
+New Crowdin updates (#993)
+Fix grade header item object comparision (#999)
+Make AppGallery badge background transparent. (#997)
+Bump junit from 4.13 to 4.13.1 (#995)
+Bump gradle from 4.0.2 to 4.1.0 (#996)
+Merge tag '0.22.0' into develop
+
+Version 0.22.0
+Merge branch 'release/0.22.0' into master
+Version 0.22.0
+Add Vulcan and Scrapper Exceptions to known exceptions (#994)
+Add in-app updates support (#914)
+Add ConnectException and StreamResetException to known exceptions (#992)
+New Crowdin updates (#987)
+Cancel scheduled lesson notifications which turned into canceled (#991)
+Reload grade list on mark all as read (#990)
+Add support for BIG font (#989)
+
+Co-authored-by: Faierbel <RafalBO99@outlook.com>
+Add support for night mode in account switcher dialog (#988)
+Add AppGallery badge (#986)
+Bump about_libraries from 8.3.1 to 8.4.2 (#985)
+Bump moshi from 1.10.0 to 1.11.0 (#984)
+Bump gradle from 4.0.1 to 4.0.2 (#982)
+Bump core-ktx from 1.3.1 to 1.3.2 (#983)
+New Crowdin updates (#981)
+New Crowdin updates (#948)
+Upgrade android sdk to 30 (#966)
+Bump chucker from 3.2.0 to 3.3.0 (#979)
+Bump firebase-crashlytics from 17.2.1 to 17.2.2 (#974)
+Bump moshi from 1.9.3 to 1.10.0 (#972)
+Bump coil from 1.0.0-rc2 to 1.0.0-rc3 (#976)
+Bump firebase-messaging from 20.2.4 to 20.3.0 (#973)
+Bump about_libraries from 8.3.0 to 8.3.1 (#975)
+Bump mockk from 1.10.0 to 1.10.2 (#977)
+Bump google-services from 4.3.3 to 4.3.4 (#978)
+Merge tag '0.21.2' into develop
+
+Version 0.21.2
+Merge branch 'release/0.21.2' into master
+Version 0.21.2
+Fix string pair list type converter (#971)
+Merge tag '0.21.1' into develop
+
+Version 0.21.1
+Merge branch 'release/0.21.1' into master
+Version 0.21.1
+Fix string pair list type converter (#970)
+Merge tag '0.21.0' into develop
+
+Version 0.21.0
+Merge branch 'release/0.21.0' into master
+Version 0.21.0
+Migrate from gson to moshi (#969)
+Show groups next to subjects in timetable (#953)
+Add subjects sorting in grades (#946)
+Add remembering the full screen mode in homework (#956)
+
+Co-authored-by: Faierbel <RafalBO99@outlook.com>
+Different notification for notes and praises (#952)
+Show subjects without grades in "Grades" (#947)
+Add app shortcuts (#939)
+
+Co-authored-by: Faierbel <RafalBO99@outlook.com>
+Upgrade gradle wrapper to 6.6.1 (#968)
+Merge tag '0.20.5' into develop
+
+Version 0.20.5
+Merge branch 'release/0.20.5' into master
+Version 0.20.5
+Fix crash in flowWithResourceIn() (#967)
+Merge tag '0.20.4' into develop
+
+Version 0.20.4
+Merge branch 'release/0.20.4' into master
+Version 0.20.4
+Expand exam sync date range to next month (#960)
+Fix lifecycle of timer tasks in timetable lessons (#958)
+
+Co-authored-by: Faierbel <RafalBO99@outlook.com>
+Bump coil from 1.0.0-rc1 to 1.0.0-rc2 (#961)
+Bump firebase-crashlytics-gradle from 2.2.1 to 2.3.0 (#964)
+Bump hilt_version from 2.28.3-alpha to 2.29.1-alpha (#962)
+Bump material from 1.2.0 to 1.2.1 (#963)
+Add eduportal.koszalin.pl register (#959)
+Move timetable notifications scheduling to background thread (#954)
+Ignore empty semesters on refresh (#955)
+Fix bug in grade statistics (#951)
+Disable sound of upcoming lessons notification (fix) (#950)
+Fix crash on unknown attendance category type (#949)
+Merge tag '0.20.3' into develop
+
+Version 0.20.3
+Merge branch 'release/0.20.3' into master
+Version 0.20.3
+Add full stacktrace to errors list in sync now (#945)
+Fix crash in flowWithResourceIn() (#944)
+Fix attendance item description (#943)
+Merge tag '0.20.2' into develop
+
+Version 0.20.2
+Merge branch 'release/0.20.2' into master
+Version 0.20.2
+Merge tag '0.20.1' into develop
+
+Version 0.20.1
+Merge branch 'release/0.20.1' into master
+Version 0.20.1
+Fix semester list refresh on no current semester found (#940)
+Fix grade summary empty view (#941)
+Fix lucky number notification (#937)
+Remove force sync dialog (#938)
+Disable notification sound (#936)
+Fix recaptcha loading in password recover (#935)
+Add skarzyskokamienna vulcan register (#934)
+Fix crash in flowWithResourceIn() (#933)
+Update UI dependencies (#927)
+Bump firebase-crashlytics from 17.1.1 to 17.2.1 (#931)
+Bump runner from 1.2.0 to 1.3.0 (#932)
+Bump firebase-inappmessaging-display-ktx from 19.1.0 to 19.1.1 (#930)
+Bump core from 1.2.0 to 1.3.0 (#929)
+Merge tag '0.20.0' into develop
+
+Version 0.20.0
+Merge branch 'release/0.20.0' into master
+Version 0.20.0
+Fix messages after 20.09 update (#916)
+Bump coil from 0.11.0 to 1.0.0-rc1 (#920)
+Bump appcompat from 1.2.0-rc02 to 1.2.0 (#926)
+Bump firebase-inappmessaging-ktx from 19.1.0 to 19.1.1 (#918)
+Bump junit from 1.1.1 to 1.1.2 (#924)
+Bump firebase-crashlytics-gradle from 2.2.0 to 2.2.1 (#923)
+Bump appcompat-resources from 1.1.0 to 1.2.0 (#922)
+Bump firebase-analytics from 17.4.4 to 17.5.0 (#917)
+Save semesters with students during registration (#915)
+Bump work_manager from 2.3.4 to 2.4.0 (#910)
+
+Co-authored-by: dependabot-preview[bot] <27856297+dependabot-preview[bot]@users.noreply.github.com>
+Bump firebase-messaging from 20.2.3 to 20.2.4 (#912)
+Bump core-ktx from 1.3.0 to 1.3.1 (#911)
+Migrate to dagger hilt (#909)
+Migrate workers and app widgets to coroutines (#907)
+Remove threetenabp (#908)
+Bump kotlinx-coroutines-rx2 from 1.3.7 to 1.3.8 (#901)
+Migrate presenters from rxjava to coroutines flow (#894)
+Bump kotlinx-coroutines-core from 1.3.7 to 1.3.8 (#903)
+Bump firebase-inappmessaging-display-ktx from 19.0.7 to 19.1.0 (#905)
+Bump firebase-crashlytics from 17.1.0 to 17.1.1 (#902)
+Bump firebase-analytics from 17.4.3 to 17.4.4 (#906)
+Bump firebase-inappmessaging-ktx from 19.0.7 to 19.1.0 (#904)
+Bump gradle from 4.0.0 to 4.0.1 (#900)
+Bump dagger from 2.28.1 to 2.28.3 (#899)
+Bump firebase-messaging from 20.2.1 to 20.2.3 (#898)
+New Crowdin updates (#888)
+Bump about_libraries from 8.2.0 to 8.3.0 (#896)
+Bump swiperefreshlayout from 1.1.0-rc01 to 1.1.0 (#897)
+Bump dagger from 2.28 to 2.28.1 (#895)
+Bump firebase-crashlytics from 17.0.1 to 17.1.0 (#892)
+Bump firebase-crashlytics-gradle from 2.1.1 to 2.2.0 (#889)
+Bump firebase-messaging from 20.2.0 to 20.2.1 (#890)
+Migrate repositories from rxjava to coroutines (#885)
+Merge tag '0.19.0' into develop
+
+Version 0.19.0
+Merge branch 'release/0.19.0'
+Version 0.19.0
+New Crowdin translations (#874)
+
+Co-authored-by: Mikołaj Pich <m.pich@outlook.com>
+Message fuzzy search (#869)
+Message sharing and printing (#866)
+Add predicted and final grade notifications (#872)
+Fix lint errors (#873)
+Add account headers in student picker (#871)
+Fix showing summary summary for subjects without partial grades (#877)
+Bump sonarqube-gradle-plugin from 2.8 to 3.0 (#882)
+Bump about_libraries from 8.1.6 to 8.2.0 (#879)
+Bump firebase-crashlytics from 17.0.0 to 17.0.1 (#880)
+Bump firebase-analytics from 17.4.2 to 17.4.3 (#881)
+Bump fragment-ktx from 1.2.4 to 1.2.5 (#878)
+Merge tag '0.18.3' into develop
+
+Version 0.18.3
+Merge branch 'release/0.18.3'
+Version 0.18.3
+Fix force average calc from two semesters (#870)
+Fix message deleting (#875)
+Merge tag '0.18.2' into develop
+
+Version 0.18.2
+Merge branch 'release/0.18.2'
+Version 0.18.2
+Emulate summaries from grade list when summaries are empty (#855)
+Fix login button state in student select login fragment (#863)
+New Crowdin translations (#856)
+Revert "Bump sonarqube-gradle-plugin from 2.8 to 3.0" (#864)
+
+This reverts commit ab7d30c9950c9f0eab5581494b8197425cb12394.
+Fixes in updating adapter items (#854)
+Fix too many alarms on samsung devices (#859)
+Bump about_libraries from 8.1.4 to 8.1.6 (#861)
+
+Bumps `about_libraries` from 8.1.4 to 8.1.6.
+
+Updates `aboutlibraries-plugin` from 8.1.4 to 8.1.6
+- [Release notes](https://github.com/mikepenz/AboutLibraries/releases)
+- [Changelog](https://github.com/mikepenz/AboutLibraries/blob/develop/gradle-release.gradle)
+- [Commits](https://github.com/mikepenz/AboutLibraries/compare/v8.1.4...v8.1.6)
+
+Updates `aboutlibraries-core` from 8.1.4 to 8.1.6
+- [Release notes](https://github.com/mikepenz/AboutLibraries/releases)
+- [Changelog](https://github.com/mikepenz/AboutLibraries/blob/develop/gradle-release.gradle)
+- [Commits](https://github.com/mikepenz/AboutLibraries/compare/v8.1.4...v8.1.6)
+
+Signed-off-by: dependabot-preview[bot] <support@dependabot.com>
+
+Co-authored-by: dependabot-preview[bot] <27856297+dependabot-preview[bot]@users.noreply.github.com>
+Fix capitalization in new message activity (#860)
+Filter out empty items in grade summary (#857)
+ Don't capture click on login student select checkbox  (#862)
+Bump sonarqube-gradle-plugin from 2.8 to 3.0 (#853)
+Bump gradle from 3.6.3 to 4.0.0 (#852)
+Bump about_libraries from 8.1.3 to 8.1.4 (#851)
+Bump dagger from 2.27 to 2.28 (#850)
+Fix displaying the feature disabled message in completed lessons (#849)
+Merge tag '0.18.1' into develop
+
+Version 0.18.1
+Merge branch 'release/0.18.1'
+Version 0.18.1
+New Crowdin translations (#847)
+Bump firebase-inappmessaging-ktx from 19.0.6 to 19.0.7 (#844)
+Bump firebase-analytics from 17.4.1 to 17.4.2 (#843)
+Bump firebase-crashlytics-gradle from 2.1.0 to 2.1.1 (#841)
+Fix debug channel (#846)
+Bump firebase-messaging from 20.1.7 to 20.2.0 (#839)
+Bump about_libraries from 8.1.2 to 8.1.3 (#845)
+Bump firebase-inappmessaging-display-ktx from 19.0.6 to 19.0.7 (#838)
+Hide advanced login options button (#837)
+Open dontkillmyapp.com if no action found in app killer manager (#835)
+Show `check for updates` dialog before report a bug (#834)
+Wrap long preference titles (#836)
+Allow access to saturday in timetable and attendance (#833)
+Improve firebase logging (#832)
+Destroy webview in password recover before setting binding to null (#829)
+Set app_name in build.gradle (#830)
+Fix crash in timetable time left (#826)
+Add debug statements to get/update methods in grade details adapter (#827)
+Fix mark message as read in search mode (#828)
+Fix grade sorting (#825)
+New Crowdin translations (#817)
+Merge tag '0.18.0' into develop
+
+Version 0.18.0
+Merge branch 'release/0.18.0'
+Version 0.18.0
+Fix crash in timetable on api < 21 (#816)
+New Crowdin translations (#813)
+Add app killer manager to settings (#808)
+Add lesson time left display (#550)
+Add notification about upcoming lesson (#578)
+Add search in messages (#804)
+Fix notifications on android 8.0 (#814)
+Bump coil from 0.10.1 to 0.11.0 (#812)
+Bump appcompat from 1.2.0-beta01 to 1.2.0-rc01 (#811)
+Bump firebase-crashlytics-gradle from 2.0.0 to 2.1.0 (#810)
+Bump firebase-analytics from 17.4.0 to 17.4.1 (#809)
+Add option to hide/show chart list in grade class stats (#807)
+Add fullscreen mode to homework dialog (#806)
+New Crowdin translations (#797)
+Add widget system theme option (#759)
+Update translations (#794)
+Optimize grade average provider (#792)
+Use view binding instead of kotlin synthetics (#791)
+Update Crowdin configuration file
+Update Crowdin configuration file
+Add nav bar color in night style (#790)
+Migrate from fabric to firebase crashlytics (#789)
+Remove flexible adapter (#781)
+Add importantForAutofill to login fields (#788)
+Bump firebase-analytics from 17.3.0 to 17.4.0 (#787)
+Bump coil from 0.9.5 to 0.10.1 (#785)
+Bump firebase-inappmessaging-ktx from 19.0.5 to 19.0.6 (#782)
+Bump firebase-inappmessaging-display-ktx from 19.0.5 to 19.0.6 (#786)
+Bump threetenabp from 1.2.3 to 1.2.4 (#783)
+Bump threetenbp from 1.4.3 to 1.4.4 (#784)
+Merge tag '0.17.4' into develop
+
+Version 0.17.4
+Merge branch 'release/0.17.4'
+Version 0.17.4
+Merge tag '0.17.3' into develop
+
+Version 0.17.3
+Merge branch 'release/0.17.3'
+Version 0.17.3
+Fix injector of ErrorDialog (#780)
+Bump about_libraries from 8.1.1 to 8.1.2 (#779)
+Merge tag '0.17.2' into develop
+
+Version 0.17.2
+Merge branch 'release/0.17.2'
+Version 0.17.2
+Refresh semesters if previous list was downloaded in different m… (#776)
+Fix crash after send message when activity is in background (#777)
+Add error message and bug report button to error dialog (#778)
+Don't log common errors to crashlytics (#775)
+Fix visibility of dialog close button when homework content is l… (#774)
+Bump kotlin_version from 1.3.71 to 1.3.72 (#773)
+Bump swiperefreshlayout from 1.1.0-beta01 to 1.1.0-rc01 (#770)
+Bump gradle from 3.6.2 to 3.6.3 (#772)
+Bump preference-ktx from 1.1.0 to 1.1.1 (#771)
+Merge tag '0.17.1' into develop
+
+Version 0.17.1
+Merge branch 'release/0.17.1'
+Version 0.17.1
+Bump firebase-inappmessaging-display-ktx from 19.0.4 to 19.0.5 (#767)
+Bump firebase-inappmessaging-ktx from 19.0.4 to 19.0.5 (#768)
+Show all known adfslight registers in register list (#766)
+Bump about_libraries from 8.1.0 to 8.1.1 (#769)
+Add Sdk.init(student) call in all remote repositories (#764)
+Fix homework dialog size (#765)
+Fix crash caused by updating view in not attached fragment (#763)
+Fix crash in message preview (#762)
+Use recycler view in homework details dialog (#761)
+Merge tag '0.17.0' into develop
+
+Version 0.17.0
+Merge branch 'release/0.17.0'
+Version 0.17.0
+Revert "Add "System theme" option to widgets" (#753)
+Bump chucker from 3.1.1 to 3.2.0 (#755)
+Bump threetenbp from 1.4.2 to 1.4.3 (#756)
+Add force sync feature in settings (#643)
+Add missing sdk initialization in lucky number repository (#752)
+Add more details in email template (#751)
+Add mark as done feature in homework (#743)
+Add firebase messaging (#740)
+Add firebase messaging (#740)
+Add message attachments (#734)
+Add better validation to login/email field (#741)
+Add "System theme" option to widgets (#739)
+Update gradle to 6.2.2 (#750)
+Bump appcompat from 1.2.0-alpha03 to 1.2.0-beta01 (#749)
+Bump about_libraries from 8.0.2 to 8.1.0 (#747)
+Bump fragment-ktx from 1.2.3 to 1.2.4 (#748)
+Bump firebase-core from 17.2.3 to 17.3.0 (#746)
+Bump gradle from 3.6.1 to 3.6.2 (#744)
+Bump aboutlibraries-core from 7.1.0 to 8.0.0 (#731)
+Bump appcompat from 1.1.0 to 1.2.0-alpha03 to fix webview crash… (#737)
+Add points to notes (#738)
+Change strings.xml form from male to impersonal (#736)
+Bump threetenabp from 1.2.2 to 1.2.3 (#735)
+Bump chucker from 2.0.4 to 3.1.1 (#733)
+Bump room from 2.2.4 to 2.2.5 (#727)
+Bump kotlin_version from 1.3.70 to 1.3.71 (#732)
+Bump threetenbp from 1.4.1 to 1.4.2 (#730)
+Bump work_manager from 2.3.3 to 2.3.4 (#728)
+Bump fragment-ktx from 1.2.2 to 1.2.3 (#729)
+Bump rxjava from 2.2.18 to 2.2.19 (#726)
+Bump mockito-inline from 3.3.1 to 3.3.3 (#725)
+Fix marking message as read in hybrid and mobile api mode (#722)
+Bump dagger from 2.26 to 2.27 (#724)
+Bump mockito-android from 3.3.1 to 3.3.3 (#723)
+Update gradle-publisher to 2.7.2 (#719)
+Bump swiperefreshlayout from 1.1.0-alpha03 to 1.1.0-beta01 (#718)
+Bump work_manager from 2.3.2 to 2.3.3 (#717)
+Merge tag '0.16.0' into develop
+
+Version 0.16.0
+Merge branch 'release/0.16.0'
+Version 0.16.0
+Add some login help messages (#716)
+Bump kotlin_version from 1.3.61 to 1.3.70 (#715)
+
+Bumps `kotlin_version` from 1.3.61 to 1.3.70.
+
+Updates `kotlin-gradle-plugin` from 1.3.61 to 1.3.70
+
+Updates `kotlin-stdlib-jdk8` from 1.3.61 to 1.3.70
+- [Release notes](https://github.com/JetBrains/kotlin/releases)
+- [Changelog](https://github.com/JetBrains/kotlin/blob/master/ChangeLog.md)
+- [Commits](https://github.com/JetBrains/kotlin/compare/v1.3.61...v1.3.70)
+
+Updates `kotlin-test` from 1.3.61 to 1.3.70
+- [Release notes](https://github.com/JetBrains/kotlin/releases)
+- [Changelog](https://github.com/JetBrains/kotlin/blob/master/ChangeLog.md)
+- [Commits](https://github.com/JetBrains/kotlin/compare/v1.3.61...v1.3.70)
+
+Signed-off-by: dependabot-preview[bot] <support@dependabot.com>
+Add German language (#712)
+Replace Creators with Contributors (#675)
+Change asset name and contributor name (#714)
+Set missing styles to small lesson items (#707)
+Replace Maybe with Single in Message DAO (#710)
+Filter lucky numbers by school shortcut (#708)
+Update Ukrainian language (#711)
+Add Ukrainian language (#709)
+Sort the second group's lessons below the student's lessons (#706)
+Add separate host in login form to login to VULCAN adfslight (#704)
+Update gradle to 6.2.1 (#705)
+Show list of charts in grade statistics (#689)
+Add new notifications categories (#685)
+Bump gradle from 3.6.0 to 3.6.1 (#702)
+Bump firebase-core from 17.2.2 to 17.2.3 (#703)
+Bump gradle from 3.5.3 to 3.6.0 (#698)
+Bump room from 2.2.3 to 2.2.4 (#694)
+Bump mockito-android from 3.2.4 to 3.3.1 (#696)
+Bump mockito-inline from 3.2.4 to 3.3.1 (#693)
+Bump fragment-ktx from 1.2.0 to 1.2.2 (#695)
+Bump coil from 0.9.4 to 0.9.5 (#699)
+Bump rxjava from 2.2.17 to 2.2.18 (#700)
+Bump work_manager from 2.3.0 to 2.3.2 (#697)
+Add account recover (#635)
+Automatically switch semesters without sync (#681)
+Add log viewer (#686)
+Respect user settings in timetable app widget (#687)
+Refactor the resizing of the lucky number app widget (#682)
+Show semester in appbar subtitle in grades view (#684)
+Bump material from 1.1.0-rc02 to 1.1.0 (#680)
+Bump coil from 0.9.2 to 0.9.4 (#679)
+Fix showing empty total summary and ordering of summary months (#678)
+Add dynamic nick/email in login (#676)
+Disable signed in students in login (#677)
+Bump dagger from 2.25.4 to 2.26 (#673)
+Add total attendance summary (#672)
+Fix login more options button in dark theme (#674)
+Fix timetable_show_whole_class_entries en translation (#668)
+Merge tag '0.15.0' into develop
+
+Version 0.15.0
+Merge branch 'release/0.15.0'
+Version 0.15.0
+Show points sum in grades details (#664)
+Visual enhancement of displaying grades point stats (#665)
+Don't hide password toggle button on error (#666)
+Add excusing for absence (#533)
+Bump fragment-ktx from 1.2.0-rc05 to 1.2.0 (#662)
+Bump activity-ktx from 1.1.0-rc03 to 1.1.0 (#661)
+Bump work_manager from 2.3.0-rc01 to 2.3.0 (#660)
+Add creators list (#636)
+Add option to show only student plan lessons (#654)
+Bump rxjava from 2.2.16 to 2.2.17 (#656)
+
+Bumps [rxjava](https://github.com/ReactiveX/RxJava) from 2.2.16 to 2.2.17.
+- [Release notes](https://github.com/ReactiveX/RxJava/releases)
+- [Changelog](https://github.com/ReactiveX/RxJava/blob/v2.2.17/CHANGES.md)
+- [Commits](https://github.com/ReactiveX/RxJava/compare/v2.2.16...v2.2.17)
+
+Signed-off-by: dependabot-preview[bot] <support@dependabot.com>
+Fix login info autofill (#652)
+Improve grades dialog layout (#631)
+Bump material from 1.1.0-rc01 to 1.1.0-rc02 (#655)
+Bump threetenabp from 1.2.1 to 1.2.2 (#657)
+Bump firebase-core from 17.2.1 to 17.2.2 (#658)
+Bump threetenbp from 1.4.0 to 1.4.1 (#659)
+Add debug notification icons (#637)
+Merge tag '0.14.2' into develop
+
+Version 0.14.2
+Merge branch 'release/0.14.2'
+Version 0.14.2
+Change color attr in backtround_header_note drawable to color re… (#644)
+Update error_service_unavailable string (#645)
+Merge tag '0.14.1' into develop
+
+Version 0.14.1
+Merge branch 'release/0.14.1'
+Version 0.14.1
+Add missing translations (#642)
+Bump junit from 4.12 to 4.13 (#640)
+Bump logging-interceptor from 3.12.6 to 3.12.7 (#641)
+Bump fragment-ktx from 1.2.0-rc04 to 1.2.0-rc05 (#639)
+Bump work_manager from 2.3.0-beta02 to 2.3.0-rc01 (#638)
+Change grade header note to unread count (#634)
+Minor translation changes (#630)
+Bump aboutlibraries from 7.0.4 to 7.1.0 (#633)
+Bump dagger from 2.25.3 to 2.25.4 (#632)
+Add fields validation in mobile api login (#629)
+Fix error view which overlaps grade statistics content (#627)
+Merge tag '0.14.0' into develop
+
+Version 0.14.0
+Merge branch 'release/0.14.0'
+Version 0.14.0
+Change Wulkanowy API link to SDK in README (#626)
+Don't copy teacher from previous lesson with changes if new one… (#622)
+Fix lucky number empty screen (#623)
+Migration to Wulkanowy SDK (#336)
+Bump room from 2.2.2 to 2.2.3 (#618)
+Bump work_manager from 2.3.0-beta01 to 2.3.0-beta02 (#620)
+Bump mockito-inline from 3.2.0 to 3.2.4 (#621)
+Bump mockito-android from 3.2.0 to 3.2.4 (#619)
+Bump fragment-ktx from 1.2.0-rc03 to 1.2.0-rc04 (#617)
+Bump material from 1.1.0-beta02 to 1.1.0-rc01 (#616)
+Bump dagger from 2.25.2 to 2.25.3 (#614)
+Bump rxjava from 2.2.15 to 2.2.16 (#615)
+Fixed capitalization in the about tab (en) (#613)
+Fixed letter capitalization in the About tab (pl) (#612)
+Merge tag '0.13.0' into develop
+
+Version 0.13.0
+Merge branch 'release/0.13.0'
+Version 0.13.0
+Add FAQ link (#611)
+Bump fragment-ktx from 1.2.0-rc02 to 1.2.0-rc03 (#610)
+Bump activity-ktx from 1.1.0-rc02 to 1.1.0-rc03 (#608)
+Bump gradle from 3.5.2 to 3.5.3 (#609)
+Bump coordinatorlayout from 1.1.0-rc01 to 1.1.0 (#607)
+Bump mockito-android from 3.1.0 to 3.2.0 (#605)
+Bump kotlin_version from 1.3.60 to 1.3.61 (#606)
+Bump mockito-inline from 3.1.0 to 3.2.0 (#604)
+Add russian language (#595)
+Bump assisted-inject-processor-dagger2 from 0.5.1 to 0.5.2 (#601)
+Bump rxjava from 2.2.14 to 2.2.15 (#603)
+Bump assisted-inject-annotations-dagger2 from 0.5.1 to 0.5.2 (#602)
+Add error view showing on first loading in fragment view (#590)
+Add 0,00 grade modifier (#596)
+Bump work_manager from 2.3.0-alpha03 to 2.3.0-beta01 (#600)
+Bump room from 2.2.1 to 2.2.2 (#599)
+Bump core-ktx from 1.2.0-beta02 to 1.2.0-rc01 (#598)
+Bump recyclerview from 1.1.0-rc01 to 1.1.0 (#597)
+Bump kotlin_version from 1.3.50 to 1.3.60 (#594)
+Bump google-services from 4.3.2 to 4.3.3 (#591)
+Bump sonarqube-gradle-plugin from 2.8 to 2.8.0.1969 (#593)
+Fix screens loading state (#589)
+Update material design components (#587)
+Bump activity-ktx from 1.1.0-rc01 to 1.1.0-rc02 (#586)
+Bump fragment-ktx from 1.2.0-rc01 to 1.2.0-rc02 (#585)
+Bump core-ktx from 1.2.0-beta01 to 1.2.0-beta02 (#584)
+Fix LuckyNumberWidget not showing ThemeDialog (#583)
+Add BaseDao interface (#581)
+Bump rxjava from 2.2.13 to 2.2.14 (#580)
+Update gradle wrapper (#579)
+Add DatePicker to Timetable and Attendance modules. (#522)
+Add language change settings (#577)
+Bump assisted-inject-annotations-dagger2 from 0.5.0 to 0.5.1 (#576)
+Bump assisted-inject-processor-dagger2 from 0.5.0 to 0.5.1 (#575)
+Merge tag '0.12.0' into develop
+
+0.12.0
+Merge branch 'release/0.12.0'
+Version 0.12.0
+Add support for edu.lublin.eu (#571)
+Bump firebase-core from 17.2.0 to 17.2.1 (#572)
+Add school quick actions (#570)
+Fix restoring state in exposed dropdown menu (#569)
+Change FAB to extended FAB in messages (#536)
+Bump dagger from 2.24 to 2.25.2 (#564)
+Bump fragment-ktx from 1.2.0-beta02 to 1.2.0-rc01 (#568)
+Bump work_manager from 2.3.0-alpha02 to 2.3.0-alpha03 (#563)
+Bump recyclerview from 1.1.0-beta05 to 1.1.0-rc01 (#566)
+Bump activity-ktx from 1.1.0-beta01 to 1.1.0-rc01 (#567)
+Bump coordinatorlayout from 1.1.0-beta01 to 1.1.0-rc01 (#565)
+Bump room from 2.2.0 to 2.2.1 (#562)
+Add school info (#557)
+
+* Add db layer to school info
+
+* Add base classes
+
+* Add database migration
+
+* Add base view
+
+* Update icon
+
+* Fix textviews height
+
+* Handle error and empty results
+
+* Improve school info look
+
+* Add strings
+
+* Fix action bar elevation in school fragment
+
+* Add missing blank lines
+
+* Reorganize strings
+
+* Make field title first in order
+
+* Make fields views selectable
+
+* Rename SchoolInfo to School
+Bump aboutlibraries from 7.0.3 to 7.0.4 (#559)
+Bump gradle from 1.31.1 to 1.31.2 (#560)
+Contact info after failed login (#556)
+Add system theme setting for Android 10 (#554)
+Move default preferences values to separate file (#555)
+Update androidx dependencies (#553)
+Bump recyclerview from 1.1.0-beta04 to 1.1.0-beta05 (#551)
+Bump room from 2.2.0-rc01 to 2.2.0 (#552)
+Merge tag '0.11.0' into develop
+
+Version 0.11.0
+Merge branch 'release/0.11.0'
+Version 0.11.0
+Add navigate up to login view (#547)
+Bump gson from 2.8.5 to 2.8.6 (#549)
+Add mark as read button enable logic (#534)
+Fix duplicate percentage in attendance summary (#548)
+Fix multidex in debug variant (#545)
+Update mockito to last version from maven central (#546)
+Bump sonarqube-gradle-plugin from 2.7.1 to 2.8 (#543)
+Bump gradle from 3.5.0 to 3.5.1 (#542)
+Bump githook from 1.1.0 to 1.2.0 (#539)
+Bump rxjava from 2.2.12 to 2.2.13 (#538)
+Add better timetable changes display (#513)
+Change timetable widget date format (#530)
+Clear Semesters table (#535)
+Add points to class grades statistics (#512)
+Add click to copy function (#531)
+Update readme badges (#532)
+Bump mockito-core from 3.0.8 to 3.0.11 (#525)
+Bump play-publisher from 2.4.1 to 2.4.2 (#528)
+Bump logging-interceptor from 3.12.5 to 3.12.6 (#529)
+Bump mockito-inline from 3.0.8 to 3.0.11 (#526)
+Bump mockito-android from 3.0.8 to 3.0.11 (#527)
+Add teachers (#489)
+Improve date navigation (#519)
+Add dark theme for app widgets (#509)
+Bump mockito-android from 3.0.7 to 3.0.8 (#518)
+Bump gradle from 1.31.0 to 1.31.1 (#517)
+Bump mockito-inline from 3.0.7 to 3.0.8 (#516)
+Bump mockito-core from 3.0.7 to 3.0.8 (#515)
+Fix wrong index in form host value (#507)
+Fix privacy link position on small screens (#508)
+Fix attendance_excused_lateness pl typo (#511)
+Bump logging-interceptor from 3.12.4 to 3.12.5 (#510)
+Update API 28 to API 29 (#506)
+Merge tag '0.10.2' into develop
+
+Version 0.10.2
+Merge branch 'release/0.10.2'
+Version 0.10.2
+Fix login in symbol view (#493)
+Bump recyclerview from 1.1.0-beta03 to 1.1.0-beta04 (#504)
+Bump gradle-play-publisher from `cdaeb61` to 2.4.0 (#501)
+Bump mockito-core from 3.0.6 to 3.0.7 (#502)
+Bump mockito-android from 3.0.6 to 3.0.7 (#503)
+Bump room from 2.2.0-beta01 to 2.2.0-rc01 (#499)
+Bump google-services from 4.3.1 to 4.3.2 (#498)
+Bump mockito-inline from 3.0.6 to 3.0.7 (#497)
+Bump logging-interceptor from 3.12.3 to 3.12.4 (#496)
+Fix grade details header unread info (#494)
+Merge tag '0.10.1' into develop
+
+Version 0.10.1
+Merge branch 'release/0.10.1'
+Version 0.10.1
+Fix account icon color in widgets (#488)
+Fix crashing tab layout on prelolipop (#492)
+Fix about_feedback_summary typo (#487)
+Merge tag '0.10.0' into develop
+
+Version 0.10.0
+Merge branch 'release/0.10.0'
+Version 0.10.0
+Change marking current student in accounts dialog (#486)
+Mitigate disappearing teachers in timetable (#485)
+Fix status bar color on xiaomi (#484)
+Reduce grade color saturations (#482)
+Bump aboutlibraries from 7.0.2 to 7.0.3 (#480)
+Fix elevation overlay on pre-lolipop (#475)
+Fix spaming NoCurentStudentException (#476)
+Fix empty hosts list after activity recreating (#477)
+Update dependencies (#474)
+Add outline icons (#328)
+Bump firebase-core from 17.1.0 to 17.2.0 (#473)
+Change app theme (#330)
+Bump rxjava from 2.2.11 to 2.2.12 (#472)
+Bump play-publisher from 2.2.1 to 2.3.0 (#446)
+Bump gradle from 3.4.2 to 3.5.0 (#469)
+Bump reactivenetwork-rx2 from 3.0.4 to 3.0.6 (#468)
+Bump google-services from 4.3.0 to 4.3.1 (#470)
+Bump kotlin_version from 1.3.41 to 1.3.50 (#471)
+Bump mockito-core from 3.0.5 to 3.0.6 (#466)
+Bump mockito-inline from 3.0.5 to 3.0.6 (#465)
+Bump mockito-android from 3.0.5 to 3.0.6 (#467)
+Bump mockito-core from 3.0.4 to 3.0.5 (#464)
+Bump mockito-inline from 3.0.4 to 3.0.5 (#463)
+Bump mockito-android from 3.0.4 to 3.0.5 (#462)
+Bump firebase-core from 17.0.1 to 17.1.0 (#461)
+Bump work_manager from 2.1.0 to 2.2.0 (#460)
+Merge tag '0.9.4' into develop
+
+0.9.4
+Merge branch 'release/0.9.4'
+Version 0.9.4
+Fix day/week navigation on holiday (#459)
+Bump assisted-inject-annotations-dagger2 from 0.4.0 to 0.5.0 (#458)
+Bump assisted-inject-processor-dagger2 from 0.4.0 to 0.5.0 (#457)
+Update gitignore (#455)
+Bump reactivenetwork-rx2 from 3.0.3 to 3.0.4 (#456)
+Bump rxjava from 2.2.10 to 2.2.11 (#454)
+Bump mockito-core from 3.0.2 to 3.0.4 (#451)
+Bump mockito-android from 3.0.2 to 3.0.4 (#450)
+Bump mockito-inline from 3.0.2 to 3.0.4 (#452)
+Bump dagger from 2.23.2 to 2.24 (#449)
+Bump gradle from 1.30.0 to 1.31.0 (#448)
+Update README (#447)
+Bump work_manager from 2.0.1 to 2.1.0 (#441)
+Bump gradle from 1.29.0 to 1.30.0 (#443)
+Bump mockito-inline from 3.0.1 to 3.0.2 (#442)
+Bump mockito-android from 3.0.1 to 3.0.2 (#444)
+Bump mockito-core from 3.0.1 to 3.0.2 (#445)
+Bump firebase-core from 17.0.0 to 17.0.1 (#440)
+Bump gradle from 3.4.1 to 3.4.2 (#438)
+Group dependencies versions in variables (#437)
+Bump kotlin_version from 1.3.40 to 1.3.41 (#433)
+Bump mockito-inline from 2.28.2 to 3.0.1 (#434)
+Bump mockito-android from 2.28.2 to 3.0.1 (#435)
+Bump mockito-core from 2.28.2 to 3.0.1 (#436)
+Bump google-services from 4.2.0 to 4.3.0 (#432)
+Bump frag-nav from 3.2.0 to 3.3.0 (#430)
+Bump firebase-core from 16.0.9 to 17.0.0 (#423)
+Increase min SDK to 16 (#429)
+Bump rxjava from 2.2.9 to 2.2.10 (#428)
+Bump dagger-android-support from 2.23.1 to 2.23.2 (#424)
+Bump dagger-android-processor from 2.23.1 to 2.23.2 (#425)
+Bump dagger-compiler from 2.23.1 to 2.23.2 (#426)
+Bump kotlin_version from 1.3.31 to 1.3.40 (#427)
+Merge tag '0.9.3' into develop
+
+0.9.3
+Merge branch 'release/0.9.3'
+Version 0.9.3
+Fix crash on login when error message is null (#420)
+Bump room-testing from 2.1.0-rc01 to 2.1.0 (#417)
+Bump room-compiler from 2.1.0-rc01 to 2.1.0 (#415)
+Bump room-rxjava2 from 2.1.0-rc01 to 2.1.0 (#411)
+Bump room-runtime from 2.1.0-rc01 to 2.1.0 (#419)
+Merge branch 'release/0.9.2'
+Merge tag '0.9.2' into develop
+
+0.9.2 0.9.2
+Version 0.9.2
+Add StackOverflowError to RxJava's error handler (#408)
+Fix showing empty view in mobile device view (#407)
+Fix update of grades in GradeDetailsFragment (#406)
+Organize AndroidX libraries (#404)
+Fix typo in service interval (#405)
+Fix change of worker specs after app update (#402)
+Fix crash TabLayout on Android 4.x in new version of material components (#403)
+Bump threetenabp from 1.2.0 to 1.2.1 (#401)
+Merge tag '0.9.1' into develop
+
+Version 0.9.1
+Merge branch 'release/0.9.1'
+Version 0.9.1
+Add option to force calc average by app (#400)
+Add githook plugin (#398)
+Fix tab layout crash on prelolipop (#399)
+Merge tag '0.9.0' into develop
+
+0.9.0 0.9.0
+Merge branch 'release/0.9.0'
+Version 0.9.0
+Add F-Droid flavor (#349)
+Change timeout string (#397)
+Add mobile access managment (#344)
+Add session expired dialog after password change (#389)
+Show grades average from register if exist instead of calculating (#374)
+Fix only wifi setting (#394)
+Bump material from 1.1.0-alpha06 to 1.1.0-alpha07 (#393)
+Bump dagger-compiler from 2.23 to 2.23.1 (#391)
+Bump dagger-android-processor from 2.23 to 2.23.1 (#392)
+Bump dagger-android-support from 2.23 to 2.23.1 (#390)
+Bump room-testing from 2.1.0-beta01 to 2.1.0-rc01 (#377)
+Bump room-rxjava2 from 2.1.0-beta01 to 2.1.0-rc01 (#385)
+Bump room-runtime from 2.1.0-beta01 to 2.1.0-rc01 (#388)
+Bump mockito-core from 2.28.1 to 2.28.2 (#387)
+Bump runner from 1.1.1 to 1.2.0 (#386)
+Bump rxjava from 2.2.8 to 2.2.9 (#381)
+Bump dagger-compiler from 2.22.1 to 2.23 (#380)
+Bump core from 1.1.0 to 1.2.0 (#383)
+Bump dagger-android-support from 2.22.1 to 2.23 (#384)
+Bump mockito-inline from 2.28.1 to 2.28.2 (#382)
+Bump mockito-android from 2.28.1 to 2.28.2 (#379)
+Bump junit from 1.1.0 to 1.1.1 (#378)
+Bump dagger-android-processor from 2.22.1 to 2.23 (#376)
+Bump room-compiler from 2.1.0-beta01 to 2.1.0-rc01 (#375)
+Bump mockito-inline from 2.27.5 to 2.28.1 (#372)
+Bump mockito-android from 2.27.5 to 2.28.1 (#373)
+Bump mockito-core from 2.27.2 to 2.28.1 (#371)
+Bump mockito-inline from 2.27.0 to 2.27.5 (#367)
+Bump mockito-android from 2.27.0 to 2.27.5 (#354)
+Bump threetenbp from 1.3.8 to 1.4.0 (#366)
+Bump logging-interceptor from 3.12.1 to 3.12.3 (#369)
+
+Bumps logging-interceptor from 3.12.1 to 3.12.3.
+Bump crashlytics from 2.9.9 to 2.10.1 (#365)
+Bump room-runtime from 2.1.0-alpha07 to 2.1.0-beta01 (#364)
+Bump room-testing from 2.1.0-alpha07 to 2.1.0-beta01 (#363)
+Bump gradle from 1.28.1 to 1.29.0 (#355)
+
+Bumps gradle from 1.28.1 to 1.29.0.
+Bump firebase-core from 16.0.8 to 16.0.9 (#358)
+
+Bumps firebase-core from 16.0.8 to 16.0.9.
+Bump room-rxjava2 from 2.1.0-alpha07 to 2.1.0-beta01 (#357)
+
+Bumps room-rxjava2 from 2.1.0-alpha07 to 2.1.0-beta01.
+Bump play-publisher from 2.2.0 to 2.2.1 (#356)
+
+Bumps play-publisher from 2.2.0 to 2.2.1.
+Bump room-compiler from 2.1.0-alpha07 to 2.1.0-beta01 (#350)
+
+Bumps room-compiler from 2.1.0-alpha07 to 2.1.0-beta01.
+Bump reactivenetwork-rx2 from 3.0.2 to 3.0.3 (#351)
+
+Bumps [reactivenetwork-rx2](https://github.com/pwittchen/ReactiveNetwork) from 3.0.2 to 3.0.3.
+- [Release notes](https://github.com/pwittchen/ReactiveNetwork/releases)
+- [Changelog](https://github.com/pwittchen/ReactiveNetwork/blob/RxJava2.x/CHANGELOG.md)
+- [Commits](https://github.com/pwittchen/ReactiveNetwork/commits)
+Bump material from 1.1.0-alpha05 to 1.1.0-alpha06 (#353)
+
+Bumps [material](https://github.com/material-components/material-components-android) from 1.1.0-alpha05 to 1.1.0-alpha06.
+- [Release notes](https://github.com/material-components/material-components-android/releases)
+- [Commits](https://github.com/material-components/material-components-android/compare/1.1.0-alpha05...1.1.0-alpha06)
+Bump sonarqube-gradle-plugin from 2.7 to 2.7.1 (#352)
+
+Bumps sonarqube-gradle-plugin from 2.7 to 2.7.1.
+Version 0.8.4
+Fix network constraint in background sync (#348)
+Version 0.8.3
+Change help text when entering the symbol to a more precise one (#345)
+Fix no current student in services after logout all accounts (#342)
+Fix empty maybe when loading message content (#343)
+Don't copy teacher from previous lesson to completed (#341)
+Fix null returns in widgets (#340)
+Version 0.8.2
+Fix crash on reselecting fragment (#339)
+Fix crash when no webview activity (#338)
+Fix not attached fragment (#337)
+
+* Add condition for error dialog
+* Add safe call of forEach in LuckyNumberWidgetProvider
+Version 0.8.1
+ Fix entity list comparing (#335)
+Fix dark theme background with custom theme engine (#334)
+Fix menu view initialization and restoration (#333)
+Fix theme on release build (#332)
+Version 0.8.0
+Add showing proper fragment in notifications (#331)
+Add lucky number widget (#292)
+Improve login student selection layout (#329)
+Add activity and fragment lifecycle logging (#327)
+Fix configure activity's theme (#325)
+Fix showing last message after update (#326)
+Fix grade summary final grade string (#324)
+Add AMOLED mode (#279)
+Update dependencies (#323)
+Add a selection of multiple students to login (#318)
+Add counting of the full-year average to the summary of grades (#322)
+Change style of privacy policy link (#321)
+Merge branch '0.7.x'
+Add account picker for timetable widget (#314)
+
+Close #281
+Version 0.7.6
+Add privacy policy link (#320)
+Merge branch '0.7.x'
+Version 0.7.5
+Fix message loading if student and parent are logged in (#319)
+
+Fixes #316
+Add class name to student (#315)
+Add deleting messages (#290)
+Merge branch '0.7.x'
+Version 0.7.4
+Add 0,75 grade modifier (#313)
+Fix more than one current semester (#307)
+Add opening login view on no current student (#312)
+Again fix rejected execution in sync worker (#310)
+Fix more than one current student (#311)
+
+Fix #309
+Fix black spinner in login form (#308)
+Merge branch '0.7.x'
+Version 0.7.3
+Fix rejected execution in sync worker (#305)
+Fix undeliverable network exceptions (#306)
+
+
+
+* Remove unnecessary this
+Merge branch '0.7.x'
+Version 0.7.2
+Fix more than one current semester in database (#304)
+Fix crash on duplicate items (#303)
+Update dependencies (#302)
+Add logging to sync worker (#300)
+Fix day navigation unevenition (#301)
+Fix reselecting root fragments (#299)
+Fix reset button in timetable widget (#298)
+Fix issues when loading lucky number (#297)
+Set max concurrency in sync worker (#296)
+Add checking current student in background services (#295)
+Fix restoring the grade fragment (#293)
+Remove retry sync work when completed lessons is disabled (#294)
+Add messages forwarding (#288)
+Fix empty container id in grade fragemnt adapter (#289)
+Version 0.7.1
+Add swipe refresh to grade fragment (#287)
+Fix the application finish after selecting an account (#286)
+Change grade weightValue type to double (#285)
+Version 0.7.0
+Add replying to messages (#263)
+Centre the login form (#283)
+Change homework view to weekly (#284)
+Add homepage button in about fragment (#280)
+Change settings for checking the internet connection (#282)
+Follow current grade scheme in stats chart (#277)
+Improve the display of changes in the timetable (#275)
+
+Closes #264
+Update dependencies (#274)
+Change login progress bars (#272)
+Disable swipe to refresh on data loading (#270)
+Add debug notification for worker (#271)
+Add missing text when no grade description (#269)
+Migration to WorkManager (#254)
+
+Closes #241
+Fix timetable widget automatic day switching (#267)
+Fix grade stats loading issues (#266)
+Mitigate disappearing room numbers in timetable (#265)
+Add grade statistics (#251)
+Add option to change grade (background) color scheme (#259)
+Settings rename view section (#262)
+Update grade colors (#231)
+Update login error message (#260)
+Mitigate notifications from old grades (#258)
+
+Fixes #257
+Add lucky number logging (#256)
+Add sending messages (#232)
+Fill login credentials with default values upon fakelog selection (#255)
+
+Resolves #245
+Mark as read items older than student registration date (#253)
+Login form style fix (#252)
+Fix timetable widget crash on update (#250)
+Update login form to Material Design 2 (#229)
+Entities unification (#248)
+
+* Remove default entieties params
+
+* Change var to vals
+
+* Fix indent in data classes
+
+* Change message unread to val
+
+* Make all fields in Message non-nullable
+
+* Add destructive db migrations #246
+
+* Fix password decrypting
+
+* Fix tests
+
+* Fix student logout
+
+* Use orEmpty() on nullable strings
+
+* Use var in Student password and Message unread
+Apply ripple effect on grade details header only if item is expandable (#239)
+
+Resolves #234
+Sort repositories (#244)
+Fix no current student (#243)
+Add completed lessons (#236)
+Fix lucky number crash (#242)
+Fix uninitialized fragment after restoring the activity (#237)
+Split login form for two fragments (#230)
+Add Firebase Analytics for the loaded lucky number (#233)
+Merge branch '0.6.x'
+Version 0.6.6
+Add lucky numbers (#216)
+Upgrade to Gradle Play Publisher v2 (#228)
+Remove renaming source file in R8 (#227)
+Fix empty fragment list in fragment manager (#226)
+Fix receiving a lot of notifications after turning them off for a while (#225)
+Fix empty Maybe in student repository (#224)
+Version 0.6.5
+Change icon of semester switch (#223)
+Disable obfuscate in R8 (#222)
+Version 0.6.4
+Update dependencies (#221)
+Add api initialization to the message repository (#220)
+Add more logging (#219)
+Fix crash on duplicate notes (#218)
+Fix exam_no_items english translation (#217)
+
+Changed `exam_no_items` from **No exams in this week** to **No exams this week**
+Fix crash on Meizu devices (#215)
+Fix dialog state (#214)
+Version 0.6.3
+Add grade id to equals (#213)
+Add chucker okhttp inspector (#205)
+Fix stable id in grade fragment (#211)
+Fix NPE on error dialog (#212)
+Version 0.6.2
+Fix scroll to start in grade fragment (#210)
+Fix spinner dropdown arrow not displaying in attendance summary (#207)
+ Fix broken grade summary view  (#208)
+Fix item sorting in grades details (#209)
+Change icon of the attendance summary (#206)
+English translation fix (#204)
+Added icon for the DEV version (#203)
+Version 0.6.1
+Fix firebase crashlytics (#202)
+Version 0.6.0
+Fix error message snackbar (#201)
+Configure code shrinking (#200)
+Fix blank number and change strikethrough lesson in widget (#198)
+Add new app icon (#199)
+Migrate to firebase (#196)
+Adjustment login layout to material design (#197)
+Update dependencies (#195)
+Show full subject name on expand (#193)
+Add mark as read to grade menu (#194)
+Add a summary of attendance (#132)
+Add option to change plus and minus modifier separately (#192)
+Add messages (#148)
+Avoid re-loading fragments on the current week/day (#191)
+Add workaround password decryption error (#189)
+Fix the deformed settings icon (#190)
+Add version text to login form (#188)
+Fix login when an error occurs (#187)
+Add details to error message (#186)
+Add account manager (#183)
+Add config for travis ci (#185)
+Fix no expandable grades (#184)
+Add homework (#181)
+Fix crash on restore LoginActivity (#182)
+Add notes (#179)
+Add preference for the expandable grades (#178)
+Move night mode initialization to WulkanowyApp (#180)
+
+Fixes #162
+Add preference for the grades modifier (#177)
+
+Resolve #163
+Add vibrate permission (#176)
+Merge pull request #153 from wulkanowy/app-modules-refactor
+
+Refactor app modules
+Logger refactor (#175)
+Timetable widget refactor (#171)
+Services refactor (#168)
+Sort lessons by number (#174)
+Dark theme refactor (#173)
+Fix range of days in exam navigation (#172)
+Refactor packages hierarchy (#170)
+Settings refactor (#166)
+Migrate to AndroidX (#169)
+Change all entities ids from string to int (#167)
+Modules improvements (#164)
+Refactor multi logs support (#165)
+Refactor timetable module (#160)
+Refactor grade module (#156)
+Refactor attendance module (#161)
+Refactor exam module (#157)
+Created issue template (#159)
+Migrate to new api (#155)
+Refactor main module (#154)
+Refactor login module (#151)
+Add license scan report and status (#152)
+Add homework api (#150)
+Make API responses structure flat (#149)
+Refactoring password encryption (#147)
+Version 0.5.2
+Fix 29 migration (#146)
+Version 0.5.1
+Add weight on grades list (#145)
+Adjust colors of grades in dark theme (#143)
+Upgrade android SDK (#144)
+Add support for multiple SnP sites (#140)
+Stop synchronization on holidays (#142)
+User short grade names in grades summary (#141)
+Version 0.5.0
+Add dark theme (#133)
+Separate synchronization from login (#137)
+Clean data user on bad user credentials (#138)
+API fixes (#136)
+Hide actionbar on scroll (#135)
+Fix displaying the replacements in widget (#134)
+Add logger (#131)
+Add a summary of grades (#127)
+Move ticks converter to api (#130)
+Expand current day on startup (#129)
+Hide empty fields in summary (#128)
+Add mobile access API (#126)
+Version 0.4.5
+[API] Fix timetable endpoint (#125)
+Implementation of a new Dagger injection (#103)
+Version 0.4.4
+Fix lesson description from warning (#124)
+Stop refreshing while semester switching window open (#123)
+Add some fabric answers (#120)
+Fix autofill on api lvl 26 (#122)
+Clear db before register (#121)
+Fix api login(#119)
+Avoid null if cell second div not contain span (#118)
+Version 0.4.3
+Fix api login error (#115)
+Add condition to exam query (#116)
+Fix text alignment <= lv l20 (#117)
+Remove the root check (#114)
+Delete non-existing lessons on sync  (#112)
+Stop SyncJob if user is not registered in app (#113)
+Version 0.4.2
+Fix exams sync  (#108)
+Stopping job when user not registered in app (#111)
+Fix certificate parsing issues (#109)
+Fix adfs login (#110)
+Version 0.4.1
+[API] Fix first login (#107)
+[API] Get rid of NULL in timetable lesson descriptions (#106)
+Call of SyncJob only after user register in app (#105)
+Fix parsing grade description with symbol containing special chars (#104)
+Version 0.4.0
+Save current tab position in exams (#102)
+Mark current week (#100)
+Remove backup rules (#101)
+Add about section in settings (#99)
+Change description date in exam and fix styles (#98)
+Fix animations on expand and collapse (#97)
+Add exams (#87)
+
+* [API/exams] Fix parsing empty list
+* [API/exams] Fix date format
+* [API/exams] Set day name from api
+[API] Add support for adfs login (#76)
+Add option to hide present in attendance (#96)
+Update dependencies (#95)
+Add semester switch in grades (#94)
+Fix widget state change during update (#93)
+Refactor model layout (#92)
+Fix grade regex (#91)
+Add info about predicted and final ratings (#88)
+Fix notification intent (#89)
+Refactor entites (#86)
+Add timetable widget (#84)
+Version 0.3.1
+[API] Improve login (#83)
+Change message after sync completed (#85)
+Version 0.3.0
+Show fully name on expand header (#82)
+Log non-fatal exceptions with fabric (#80)
+Update CI config (#81)
+Notifications improvements (#78)
+
+* Refactor notifications
+* Change grade notify icon
+Add setttings (#74)
+Hide actionbar during login (#79)
+Migrate to ThreeTenABP (#77)
+Update gradle to 4.4 (#75)
+Version 0.2.2
+Fix resuming states in fragments (#72)
+
+* Downgrade sdk version
+* Update dependencies
+* Fix infinite loading on restore states
+* Fix crash when loading loaded fragments
+[API] Add error messages to exceptions (#71)
+Version 0.2.1
+Fix display items on refresh (#70)
+Fix inactive elements (#69)
+Fix circleci instrumented job (#68)
+Fix session handling (#67)
+Version 0.2.0
+Fix crash in grades on some devices (#66)
+Optimize session handling (#63)
+
+* [APP] Change way the Vulcan is configured (#65)
+[DB] Add database migrations (#64)
+Add attendance (#58)
+Replace versioneye with snyk (#62)
+Add application id suffix in debug builds (#61)
+Add cleaning user data on upgrade and downgrade (#60)
+Add a view of free days to the timetable (#57)
+
+* Fix Timetable freeze when app was killed
+* Add views for free days
+Add remove user id in db upgrade (#59)
+Version 0.1.1
+CustomTabs fix (#56)
+Cleaning of resources (#55)
+[UI] Use different splash background depending on api level  (#54)
+[API] Remove duplicated POJOs (#53)
+MVP (#46)
+[API] Make support for alternative log addresses more centralized (#52)
+Add api to retrieve messages (#51)
+Use Client as dependency instead inherit from Api (#50)
+Fix grades average (#49)
+Add crashlytics (#47)
+Fix timetable sync (#48)
+Update dependencies (#43)
+Prepare app for MVP (#40)
+Add auto update (#42)
+Hotfix jsoup issue (#41)
+
+Downgrade to prev version of jsoup
+
+see https://github.com/jhy/jsoup/issues/992
+Fake log integration (#39)
+
+* Handle technical break error
+
+* Add login by pass email with log host
+
+* Use in FirstAccountLogin fully Vulcan facade
+
+* Add SnP interface
+Add timetable to Wulkanowy (#38)
+
+* Add timetable entities, synchronization and UI
+* Add better code hub config
+* Update SDK tools
+* Change activity to ui
+
+* [API] fix lesson room, when division into groups
+* [API] Rewrite lesson parser
+* [API] Add support for new lesson type
+* [API] Fix for substitutions in the timetable
+Add sonarqube (#37)
+Fix bintray version (#36)
+Add app lock for SDK < 18 with root (#35)
+API as java module (#34)
+Add exams API (#30)
+Android Notifications implementation (#33)
+
+* Fix bug with the number of grades in snackbar
+* Add basic grade notification
+* Add notification icons
+* Add intent to notification 
+* Improve login activity appearance
+* Improve dashboard appearance
+* Small amendments
+* Change splash logo
+Refactorization of the app (#31)
+
+* Refactor LoadingTask
+* Remove LoadingTask class
+* Fix context leak in LoginTask
+* Refactorisation GradesFragment
+* Refactorization synchronization
+* Fix leak in VulcanService
+* Update mockito
+* Add more tests for EntitiesCompare
+* Fix Instant Run
+* Add margin to grades
+* Update ci android image
+Change dialog closing button text (#32)
+New login UI (#29)
+
+* Refactor activity names
+* Refactor login activity and async task
+* Add forgot password and create account links
+* Login without passing symbol in login form
+* Add heading text before login form
+* Refactor API/login
+* Add login loading steps
+* Remove unnecessary try catch
+* Refactor snp and add tests
+* Remove redudant throws clauses
+Implementing Pull to Refresh (#28)
+
+* Add swipe refresh layout
+* Remove indicator and change border position
+* Add snackbar for new grades and rename classes of synchronization
+* Add info of the number of grades
+* Add grades average average
+* Add alert of new grades
+* Fix crash while refreshing
+* Add disappearing alerts
+* Optimize res and fix crash
+* Update API to version 27
+Create tests (#26)
+
+* Add unit and instrumented tests
+* Divide code coverage to two different tags on codecov
+* Change sdk image to 25
+* Turn on console output in unit tests
+API facade (#27)
+
+*Create API facade
+
+* Refactor API tests
+
+* Implementation of the facade API and add tests for synchronization
+API attendance (#24)
+Use codecov for code coverage (#25)
+
+* Use codecov for code coverage
+
+* Change codacy coverage badge with codecov
+
+* Unify repo badges
+
+* Update download link
+
+* Update unit tests
+Migrate to greenDAO (#23)
+
+* Migration of database operation to greenDAO
+* Disable crashlitics for debug builds
+* Remove unused drawable
+* Fix crash when user have one grade
+Update API 25 to API 26 (Android O) (#22)
+Add services  (#21)
+Sort grades by date (#20)
+Replace all county/counties occurrences with symbol/symbols (#19)
+Add cookies database and remake grade dialog (#18)
+
+* Add cookies database
+* Remake dialog fragment
+* Add selectable to textview in dialog
+Update dependencies  (#17)
+Add grades interface and change app appearance (#14)
+
+* Change style and remake activity_main layout
+
+* Change to a brighter navigation background color
+
+* Add expandable recyclerView (thoughtbot)
+
+* Add indicator to expandableRecyclerView and empty subject not shown
+
+* Add Dialog Fragment with grade details
+Hotfix login (#16)
+Update dependencies and improve build process (#15)
+API improvements (#13)
+Add to Grade semester and symbol properties (#12)
+Add grades database (#7)
+Add timetable api (#9)
+Add school api (#11)
+Add ability to change grades list semester (#10)
+Add notes api (#8)
+
+* Add notes api with tests
+* Get county for snp direct from database
+Add password encryption (#6)
+
+Add password encryption
+Code style fixes
+Add user api
+Merge remote-tracking branch 'origin/master'
+Add account database
+Fix typeface in password input
+Merge remote-tracking branch 'origin/master'
+Remake MainActivity layout
+Add api for grades
+Fix merge branches
+Merge branch 'grid-marks'
+
+# Conflicts:
+#	app/src/main/java/io/github/wulkanowy/activity/main/Login.java
+#	app/src/main/java/io/github/wulkanowy/activity/main/MainActivity.java
+Create api package (#4)
+
+Create api package and move login's implementation to it
+Add basic user data store and automatic login
+Add support for support libraries
+Build coverage report (#3)
+
+Add first unit test & code coverage config
+Fix restarts activity when changing orientation
+Add loading circle and download subject name
+Add experimental/partial downloading marks data
+Fix incompatibility on other screen size than 5in
+Correct the appearance of the grid and add automatic calculation of fragments layouts
+Add RecyclerView in marks
+Merge pull request #2 from codacy-badger/codacy-badge
+
+Add a Codacy badge to README.md
+Add Codacy badge
+Fix ImageAdapter context ref
+Add gridview (not working)
+Update jsoup to 1.10.3
+Merge branch 'bottom-nav'
+
+# Conflicts:
+#	.idea/misc.xml
+#	.idea/modules.xml
+Merge remote-tracking branch 'origin/bottom-nav' into bottom-nav
+Add dynamic title in dashboard and round icon luncher
+Fix circleci build, delete unused resources
+Adds fragments and simple navigation between them
+Change selected color
+Fix, clear and polishing
+
+1fb4079
+Update ignore files
+Add experimental bottom navigation menu
+Add basic navgation drawer
+Update download links
+Fix path
+Manage jsoup dependency via gradle and not via jar file
+Fix circle-ci build, add bitrise
+Change ./gradlew mode
+Rename project domain to io.github
+Use counties resource as hashmap
+Delete possibility of return to splashscreen
+Merge branch 'revert-8793f936' into 'master'
+
+Revert "Merge branch 'new-splashscreen' into 'master'"
+
+See merge request !5
+Revert "Merge branch 'new-splashscreen' into 'master'"
+
+This reverts merge request !4
+Merge branch 'new-splashscreen' into 'master'
+
+Delete StartedActivity and replace it by SplashActivity
+
+See merge request !4
+Add ProgressDialog when logging in.
+Delete StartedActivity and replace it by SplashActivity
+Add counties list
+Change `enter` behavior on last login field to `done`
+Merge branch 'fix-build' into 'master'
+
+Fix build
+
+See merge request !3
+Fix build
+Implement debug login (loginData.xml)
+Remove unnecessary code line
+
+Oszczędzaj RAM gdziekolwiek jesteś!
+Fix login process #1, refactoring Login class and more
+Merge branch 'improve_easy-apk-download' into 'master'
+
+Easy dowload apk
+
+See merge request !2
+Easy dowload apk
+ Step 3 complete
+#2 Add checking corect password and e-mail
+Merge remote-tracking branch 'origin/master'
+#1 Add login  POST
+Add README.md
+Merge branch 'autobuild' into 'master'
+
+Build and test app on gitlab ci
+
+See merge request !1
+Build and test app on gitlab ci
+Add asynctask login class
+Add county and alert dialog
+Add county and alert dialog
+Add login activity
+Fixed blank image and add actionsbar in main activity
+Started activity and icon
+Add .gitlab-ci.yml
+Add .gitignore

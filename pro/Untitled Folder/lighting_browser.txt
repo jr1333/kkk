@@ -1,0 +1,3407 @@
+Remove redundant caching
+Actually limit mem cache size to 5 MB based on bitmap allocations
+Bump cache size to 5 MB
+Use correct count
+Enable configuration cache
+Updating gradle version and AGP plugin
+Update to latest jsoup
+Update to next jsoup version
+Update to latest non-breaking jsoup version
+Consolidate id functions
+Removing unnecessary comment
+Remove reading mode since it's very mediocre
+Cleaning up code
+Fixing bug where coordinator tried to coordinate before the view was laid out
+Cleaning up imports
+Replace old deprecated preferences with new androidx preferences
+Fixing import and export of bookmarks
+Define task affinity globally
+Removing unused resources
+Make settings have the same task affinity as the default
+Fixing bookmark edit title
+Fixing formatting
+Add missing permissions
+Change task affinity for incognito and default browsing modes to avoid orphaning activities
+Fix crash in incognito mode
+Don't display blank titles
+Migrate to rx3
+Don't use the default filename for the UI if we don't know the mimetype
+
+improves the download experience
+Remove I2P support
+
+I don't want to support this anymore.
+Cleaning up lint warnings
+Fixing issue where release builds cant reference leak canary
+Update okhttp and okio
+Re-enable leak canary
+Target API 33
+
+TODO still
+- Upgrade leak canary
+- Release builds broken
+- Can't request permissions in settings activities, so need to rewrite settings activities
+Fix bug where empty titles are recorded in history
+Fixing iconography colors
+Actually jetifier still needed
+Change tab selection logic to prioritize picking the tab in front of the current one when closing
+Update gradle plugin and remove jetifier
+Increase memory usage
+Remove broken jacoco configuration
+Upgrade jacoco
+Converting gradle to use kotlin dsl
+Fixing bug where initialization could not occur if the list was empty
+Formatting
+Fixing issue with new tab ordering
+Switch to Kotlin gradle DSL
+Utilize a default title so that the tab title isn't ever blank
+Ensure that repository functions operate on the correct scheduler
+Simplifying data source provider by injecting the data sources
+Fixing lint warning
+Removing unused and dead code
+Remove legacy theme provider as it is no longer needed after removing old browser code
+Don't allow new tabs to be created before initialization is complete
+Subscribe to whole upstream observable on the same thread
+Removing deprecated code that isn't needed
+Implementing http auth request, ssl error, and form resubmission handling
+Support zoom scale changing
+Fixing search bar focus issues
+Removing unnecessary super calls
+Internalize the initialization of the tabs to the repository to handle the initial URL correctly
+Revert "Fixing problematic initialization sequence that mutated the tabs list from multiple places"
+
+This reverts commit c5202c04e2157103352203a0f9181a4ba33002d3.
+Fixing problematic initialization sequence that mutated the tabs list from multiple places
+Reducing visibility on unused functions
+
+Keeping functions since they are historically useful for context
+Adding missing documentation
+Fixing formatting
+Executing exit cleanup when the browser closes
+Animate back button transition in bookmark tab
+Cleaning up code
+Fixing focus issue with search box
+Improving documentation of tab classes
+Documenting browser apis
+Improving documentation
+Replace star imports with direct imports
+Fixing cursors
+Improving package structure
+Improving package structure
+Adding missing documentation and improving formatting
+Cleaning up unnecessary enums
+Cleaning up code to remove old SDK int checks
+Updating documentation
+Adding interface documentation
+Update documentation
+Reformatting code
+Moving files to the correct package
+Moving root activities to the root directory
+Moving files out of temp package and into main package
+Removing old browser code
+Moving class to appropriate package
+Supporting restoring lost tabs preference
+WebRtc support
+Support fullscreen video
+Fixing build
+Fixing lint errors
+Support upload in the browser
+Bump min sdk to 21, RIP kitkat
+Support proxying
+Reimplementing proxy in new tab impementation
+Support reopening closed tabs
+Support color mode
+Disable item animation for desktop tabs
+
+it just looks bad
+Go up to the root folder when deleting a folder
+Separating the tab list state from the view state since they are not directly related
+
+Also avoids race conditions from occurring with multiple subscriptions to the tab states that would only be resolved by creating a monolithic subscription to all tabs at once
+Don't record history entries with blank URLs
+Change default homepage to bookmarks
+Implementing theme aware homepage and fixing theme awareness with other pages
+Theming download and history pages
+Theming the bookmark page
+Fixing issue where subscribing to the url changes from two different subscriptions caused the tabs to be incorrectly updated
+Support create and close window requests
+Prevent local file URLs from being unilaterally loaded by the browser without user consent
+Implementing most key combos
+Avoid subscribing to the bookmark repo on the main thread
+Properly cache favicons for use elsewhere
+Enable and disable menu items based on current URL
+Show the freeze icon as the tab icon when the tab is frozen
+Fixing issues with search bar focus and the URL displayed
+Fixing behavior issue where the favicon would be incorrect if the page didn't have an icon
+Properly handle the back button when the tab can no longer "go back"
+Properly show the toolbar when switching tabs and when the url changes
+Hide keyboard when the webview is focused
+Go home when the home button his hit in desktop configuration mode
+Close tab drawers whenever the current tab is changed
+Hide the keyboard when a search suggestion is clicked
+Properly handle the back button in the browser
+
+Mostly implement proper back button handling. Currently missing handling for search bar focus and custom view hiding
+Fix UI flashing when deleting a tab
+Fix issue where new tabs would be opened before old tabs
+Need to support going home in certain configurations
+Implementing incognito mode
+Fixe reading mode button not working
+Support the tools menu in the browser
+Adjusting dark theme search bar background
+Disable overscroll on webviews since it causes distortion of the webpages and looks weird
+Properly adding subscription to disposable
+Fixing issue where tab close can be triggered on tabs that are in the process of closing
+Updating gradle
+Upgrading gradle
+Support downloads
+Support showing long press options for history page
+Support deleting downloads on download page
+Properly display dialog for bookmark and folder page and reload the page
+Upgrade dependencies
+Close bookmark and tab drawers after clicking on a tab or bookmark
+Formatting
+Add option support to folders
+Moving enums to correct contract location
+Handling tab long press and tab closing dialog
+Open another app when navigating to URLs that can be handled outside the app
+Handle panic clean
+Fix bug where tab freezing wouldn't work due to freezing the state after it was destroyed
+Add todo for special URL long clicks
+Fix lint warnings
+Handle long presses on the webview
+Update gradle
+Handle long click partially
+Upgrading gradle tools
+Removing unused imports
+Cleaning up lambdas
+Creating browser scope that scopes browser instance
+Updating gradle and dependencies
+Handle hiding toolbar while scrolling
+desktop and drawer tab support
+Show the ssl state when the icon is clicked
+Handle find in page
+Updating gradle
+Handle back/forward menu items, handle opening tabs and bookmarks
+Support adding URL to home screen
+Add in long click function
+Handle bookmark back button display
+Show root folder when back is pressed
+Add support for editing bookmark and folder
+Full support for adding bookmarks
+Support back press
+Support custom browser headers
+Simplify map
+Simplifying subscriptions
+Fix issue where search didn't lose focus and the wrong text was set
+Support new deeplinks
+Support opening links
+Remove unnecessary state render
+Handle tab updates that occur in the background
+Handle tab freezing and restoring
+Load homepage on home press
+Simplify key handling
+Only handle key up scenarios
+Add missing click bindings
+Support enabling and disabling add bookmark icon, partial bookmark/unbookmark support
+Fixing bug where search sometimes just reloaded tab, caused by focus clear triggering setText, also filtering out empty searches
+Support adblocking
+Create partial state class that allows the diff in the state to be rendered by the view without re-rendering everything
+Fixing search focus display of URL
+Handle focus issues in the search view
+Support share and copy link
+Rename Tab to more descriptive TabViewState
+Handle keyboard combos and handle menu clicks with the same style of adapter
+Adding text changed listener to handle style removal
+Support menu clicks
+Support loading favicons in tabs and bookmarks
+immediately display URL that will be loaded and set title
+Adding placeholder docs
+Support custom search query
+Handle url display
+inject dependencies and create new tabs using home page
+Extract TabModel
+Add history recording
+Initial browser2 rewrite
+
+First stage of the browser2 rewrite. partially functional with search, tab and bookmark navigation.
+Add named arguments
+Fix lint warnings
+Fixing lint warnings
+Fixing test for robolectric update
+Updating dependencies
+Target Android R
+Updating dependencies
+Update gradle plugin
+Removing unused strings
+Merge pull request #780 from chk1/dev
+
+Fix bookmark import switching URL and title
+Merge branch 'dev' into dev
+Fixing lint warnings
+Updating dependencies
+Fix bookmark import switching url and title
+Add support for importing bookmarks from backups in the netscape bookmark format
+
+Support importing from backup files in the new HTML format as well as the old custom JSON format.
+Improving formatting
+Don't use mutable data structure in InMemoryHostsRepository
+FIxing concurrency bug by making bookmark list immutable and just swapping out the old list with the new list
+Utilize android Uri instead of java URI for better character set handling
+Use 'url' as the primary key in the HostsDatabase for improved performance
+Log hosts count for better debugging
+Merge pull request #768 from anthonycr/dev
+
+Release 5.1.0
+Merge pull request #769 from iKirby/translation
+
+Update Simplified Chinese translations
+Update Simplified Chinese translations
+Merge branch 'master' into dev
+Fixing typo in change log
+Prepare for 5.1.0 release
+Allow multiple windows in incognito and support for storage capabilities for full incognito capable API versions
+Simplify rx observable declarations
+Deduplicate interceptor creation
+Making query more correct
+
+It was working before, but this is more correct and returns less data.
+Simplifying domain parsing logic
+Renaming function to be more clear in its usage
+Simplifying interpolator implementation
+Move backpressure strategy declaration up to avoid processing strings we can't receive
+Simplifying code
+Removing static app component state in favor of Injector
+Allow the suggestion insert button for all suggestions
+Add button to search suggestions that inserts the query into the search box
+Adding tab freezing feature that only loads the latest tab and delays initializing the others until the view is attached.
+
+This should save memory and improve performance.
+Replace ApiUtils with Capabilities
+Rename functions to represent their functionality
+Adding support for fully functional and more secure incognito mode
+
+Incognito mode is now run in a separate process that does not share cookies or app cache or web databases with the normal mode.
+Fixing bug where the search bar could be focused through the drawers
+Merge pull request #762 from iKirby/translation
+
+Update Simplified Chinese translations
+removing i2p submodule in favor of newly published artifacts
+Update Simplified Chinese translations
+Upgrading gradle version
+Use template instead of concatenation
+Adding copy action to incognito since we already have share option
+Removing unnecessary padding and setting contentDescription
+Merge pull request #759 from anthonycr/dev
+
+Version 5.0.2
+Merge branch 'master' into dev
+Version 5.0.2
+Don't directly reference appcompat ImageView
+Extracting StyleRemovingTextWatcher from BrowserActivity for reduced complexity
+Fixing status bar color when desktop tabs are used
+Removing unnecessary framelayout
+Reduce number of views by unwrapping imageview buttons
+Reduce number of views by unwrapping image views
+Avoiding kotlin android extensions
+Use string to format search in page query
+Using dimensions wherever possible
+
+Also adjust height of toolbar search bar
+Use extension function to avoid deprecated API
+Updating androidx and other dependencies
+Fixing lint warnings
+Removing unused style
+Fixing content descriptions, autofill, and inputType warnings
+Using lambda syntax
+Show cName if oName is blank
+Showing site's SSL certificate info when the SSL info icon is pressed and fixing visual bug where icon showed wrong state
+Making SSL icon clickable for future feature
+Adding missing documentation
+Fix segfaults triggered by new windows that were being caused by header modification
+
+Disallow multi window when header are modified.
+Hardcode versionCode and versionName so that F-Droid can see the latest version
+Use interface instead of abstract class for simplicity
+Adding reusable annotation to mark dependencies that don't need to be singletons but can be reused for lower memory usage
+Fixing build for I2P
+Force incognito activity to dark theme
+Updating user agents
+Support for Android 10
+Replace usage of setDialogSize with resizeAndShow
+Creating ProxyChoice enum
+Creating AppTheme enum
+Creating RenderingMode enum
+Utilize enum preference for SearchBoxModel
+Creating an enum preference delegate
+Replacing setDialogSize with resizeAndShow
+Use ReadingActivity.launch wherever possible
+Unify custom view display logic
+Inject javascript files
+Merge pull request #754 from anthonycr/dev
+
+Fixing play store build
+Exclude x86 architecture since there is no x86_64 library available, preventing play deploy
+Merge pull request #753 from anthonycr/dev
+
+Version 5.0.1
+Version 5.0.1
+Adding empty gradle file to fix i2p build
+Adding i2p android base
+Relying on I2P submodule until 0.9.41 is available on maven
+
+Need 64 bit binaries to be able to ship new version of the app.
+Fixing minor filtering issue
+Merge pull request #752 from anthonycr/dev
+
+Pulling translations into 5.0.0 release
+Fixing release date
+Fixing unescaped apostrophe
+Merge pull request #751 from cagatayldzz/dev
+
+Update TR strings.xml
+Merge pull request #750 from anthonycr/dev
+
+Version 5.0.0
+Merge branch 'dev' into dev
+Updating changelog for version 5.0.0
+Update TR strings.xml
+Update TR strings.xml
+Don't install multidex on lollipop and above
+Updating default bookmarks to add changelog and remove fb
+Changing version to 5.0.0 since changelog is so large
+Merge branch 'master' into dev
+Merge branch 'dev' of https://github.com/anthonycr/Lightning-Browser into dev
+Version bump for 4.6.0
+Merge pull request #748 from iKirby/translation
+
+Update Simplified Chinese translations
+Merge branch 'dev' into translation
+Fixing tests for OkHttp downgrade and updating kotlin
+Merge branch 'dev' into translation
+Reflectively install multidex to avoid loading the class during compilation on release
+Fixing desktop layout new tab button size
+Downgrading okhttp since I still want to support kitkat
+Supporting debug on kitkat with conditional multidex
+Close incognito notification if incognito activity is destroyed
+Merge branch 'dev' into translation
+Renaming test to match file name
+Improving naming of some favicon related functions
+Tests for WebPage
+Improving packaging
+Replacing BookmarksFragment with BookmarksView
+Remove unnecessary drawable state jumping
+Creating simplified TabViewState
+Using merge as root tag of each tab view
+Replace TabsFragment with individual views
+Fix some inappropriate translations
+
+(cherry picked from commit 8f5376b3532e23d8cf0d3678e937443fd3666d46)
+Remove translations for open source licenses
+
+(cherry picked from commit d73d2295cc8aac1646d9f38eb935f949b39b0c74)
+Redone Simplified Chinese translations
+Fixing test
+Improve type safety by utilizing Host type instead of string for BloomFilter type
+Pass back Host instead of String
+Adding missing documentation
+Adding documentation to UserPreferences
+Adding missing documentation
+Remove unnecessary webview initialization
+Set property so that preferences are accounted for
+Simplify navigation drawer adjusting logic
+Inlining function call
+Simplify search suggestion selection logic
+Change suggestions icon for history to clock
+Removing unused code
+Fixing tab strip display issue caused by re-sizing the toolbar
+Replace manual bitmap display for tab count with TabCountView
+Updating gradle and android gradle plugin
+Injecting schedulers wherever possible
+Convert UrlUtils to extension functions
+Utilize icon state color instead of manually setting color filter
+Create component builder instead of manually injecting module dependencies
+Replace stateful filtering of search, bookmark, and history suggestions with reactive flowable based approach
+Setting the color state on the vector to fix theming issue
+Removing unnecessary background color setting
+Enable and disable back button in drawers, theme menu item in XML
+Make bookmark icon constant size
+Removing unused method
+Utilizing state selector to avoid manually setting resources
+Fixing full screen video bug where orientation defaulted to user orientation instead of requesting landscape
+
+Since most videos are in landscape this resulted in a bad UX
+Use XML styling instead of programatic styling of search box
+Set color tint on vector drawables instead of programmatically setting it
+Updating core-ktx and targetting jvm 1.8 bytecode
+Properly theming the find in page tool bar
+Replacing protected function with ScreenSize class
+Fixing lint warnings and using lambda syntax in java code
+Utilizing separate icon for refresh instead of compound drawable
+Simplify bookmark icon urls
+Fixing bug where local files could not be loaded when linked from other pages
+Fixing lint warnings
+Updating okHttp
+Updating dependencies
+Updating tests for lazy client initialization
+Lazily loading File objects to not block main thread
+Use constraint layout to reduce the size of the toolbar
+Changing backgrounds of drawer buttons for better perceived responsiveness
+Merge pull request #740 from anthonycr/scalable-ad-blocking
+
+Scalable Ad Blocking
+Merge branch 'dev' into scalable-ad-blocking
+Merge pull request #728 from SkewedZeppelin/dev
+
+Add option to enable Save-Data header
+Merge pull request #739 from donfuxx/cleanup-articletextextractor
+
+remove some unused code in ArticleTextExtractor
+Merge branch 'dev' into scalable-ad-blocking
+Merge pull request #731 from pan93412/translation
+
+Update Chinese (Taiwan) Translation.
+Signal to system that the WebView is important for auto fill
+Properly update enabled state of the refresh button after hosts source change
+Returning preference in DSL for expanded usage
+Properly handle unsuccessful remote requests
+Support force refreshing of hosts file from a remote source
+
+- Added in user agent for best practices so that site owners can see who is making requests.
+Update android build tools
+remove some unused code in ArticleTextExtractor
+Updating dependencies
+
+- Updated Rx
+- Updated dagger
+- Updated okhttp
+- Updated kotlin
+- Updated assertJ
+- Updated mockito
+Removing unnecessary DI annotations
+
+This class is manually constructed
+Moving parser to separate package
+Updating gradle plugin, gradle version, androidx, and butterknife
+Support refresh and self identification by a host
+
+Will allow support for periodic refresh of the url backed hosts
+Encapsulate stream reading within the HostsFileParser simplifying consumption
+Handle errors when making requests to the network URL or the local hosts
+
+- Don't clear hosts until we've loaded new ones, allowing the old hosts to provide coverage until we can successfullly make a request.
+- Don't initialize the blocker with a bloom filter if the repo has no hosts in it as it would cause a bad experience.
+Don't grab all hosts from the repository every time the ad blocker is loaded
+Rough implementation of the UrlHostsDataSource
+Adding prompt to restart the app when switching to default
+Support switching to local file data source by storing the identity hash of each source
+UI Support for local file adblock source
+Fixing lint warnings
+Fixing crash caused by network connectivity problems
+
+Should never return null from a callable
+Fixing threading in TabsManager
+Localizing suggestions better
+Improving readability and consistency
+Don't try to load non network URLs in the WebView
+Show dialog when adding a bookmark
+
+This allows the user to change the folder before the bookmark is created
+Allowing ad blocking on free and plus versions
+Adding basic preference framework for changing ad block hosts source
+Adding nullable string preference
+Creating HostsDatabase for disk backed HostsRepository
+Update Chinese (Taiwan) Translation.
+Don't convert to lambda to avoid loading instance before we need it
+Fixing bug in inlineTrim
+Only initialize the HostsRepository with data if it is empty, only read from hosts data source if repository is uninitialized
+Improve adblocker loading by serializing bloom filter to storage instead of recreating it every time
+
+- Created ObjectStore and JvmObjectStore which serialize objects to disk for fast recreation.
+- Created DelegatingBloomFilter which delegates to an internal mutable BloomFilter
+- Load bloom filter only once if possible.
+Updating tests for new robolectric
+Updating okhttp
+Updating test and build dependencies
+Removing explicit okio declaration as it was not needed
+Replace Guava BloomFilter with custom BloomFilter implementation backed by Murmur hashing algorithm
+
+- Motivated by build problems and APK size increase caused by Guava
+- Added BloomFilter interface
+- Added DefaultBloomFilter implementation
+- Added HashingAlgorithm interface
+- Added MurmurHash implementation from OSS project and MurmurHashStringAdapter
+- Added lowerHalf and upperHalf extension functions for integer bit operations.
+- Added tests for DefaultBloomFilter and integer extensions
+Merge pull request #730 from ali-demirtas/patch-1
+
+Update strings.xml
+Update strings.xml
+
+Incorrect and incomplete translations have been edited.
+Add option to enable Save-Data header
+
+See:
+https://www.ctrl.blog/entry/http-save-data
+https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/save-data/
+Inject assets instead of application, add missing documentation
+Updating guava and annotation lib
+Use extension to get services
+Remove unnecessary space in docs
+Fixing test for parsing refactor
+Update okio to the latest version
+Improve performance of parser with char replace and simpler substring, extract parser into class
+Remove unused constant
+Improve performance of hosts parsing by creating indexOfChar and containsChar
+Simplify starts with
+Improving performance by reducing allocation triggered by trim and equals
+Don't do unnecessary replacement
+Make blocking function naming more clear
+Make url param non null
+Use UTF8 as charset
+Make repository containsHost synchronous
+Decrease false positive rate on filter to 1%
+Using bloom filter to determine if URL is not blocked
+
+- Created BloomFilterAdBlocker to replace AssetsAdBlocker
+- Inject HostsDataSource and HostsRepository into BloomFilterAdBlocker
+- Create default AssetsHostsDataSource which reads from hosts file in assets
+- Create default InMemoryHostsRepository that just uses a map. It's loaded when the ad blocker is created.
+- TODO: Need to only load from data source and populate repository if it's empty. Also, cache bloom filter to disk for faster read.
+- Longterm TODO: Create database HostsRepository for hosts lists of unknown size.
+- Added guava so we can use BloomFilter
+Renamed WhiteListItem -> Entry and url property to domain
+Updating docs for allow list rename
+Updating core and appcompat dependencies
+Cleaning up usage of subject
+renaming constant arrays
+Rename logger, add domain
+Updating hosts file
+Fixing settings initialization crash
+Increasing size of small icon
+Making icon larger
+New browser icon
+Rename Whitelist to AllowList
+Adding ability to add or remove a URL from the adblock whitelist
+Use recycler view in list dialog to support complex DialogItem
+Create extension function that only calls pop if the stack is not empty
+Inject BuildInfo instead of referencing static BuildConfig
+Replacing android log with custom logger
+Replacing usage of android log in suggestions
+Make LightningView listen to connectivity itself
+Improve LightningView API by moving findInPage result functions to an interface
+Injecting logger instead of always invoking android logger
+Fixing lint warnings
+Enabling inline classes and progressive mode
+Update to kotlin 1.3
+Utilize stack instead of queue for proper ordering of closed tabs
+Using same request code for pre and post lollipop
+Using Jsoup dsl for home page
+Using jsoup dsl for history page
+Using jsoup dsl for download page
+Using Jsoup DSL for bookmark page construction
+Add missing documentation
+Allowing reopening recent tab in incognito and make it disk independent
+Extracting viewholder
+Breaking out data model class
+Reformatting files according to new formatting settings
+Updating build tools
+Fix bug where spaces in queries were incorrectly encoded
+Formatting
+Removing unnecessary function parameters
+Inject the main handler
+Merge pull request #717 from anthonycr/androidx-refactor
+
+Androidx refactor
+Including gradle.properties
+Updating dependencies
+Refactoring to use androidx instead of support library
+Update to support library 28
+
+- Enable multidex on debug
+- Added proguard rules for okhttp
+Updating dependencies
+Fix bug where last created tab was not selected
+Fix nullability problem with palette API
+Extract injector off context instead of referencing a static property
+Cleaning up copying to clipboard
+Inlining functions and cleaning up nullability warnings
+Fixing nullability problems with permissions model
+
+Fixed nullability problems to defaulting a null host to an empty host
+Cleaning up warnings and interop
+Simplifying initialization of tabs
+Refactor usage of initializers to use dependency injection
+Replacing DownloadPageBuilder and DownloadsPage with DownloadPageFactory
+Convert BookmarkPage and BookmarkPageBuilder to BookmarkPageFactory
+Refactorying StartPage and HomePageBuilder into HomePageFactory
+Convert HistoryPageBuilder to HistoryPageFactory
+Injecting the presenter and tabs manager
+Using separate qualifiers instead of Named
+Merge pull request #712 from anthonycr/tab-manager-refactor
+
+TabManager refactor
+Inject main thread instead of referencing it directly
+Replacing usage of Named with specific qualifiers
+Fix bug where current tab wasn't being set because of change to onTabChanged instead of tabChanged
+Refactoring tab manager code to be more readable and simplifying the logic
+
+- Simplified the tab manager initialization logic by converting initialization to more idiomatic rx streams based approach.
+- Maintained certain side effects by utilizing doOnNext or doOnSuccess
+- InitializeTabs now emits the last initialized tab so that it can be displayed in the UI.
+- Added a delayed initialization TabInitializer that requests the user's permission to initialize it.
+- Added observable extensions
+- Added an Option type taken from Arrow (not enough types are currently needed to pull in whole library)
+Order downloads by primary key
+Replace DownloadItem with DownloadEntry
+Merge pull request #711 from anthonycr/history-item-refactor
+
+Replace HistoryItem with WebPage sealed class
+Fix broken Kdoc
+Renaming parameters to match refactored classes
+Make SearchSuggestion a data class
+Replace HistoryItem with WebPage sealed class
+
+HistoryItem replaced with
+- WebPage
+  - HistoryEntry
+  - Bookmark
+    - Entry
+    - Folder
+  - SearchSuggestion
+Fix adapter formatting
+Unit tests for GOogleSuggestionsModel
+Unit tests for DuckSuggestionsModel
+Tests for BaiduSuggestionsModel
+Unit tests for NaverSuggestionsModel
+Passing headers with every initialization
+Making suggestions models testable
+Updating NaverSearch to fit the new system
+Cleaning up code
+Merge pull request #703 from limerainne/NaverSearch
+
+Add Naver search engine and suggestions
+Merge branch 'dev' into NaverSearch
+Simplifying settings setup
+Update kotlin version
+Merge pull request #709 from anthonycr/tab-initializer
+
+Creating TabInitializer visitor to standardize initial URL loading
+Merge pull request #701 from limerainne/dev
+
+Update Korean translations
+rename ResultMsgInitializer
+Merge branch 'dev' into dev
+Creating TabInitializer visitor to standardize initial URL loading.
+Remove unnecessary synchronization
+Simplifying tabmanager implementation
+Remove unused memory management
+Fixing formatting
+Removing unnecessary synchronized on LightningView functions
+Fixing bug where history wouldn't reload after deleting an item
+Improving database implementations
+Fixing formatting and utilizing useMap
+Cleaning up datatbase code
+Making code more idiomatic
+Fix indentation
+Improving readability of BookmarkDatabase
+Fixing bug where bookmark icon is not displayed correctly
+Make JSONArray extension inline
+Cleaning up suggestions
+Replacing readStringFromStream with usage of ResponseBody.string
+Using builder instead of parser to eliminate nullability
+Improving search suggestions API
+Replacing Utils function with better kotlin extensions
+Utilizing toast extension
+Converting toValidUri to extension on Uri
+Simplifying click listener implementation
+Convert drawTrapezoid to canvas extension function
+Utilizing extension function to desaturate bitmap
+Bumping build tools and fixing CI build
+Utilizing existing theme chooser function
+Utilizing toUri where possible, converting toValidUri to use data class
+Removing dead code with minSdk bump
+Simplifying upload logic
+Targetting Android 28
+Updating build to use gradle 4.10
+Bumping min sdk to 19
+Updating kotlin version
+Fixing indentation
+Inject preferences instead of application
+Swap out domainForUrl for existing string extension
+Improve preference delegate API
+Hiding implementation details of DatabaseDelegate via function
+Replacing LazyDatabase with DatabaseDelegate
+Injecting services instead of grabbing them from the context
+Converting uri util to uri extensions
+Using better factory methods for collection creation
+Make factory method more idiomatic
+Improving Rx observable streams
+switching to diskScheduler for observing page
+Update gradle build tools
+Cleaning up kotlin and fixing rx streams
+Replacing usage of bonsai with rxjava
+Using rx stream to import bookmarks from assets
+Switch initialization to use Rx
+Renaming observable classes
+Updating dependencies
+Add Naver search engine and suggestions
+Update Korean translations
+Filter on a single thread to prevent concurrent modification
+Don't re-subscribe if previous query is not complete
+Converting reading activity to use rxjava
+Converting HistoryPage to use Rx
+Switching adapter to use rx for threading
+Using Rx for the FaviconModel
+Updating kotlin and build tools dependencies
+Functional tests for ObservableBroadcastReceiver
+Convert NetworkConnectivityModle to use ObservableBroadcastReceiver
+Merge pull request #690 from LNDDYL/dev
+
+Updated translations
+Merge branch 'dev' into dev
+Updating dependencies
+Updating build tools
+Updating gradle plugin
+Fixing lint warnings
+Update mezzanine version
+Cleaning up activity
+Merge branch 'dev' into dev
+Updating gradle plugin, gradle version, and kotlin version
+fix
+fix
+fix
+New translations
+fix
+fix
+Merge pull request #1 from pan93412/dev
+
+Fix the zh_TW translation of Lightning Browser.
+Fix the zh_TW translation of Lightning Browser.
+修正翻譯 Lightning Browser 的正體中文 (zh_TW) 字串。
+
+Date: 2018.04.02
+日期：2018 年 4 月 2 日
+Time: 23:19 (UTC +08:00)
+時間：23:19
+Information: Fix some strings.
+說明：修正部份字串，使其更符合台灣用詞。
+fix
+fix
+fix
+New translations
+New translations
+New translations
+Updated to v4.5.1 (untranslated)
+Updating support library version
+Updating dependencies
+Adding dependencyUpdates plugin
+Fix naming
+Update kotlin version
+Forcing base branch to dev for code coverage
+Merge pull request #681 from anthonycr/preferences-refactor
+
+Preferences refactor
+Fixing default setting
+Fix build
+Merge pull request #672 from squeezer11/master
+
+Updated de (German) translation
+Removing preference manager
+Moving proxy checks
+Moving proxy host and port
+Moving proxy choice
+Remove unnecessary preference
+Moving leak canary preferences out to separate preferences class
+Moving preferences to userpreferences
+Moving screen size preference to UserPreferences
+Converting more preferences to kotlin
+Converting more preferences to kotlin
+Moving more preferences
+Moving settings to user preferences
+Fixing preference reference
+Moving adblock preference to UserPreferences
+String preference implementation
+IntPreference implementation
+New delegate approach to preferences
+Convert settings activity to kotlin
+Update mezzanine version
+Update kotlin version
+Updated de (German) translation
+
+Commit made via Stringlate
+Merge pull request #655 from PiwwowPants/bugfix/Debug-settings-checkbox-for-leak-canary-appears-twice
+
+Removed erroneous addPreferencesFromResources call
+Merge pull request #658 from badener95/dev
+
+German translation: Add new strings, fix typos, few nitpicks
+Merge pull request #659 from TKMankind/patch-1
+
+Update strings.xml
+Merge pull request #663 from eauland/patch-1
+
+Update French translation
+Converting general settings to kotlin
+Updating testing dependencies
+Updating dependencies
+Update build tools version
+Update kotlin version
+Update French translation
+Update strings.xml
+
+A small correction/Une petite correction.
+German translation: Add new strings, fix typos, few nitpicks
+Converting UrlUtils to kotlin
+Removed erroneous addPreferencesFromResources call
+Merge pull request #654 from anthonycr/settings-refactor
+
+Rewrite the advanced settings fragment
+Renaming method
+Replacing java collection with kotlin version
+Cleaning up lambda
+Adding documentation to AbstractSettingsFragment and renaming dynamic preference creator method
+Rewrite the advanced settings fragment
+Removing old bookmark manager since it's been so long since it was decommissioned
+Removing unnecessary layer of inheritence
+Updating mockito and support lib versions
+Update kotlin version
+Removing uneeded utils
+Converting bonsai observables to rx, adding rxkotlin
+Updating kotlin version
+Converting debug settings fragment to kotlin
+converting bookmark settings to kotlin
+Converting display fragment to kotlin
+Converting about fragment to kotlin
+Creating an abstract settings fragment to increase readability
+Merge pull request #645 from anthonycr/webrtc-support
+
+Adding support for WebRTC
+Updating readme for new permissions
+Removing unnecessary permissions
+Breaking out permissions handling into its own model/view layer
+
+If a resource is granted to a specific host, it will be granted for the duration of the browsing session.
+Merge branch 'webrtc-support' of https://github.com/anthonycr/Lightning-Browser into webrtc-support
+Only request permissions we need
+Merge branch 'dev' into webrtc-support
+Adding preference to allow turning WebRTC on and off
+Bumping rxjava version
+Update gradle version
+Update travis build
+Cleaning up observables, switching to rx
+Update build tools version
+Replacing stacktrace print with actual logging
+Cleaning up dependency injection code
+Adding support for WebRTC
+Cleaning up dialog builder class
+Cleaning up search box model
+Bumping support library version
+Bump kotlin version
+Internalizing right drawable click detection to SearchView
+Cleaning up code
+Unit tests for part of ViewExtensions
+Unit tests for JSONArrayExtensions
+unit tests for FaviconUtils
+Merge branch 'dev' of https://github.com/anthonycr/Lightning-Browser into dev
+Unit test for DialogItem
+Merge pull request #643 from anthonycr/test-coverage
+
+Adding tests for disposable broadcast receiver
+Adding tests for disposable broadcast receiver
+Merge pull request #642 from anthonycr/test-coverage
+
+Adding code coverage to repository
+Fixing build script
+Fixing coverage
+scoping the test coverage
+Adding codecov to build script
+Enable jacoco test coverage
+Merge pull request #641 from badener95/dev
+
+Update German translation
+Convert AppCompatPreferenceActivity to kotlin
+Updating dagger
+Add ability to handle web search intents
+Update strings.xml
+Update strings.xml
+Update strings.xml
+Update strings.xml
+Update strings.xml
+Update German translation
+Merge branch 'dev' of https://github.com/anthonycr/Lightning-Browser into dev
+Bumping mezzanine version
+Merge pull request #639 from m4sk1n/dev
+
+Update Polish translation
+Merge branch 'dev' into dev
+Removing now unnecessary butterknife proguard rules
+Update Polish translation
+
+Signed-off-by: Marcin Mikołajczak <me@m4sk.in>
+improving proguard rules to reduce apk size
+Updating rx version
+Update robolectric version and test target version
+Don't allow search suggestions in incognito
+Don't close activity when closing new tab since it deletes all tabs in incognito
+Allow urls to be opened in incognito if it's already open
+Fix bug where new tab long press wasn't opening the old tab
+Fix bug where pasting text into search bar could result in style and alignment change
+Removing unused class
+Adding history disposable
+Convert to apply
+Updating search suggestions to utilize rx observables
+Converting suggestions model to be reactive
+Unit tests for UriUtils
+Get rid of custom getters
+Keep robolectric version on api 26 for the time being
+Updating to handle glorious new nullability annotations in fragment, thanks jw
+Bumping target version to 27
+Replacing support-v4 with support-compat and support-fragment
+Undoing problematic changes
+Removing deprecated code in animators
+Fixing kdoc
+Enable wideColorGamut mode on supported devices
+Remove unnecessary repos from travis config
+Updating to android gradle plugin 3.0
+Converting resource utils to context extensions
+Merge pull request #637 from JumpingYang001/patch-1
+
+Add miss item "action_downloads" in values-zh-rCN
+Converting utils to kotlin
+Removing explicit close drawer method in favor of generic back press method
+Removing unnecessary synchronization on the UI thread
+Adding documentation to controller interface
+Add miss item "action_downloads" in values-zh-rCN
+Cleanup
+
+- Switching from properties with custom getters to functions
+- Using lambda instead of SAM for browser dialog listener
+- Simplifying notification code
+-
+removing log
+Documenting connectivity model
+Moving network observable from observer pattern to reactive pattern
+Removing unnecessary trim
+Removing unused function
+Simplifying logic
+Don't close the drawers when opening tab in background
+Convert startpage to use rx
+Converting bonsai code to rx
+Cleaning up network requests
+Improving suggestions readability and performance
+Exposing error as property
+Unit tests for BookmarkUiModel
+Renaming tests
+Reusing empty byte array
+Cleaning up declaration
+Changing SSL icons
+Don't show ssl icon when in edit mode
+Overlaying ssl icon on a white background so that its always visible
+Fixing color reference
+Supporting incognito notification on pre lollipop
+Fixing bug where javascript was getting wrongly escaped
+Making code more readable
+More efficient DI using binding module
+Cleaning up method declarations
+Fixing tests
+updating build tools
+Updating dagger dependency
+Updating io thread
+Injecting database scheduler
+Cleaning up di
+renaming test
+Unit tests for closeable extensions
+Getting rid of unnecessary extension
+Renaming from model to repository
+Unit tests for no-op ad blocker
+Simplifying domainForUrl
+Unit tests for ssl warning preferences
+Using new url instead of current url
+Update ssl state on tab switch
+Fixing threading problems with accessing the view on the wrong thread
+Unit tests for SessionWhitelistModel
+Getting rid of redundant method
+Cleaning up databases and documentation
+Groundwork for whitelist feature
+Properly setting ssl state
+Cleaning up injection
+adding private constructor
+Fixing interop problems
+Adding lock icon to display ssl status
+Adding feature for ignoring Ssl warnings until the browser is closed
+Converting history database to rx
+Converting download database to use Rx
+Close databases upon table deletion
+Auto closing cursors
+Renaming variable
+Removing unnecessary !!
+Breaking out utils into view extensions
+removing unnecessary use of utils
+Cleaning up final problems
+remove utils which didn't let lint work
+Converting StringBuilderUtils to extensions
+Unit tests for AssetsAdBlocker
+Cleaning up gradle, adding assertj test dependency
+Making utils final
+Fixing field names
+Making code more idomatic, fixing utils classes
+Adding documentation
+moving extensions
+fixing bug with database opening
+Updating lint rules, cleaning up code
+Show incognito icon in incognito mode to distinguish from dark mode
+Convert proxy annotation to kotlin
+Removing unnecessary close method
+Adding ongoing incognito notification feature
+Cleaning up code
+Fixing shortcut addition in Android O
+Cleaning up code
+Cleaning up dialogs
+Removing disfunctional bookmark import from browser
+Converting from bonsai to rx
+Updating leak canary
+Inlining constants for clarity
+Cleaning up method declarations
+Updating to latest kotlin version
+Converting LightningView to kotlin
+Fixing bug where the search bar was not hidden when scrolling
+renaming incorrectly named variables
+Cleaning imports
+Cleaning up resource closing
+Updating okhttp
+Cleaning up
+Cleaning up naming and crash
+Converting BrowserActivity to kotlin
+Converting tabsfragment to kotlin
+Updating kotlin plugin
+Remove manual view cache clearing call which was unnecessary
+Converting bookmark drawer to kotlin
+Fixing potential color bugs
+Converting dialog utils to kotlin
+Converting dialog builder to kotlin
+Converting base activity to kotlin
+Converting activity to kotlin
+Converting top level activities to kotlin
+Converting handlers to kotlin
+Converting title holder to kotlin
+Converting webview client to kotlin
+Converting chrome client to kotlin
+Converting application class to kotlin
+Converting tabs manager to kotlin
+Formatting docs
+Converting presenter to kotlin
+Updating to eap kotlin version
+Converting TabViewModel to TabViewState
+Converting TabsView to kotlin
+Converting browser view to kotlin
+Converting bookmark database to kotlin
+Converting downloads database to kotlin
+Converting constants to kotlin
+Convert history database to kotlin, create lazy database loader
+Fixing search view styling
+ Converting to kotlin
+Converting model to kotlin
+Converting utils to kotlin
+Fixing naming
+Converting page files to kotlin
+Moving html page files to a different package
+Converting download page to utilize mezzanine
+Fixing page title
+Converting history page to use mezzanine
+Converting homepage generation to utilize mezzanine
+Cleaning up kotlin code
+Fix bug where invalidating the data set when it hadn't changed caused bugs with the dropdown
+Updating the support library and butterknife
+Updating jsoup
+Updating kotlin
+Switching to better file generation for bookmarks page
+Converting BookmarkUiModel to Kotlin
+Merge pull request #614 from ma1uta/dev
+
+Russian translation.
+Russian translation.
+Moving js files to src folder
+Removing unnecessary countdown timer to hide toast
+Merge pull request #609 from LordSomen/dev
+
+A toast message will appear whenever a bookmark is added to a url
+added the time period in the toast message ....updating Utils.showtoast method
+Toast message showing whenever add bookmark is clicked...changed as directed
+adding bookmarks value added into string.xml
+Merge remote-tracking branch 'upstream/dev' into lol
+fetching the updated branch
+Fix visibility
+Fixing lint warnings
+Fixing null problems
+Updating the ui color
+Utilize mezzanine to use with javascript
+Rename variable
+Convert animation utils to kotlin
+Getting rid of reliance on tab manager from adapter
+Add non null annotation
+Adding more nullability annotations
+Adding nullability annotations where possible
+Convert interface to kotlin
+A toast message will appear whenever a bookmark is added to a url
+Converting adblocker to kotlin, creating common interface
+moving activity, updating butterknife
+Changing from val to function
+Merge pull request #606 from cagatayldzz/dev
+
+Update TR strings.xml
+Update strings.xml
+Convert controller to kotlin
+Build fix
+Converting search box model to kotlin
+Converting tests to kotlin
+Converting interpolator to kotlin
+Creating a network observable that notifies consumers of network change events
+Getting rid of properties with custom getters and replacing with functions
+Converting provider class to kotlin
+Converting adapter to kotlin, adding kotlin android extensions
+Properly closing cursors
+Converting the rest of the suggestions code to kotlin
+Javadoc for tabs view
+Fixing potential null pointer
+Fixing broken translation
+Merge pull request #602 from tryton-vanmeer/history-new-tab
+
+Open History in new tab
+Open History page in new tab
+
+History page is opened in a new tab. If there is a history tab open already, switch to it.
+Merge pull request #601 from cagatayldzz/dev
+
+Update TR strings.xml
+Update strings.xml
+Merge branch 'master' into dev
+Merge pull request #597 from anthonycr/dev
+
+Version 4.5.1
+Adding 4.5.1 release info
+Bump for bugfix
+Breaking out parsing code into different method
+Merge pull request #596 from luca020400/patch-1
+
+GoogleSuggestions: Switch to UTF-8 encoding
+GoogleSuggestions: Switch to UTF-8 encoding
+Converting search engines to kotlin
+Cleaning up settings
+Merge pull request #595 from msya/msya/add-kotlin
+
+Add Kotlin and Convert SuggestionManager to Kotlin
+Cleaning up the ResourcesUtils
+Improving packaging structure
+Clean up code
+Added Kotlin to project and converted SearchSuggestionManager to Kotlin
+Updating formatting
+Changing download options
+Cleaning up redundant initializers
+Cleaning up code
+Cleaning up documentation
+Moving search suggestions into their own package
+Improving the way search engine preferences are handled
+Fixing javadocs
+Merge pull request #592 from Zoraver/dev
+
+Enhanced keyboard shortcuts.
+Improving the way search engines are handled
+Breaking out search box display logic into a ui model
+Enhanced keyboard shortcuts.  Added Ctrl+f to find in page, Alt+<number> to switch to a specific tab, and Ctrl+Shift+p to open a new private window.  Ctrl+p was left reserved for printing.
+Unit tests for StringBuilderUtils, fixing trim method in StringBuilderUtils
+Updating bookmark database to handle optional trailing slashes
+Merge pull request #589 from Zoraver/dev
+
+Significantly improved multiwindow experience.
+Significantly improved multiwindow experience.
+Merge pull request #588 from DF1E/dev
+
+update downloads
+Merge pull request #586 from t61p/japanese-translation
+
+Japanese translation
+fix missing parameters
+udpate downloads design
+Fixing bug where last tab would be destroyed on exit in certain cases
+Synchronizing access to database
+Switching to IO scheduler and cleaning up cache method
+Adding todo and switching to compat interpolator
+Adding todo around bookmark long press bug
+Naming dialog builder field correctly
+Fixing twitter URL
+Japanese translation update
+Merge remote-tracking branch 'upstream/dev' into japanese-translation
+Adding simple unit tests
+Getting rid of google favicon fetching and using generated favicon as fallbacks
+Switching to URLUtil where possible
+Fixing bug where folders didn't show up on the bookmarks page
+Reducing usage of file names
+Referencing controller instead of browser activity
+Merge pull request #581 from DF1E/dev
+
+download improvements
+Nice color default icons for bookmarks
+Fixing history and download item sorting
+inject DownloadHandler
+
++ don't save downloads in incognito
+downloads - show message if file doesn't exist
+Adding favicons read off disk to memory cache
+Fixing equals and dashcode for download and history items
+Cleaning up History and Download Items
+Switching HistoryDatabase to implement reactive interface
+Updating travis build components
+Modifying language around disabled settings
+Updating support library
+Updating hosts file
+Getting rid of unnecessary casts in findViewById!!!
+Bumping target to API 26
+Updating gradle version
+Merge branch 'master' into dev
+Merge pull request #580 from anthonycr/dev
+
+Release 4.5.0
+Added missing change log items
+Adding change log
+Updating bookmark page and history page with changes from @ByteHamster
+Bumping version for beta
+Fixing exception thrown due to observable using the wrong thread
+Bumping version codes for beta bugfix
+Safeguarding against runtime exceptions when importing and exporting
+Ensuring that bookmark export failures are handled
+Fixing bugs resulting from not unsubscribing
+Adding todo
+Fix favicon retrieval from cache, disable preemptive favicon fetching
+Bumping version for beta
+Catch fileuriexposedexception for now
+Fixing problem with unsafe URIs
+Fixing crashes resulting from fragment lifecycle mismanagement
+Fixing bug where icon could be the wrong color
+
+Without mutating icon could be the wrong color after theme change
+Adding proguard warning exemptions for okhttp
+Bumping version for beta
+Cleaning up lint
+Fixing strings
+Merge pull request #552 from Roboe/l10n-spanish
+
+Update Spanish (es) localization
+Merge branch 'dev' into l10n-spanish
+Merge pull request #495 from Freddynic159/patch-1
+
+Updated spanish translation
+Merge branch 'dev' into patch-1
+Cleaning up recent merge problems
+Merge pull request #485 from xpirt/dev
+
+update italian translations and minor changes
+Merge branch 'dev' into dev
+Fixing potential null pointers
+Fixing Greek and Lithuanian languages
+Updating build tools and okhttp
+Merge pull request #519 from Zoraver/dev
+
+Added Basic Keyboard Shortcut Support
+Fixed problems with German translation file
+Merge pull request #394 from pejakm/srupd
+
+Update Serbian language
+Merge pull request #502 from Penturon/dev
+
+Updated german translation
+Merge branch 'dev' into dev
+Merge pull request #397 from bebolint98/patch-3
+
+Update strings.xml
+Merge pull request #387 from HendrikBoone/dev
+
+Dutch translations
+Fixing Brazilian translations
+Merge pull request #456 from stellasythe/dev
+
+Portuguese-Brazilian translation
+Merge pull request #577 from jiaojianhua/upstream
+
+Baidu search suggestion
+Merge pull request #572 from DF1E/dev
+
+add downloads page
+Merge branch 'dev' into dev
+minor changes
+New: Baidu search suggestion
+Add Baidu searc suggestion
+Removing unused imports
+Updating dagger
+Updating butterknife
+fixes for downloads page
+
+- fixes open downloads
+- fix if download dialog canceled
+- save image downloads
+fix refreshing page after deleting all bookmarks
+
+simple forgot to add handleDownloadDeleted()
+slightly improved history and downloads html
+add delete downloads dialog
+add DownloadsPage
+Fix logic where only start pages should be excluded from close
+Fixing ridiculous switches
+Fixing errant capital letter
+Fixing dialog padding for seekbar dialogs
+Moving to use sentence case
+Cleaning up dialogs throughout the app
+Removing unnecessary executor
+Setting compat vector usage for all versions <= KitKat
+Merge pull request #569 from xiehuihui/dev
+
+It crash when it starts in KitKat(API level 19).
+Improving http auth dialog ui
+Merge pull request #570 from cagatayldzz/dev
+
+Updated Turkish translation
+Update strings.xml
+It crash when it starts in KitKat(API level 19).
+Merge pull request #522 from fid-jose/dev
+
+Show realm in HTTP auth dialog
+Fixing arabic formatting
+Adding file size to download dialog thanks to @alinux78
+Applying changes from @Mishiranu PR
+Adding share option to context menu
+Forcibly opt out of any metrics google may collect within the web view
+Documentation for favicon model
+Utilizing LRUCache for in memory bitmap caching
+Increase the max supported aspect ratio
+Documentation for HistoryModel
+Switching to lazy database for history
+Changing full screen to be enabled by default
+Add sorting back to bookmarks
+Fixing bug where add/remove bookmark button didn't work
+Using diffutil to simplify updating the list
+Fixing inconsistency between browser and settings activities
+Updating grade plugin
+Adding documentation for ThemeUtils
+Darkening the status bar
+Adding setting for black status bar
+Avoid constant condition by changing full_version declaration
+Merge pull request #567 from anthonycr/bookmarks-refactor
+
+Moving bookmarks from flat file to database
+Updating leakcanary
+Update and rename Mozilla Public License v. 2.0 to LICENSE
+Removing incomplete license file
+Removing no longer necessary gitmodules file
+Removing unnecessary iml file
+Add documentation for BookmarkUiModel
+Documentation for BookmarkExporter
+Merge branch 'dev' into bookmarks-refactor
+Merge pull request #556 from MarkThat/patch-4
+
+Fixed some old typos and re-worked some strings
+Merge pull request #562 from mtbu/dev
+
+Prevent URL-box resetting on cursor movement
+Japanese translation update (#565)
+Cleaning up bookmark initialization logic
+Import bookmarks from assets if the database is empty
+Moving old bookmark manager to LegacyBookmarkManager
+
+LegacyBookmarkManager has read only functionality
+Documentation for the bookmark model
+Moving bookmarks storage from flat file to database
+Removing unnecessary comments
+Making history page method static
+Break out rotation animation into animation utils
+Switching from getSimpleName to hardcoded tag
+Setting the background of the item
+Switching to recycler view
+Making the tab object tag more specific for its use case
+Deleting unused code
+Japanese translation update
+Removing unused class
+Simplifying shouldOverrideUrlLoading
+Using observables instead of executors
+Fix bug with background tabs opening urls
+
+If a background tab opened a URL that triggered the intent chooser, and
+the user chose to open the URL in the browser, the current tab would
+open the URL instead of the originating URL. Using the tab’s hashcode,
+the original tab now will open the URL.
+Removing unnecessary long click listener
+Removing event buss
+Ensure that published items aren't null
+Inferring nullity
+Inferring nullity
+Cleaning up unused code
+Better stringbuilder comparison
+Localizing log tags
+Getting rid of BrowserApp.get method
+Injecting application where possible
+More injection
+Constructor injection for HistoryDatabase
+Constructor injection > field injection
+Improving memory performance in case with multiple hosts per line
+Moving string utils methods to a utils class
+Prevent URL-box resetting on cursor movement
+
+Stop the URL-box from resetting to the current URL (or blank) whenever the user clicks on it to move the cursor
+Improving performance of adblocking code by utilizing stringbuilder
+Fixing fragment lifecycle for tab and bookmark drawers
+Updating dagger 2
+Updating to butterknife v8
+Using butterknife to bind views in fragments
+Removing unused resources
+Cleaning up potential NPEs and other lint warnings
+Making encoding a constructor parameter
+Use built in OkHttpCache instead of manual cache
+Cleaning up suggestions model code
+Switching from task thread to IO thread where appropriate
+Renaming task method
+Keeping connectivity manager around rather than getting it every time
+Annotating suggestions methods with nullable annotations
+Fixed and removed the languages strings
+Fixed
+Using okhttpclient for suggestions downloads
+Use OkHttp to download images
+I forgot the languages strings! Updated.
+Fixed some old typos and re-worked some strings
+
+It would be cool to have these changes in the next update since the latest version has some outdated translations which may confuse users.
+[Spanish l10n] Update strings
+Cleaning up image request logic
+Reducing code duplication in image downloader
+Dropping async task for bonsai in image downloading
+Making html page generation reactive
+Moving to asynchronous consumption of the HistoryDatabase
+Updating grade
+Moving away from raw query and cleaned up query code
+Fixing crash on restore caused by bonsai upgrade
+Fixing nullable problems
+Cleaning up lint warnings caused by appcompat upgrade
+Removing bit about submodules
+Update support library version (#542)
+Merge pull request #541 from anthonycr/readme-formatting
+
+Fix formatting of readme
+Fix formatting of redme
+Merge pull request #540 from anthonycr/removing-submodules
+
+Removing submodules
+removing bonsai submodule
+removing animated progress bar submodule
+Giving gradlew proper privileges
+Updating travis build configuration
+removed netcipher submodule correctly
+Updating jsoup and leak canary
+Moving new Chinese translations to correct folder
+Moving to net cipher 2.0.0-alpha away from submodule
+Updating bonsai
+Update to latest progress bar library code
+Updating gradle plugin, updating sex count plugin, upgrading target version, updating support library versions
+Merge pull request #472 from moon-dark/moon-dark-patch-1
+
+Append Chinese translations
+Merge pull request #500 from DMSalesman/dev
+
+Finalized Italian translation
+Merge pull request #505 from smarquespt/dev
+
+Portuguese update
+Merge pull request #514 from valentind44/patch-1
+
+Added new strings to the French translation.
+Merge pull request #518 from zygimantus/dev
+
+Lithuanian language added
+Merge pull request #526 from hereisdennis/dev
+
+German Translations updated.
+Merge pull request #527 from Roboe/l10n-spanish
+
+Update Spanish (es) localization
+Add files via upload
+[Spanish l10n] Update strings and add new ones
+German Translations updated.
+Show realm in HTTP auth dialog
+
+Display realm when an HTTP authentication is requested.
+The term "Server message" is used instead of realm as not all users
+would understand what realm means.
+Added basic keyboard shortcut support.
+Lithuanian language added
+Added new strings to the French translation.
+Minor bugfix bump
+Update hosts file
+Fixed bug where startpage logo wasn't showing up
+Portuguese update
+Fixed a memory leak
+Add files via upload
+Italian translation update #2
+Merge pull request #1 from anthonycr/dev
+
+Update base
+Update AnimatedProgressBar library
+Update Bonsai library to latest
+Merge remote-tracking branch 'refs/remotes/origin/master' into dev
+Merge remote-tracking branch 'refs/remotes/origin/dev'
+4.4.1 hotfix version update
+Fixed bug where links wouldn't open correctly in the browser
+Fixed threading issue with all bookmarks list
+Update strings.xml
+
+Added some missing translation strings
+Fix null pointer exception caused by activity not being ready
+Merge remote-tracking branch 'refs/remotes/origin/dev'
+Update version numbers for next release
+Update to hosts file
+Updated to latest gradle version
+Fix bug where certain apps wouldn't be considered to handle intents, cleaned up imports
+improve image dialog handling
+
+and finish italian translation
+Inform people about flash player support
+
+.. and update italian translations again.
+BrowserActivity: close drawers on back/forward btns
+
+and update italian translations
+strings.xml: update italian translations
+Remove snackbar event bus message
+Cleaning up some event bus related code
+update gradle plugin
+Include correct version of build tools
+refactoring search suggestions adapter
+pulling out event bus in more places
+Use interface instead of event bus, moving some stuff out of activity and into presenter
+Better interpolators for decelerate animations
+Fix bug on nougat where the background is black while the activity is displaying
+Fixing deprecated API usage and lint warnings
+Upgrade to latest gradle plugin
+Append Chinese translations
+
+Append Chinese translations, zh-rCN and zh-rTW
+Create PROXY IntDef to enforce values
+Allow the app to be moved to external storage
+Formatting manifest
+Fixed bug on Android Nougat where long press of the back button didn't work as before
+Update to latest leak canary version
+tell travis we need java 8
+target sdk 24
+Don't save a tab if the url is empty (e.g. a tab that was opened to trigger a download)
+Fixed bugs in downloading preventing some files from being properly opened
+Removing some unused code, breaking out strings into constants, improving network receiver
+Create common suggestions task that is extended by Duck and Google suggestions
+
+Also remove old suggestions task that was unused
+Correctly handle logic affected by swapped drawers
+Don't manually encode spaces
+Add support for duck suggestions to preference manager
+Add support for DuckDuckGo search suggestions, make improvements to google suggestions
+Remove old search suggestions adapter
+Support swapping tabs and bookmarks drawers
+Correctly size dialogs across the app
+Augmented dialogs, added options to dialogs, improved dialog UI
+Use normal thickness font
+Update to correct commit of netcipher
+update to latest Bonsai code
+Fade in selected state on tabs when they are in the drawer
+Add support background setting
+Improve text reflow
+Removed duplicate background
+Fix threading issue in download code
+Fixed a threading bug in ImageDownloadTask
+Fixed crash in history
+Portuguese-Brazilian translation
+Update gradle version
+Fix potential bug accepting invalid certificates in reader mode
+Remove unused imports
+Updating ad server list, removing unnecessary code in adblock
+Cleaning up new suggestions class
+Cleaned up styles and themes
+Improved layout of search suggestions, added breathing room
+Add workaround for occasionally buggy header loading code
+
+If custom headers (block identifying headers and DNT) are not being
+used, we call super. This way, if the user turns on those options and
+experiences problems on a site, they can turn off the option so that the
+site works correctly.
+Theme dialogs correctly with accent color
+Fixed bugs with opening file:// urls in the browser via intent
+Print crashes to external storage on debug builds for in the field testing
+Change dialog UI to be list based instead of button based to allow for more options
+Switch from png to vector
+Fixed bug with recyclerview
+Fixed bug where recyclerview got out of sync
+Performance improvments, fixed bug with find in page in full-screen mode
+Fixed a bug where sometimes opening browser from recents opened recent tab, removed extra view
+
+Also increased strictmode scope
+Fixed build error
+Properly escape query strings, fixed crash
+Switch to progress bar library
+Speed up animations slightly
+Move from internal observable classes to bonsai, fix threading problems with suggestions
+moving to bonsai
+Fix memory leaks caused by the android framework
+Fix bug where AutoCompleteTextView selected text but didn't delete it when typing
+
+Also added in window focus change callback so that we can animate UI in
+correctly. Also other small changes
+Updated to gradle wrapper 2.10, updated to android gradle plugin 2.1
+Updating gradle dependencies
+Add debug settings so that you can toggle LeakCanary (and other settings in the future) in debug
+Merge pull request #411 from anthonycr/dev
+
+4.3.0 Release
+Fix CI build
+release bump and update tools version
+Fixed bug where onComplete would throw an error if onError was called before
+Fixed bug with WebView onResume, improved Observable, fixed some other stuff
+Fixed bug with state restoration, fixed weird tab closing behavior, added some missing annotations
+added some missing nullable annotation additions, switched to compat implementations of some methods, fixed some lint warnings
+Updated dependencies
+More suggestions cleanup
+Cleaned up search suggestions code, fixed potential memory leaks
+document BrowserPresenter, fix some things with it
+Update to latest support library
+fixed bug with event bus, moved adapter
+Fix bug where keyboard would hide text boxes in incognito
+Fixed null pointer exception, fixed threading bug on ICS, upgraded leak canary version
+Bugfix bump... hopefully last one before merge to master and full release
+Fixed null pointer exception
+Revert to previous support library version until they fix the menu bug
+Added FAQ to settings
+Only Kitkat and up supports changing headers, disable on lower API versions
+Fixed bug where bookmarks as homepage changes what bookmarks are shown in bookmark drawer
+bugfix bump
+Fixed bug where keyboard would cover text input on the webview
+Don't enable useless autocomplete box to popup on the embedded search form
+Fixed threading bug in bookmark setting fragment, changed default bookmark title
+Fixed bugs related restore tabs option
+
+- fixed tab being blank if option was off
+- fixed bug where bookmarks would show sub folder if browser was closed
+in that folder if option was on
+Update strings.xml
+
+Update Hungarian string
+Update version code in prep for release, enable color mode by default
+Remove unnecessary imports, make methods static
+Fixed bug where fragments wouldn't update their preferences if they changed
+Fixed null pointer exception by properly replacing the fragment
+Fix bug where certain devices had different toolbar heights
+Fixed bug where multiple processes caused incognito to nor respond to preference changes.
+
+Possibly in the future I should explore gong back to multiprocess for
+incognito mode but right now it causes bugs. Also tweaked UI color in
+color mode
+Color the search bar appropriately for the various theme/color mode, fixed bug when restarting activity
+Fixed some bugs with restoring/initializing tabs when new intents were received and browser was killed by background
+Fixed bug where changing theme resulted in default tab icons being incorrectly themed
+Fixed bug when switching between hiding status bar on/off
+Update Serbian language
+Fixed layout bug in full screen mode
+updated hosts file
+Fixed crashes
+Update to latest support library, improve drawer closing experience
+Roll back support library until fragment backgrounds are fixed
+Fixed another IO not closed resource leak
+Fixed bug with fragment background
+Fixed leaked io connection
+Fixed layout bug, fixed bug slowing down recyclerview animations
+New duckduckgo image
+Dutch translations
+Fixing some animation bugs
+Temporarily revert v4 support until its fixed, add some documentation
+Temporarily revert appcompat dependency until bugs are fixed
+Update gradle version, fix crash on kitkat caused by old gradle plugin version
+fixed index out of bounds bug
+Smoothly close browser by closing the activity after the drawers are closed, removed bus event
+Fixed bug where rotating device caused webview height to be incorrect
+Removed layer of overdraw
+Update to latest support libs, get rid of pointless hardware layers
+Fixed potential memory leak, moved variables
+Fixed bug where new intents wouldn't open in the browser if it had been killed by the OS
+Fixed memory leak, removed useless log statement
+Animate vertical and horizontal tabs correctly
+Fixed bug where searching text in page the arrows did the opposite of what you thought
+Animate tab addition/deletion in recyclerview, change full screen implementation to be simpler
+
+TODO still need to use correct animations for tab addition and removal
+fix rotation bug
+Fixed toolbar size bug on rotation
+Added back/forward icon enable/disabling on tablet devices
+Moved icon in drawer, removed unnecessary view in tab_list_item
+Fixed NPE in bookmarks fragment... ugh
+Add support for guardian project panic/ripple app
+Fixed bug where tab icon showed in desktop tab mode
+Merge pull request #375 from MarkThat/patch-1
+
+Update italian translation
+Merge pull request #369 from rishubil/dev
+
+Add increase contrast filter
+fix leaked tab listener
+Just log an error instead of crashing when view state is messed up
+Temporarily fix bug where tabs created outside the presenter class (in manager) cause the tab number to be mismatched
+Change thickness and font of tab number
+Change out arrow drawable for an icon that displays current number of tabs
+Support bookmark importing from chrome variants and stock browser, lint fixes
+Add new tab button to desktop tabs view
+Add accessors to get Chrome dev and beta bookmarks, also fix potential bugs
+Workaround for travis not having enough memory :-/ guess we'll just build debug versions
+Allow close dialog to be shown when tabs icon is pressed
+Add ability to close all tabs except current tab
+Renamed OnSubscribe/Subscriber, moved anonymous class to static class, added --stacktrace to gradle build to capture build crash
+Reactive code for reading activity
+Add support for onStart and onError
+Fix build problem, make class static and fix some generics problems
+Prevent observers from sending events out of order, add documentation, annotations
+Show the last created tab after initialization
+Add missing annotations, clean up reactive code, simplify methods
+Added missing annotations to react
+Fixed StrictMode problems, created a reactive implementation class, fixed potential NPEs, fixed memory leak
+
+* Fixed places where IO was done on main thread
+* Created reactive class Observable so that work could easily be done on
+other threads
+* Fixed potential NPEs in LightningView
+* Fixed memory leak where ConnectivityManager was leaking activity
+get rid of listener between tab manager and presenter. invert the dependency between them.
+mostly move delete tab and new tab and handle new intent to presenter
+Use Executor thread pool instead of creating my own threads on the fly
+Lint fixes, change nullable annotation in preference manager
+Initial slow move toward MVP pattern
+Add missing annotation
+Null annotations for rest of classes
+Add null annotations for fragments
+Fix nullable problem in ThemeUtils
+Fix null annotations, issues in various classes
+Annotate networkreceiver
+Add missing annotation
+Fix null issues with bitmap
+Non null annotations in LightningWebClient/ChromeClient
+Infer nullity
+Annotate method parameters, lint fixes
+Add missing method documentation
+Update
+
+Translated two new strings
+add ability to add shortcuts to the homescreen, more work still needed
+Cleanup unused methods
+Documentation, cleanup of TabsManager
+Save tab back/forward state, not just current site when saving/restoring state
+Use Application object instead of explicit Context
+Remove unused imports
+Variable renaming, moving fields around, more injection, move ProxyUtils out of flavor specific code
+Inject Bus, HistoryDatabase, and PreferenceManager rather than using BrowserApp to access instances
+Remove static context getter from BrowserApp
+Add missing changes for history page changes
+Make HistoryPage an AsyncTask to be easier to use
+Make StartPage an AsyncTask, makes it simpler to use
+Make BookmarkPage an AsyncTask to simplify its use, change recursion to iteration in DownloadHandler
+Remove more uses of the static context from BrowserApp
+Utilize IconCacheTask, add Application.get because maybe storing the application context is bad????
+No need to inject BookmarkPage, make it a utility class for right now
+Fixed Lite build error
+Fixed crash when opening browser from intent
+Dependency injection for ReadingActivity
+Make ProxyUtils a proper dagger singleton, inject more member variables where possible
+Properly use AppComponent to only inject classes into dagger, inject static dependencies into BrowserApp class
+Protect incognito activity from intents, clean up some code analysis warnings, simplify LightningView settings methods
+Correctly remove WebView from layout before destroying it. throw exception if destroy is called without remove
+Fixed memory leak caused by incorrectly destroying the WebView before it was removed from its parent
+Documentation for Utils class
+Revert change to leak canary version, add todo for bug
+Fix lint issues with color ints
+Update to stable leak canary release
+Documentation for LightningViewTitle.
+Comment formatting
+Finish LightningView documentation, add nullable/nonnull annotations to some methods
+start documentation in LightningView, remove direct field access and replace with getters
+Attempt to fix build error by pulling latest tools
+Fixed CI build error due to missing build tools
+added content URIs for Chrome dev and beta and debug methods
+Potential javascript to extract theme meta tag (currently no-op)
+Update gradle dependencies, fix a number of lint errors
+
+Note: resource closed inspections that were ignored were ignored because
+they were being properly closed in finally{} blocks
+Fixed broken gradle build
+Async loading of homepage, delegate IOThread responsibility to BrowserApp class
+Run UI operations on correct thread
+Mirror AppComponent getters in BrowserApp so that classes are less reliant on AppComponent, refactored getAppContext to getContext
+Start using a single thread executor for any database access to eliminate unnecessary thread creation
+Fixed memory leak in IncognitoActivity
+Update gradle to use LeakCanary snapshot so that leak detection works on marshmallow
+Add increase contrast filter
+Merge pull request #351 from M2ck/patch-1
+
+updated french translation
+Merge pull request #350 from takahirom/master
+
+Add japanese translation.
+french translation up to date
+[WIP] updated french translation
+Add japanese translation
+Add japanese translation
+perform exit cleanup when browser is closed regardless of whether last tab is deleted or not
+Fixed close tab behavior, fixed UI corner case bug
+Merge pull request #326 from cliqz-oss/dev
+
+Tab deletion logic moved to TabsManager
+Fix bug with navigation drawer, update gradle dependencies
+Merge branch 'dev' of https://github.com/anthonycr/Lightning-Browser into dev
+Catch non 2xx responses and don't try to open an input stream
+Merge pull request #340 from MarkThat/patch-1
+
+Translation of new and old strings.
+Move language initialization to constructor
+Update to search suggestions API that supports HTTPS
+Translation of new and old strings.
+Update hosts file with latest version from hosts-file.net
+Reformatted manifest file
+Merge pull request #322 from pejakm/cccons
+
+Add clear_cookies string to fix context inconsistencies
+Make the workaround more obvious
+Workaround for bug in the appcompat support library
+Fix merge conflict
+Merge branch 'dev' of https://github.com/anthonycr/Lightning-Browser into dev
+Fix crash that could occur pre API 16
+Merge pull request #327 from kuc/migrate-to-https
+
+Migrate to HTTPS
+Better handling of bookmarks, some responsability moved back to BrowserActivity
+Fix checks to allow both HTTP and HTTPS URLs
+Fix methods from SHelper
+
+Both Google and Facebook force HTTPS-only traffic for years.
+Migrate all trafic to Google services to HTTPS
+Merge pull request #2 from ravjit-cliqz/dev
+
+Changed the scope of removeTab to private
+Changed the scope of removeTab to private
+Merge pull request #1 from ravjit-cliqz/dev
+
+Moved deleting logic to tabs manager
+moved the deleting logic to TabsManager
+Add support for multiple languages in search suggestions
+Fixed bug where you could add generated html pages as bookmarks
+Remove headers in case the setting is disabled after being enabled
+Corrected variable names.
+Add support to remove identifying headers, add support for DNT header requests
+Fix bug where you couldn't turn flash on on supported devices
+Fix issue where warning dialog was not shown for local files in some cases
+Fixed bug where the homepage file url was showing
+Merge pull request #321 from pejakm/srupd
+
+Update Serbian
+Merge pull request #319 from ByteHamster/dev
+
+Workaround for #270
+Add clear_cookies string to fix context inconsistencies
+Update Serbian
+Properly destroy WebView
+Disabled scaling on bookmarks page
+Workaround for #270
+
+In my opinion, it is neccessary for a browser to open local files.
+Because local files might be a security risk,
+ask the user before opening a local file.
+Fixed memory leak
+Switch to grant library for permissions handling
+Update to latest support libraries, move permissions stuff to separate package
+Mistakenly removed build tools 22 that netcipher relies on
+Switched to correct build tools
+Tryin 2 fix travis ci. local builds aren't failing with lint errors :(
+Removed redundant character escapes to fix lint errors.
+Fixed bugs in showTab, attempt to improve full-screen video handling.
+Fixed bug where opening a URL in the browser wouldn't work, refactored the ui controller, fixed bad database practices.
+Fixed new bug where browser wouldn't close on new intent. Fixed potential vuln in downloading code. Formatted some code.
+Fixed recently introduced UI bug in desktop tab mode.
+Fixed security vulnerability in the intent selector
+Add back SSL error detection that was removed, fixed static analysis warnings.
+Fixed more bugs recently introduced. Hardened asynctasks against memory leaks. Fixed some other stuff
+Fixed number of UI bugs recently introduced in Tabs changes merge from S. Pacifici
+Document the PermissionsManager
+Preliminary fix for permissions, fixed a new crash, formatted some code
+Add dex counter, fixed new bugs in bookmarks, fixed bug in bookmark sync, todo fix downloading bug
+Merge pull request #296 from stefano-cliqz/experimental_tabs
+
+Experimental tabs
+Merge branch 'dev' of github.com:anthonycr/Lightning-Browser into experimental_tabs
+Improving the #296 pull request
+Be more clear on code style
+Merge branch 'master' into dev
+Merge branch 'dev' of https://github.com/anthonycr/Lightning-Browser into dev
+Removed commented out line that was being compiled...
+
+seriously, every time I compiled the free version this line got compiled
+as if it wasn't commented out. Regardless, it doesn't need to be there.
+Merge pull request #307 from ByteHamster/dev
+
+Added 'home' button to tab drawer, German translation updates
+Updated German translation
+Added 'home' button to tab drawer
+Added trello board info
+Merge branch 'dev' of github.com:anthonycr/Lightning-Browser into experimental_tabs
+Added more download options
+Merge pull request #303 from MarkThat/dev
+
+Translated from scratch
+Merge pull request #302 from kuc/update-polish-translations
+
+Update Polish translations
+Translated from scratch
+
+Some errors should be fixed now, i also added some strings which i did not translate before.
+Update Polish translations
+Merge pull request #299 from anthonycr/dev
+
+Version 4.2.3 Release
+last changes for 4.2 update
+Merge pull request #298 from kuc/fix-onReceivedSslError
+
+Fixes #297: properly implement onReceivedSslError() method
+Fixes #297: properly implement onReceivedSslError() method
+
+Validation of SSL certificates is still not ideal, as https://badssl.com/ shows, but further improvements require more investigation.
+Restore activity restart when tab mode changes
+Fix UI bug caused by obfuscation
+Merge latest changes from Anthony's dev branch
+Up version number, fix build error.
+iml files removed. They are generated during gradle sync by Android Studio.
+Solve problems with colors when tabs are switched
+Reduce visibility of members and methods where possible, and more (see description)
+
+* reduce visibility
+* remove unused methods and members
+* Suppress unused warnings we can ignore
+* fixed or ignored deprecation warnings
+* Changed HistoryItem to have better hashcode and equals implementations
+and removed id member from it as it was unnecessary
+* Fix performance problem with loading bookmarksettingsfragment and
+properly annotate bookmarklocalsync
+Begin adding documentation, remove unnecessary controller method
+Lint fixes, save scroll position in bookmarks list
+Fixed bug where tab and toolbar colors were not in sync when color mode got switched on
+Use executorservice instead of plain executor to facilitate shutdown
+Add back importing from stock browser and an attempt to add import from chrome
+
+import from the default built in browser, stock browser ususally, but
+chrome on marshmallow and above.
+Better asynchronous image loading for BookmarksFragment
+
+Previous AsyncTask would throw a RejectedExecutionException if too many
+AsyncTasks got spawned on the thread pool executor. The solution was to
+create a custom Executor that properly executed the task and queue it if
+necessary. Also switched to using weakreference for the view and set
+timeouts on image loading so it can load faster.
+Updated download handler
+Fixed bugs in downloading code, Added butterknife, Added back proxying to lite
+Simplified LightningView with externalized XXXClients
+Added support for downloading files to directories not lying in the directory returned by getExternalStorage
+
+Useful for devices with both internal and external storage
+ClickHandler removed, avoid call loop duirng long press on a webview between BrowserActivity and LightningView
+Trying to remove BrowserController interface
+Change variables to project naming convention
+Remove unused resources, make methods static
+Fixed bugs in the BookmarksFragment and BookmarkManager
+Bookmark page generation moved to LightningView to avoid call loop between BrowserActivity and LightningView through BrowserController
+PreferenceManager injected
+Properly close I/O streams that were not being properly closed
+Made inner classes static to discourage access within of enclosing class
+Reduce unnecessary public visibility on internally used variables
+Equalized padding on autocomplete layout
+Back, Forward and Plus rewired
+In the middle of events rewiring (back/forward)
+remove redundant calls to "showTab"
+Remove unnecessary ClickListener classes
+Fixed static analysis warnings
+
+* Using strings when characters could be used
+* Unused imports
+* String concatenation in a loop
+Extract anonymous caching class to its own inner class
+TabsFragment extracted
+mWebView reference removed from BrowserActivity
+CurrentTab reference removed from BrowserActivity
+TabsManager created
+iml files removed. They are generated during gradle sync by Android Studio.
+Fixed bug in release builds where event bus events were not being fired
+Initialize ui color variable
+Fixed ColorMode on the desktop tab UI by caching the backing Bitmap rather than immutable BitmapDrawable
+
+BitmapDrawable turns out is sort of immutable even when using mutate()
+so what was happening was that when switching from a tab on the right to
+a tab on the left, the foreground drawable was set as the background of
+two views for a small instant as the RecyclerView binds views from left
+to right and the setColorFilter on the left foreground tab was not
+working at all. When you switched from a left to right tab, it worked
+fine because the left tab background was changed before the right and
+the foreground drawable was only used by one view in that case. The
+solution was to not reuse the drawable but instead reuse the backing
+bitmap and create a new drawable whenever a tab moved to the foreground.
+Update to faster jsoup library version
+Use thread pool executors on AsyncTasks to increase performance
+Cache icons on a background thread
+Updated to latest Google logo
+Refactored ProxyUtils for lite version
+Fix broken icon downloading, handle edge cases where url parameter is bad
+Removed need for passing a Context to the ProxyUtils singleton
+Don't clear the HashMap, instead just change the reference
+Add LeakCanary library, fix a few memory leaks
+Fixed a number of lint warnings
+Fixed compile bug in LightningLite
+Fixed bug with WebView background being transparent, fixed some deprecated API usage, made HistoryDatabase a true singleton
+formatting change in browseractivity
+Remove pointless assertions: @ NonNull removes need for assertions
+Cleaning up lint warnings and making some performance improvements on string builders
+Add a transition when entering and exiting the Reading mode
+Use support library DrawerArrowDrawable instead of using our own version
+Lint fixes, remove use of assert from code, update to latest support library
+Update README.md
+Merge pull request #284 from stefano-cliqz/dev
+
+Refactoring: Bookmarks as Fragment
+Fix removing the BookmarksEvent.Deleted instead of the actual bookmark
+Fix bookmarks drawer background problems
+BookmarkPage restored and proper dependency injection
+Activity Transaction animations merged
+Add clear button to the search bar instead of go button
+Animations for activity transitions
+Updated netchiper submodule
+Refactoring: Bookmarks as Fragment
+
+1. Incognito mode in another process
+2. Bookmarks as a Fragement using Otto
+3. Initial bookmarks as fragment implementation
+method could be static
+Improved reading mode thanks to changes from snacktory fork by skyshard
+Added option for empty user agent if the user sets an empty string to work around webview limitations
+Fixed some deprecation problems and code analysis warnings
+Switched to RecyclerView, cleaned up some HTML generator methods
+Added permission handling and support for API 23
+Changed padding on toolbar for consistency, updated build tools
+Try to fix problem with netcipher library
+Added back sdk 22 necessary for orbot library
+First step toward Android M support, compile with sdk 23, fix errors caused by upgrade
+
+removed copy button from search bar and replaced with go action. Had to
+remove browser content provider usage as it is not longer included in
+the sdk and has been completely removed.
+Better URL validation, thanks AOSP
+Added homepage button, altered tab UI slightly, fixed URL validation
+Merge branch 'master' into dev
+Fixed many code analysis warnings
+Fixed bug where history wasn't being deleted until the app was restarted
+removed unused strings
+another attempt to fix travis
+added info about contributing
+Attempt to fix continuous integration build error
+Update travis CI settings to support containers for faster building
+Fixed a couple code warnings
+Renamed folders to fix build error
+Merge branch 'master' into dev
+
+Conflicts:
+	app/src/main/res/values-it/strings.xml
+Merge pull request #283 from yuki2006/dev
+
+fix: about scheme
+Merge pull request #282 from MarkThat/patch-4
+
+Same as branch master, every string is updated.
+Merge pull request #281 from MarkThat/patch-1
+
+Changed a few old strings and added new.
+Miscellaneous code analysis warning fixes
+Initial support for tabs on the top instead of in the navigation drawer
+
+added a setting to switch between modes. Still needs work to be less
+buggy
+fix: about scheme
+Same as branch master, every string is updated.
+Changed a few old strings and added new.
+Further generify Adblock host loading
+Update hosts file, create versatile hosts loading method to make way for users to load from any hosts file
+Fixed a setting, lowered priority on a thread
+Implement javascript close window method in the browser
+Make incognito mode safer, fix crash in search adapter,
+Updated with latest changes from NetCipher library
+Added korean translation
+Fix RuntimeException on Android M Preview
+Use single WebkitProxy reset method
+Update netcipher library to latest version
+Fixed some bugs
+Add option to clear Web Storage
+Merge pull request #271 from anthologist/master
+
+Updated italian translation
+Update strings.xml
+Update strings.xml
+Update strings.xml
+Added text encoding setting, updated support libraries
+Update strings.xml
+fixed full-screen mode when watching a video in full-screen
+Add suggestions to naming a folder in edit bookmark dialog
+Updated hosts file
+fixed bug in search adapter
+Fixed bug when long pressing bookmarks, removed unused strings
+Merge remote-tracking branch 'origin/master' into dev
+
+Conflicts:
+	app/src/main/res/values-fr/strings.xml
+Merge pull request #268 from David-Guillot/patch-1
+
+French translations, first batch
+More clear and understandable suggestions filtering algorithm
+long-press on a folder on the bookmarks page works correctly now + other cleanup
+Sort bookmarks so folders are at the end of the list, updated bookmarks page to better utilize space
+Renaming and Deleting bookmark folders is now available yay
+Fixed forgotten escaping
+Fixed typo
+
+Thanks @kuc
+French translations, first batch
+Simplify and improve long press handling for links on the bookmark page and history page
+Added Bookmark folders, Added actions to the bookmark drawer, + other
+
+Updated icons, removed light/dark versions only have one version now
+that uses a color filter to be themed to save space, optimized view
+layouts
+Down with Toast, all hail Snackbar
+Snackbar >>>>>>> Toast
+Removed use of tabs and replaced with 4 spaces
+Updated ProxyUtils to automatically start TOR when needed, more abstraction of BrowserActivity, other cleanup
+Fixed errors with ProxyUtils
+updated to latest netcipher submodule
+Merge remote-tracking branch 'origin/master' into dev
+
+Conflicts:
+	app/src/main/res/values-pt/strings.xml
+Convert BrowserActivity to an abstract class, remove unused resources
+New Full-screen mode works better and doesn't hide the top of the WebView, +other
+
+* Now using material alertdialog on all versions
+* cleaned up some code
+* fixed lint issues and other inspection related problems
+* Attempted to fix bugs found
+Merge pull request #255 from DF1E/settings
+
+Material Settings
+Merge pull request #254 from smarquespt/master
+
+Portuguese update
+Merge pull request #260 from chirs1985/master
+
+1. Use the " \ " character to escape the " ' " character
+1. Use the " \ " character to escape the " ' " character
+2. lose the </string-arrary>
+remove LicenseActivity intent
+create PreferenceCategory for licenses
+Toolbar fix
+small fix
+
+this info dialog is not necessary because the flash CheckBox isn't
+enabled if API>19
+clean manifest
+new Settings 3/3
+
+now we have to bring the ToolBar back and fix some bugs...
+And testing!
+new Settings 2/3
+new Settings 1/3
+rebase test for main settings screen
+Portuguese update
+Moved proxy code to utility class, remove proxy from lite version to reduce apk size
+Fixed bug
+Fix error in strings
+Merge remote-tracking branch 'origin/master' into dev
+Merge pull request #249 from str4d/i2p-android
+
+Support I2P (and other proxies in future)
+Merge remote-tracking branch 'origin/master' into dev
+Code cleanup
+Merge pull request #251 from MarkThat/patch-3
+
+Patch 3
+Add manual proxy picker
+Corrections.
+
+Removed few strings which i added for error. Can these changes be merged without gradle?  I don't understand how to use it hehe.
+Cheers!
+Update strings.xml
+Update. 
+
+I found some errors and fixed them and added the new translations.
+Merge pull request #241 from AltNico/cleanup
+
+Remove unnecessary files
+Use constants for proxy choices, part 2
+Use constants for proxy choices
+Notify user if proxy is not ready when they try to load a URL
+Fix for I2PAndroidHelper.isI2PAndroidRunning() always returning false
+
+Requires v0.7 of the I2P client library, which will be released once I2P 0.9.20
+is released.
+remove unnecessary files
+
+Basically, all I have done was adding some missing files/directories to
+.gitignore and the executing the following commands:
+git rm --cached -r ./
+git add --all
+Utilize gradle product flavors to produce free and plus versions
+Merge remote-tracking branch 'origin/master' into dev
+Merge pull request #247 from Roboe/l10n-es
+
+Updated Spanish (es) localization
+Merge pull request #238 from ageback/master
+
+Complete S.Chinese.
+Use I2P if configured
+Change Orbot checkbox to an HTTP proxy choice list (None, Orbot, I2P)
+Add I2P client library to dependencies
+[Spanish l10n] Fixed duplicated string
+[Spanish l10n] Added new strings
+[Spanish l10n] Fixed some strings and updated untranslated ones
+Added an AMOLED Black theme, changed from tabs to spaces for some files
+Merge pull request #237 from smarquespt/master
+
+Portuguese update
+Complete S.Chinese.
+Portuguese update
+Merge pull request #234 from anthonycr/dev
+
+compile jsoup from jcenter instead of embedding jar in code
+compile jsoup from jcenter instead of embedding jar in code
+Merge pull request #232 from anthonycr/dev
+
+Dev
+Updated to latest gradle plugin
+updated to latest netcipher library
+Remove unused resources, code cleanup
+Merge remote-tracking branch 'origin/master' into dev
+
+Conflicts:
+	app/src/main/res/values-sr/strings.xml
+Merge branch 'pr/229' into dev
+
+Conflicts:
+	app/build.gradle
+Remove unused resources on build
+Lint fixes and code cleanup
+improvements for android studio
+Fix BrowserApp class not being found by webkitproxy
+Fix missing strings error, remove unused icon
+Serbian translation thanks to @pekjam
+Merge pull request #227 from pejakm/srupd
+
+Update Serbian translation
+Update Serbian translation
+Move java files to sub-packages for better organization
+Exclude support jars from netcipher build
+add m2repository
+Update build to search for latest support repos
+Update to latest sdk
+Fix travis yml
+Try to fix line end bug
+Dummy change to gradleq
+Fixing travis
+Add in appropriate .idea files
+Remove unnecessary iml file
+Remove old iml file
+Switch to gradle!!!
+Merge pull request #222 from anthonycr/dev
+
+Dev -> master
+Merge branch 'dev' of https://github.com/anthonycr/Lightning-Browser into dev
+Clear webdata when the cookies are cleared
+Merge pull request #215 from bebolint98/patch-1
+
+Update strings.xml
+Merge pull request #214 from bebolint98/patch-2
+
+Update strings.xml
+Merge pull request #217 from smarquespt/master
+
+Add Portuguese language
+Update strings.xml
+Update strings.xml
+Update strings.xml
+Update strings.xml
+Add Portuguese language
+Use boolean constant to make free/plus builds easier to generate
+Fixed bug that crashed dialogs
+Update strings.xml
+Update strings.xml
+Update strings.xml
+Update strings.xml
+Update strings.xml
+Update strings.xml
+Fixed bug where incognito tabs are rememebered
+Workaround for a bug in LG devices
+Merge branch 'master' of https://github.com/anthonycr/Lightning-Browser
+
+Conflicts:
+	res/values-hu/strings.xml
+	res/values-it/strings.xml
+	res/values-ja/strings.xml
+Merge pull request #207 from astrone/patch-2
+
+Made some extra corrections and translated one more string
+Merge pull request #208 from ys0115/patch-1
+
+Update strings.xml
+Merge pull request #210 from bebolint98/dev
+
+Add hungarian localization to dev branch
+Update strings.xml
+Create strings.xml
+Last updates for public release 4.0.8a. Updated adblocking hosts and added some default bookmarks for better UX
+Refactored/Cleaned up some settings activities
+Update strings.xml
+Made some corrections and translated one more string
+Fixed scrolling sensitivity in full-screen, fixed http auth dialog issue
+update submodules from netcipher
+Fix file uploading on Lollipop, clean up the code
+Optimize webpage builders, fixed bug in bookmark activity
+Merge pull request #203 from bebolint98/master
+
+Add Hungarian localization
+Merge pull request #204 from astrone/patch-2
+
+Italian translation (Update)
+Organize PreferenceManager
+Use a PreferenceManager to handle SharedPreferences among classes
+Spring Cleaning
+Remove unused class
+Revert "Revert "Fixed bug in dark mode where search suggestions wouldn't show up. Sped up app startup by using singleton in BookmarkManager.""
+
+This reverts commit cc6d7c7aa977667ca70ad321c92f4ce5f55a7700.
+Revert "Fixed bug in dark mode where search suggestions wouldn't show up. Sped up app startup by using singleton in BookmarkManager."
+
+This reverts commit 4822996da1ed2ee0975ca0c55fc857b450ebde71.
+Fixed bug in dark mode where search suggestions wouldn't show up. Sped up app startup by using singleton in BookmarkManager.
+Update strings.xml
+Update strings.xml
+Update strings.xml
+Update strings.xml
+Update strings.xml
+Update strings.xml
+strings.xml
+Delete values-hu
+Create values-hu
+Bugfixes, code clean up
+Few new strings added and updated a pair.
+
+There is an error in Privacy Settings with italian translation. Here a screenshot: https://db.tt/IPw7eaf5 
+I have fixed it however i could not find the new strings "Tabs" , "Reader mode" etc.. hope to see them soon!
+Update strings.xml
+added new strings
+Fixed Russian translation
+Update strings.xml
+Create strings.xml
+
+Japanese
+Improved TextReflow on Kitkat and up
+Change Navigation Drawer layout slightly, fix dark theme for drawer
+Merge pull request #202 from DF1E/theme
+
+simplify theming
+fix theme on BrowserActivity
+
+there should be only one ThemableActivity but there are two dark themes
+- one for settings and on for BrowserActivity
+improve restart
+improve theming 2
+improve theming 1
+clean BrowserActivity
+Added preference changes due to theme changes.
+Added Dark Theme to browser. Added options to Reading Mode.
+Fix deprecation issues, fix a couple rendering issues
+Update icon
+Lint fixes, new icon, fixes for SearchAdapter showing weird on ICS
+Add back/forward arrows for large devices, change arrow colors to light for dark theme
+Update project for new API 22, remove another layer of overdraw on the WebView
+Remove overdraw and stop blocking DOM storage (breaks sites) in incognito mode
+Display shadow behind progress bar for non Lollipop devices
+Cache favicons when they are downloaded by the WebView for use by bookmarks
+Display back and forward buttons on tablets
+Cache search suggestions temporarily so that repeated searches to not waste data requests
+Rename HistoryDatabase and convert it to a singleton for easier usage. Improved database structure.
+Reduce overdraw on dropdown view
+Color mode dynamically lightens colors that are too dark to see
+Switch out "Android Search" for better known Ask.com search
+Fixed bug where progress bar didn't fade out always
+Using a smoother progress bar
+Merge pull request #197 from ys0115/master
+
+Add Japanese localization
+Merge pull request #199 from DF1E/dev
+
+complete german translation
+Merge pull request #196 from mark-in/ru-correct
+
+Corrections for Russian localization
+complete german translation
+Update strings.xml
+added new strings
+Fixed Russian translation
+Added in option to change URL display (url, domain, title), and other minor changes
+
+Additional changes include removing useless code and making some utility
+methods not reliant on Context
+Merge pull request #195 from Luigigimmi/patch-1
+
+Update strings.xml
+Update strings.xml
+Merge pull request #191 from DF1E/fix-readingactivity
+
+fix ReadingActivity
+Create strings.xml
+
+Japanese
+fix ReadingActivity
+
+I had no problems on stock android but on cyanogenmod I got crashes
+without this
+Change Reading mode package name to lower case
+Fix lint problems and other code style problems, also fixed sluggish navigation drawer issues
+Add in proguard protection for Reading Mode (should keep it from crashing)
+Add in attribution to jsoup library
+Remove mdpi assets, just rely on scaled down hdpi versions
+Fixed problem where progress bar didn't display on 4.0 and 4.1
+Added a Reading Mode that can be accessed from the menu
+
+Reading Mode utilizes the Snacktory library created by karussel which is
+licensed under the Apache 2.0 license.
+https://github.com/karussell/snacktory
+Fixed bug where navigation drawers sometimes overlapped
+Attempt to fix bug where DrawerArrowDrawable animation gets stuck half way.
+
+Also, add a background to indicate that the exit button on a tab is
+pressed.
+Merge branch 'dev' of https://github.com/anthonycr/Lightning-Browser into dev
+Fixed bug with Palette API
+Merge pull request #182 from karolba/patch-1
+
+Update Polish translation in dev branch
+Fix spelling
+Update Polish translation in dev branch
+Merge pull request #176 from kuc/fix-travis-build
+
+Fix Travis build in dev branch
+Port changes from setup-ant.sh to setup-ant.bat
+Change libraries to library projects
+Finish updating target to android-21
+Update .travis.yml
+Update setup-ant.sh
+Merge pull request #175 from anthonycr/master
+
+Merge in travis build script updates
+Merge pull request #171 from bidu-dw/dev
+
+Change several search engine URLs to https
+Merge pull request #173 from DF1E/dev
+
+update german string
+Merge pull request #174 from kuc/update-travis-build-script
+
+Update Travis build script
+Changes to make Incognito mode more secure and less likely to leak data to websites.
+
+Changes for Incognito Settings
+* Always disable location (even if explicitly set in settings)
+* Never save passwords or form data
+* Always set mixed content mode to NEVER ALLOW
+* Disable DOM storage
+Bug Fixes for rouge Android versions/OEMs that don't behave correctly
+Update Travis build script
+update german string
+Change several search engine URLs to https
+
+Yahoo, Bing, Baidu and Yandex support https. Change for more safety.
+Improve rendering
+Fixed occasional IllegalStateException
+Cache objects to use less memory
+Final updates for second Lollipop beta
+Search adapter shouldnt spawn new worker threads if current ones havent finished
+Add utility method to help finding favicons
+Revert "Revert "Fix miscellaneous lint errors""
+
+This reverts commit bd308dead7c92fb7b51f5af8260c12cb18e3b529.
+Revert "Fix miscellaneous lint errors"
+
+This reverts commit 920113b49ae897a36e334d10a3b7d1ebb5c2e295.
+Fix miscellaneous lint errors
+Settings should utilize .apply() instead of .commit()
+Update with new hosts file
+Simplified and improved filter algorithm
+Added option to enable/disable Color Mode
+Allow Sharing in Incognito Mode
+Added option to block third party cookies
+Complete Material Design for Settings
+Fixed potential NullPointerExceptions
+
+Rather than try to correct the issue of the Comparator crashing in
+BookmarkManager because the Strings/HistoryItems were null, I modified
+the HistoryItem object so that the title, url, and folder strings can no
+longer be null but will instead be empty if set to null, this then
+prevents the BookmarkManager from throwing an NPE when sorting the items
+by title.
+Fixed potential NullPointerExeptions
+Fixed styling issues with the toolbar
+Merge pull request #168 from DF1E/dev
+
+material design for erveryone..
+material design for erveryone..
+
+use appcompat on all API's because of its backward compatibility
+Update manifest to latest update
+Retrieve correct package name rather than hardcoding it
+Modified icon
+Simplify main activity layout file
+Merge branch 'dev' of https://github.com/anthonycr/Lightning-Browser into dev
+Animate toolbar hide/show
+Update README.md
+Merge pull request #167 from anthonycr/master
+
+Add specific build information for each branch
+Add specific build information for each branch
+Initial changes for Material Design
+Activities now return correct menus that can be utilized by the toolbar
+Add text reflow for Android versions >= Kitkat
+JavaScript for inverted rendering
+Added material design drop shadow to html pages
+Fixed URL Encoding for Search Suggestions so that special characters work
+Merge pull request #166 from evlah/patch-1
+
+Update strings.xml
+Update strings.xml
+Cache some objects to speed up the query process.
+
+This class needs a lot of attention to speed up the filtering process
+and make it easier to understand.
+Speed up the retrieval of search suggestions from the database.
+
+Since the maximum amount of displayed suggestions is set at 5, it makes
+sense to limit the query to a maximum of 5. This speeds up the query
+significantly which makes queries more responsive.
+Merge pull request #161 from karolba/no-zoom-in-internal-pages
+
+Not allow to zoom in the internal pages.
+Merge pull request #159 from karolba/fix-kitkat-upload-bug
+
+Fix bug with uploading files on KitKat
+Merge pull request #160 from karolba/translation-pl
+
+Add Polish translations
+Merge pull request #165 from uberspot/master
+
+add greek translation
+add greek translation
+Fix a typo
+Delete a comment saying that it doesn't work
+Not allow to zoom in the internal pages.
+
+This commit prevents an user from zooming in the Home Page, Bookmarks
+Page and History Page.
+On some devices, for examlpe, some tablets with low dpi, tapping the
+search bar in the Home Page would zoom the browser in about 25% and then
+open the keyboard. That looks weird.
+Also, the Lightning Browser does not allow zooming in the Settings menu
+and the Tabs/Bookmarks sidebars. Allowing the user to zoom in one place
+of the UI and not in the other is inconsitent.
+Add Polish translations
+
+Adds missing Polish translations for the new settings layout.
+Fix formating
+Fix bug with uploading files on KitKat
+
+This commit fixes #81. The bug was caused by Proguard messing with the
+code. This commit adds a simple Proguard rule that prevents it from
+doing so.
+Fixed Travis build errors with unused string resources
+Added link to git submodule info
+Update git submodule for Lollipop support
+Reversed search arrow direction to be more intuitive
+Merge pull request #154 from DF1E/add-searchbar
+Manual merge of Settings changes from @pejakm due to merge conflicts
+Merge pull request #146 from karolba/no-popup-while-zooming
+
+Not show a popup when zooming using only one finger.
+Merging Simplified and Traditional Chinese translations from @ageback master
+Added
+Fixed more syntax errors
+Fixed syntax error
+Merge pull request #144 from astrone/patch-1
+
+Update strings.xml
+Merge pull request #141 from arhiv6/ru_translation_update
+
+Update Russian translation
+Merge pull request #138 from irfantogluk/patch-1
+
+Turksih translation updated.
+Merge pull request #128 from Javran/agent-picker-memorize
+
+make the agent picker remember the previous value
+Merge pull request #126 from User99gmxat/master
+
+Update German translation
+Fixes popup when zooming using only one finger.
+
+When a user was zooming using the "double tap and while holding swipe
+up/down" gesture, the "Open/Download/New Tab" dialog would be shown,
+ending the zooming gesture, what made zooming using that gesture
+impossible. This commit fixed that issue.
+Update strings.xml
+
+Added more translations.
+Update Russian translation
+Turksih translation updated.
+
+Turkish translation updated with new strings.
+Merge pull request #122 from pejakm/srupd
+
+[Translations] Updated Serbian
+make the agent picker remember the previous value
+
+Saying you might sometimes accidentally click "yes"
+when editing user agent string and then the previous setting
+goes away or there is a typo in the customized string
+and you want to modify it slightly.
+
+And making the agent picker remember the previous value
+solves all the problems above :)
+Update German translation
+[Translations] Updated Serbian
+Refactored drawer variable to be inline with correct naming
+Formatting
+Fixed Italian translation
+Change to use Linux Desktop user-agent instead of windows
+Revert useless changes
+Add BookmarkActivity that allows centralized management of bookmarks
+Make history deletion more efficient
+Fixed: Stay inside incognito mode even when URL could be loaded externally
+Reduce file size
+Fixed crash on API < 16
+Removed debug log from searchAdapter
+Rename id of left drawer to be consistent with right
+Changing style of actionbar in settings
+
+Necessary change in order to use actionbar overlay for full screen
+Add license for NetCipher
+Utilize new BookmarkManager class for bookmarks
+Utilize map in order to determine what bookmarks we have
+Add methods to BookmarkManager
+Add more methods to BookmarkManager
+Remove useless constants, add folder constant
+BookmarkPage cleanup
+Moved history page creation to separate class
+Externalized String
+New class to handle bookmark storage (not utilized yet)
+
+BookmarkManager stores bookmarks in a JSON database in the apps file
+data directory. It includes helpful methods to export these bookmarks to
+a backup file and import from that backup file. It also includes a way
+to import bookmarks from the device's built in bookmark database.
+removed useless setting
+Removed superfluous method
+Increased history query efficiency
+Removed useless setting
+Formatting
+Simplified History Logging
+Removed useless drawables
+Fixed bug with reopening old tab
+Added option to disable history sync with Google
+Added option to change rendering mode
+Open old tab when long pressing new tab button
+Fixed crash when deleting blank tab
+Match queries against bookmark urls as well as titles
+Moved bookmark and homepage file locations so they don't get destroyed when the cache gets cleared
+Formatting
+Changed homepage centering to be better
+Search suggestions from history now match the URL as well as title
+Added some code to allow inverted and grayscale modes in WebView
+stupid formatting ¯\_(ツ)_/¯
+Fixed some tab deleting logic, tab showing animation stuff, and changed favicons to grayscale if the view isn't shown
+These layouts were misaligned. You won't believe what happened when I fixed them!
+Layout updates
+Update .travis.yml
+Update .travis.yml
+attempt to fix build failure
+added badge
+Update .travis.yml
+Update .travis.yml
+Update README.md
+Update README.md
+Update README.md
+Update README.md
+Update README.md
+Added travis-ci build badge
+Fixed issue where target="_blank" URLs wouldn't open correctly
+Progress animation tweak
+Formatting
+Formatting
+Added new layout algorithm option and formatted code
+Smoothed ProgressBar animation
+Update BrowserActivity.java
+Smoothed progress bar
+Merge pull request #116 from kuc/code-fixes-part2
+
+Code fixes part 2
+Fix that NullPointerException should NEVER be thrown by programmer, make exceptions more informative, simplify code logic, flip equals() on strings
+
+...and other small fixes
+Make util class non-instantiatable and non-extendable, flip equals() on strings, remove redundant code
+Add missing 'private' and 'public' access' modifiers, fix warnings
+Remove redundant variable initialization, flip equals() on strings
+Add logging exception, fix typo in comment
+Use interface instead of concrete class, add missing @Override
+Make util class non-instantiatable and non-extendable
+Fix method names, redundant initialization of variables, typos in comments and other improvements
+Fix "'handlers.size() == 0' can be replaced with 'handlers.isEmpty()'"
+Add missing equals() and hashCode() methods for class that implements Comparable<T>
+Add missing @Override annotation, remove unnecessary code
+Make util class non-instantiatable and non-extendable.
+Remove unnecessary code
+Add missing @Override annotation
+Merge pull request #113 from DF1E/master
+
+remove useless layouts
+Merge pull request #114 from pejakm/srtr
+
+[Translations] Update Serbian
+[Translations] Update Serbian
+remove useless layouts
+Lint fixes
+Fixed Video full-screen not working
+Removed libs... apparently crashes the build
+Updated with lib addition
+Merge pull request #112 from kuc/travis-ci
+
+Add automated continuous integration testing using Travis CI
+Merge pull request #111 from kuc/fix-adblock
+
+Fix AdBlock
+Update target in properties and scripts to match value from AndroidManifest.xml; make exception for Travis
+Add logging
+Fix overwriting AdBlock instance by every new created LightningView object
+Fix AdBlock collection type and other problems
+Merge branch 'master' into travis-ci
+Merge pull request #109 from DF1E/master
+
+fix spelling in german string
+fix spelling in german string
+Improved comment readability in IDE editor
+Note on intent utils
+removed useless layout params
+Merge pull request #108 from kuc/code-cleanup
+
+Code cleanup - part 1
+Add windows version of setup-ant.sh file
+Fix all lint errors 'Error: "STRING" is translated here but not found in default locale [ExtraTranslation]'
+Fix lint error in settings activity layout
+Fix typo
+Fix lint errors and warnings in license activity layout
+Fix path to library
+Fix "Error: No .class files were found in project ".", so none of the classfile based checks could be run."
+Configure android lint
+Add empty missing file ant.properties
+Allow accepting any android-sdk-license in tests, remove unused sysimg
+Simple Travis CI setup: test if project will compile to APK successfully
+Clean up SettingsActivity and AdvancedSettingsActivity
+
+* field that are overwritten from every class instance SHOULD NOT be "static"
+* some field could and was converted to local variables
+* add missing "private" qualifier here and there
+* action bar may be null, added checking for this
+* remove wrapping all method body in try-catch, moved it to method call
+* removed redundant field and local variable initializations
+* single-char string replaced with char
+* redundant qualifiers ("SettingsActivity.this" etc.) was removed
+Clean up AdBlock class
+
+* use interface instead of concrete class
+* inline initialization of static variable
+* remove redundant field and variable initialization
+* replace single-character string with char
+Fix file name not matching class name
+Restore consistency in code formatting
+
+* remove all trailing spaces
+* some files used spaces instead of tabs like the rest of codebase - fixed
+* make use of IDE "optimize import" feature
+* make use of IDE "auto format" feature to fix some missing spaces here and there
+Merge pull request #107 from User99gmxat/master
+
+Update German translation
+Update German translation
+update .gitignore for proguard and updated version code
+Update README.md
+Update README.md
+Delete BrowserActivity.apk
+Merge pull request #105 from kuc/update-submodule
+
+Update submodule and submodule settings
+Browser now handles all intents correctly
+Fixed some URL launching and the log tag
+Update setup-ant.sh
+
+libs/android-support-v4.jar file was removed in commit a9b36df80e5f43159a7d612fec04cc00681a4b17
+Update submodule netcipher, setup tracking branch 'master'
+
+Make use of git >= 1.8.2 feature to track submodule brach and allow easy updates by
+
+    git submodule update --remote
+
+More info: http://www.vogella.com/tutorials/Git/article.html#submodules
+Merge pull request #104 from kuc/polish-translation
+
+Add polish translation and fix settings layouts
+Updated drawer UI and font
+Fix indentation
+Fix typo in translation
+Remove unnecessary right padding
+Make layout of "Settings" height-responsive, add right padding for labels
+Make layout of "Advanced settings" height-responsive, add right padding for labels
+Add polish translation
+Embolden text when a tab is selected for more contrast, smoothed animation of drawer hide when tab is switched
+Small UI Changes
+Update README.md
+Updated with directions for setting up the project
+Added directions for setting up project
+Navigation Drawer UI update
+Navigation Drawer UI update
+Added shadows to navigation drawers
+Switched Incognito activity to pull cookie preference from different constant
+Added input encoding parameter to Google search string
+Removed unnecessary code
+Added support for clearing History and Cookies on exit
+updated hosts file
+updated homepage and bookmarks page to be translatable
+Merge pull request #95 from DF1E/master
+
+make history item translatable
+make history item translatable
+Updated Orbot Preference Handling
+Merge pull request #93 from DF1E/master
+
+move option to enable Orbot to settings
+move option to enable Orbot to settings
+Merge pull request #88 from DF1E/master
+
+merge commits from https://github.com/aNNiMON/Lightning-Browser
+Activities Restructure - Incognito and Main now extend a single BrowserActivity
+Optimize LicenseActivity
+Add array resources
+Merge pull request #86 from pejakm/srtr
+
+[Translations] Serbian translation
+[Translations] Serbian translation
+Update hosts.txt
+Merge pull request #83 from DF1E/master
+
+clean code
+clean code
+Merge pull request #82 from n8fr8/master
+
+Initial work to support Tor (Orbot) and proxying
+initial support for preference based proxy settings
+and filtering to stop HTML5 media leakage
+setup for external modules and proguard to reduce size
+resulting APK is < 600kb
+add support for proxying over Orbot (Tor) proxying
+Update README.md
+Bugfix for intent strings
+Bugfixes
+
+Fixed bug where homescreen didn't display for custom search URLS.
+
+Fixed bug where exit button on tabs didn't work.
+
+Fixed bug where special characters weren't properly encoded in searches
+
+Updated homepage to be more modern and holo styled
+Fixed search bug and deleteTab bug
+Fixed search bug and deleteTab bug
+Update README.md
+Update README.md
+Delete MainActivity.apk
+Merge pull request #75 from User99gmxat/master
+
+German update for 3.1.0
+Merge pull request #76 from DF1E/master
+
+update gitignore
+update gitignore
+German update for 3.1.0
+
+German language updated.
+removed some old info
+Update Constants.java
+Update README.md
+Update README.md
+Removed all hosts
+
+Add your own domains to block.
+Updated to 3.1.0
+
+Updated to new UI
+Added AdBlocker
+Added Google Search Suggestions
+Tons of other stuff
+Merge pull request #68 from sntc06/master
+
+updated Traditional Chinese (zh_TW) translations.
+Merge pull request #69 from paxet/master
+
+Update for spanish (es) translation.
+Update for spanish (es) translation.
+fixed zh_TW translations XML file.
+modified Traditional Chinese (zh_TW) translations.
+Create Mozilla Public License v. 2.0
+Changed License to MPL v. 2.0
+
+I have changed the license of Lightning Browser to the Mozilla Public License. From now on, any changes merged into projects from this one, and any forks of this browser will be licensed under the MPL v2 license instead of the Apache License. You can read more about what the MPL license means at http://www.mozilla.org/MPL/2.0/
+Update LICENSE
+Update LICENSE
+Relicensed under Mozilla Public License v. 2.0
+Updated with visible License information
+Merge pull request #65 from atomicdryad/custom_search_url
+
+New "Custom URL" option for search engine. Allow stuff like 'http://yubnub.org/parser/parse?command=' or 'http://mypersonalserver.net/woot.cgi?whatever='
+New "Custom URL" option for search engine. Allow stuff like 'http://yubnub.org/parser/parse?command=' or 'http://mypersonalserver.net/woot.cgi?whatever='
+ * Pops up txt dialog when selected, initial default same as builtin google url
+ * Default remains '1' (builtin google url)
+Updated new UI APK
+Merge pull request #58 from bboa/master
+
+Update Russian
+Merge pull request #56 from User99gmxat/master
+
+German update for 3.0.5 small fixes
+Fixed broken download links
+Update Russian
+
+Added missing string for old interface in 3.0.5b
+German update for 3.0.5 small fixes
+
+Miss two strings: "History Cleared" and "Cookies Cleared" are not available in original translation file.
+Update README.md
+3.0.5 - Crash fixes
+
+- added workaround for crash on close due to zoom button error (WebView
+bug)
+- fixed bug with database not being properly closed
+Update strings.xml
+Merge pull request #55 from bboa/master
+
+Update strings.xml
+Update strings.xml
+3.0.0 Sync for old version
+Merge pull request #51 from bboa/master
+
+Updated Russian for 3.x
+Merge pull request #52 from DF1E/master
+
+update german
+update german
+Update strings.xml
+Update strings.xml
+Update strings.xml
+1st move
+Update strings.xml
+
+type
+Merge pull request #50 from AndroidOL/patch-5
+
+Update Simplified Chinese Translation
+Update Simplified Chinese Translation
+
+Update Simplified Chinese Translation, Sycn the last Release Version.
+added license
+Update README.md
+updated with license
+Merge pull request #45 from User99gmxat/master
+
+Update strings.xml
+Merge pull request #44 from paxet/master
+
+Update strings.xml
+Merge pull request #43 from RyDroid/patch-1
+
+Update strings.xml
+Merge pull request #42 from iamcaner/patch-1
+
+Update strings.xml
+Merge pull request #40 from bboa/patch-1
+
+Update strings.xml
+Update strings.xml
+
+Vor latest 2.5.1.4 version on Play Store
+Update strings.xml
+
+Update Spanish tranlation
+Update strings.xml
+
+The french translation is finished.
+Update strings.xml
+
+Fixing broken chars
+Update strings.xml
+
+Updated Russian (based on user expirience)
+Play Store sync
+
+Fixed some crashes, stabilized the code
+Merge pull request #39 from AndroidOL/patch-3
+
+Update strings.xml
+Merge pull request #38 from AndroidOL/patch-2
+
+Update strings.xml
+Update strings.xml
+
+Update
+Update strings.xml
+
+Add Identify “gestures” Translation.
+Update Some Translations.
+Merge pull request #29 from AndroidOL/patch-1
+
+Update strings.xml
+Merge pull request #33 from bboa/master
+
+Added Russian transation
+Update strings.xml
+Sync with Play Store
+
+Sorry for lack of description but it has been a while since I synced and
+I cannot quite remember what the changes were. I apologize. I had
+trouble syncing from linux.
+Update strings.xml
+Added Russian translation
+
+Thanks for great browser!
+Update README.md
+Update strings.xml
+
+Update Translations
+
+更新翻译，修正部分全角标点以及翻译错误。
+UA 等专有名词不做翻译，初步版本。
+Merge pull request #27 from notetiene/master
+
+Updated according to the standard strings.
+Updated according to the standard strings.
+Re-sync due to bad sync
+new updated and shiny apk
+
+HOLOYOLO. this contains the fixes I just updated the code with. May or
+may not be buggy
+Assorted Bugfixes
+
+- Fixes tab location ability.
+- Improves browser stability
+- allow renaming of bookmarks
+- better objectification of the code
+- oh I can't remember, it's late and I'm tired
+Merge pull request #25 from Awesomez/patch-2
+
+Update values-zh-rCN/strings.xml
+Update strings.xml
+Update README.md
+Updated APK Build
+2.5.0.11
+
+- Swipe gestures to go back and forth
+- Reverted to old icon :(
+- ability to hide the status bar
+- progress bar indicating page load progress
+- clear cookies button
+- added proguard file
+- bugfixes/random stuff I changed
+Update README.md
+
+Changed download wording
+Merge pull request #24 from Awesomez/patch-1
+
+update zh-rCN strings.xml
+update zh-rCN strings.xml
+Merge pull request #19 from dowl/patch-1
+
+add missing elements and retranslate some
+Merge pull request #21 from Awesomez/master
+
+add baidu search engine
+add baidu search engine
+
+add baidu search engine
+Update strings.xml
+If you have responsiveness issues, do not use ProGuard
+
+I found out that a bunch of issues with 4.0.4 were caused by methods being obfuscated and not being called. I turned off ProGuard raising the size by 20 KB and things are working terrific.
+Fixed Download location
+Bugfixes
+
+- fixed crash when clicking mailto: links
+- fixed uploading on 4.0
+- changed layout so more suggestions appear in dropdown
+- hopefully fixed issues with back button
+Merge branch 'master' of https://github.com/anthonycr/Lightning-Browser
+Merge pull request #16 from Snowblond/patch-3
+
+Update strings.xml
+Update strings.xml
+
+- new german translation
+Bugfixes
+
+HOLOYOLO Praise Matias!!!
+
+- fixed a problem with the wide viewport preference not being saved
+correctly... also added a sort of easter egg.
+updated apk with 2.5.0.4
+2.5.0.4 Release Code
+
+- Fixed a several bugs with UI
+- moved strings from menu.xml into strings.xml for easier translation
+- updated Incognito code
+Pre-release tweaks
+
+- added ability to have the browser ignore old tabs you closed when
+long-pressing the back button
+- layout tweaks
+2.5.0.3
+
+- Added option to open last closed tab (long press on new tab button)
+- Added some clarification about flash not working on Android 4.3
+Merge pull request #14 from Snowblond/patch-1
+
+Added german translation to menu.xml
+Merge pull request #15 from Snowblond/patch-2
+
+added new german translation
+added german translations
+
+I added some german translations.
+Update menu.xml
+2.5.0.2 tweaks
+
+- added option to enable/disable cookies
+- added option to enable/disable wide viewport
+- added option to enable/disable loading a page in overview mode
+- added detection for Adobe Flash and warning if you try to enable flash
+and it isn't installed
+- added ability to choose between downloading mp4 videos and streaming
+them in the android video player
+Update README.md
+Update README.md
+Merge branch 'master' of https://github.com/anthonycr/Lightning-Browser
+Image Addition
+Update README.md
+Stupid Typo fixes
+Update README.md
+Fixed a bug
+YOLOHOLO
+IDK WHY THESE GOT COMMITTED
+2.5.0.2
+
+Advanced Settings are all a go, except "Incognito mode all the time",
+that one isn't functioning yet. Also, Incognito Mode isn't as up to date
+as the normal mode... I'll get around to it.
+Merge pull request #13 from Rakom27/master
+
+Fixed Italian translation
+Merge pull request #12 from tonnitube/master
+
+Added Indonesian language
+Update strings.xml
+Update menu.xml
+Update strings.xml
+Update strings.xml
+
+changed some lines with better ones.
+Update menu.xml
+
+Re added the forward button even though it's not working.
+Update menu.xml
+Added Indonesian language
+Update menu.xml
+fixed italian transaltion
+
+Added incognito menus.
+Fixed main menu.
+Fixed some mistransaltions.
+Update strings.xml
+Update strings.xml
+Update strings.xml
+
+Fixed some errors, translated some missing parts.
+Update menu.xml
+Fixed crash for devices without AOSP browser
+Added binary for 2.5.0.1
+forgot icon
+
+added large new icon
+2.5.0.1
+
+FIxed full-screen video, changed some animations, changed icon, fixed
+some problems with incognito mode
+2.5.0.0
+
+pre-release push of code to github. not guaranteed to work the way you
+want. This is what is fixed to far:
+
+- added History viewer
+- added better bookmarks (fixed bug in fullscreen mode)
+- better full screen URL bar handling
+- added some more animations
+- incognito mode
+-notify user of SSL errors
+-popup tabs now work
+-fixed bug where certain sites wouldn’t display until touched
+Merge pull request #9 from RyDroid/patch-1
+
+Update strings.xml
+Update strings.xml
+
+2 little corrections
+4.2.3
+
+- Fixed favicons and urls switching randomly
+- Enlarged exit button touch area for tabs
+- Slide animation when new tab is opened
+- Other stuff I cannot remember... I think I skipped a couple versions
+before updating the code. Sorry bout that.
+Merge pull request #8 from RyDroid/patch-1
+
+Update strings.xml
+Merge pull request #7 from fastboot/master
+
+added new german string
+Update strings.xml
+added new german translation
+added new german translation
+Revert "added new translation"
+
+This reverts commit 493e963269312a5183dd9498ad3d32c3c7dfdee5.
+added new translation
+2.4
+
+- added ability to remember tabs that were open when the browser is
+closed from low memory
+- updated german translation (thanks so much)
+- fixed some unresponsiveness in froyo, for some reason
+webview.resumeTimers() needed to be called even when the browser
+restarted
+- changed the UI in settings a bit (more HOLOish)
+Merge pull request #6 from fastboot/master
+
+better german translation
+better german translation
+
+changing some texts and trying to correct german umlauts
+2.3.12
+
+- Fixed desktop user agent problem
+- Fixed Facebook not showing up in desktop mode
+- Fixed tab switching bug
+- Code optimizations
+- Added text reflow (not guaranteed to work for everyone) , double tap
+after zooming in.
+- Fixed a bug with links not copying to the clipboard
+- Attempt to fix downloading issues for some users
+- Fixed some touch issues with 2.2
+Bug fixes 2.3.11.1
+
+- downloading fixed
+- performance slightly improved
+-  better tab performance
+- other stuff I can't remember
+- blah blah blah I'm really tired...........
+2.3.10 bugfix
+
+crash fix for devices without AOSP browser
+2.3.10
+
+- fixed all issues with rendering, performance has increased
+dramatically on not-fullscreen and has increased a little in fullscreen
+- battery life improved as a result
+- added hebrew language
+- changed the way history works (now uses SQLite database, it's way
+better than the android.provider.Browser way)
+- fixed a couple crashes related to bookmarks and downloads
+- formatted the code a little better (thanks to Aeefire for the tips,
+just know I'm taking your advice LOL)
+Update README
+Update README
+Merge pull request #4 from yuvalabou/master
+
+Hebrew Update
+Merge pull request #2 from anthonycr/master
+
+base update
+2.3.7
+
+german language
+fixed crash when exiting bookmarks
+tweaked the bookmark and tab ui a little
+bugfixes 2.3.7
+
+fixed some problems with loading pages from other apps and the app
+disappearing from memory
+Hebrew translation
+Merge pull request #1 from anthonycr/master
+
+base update
+2.3.4 - reupload
+
+Just making sure everything is up to date
+2.3.4 update
+
+- bugfixes for: rendering, disappearing tabs, keyboard not going away,
+performance on fullscreen
+Update strings.xml
+
+2.3.0
+2.3.0
+updated to 2.3.0
+
+- new full-screen UI
+- tweaked icon
+- Animations
+- better rendering
+- better performance in full-screen
+- lower battery consumption
+- Chinese traditional language added
+- Chinese simplified language added
+- French Language added
+- fixed errors in settings
+- fixed errors with bookmarks
+- added auto-complete when searching using browser history
+- now uses the standard android history
+- UI tweaks
+- NOTE: you cannot have bookmarks as your homescreen in fullscreen
+Merge pull request #1 from juliodemeaux/patch-1
+
+French STRINGS.XML
+Merge pull request #2 from juliodemeaux/patch-2
+
+French MENU.XML
+French MENU.XML
+French STRINGS.XML
+Updated to 2.2.0
+
+Added full-screen option, fixed problems with videos playing, fixed some
+rendering issues
+Create License
+PROJECT DESCRIPTION
+First push to github

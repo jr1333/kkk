@@ -1,0 +1,3614 @@
+Format CommentListController
+Add random and Q&A comment sort options
+Automatically finish sign in when relogging in
+Support syncing more than a 100 subreddits
+Fix spinner adapter view type count for Lollipop
+
+A SpinnerAdapter's View type count must be 1. Luckily, we only have 1
+view type from learning previously that multiple view types does not
+work with the spinner...
+Update gravity constants in test
+Don't append a zero count to urls
+Consolidate remove account, clear action tables
+Request sync for existing accounts
+Make logResponse private
+Remove unused imports in AccountAuthenticator
+Check for creds in RedditApi, remove some code dup
+Some misc cleanup in AccountUtils
+Move getAccountType to AccountUtils
+Remove legacy ssl url
+Make loader support upgrading existing accounts
+Show username in login title for clarification
+Check for credentials in hasCredentialsExpired
+Update to YouTube Android Player API 1.2.1
+
+The older API library crashes with Lollipop due to not specifying some
+sort of explicit intent. Updating makes this error go away.
+Fix not passing account name to AccountProvider
+Clear mail indicator when user clicks on it
+Clean up NavigationFragment a bit
+Remove Provider mark messages method
+Format BrowserActivity class
+Remove some unused code in AccountSyncAdapter
+Remove AccountProvider mark messages method
+Remove mark messages since it doesn't work anymore
+Format tests package
+Format widget package
+Format view package
+Format util package
+Format text package
+Format provider package
+Format net package
+Format database package
+Format content package, fix some lint
+Format up to content package and fix some lint
+Address some fixable lint warnings
+Increment version, target sdk version, fix a tag
+Rename instance of context to ctx
+Properly set the count parameter for pagination
+Add save scope in order to save things
+Clear session cookie for login fragment
+Fix typo in Urls.thingInfo method
+Refresh token if it has expired
+Some clean up in Prefs and ThemePrefs
+Remove unused cookie and modhash utility methods
+Save expiration time with account
+Rename some layouts and strings
+Remove add account delay
+Remove toast when removing accounts
+Handle sign-in error notification
+Remove duplicate account removal code, fix toast
+Format AccountListFragment and AccountListActivity
+Store expiresIn and scope as account userdata
+Show error messages from AddAccountLoader
+Don't cancel login process on permission denial
+Handle permission denied in LoginFragment
+Destroy loader on reset
+Add zoom controls to LoginFragment web view
+Enable home up for Login fragment
+Save and restore state in add account dialog
+Create loader that adds an account
+Change AddAccountFragment to a DialogFragment
+Restore Login webview state and set title
+Remove incorrect AccountAuthenticator theme
+Remove unneeded AccountAuthenticator intent filter
+Use a callback to finish adding an account
+Add LoginFragment to show login page
+Change OAuth flow to open browser first to login
+Refactor SubredditParser to match other classes
+Refactor Result to use only JsonReader
+Reformat Result class
+Refactor SidebarResult to match AccountInfoResult
+Use fixed length streaming mode for posts
+Avoid formatting empty strings
+Remove duplicate http code in AccessTokenResult
+Refactor AccountInfoResult to take JsonReader
+Some clean up in RedditApi
+Rename RedditApi2 to RedditApi
+Remove last usages of RedditApi class
+Rename Urls2Test to UrlsTest and fix failing test
+Rename Urls2 back to Urls
+Remove Urls class
+Remove Urls BASE_URL constant
+Remove Url.encode in favor of Url2.encode
+Use OAuth for compose and submit
+Move captcha and info APIs to OAuth
+Move Urls.perma to Urls2.permaLink
+Use OAuth API for editing
+Use Oauth API for deleting
+Use OAuth API for commenting
+Use OAuth API for saving
+Use OAuth API for reading messages
+Use OAuth API for hiding
+Use OAuth API for voting
+Remove debug message that broke all posts...
+Really get SubredditSyncAdapter working
+Reformat SiebarResult
+Get SubredditSyncAdapter working again
+Add helper method to check for required tokens
+Reformat AccountUtils
+Reformat SubredditSyncAdapter
+Get AccountSyncAdapter working again
+Reformat AccountSyncAdapter
+Refactor and add safer read methods to JsonParser
+Use OAuth API for subreddit searches
+Use OAuth API for searching
+Use OAuth API when loading sidebars
+Missing encodes, rename constants, remove unused
+Refactor message urls
+Refactor message thread urls
+Reset subreddit filter when coming from profile
+Change liked/dislked urls to upvoted/downvoted
+Rename url url functions to profile
+Split userInfo into userInfo and userInfoLink
+Add a test for Urls2
+Fix broken test to use https urls
+Use separate methods for API and link URLs
+Move mySubreddits to OAuthUrls class
+Remove some unused constants
+Use OAuth API to get user info
+Remove some unused login code for cookie API
+Use OAuth API for messages and message threads
+Use OAuth API for getting profiles
+Use authorization.compact interface
+Get more than 25 subreddits
+Loads subreddits using OAuth API
+Reformat AddAccountFragment
+Use OAuth API for getting comments
+Switch RandomSubredditLoader to use new API
+Move Url.newUrl to Url2 class
+Rename ApiUrls to Urls2
+Close connection properly in RandomSubredditLoader
+Reformat RandomSubredditLoader
+Use non-OAuth URL for app storage account
+Reformat ApiUrls class
+Reformat AccessTokenResult with new formatting rules
+Refresh token when access token has expired
+Get front page using OAuth API
+Remove unused getModhash method
+Add account with access and refresh tokens
+Rename add_account layout to oauth_redirect
+Add new AddAccountFragment to finish OAuth flow
+Rename AddAccountFragment to OAuthRedirectFragment
+Rename login extras to username
+Merge OAuthActivity into AccountAuthenticatorActivity
+Run formatter over AndroidManifest.xml
+Change OK button text to Login text for add account
+Forward to reddit login page when adding an account
+Rename login to username to match reddit site
+Remove password field from add account dialog
+
+Users will enter their login and password on the reddit site instead.
+Remove debug add OAuth account menu item
+Update README.md
+Use https, buffered streams, don't follow redirects
+Add intent filters to open URLs, clean up manifest
+Remove unused method and useless comment
+Specify account type when firing account intent
+
+...some company kept appearing no matter what authority was set! Specify
+the account type to kick them out!
+Tweak log messages in sync adapter and providers
+Ignore user required errors when syncing actions
+Some lint fixes...
+More clean up and fine tuning of AccountProvider
+Delete some unused code
+Fix account actions not being deleted properly
+Improve logging in BaseProvider
+Remove mark column from Accounts
+Process account actions in a loop
+Remove some unused parameters
+Add account actions URI to ContentUriListFragment
+Make AccountSyncAdapter mark messages read
+Add RedditApi method to mark messages read
+Add provider support for account actions table
+Remove final from static methods
+Schedule action to mark messages read
+Add database table for account actions
+Clean up redundant database code
+More clean up in database classes
+Add column for marking mail read
+Fix RuntimeException in Syncers
+
+...grr, methods that take Object...
+Fix #294: use Google docs to render PDF
+Hide copy url when multiple messages selected
+Reset sync state when rate limit error occurs
+Removed unused account argument to syncer methods
+Populate sync status field on errors
+Use expiration column to expire actions
+Hide search menu when viewing something on tablets
+Format XML files using Android Studio
+Add some logging when the cookie issue arises again
+Remove duplicate connect call...
+
+...could this be the solution to all our problems?
+Remove Eclipse profiles.xml
+Fix compilation error... Android Studio!!!
+Shorten some variable names
+Move Ops class into Syncer interface
+Retry actions until maximum failures exceeded
+Rename syncAttempts to syncFailures, add syncStatus
+Rename getOpCount to getEstimatedOpCount
+Shorten some method names in db package
+Add syncAttempts column to all actions table
+Increment to version 3.4
+Update .gitignore to ignore Android Studio outputs
+Add rudimentary code to get OAuth access token
+Listen to OAuth redirect in different activity
+Fix a couple list warnings...
+
+...there are 2,850 lint warnings.
+Make AccountListActivity listen to OAuth redirect
+Implement refreshing of comments
+Set subject extra in share intent
+Remove MenuHelper.setShareProvider
+Remove the last ShareActionProvider usage
+Remove one more ShareActionProvider
+Remove yet another ShareActionProvider
+Remove another ShareActionProvider
+Split Urls.subreddit into subredditMore
+Fix random subreddit
+Remove OAuthFragment and layout
+
+Some folks woudn't feel comfortable about logging in within the app due
+to potential key loggings so we're just going to rely on login through
+the browser.
+Remove more instances of ShareActionProvider
+Use intent chooser for share
+
+This way makes it not ask "Just Once" ..all the time.
+Add a menu item to authorize with OAuth
+Restore fragment for adding accounts
+Use normal share dialog instead of provider
+
+Giving up on getting the ShareActionProvider to work with split action
+bar so just use the normal share intent. It seems to handler for the
+share intent has changed to be more convenient, so I think this is OK.
+Upgrade to the latest support library
+Put the share menu item in the overflow menu
+Partially implement OAuth2 authorization step
+Replace AddAccountFragment with stub OAuthFragment
+Adjust menu item priorities and visibility
+
+- Promote share button a bit so that it does not overlap the overflow
+  menu on phones.
+
+- Put sort comments in the overflow menu to prevent some jank when
+  switching from links to comments in no account mode.
+
+- Put new comments in the overflow menu as well since sharing and
+  starring is probably more common.
+Change app name to just "rbb"
+
+Reddit wants apps to use the phrase "..for reddit", so the name,
+"reddit by brian", will no longer suffice. Change it to "rbb".
+Fix code to compile under Android Studio
+
+There were cyclic dependency issues with AbstractBrowserActivity
+depending on an interface defined in sub-classes of itself. Move the
+interfaces to their own files to fix the issues.
+
+Update the .gitignore file to ignore Android Studio outputs.
+Fix account list not updating until 2 accounts
+Upgrade to support library 19.0.1
+Require a justification row when detecting tables
+Fix table activity to properly animate in and out
+Fix table rendering and restore rotation
+Support the three types of bullets
+Make links clickable in tables
+Fix app storage account showing up by itself
+Use non-capturing groups in regex when possible
+Use DialogWhenLarge theme for tables
+Correctly justify headers in addition to data
+Add missing copyright headers to some tests
+Test code for getting cell gravity
+Replace TODO statement with comment explanation
+Play sound effect when hitting view table link
+Check for code blocks when creating tables
+Fix #288: check if progress is null before use
+Use string resource for table replacement string
+Evenly distribute table columns
+Remove table borders and set max cell width
+
+A custom layout or view group will probably be needed to render the
+table properly.
+Fix table regex not to eat up unnecessary newlines
+Require 3 lines with pipes to create a table
+Add untested alignment code for tables
+Draw lines between the table cells
+Add layouts for table headers and cells
+Remove unused layout for MarkdownTableActivity
+
+MarkdownTableActivity is a translucent activity that is made just to
+provide an Activity context for MarkdownTableFragment...
+Rudimentary implementation of showing tables
+Add fragment and activity to display table
+Rename test class names to match the tested class
+Add a Formatter subclass for detecting tables
+Rename Formatter to MarkdownFormatter
+Remove TODO to avoid checking prefs for theme
+
+Although it's not 100% accurate to check prefs for the current theme,
+it's probably not worth doing anything more heavyweight.
+Bump up to version 3.3
+Move filter constants back to app package
+
+Change the other code to depend on the app package rather than on the
+widget package which seemed weird for code that weren't UI related.
+Remove Contexts TODO
+
+The safe startActivity method is used where it is needed. Other calls
+that are guaranteed to work such as internal calls don't need to use
+this method.
+Show karma counts in account list activity
+
+Also remove the duplicated code of AccountNameAdapter by adpting
+AccountResultAdapter to use different layouts.
+Add some missing Override annotations
+Rename sort menu item to be more specific
+Remove YouTube link overriding in WebView
+
+An unrecognized YouTube links that redirects to another YouTube links
+can lead to an annoying popup so remove the overidding. I don't think
+this case happens very often anyways.
+Recognize YouTube attribution links
+Make account list full screen and remove posts
+Fix #285: send intent on youtube link clicks
+Issue #285: extract YT link detection
+Add context menu for links within browser
+Fix #284: add long press menu for images
+Remove unimplemented menu state methods
+mute an inconsistent layout lint warning
+Fix #237: fix ordering of comment sort menu item
+Issue #237: load sort preference for comments
+Issue #237: add method to get last comment filter
+Issue #237: add sort parameter to comment urls
+Merge branch 'master' of github.com:btmura/rbb
+
+Conflicts:
+	src/com/btmura/android/reddit/widget/BaseFilterAdapter.java
+Issue #237: implement Filterable for comments
+Issue #237: extract common sort menu code
+Issue #237: show sort dialog for comments
+Issue #237: show sort menu option for comments
+Add some todos to remember for refactoring
+Add some todos to remember for refactoring
+Remove unused sort order stuff from first iteration
+Fix #222: add icon for switching sort orders
+Make SearchActivity TAG private
+Issue #222: remember the last sort order
+Issue #222: implement changing search sort orders
+Issue #222: create separate menu controller
+Issue #222: show dialog to pick search sort order
+Increment to version 3.2
+Fix error when uploading APKs to store
+
+It seems the aapt used by the store has been upgraded to 19 which
+doesn't like string resource references for android:permission
+attributes. Replace the resource references with the text to fix the
+issue.
+Increment version to 3.1
+Possible fix to occasional blank WebViews
+
+The interwebz said this may fix it.
+Fix #283: clean up unnecessary status methods
+Issue #283: fix status click boundaries
+Issue #283: don't always report status clicks
+Issue #283: consume status click click events
+Issue #283: rename and move OnVoteListener
+Issue #283: rename onVote to onVoteClick
+Issue #283: add onStatusClick method to interface
+Remove singleTop for some activities
+Center text
+Fire listeners in separate threads
+
+This fixes a crash when a new account is added via the share dialog.
+Remove ThingActivity account name extra
+Fix #282: fix typo
+Add NavigationFragment debug message
+Don't clear list on failure to append data
+Don't show upvoted comments in liked section
+Fix #280: recover when session is missing
+More clean up in ThingProvider
+Finish save merging implementation
+Remove joined columns for save actions
+Finish removal of joining with hide actions table
+Remove joining with hide actions table
+Remove boolean arg to readMessageAsync
+Move clearing of messages to AccountProvider
+Finish removal of joining with read action table
+Remove local read action join column
+Fix #279: finish vote syncing implementation
+Rename execute to updateDatabase
+Use some static imports to clean up VoteMerger
+Rename VoteStatements to VoteMerger
+Merge getVoteActionMap into VoteStatements
+Add SQL statements to update votes
+Increment version number for user agent
+Some clean up of Listing methods
+Merge votes into initial CommentListing
+Merge votes into initial CommentListing
+Remove concept of local vote operation
+Move other vote action to ThingProvider
+Move one vote action to ThingProvider
+Some ThingListAdapter clean up
+Remove unused methods for resolved subreddits
+Fix #281: use prefs if no account argument given
+Fix #227: handle ACTION_CANCEL in touch listener
+React to account changes in ThingActivity
+Close composer if required account is not available
+Refactor helper functions for composer
+Organize styles a bit more
+Remove unused styles
+Clean up code duplication in Subreddits
+Reduce nesting to better align voting arrows
+Clean up unnecessary allocations in ThumbnailLoader
+Some clean up in ThingView
+Remove unused accountName parameter
+Fix NPE when collapsing comments
+Fix #274: hide account selector when editing
+Use split action bar for UserProfileActivity
+Fix #275: fix body not being drawn correctly
+Fix #278: don't save prefs when previewing
+Fix #271: fix messages icon click
+
+Also fixes #273.
+Increment version number
+Unlock thumbnail loader on frag creation
+Don't load thumbnails while scrolling
+
+The HTTP connections and bitmap processing can allocate a lot of junk.
+Provider clean up and refactoring
+Reorder methods in ThingProvider
+Some renaming and reordering in Provider
+Clean up list of extra constants
+Move delete comment operation to ThingProvider
+Reorder some methods
+Move edit operation to ThingProvider
+Fix #261: stick to the automatic sync instead
+Fix #263: revert "Implement ComponentCallbacks2"
+
+This reverts commit 1bd24faf04e8b27dd58decd74b3cdacdc9d51b82.
+
+Conflicts:
+	src/com/btmura/android/reddit/app/ThingListController.java
+Fix #269: remove GridLayout constant
+Use TabController to remove more duplicate code
+Fold ListViews into new Views utility class
+Fix #268: hide account selector for message replies
+Fix #266: use updated ThingHolder interface
+Refactor ThingBundleHolder interface
+Issue #266: add refresh icon to inbox
+Remove unused methods in NavigationFragment
+Rename menu resource
+Fix #259, #260: fix padding in account name row
+Fix #267: fix title when viewing messages on phone
+Some code formatting in Loaders
+Some ThingDataLoader clean up
+Fix tally in SaveSyncer
+Show reload button for profiles
+Add some missing override annotations
+Fix #262: fix starring state not sticking
+Issue #262: improve accuracy of save menu item
+Some code formatting cleanup
+Fix code formatting in ComposeFormFragment
+Remove some duplicated code
+Fix #264: fix message menu reply action item
+Fix send button without invalidating menu item
+Fix send button not reacting for edits
+Fix #265: show edit item if possible
+Fix #248: rearrange subreddit action items
+Always use NavigationFragment in browser
+Restore pending random resolution on config change
+Resolve subreddits in loader instead
+
+This is an experimental attempt at resolving the random subreddit before
+setting any fragments. The downside is that there isn't any loading
+indicator or message when an error occurs. However, the code is a lot
+simpler and more efficient.
+Move text truncation back to the view
+Remove explicit syncing as an experiment
+Various fixes: random handling and account reloads
+Revert "Fix bug where messages would always goto inbox"
+
+This reverts commit 9ffee2db68f8b2703592b91238506b5b7026d70e.
+Fix rotation issue when adding account
+Rename SubredditNameHolder interface and methods
+Fix menu after resolving random subreddits
+Fix bug where messages would always goto inbox
+Make shouldParseReplies protected
+Add account column to sessions table
+Fix random subreddit loss on filter change
+Move progress bar to top of layouts
+Remove unused pool classes
+Fix #257: improve ellipsize function
+Implement ComponentCallbacks2
+Remove unused class
+Fix #258: clean sessions by type
+Fix #15: remove special handling of images
+
+Also try using WebView#saveState + restoreState.
+Add support for hexadecimal character refs
+Fix disapproval face by properly implementing CRs
+Fix #251: truncate long titles
+Rename some utility classes
+Fix #245: remove generic session tag column
+Fix #248: rearrange menu items
+Remove unnecessary setupViews method
+Extract common tab setup code
+Fix view restoration problem
+Fix #254: fix up button for search activity
+Add comments table to content URI list
+Fix #252: periodically clean up sessions
+Fix #253: update menu items on swipe
+Fix #256: hide some menu items when previewing
+Fix #250: fix missing menu items on ICS
+
+The cause was a fragment saying it had a menu but didn't really have
+one. Also update the menu items when setting the current page. It worked
+fine in JB though.
+Fix #249: limit sidebar header image width
+Revert "Revert "Fix targetSdkVersion lint warning""
+
+This reverts commit 71f15cc6e271e9a430ffd1c92f9529523bf6b0ed.
+
+The imgur redirects stopped working an hour later, so it wasn't this
+after all. Maybe it's just a problem with their site at the moment.
+Revert "Fix targetSdkVersion lint warning"
+
+This reverts commit 1a2b39a8af340b8ed9ad286b4ba6f9d887ab110e.
+
+Changing the targetSdkVersion to 18 causes the WebView client to show a
+blank page when the browser is being redirected like on imgur.com.
+Revert "Use desktop agent for LinkFragment"
+
+This reverts commit 9c7d796c3036eaa3460c0b7dfa3db1ac2254ae28.
+Use desktop agent for LinkFragment
+
+There seems to be an issue with 4.3 not handling redirects.
+Fix #247: require distance for fling to register
+
+This is different from what the bug requests, but this should achieve
+the desired effect of being too sensitive to flings I think.
+Fix #212: swipe to unhide on hidden page
+Start cleaning service before issuing network call
+Fix not popping back stack when selecting things
+Fix #239: delete using offset + limit
+Fix rotation bug due to typo
+
+Overriding methods can be so dangerous.
+Fix #246: add arrow indicator to sidebar header
+Make drawer wider for most screens
+Suppress inconsistent layout lint warnings
+Fix duplicate resource warning
+Fix targetSdkVersion lint warning
+Fix #243: run cleaning in separate thread
+Fix #240: don't update header comment count
+Clean up AccountResultAdapter code
+Fix #242: make messages icon clickable
+Fix #244: move add subreddit item down
+Fix add subreddit item in sidebar
+Fix #241: align YT video to top in landscape mode
+Fix #236: use collator to sort subreddits
+Change ComposeActivity to tabbed activity
+Move progress bars to the bottom
+Move progress bar to top of add account frag
+Fix #235: use inline progress bar for composing
+Fix #211: add initial database cleaner
+Remove unused methods
+Fix #234: hook up refresh button
+Remove special empty text handling
+Issue #234: fix refresh item visibility
+Fix missing menu items
+Issue #234: add theme refresh icon
+Remove more code duplication
+Split menu and action mode handling
+Remove protected member access
+Use separate menus for messages
+More menu controller refactoring
+Refactor action mode handling in ThingListFragment
+Fix #231: fix crashing when selecting things
+Rename some menu handling methods
+Fix #233: handle add subreddit dialog
+Fix #223: don't allow swiping in action mode
+Fix #229: force load subreddit on clicks
+Rename NavigationFragment callback methods
+Fix #226: fix drawer resetting position
+Fix #232: fix seek bar for JB-MR1+
+Move sidebar item handling to ThingListFragment
+
+This fixes getting the right sidebar when selecting subreddits in the
+related subreddits activity.
+Incremental clean up in ThingListFragment
+
+- Add some missing Override annotations
+- Make some public methods private to setup future clean up
+Fix #230: fix related subreddits selection typo
+Fix some obvious NPEs when rotating
+Make sure to set fragment visibility
+Fix #221: rename sidebar tabs
+Fix SearchActivity crash on configuration change
+Issue #221: implement subreddit scraper
+Issue #221: add related subreddits fragment
+Issue #221: change SidebarActivity to use tabs
+Remove unused loafIfPossible methods
+Increase left width for larger tablets
+Fit more details on 7 inch tablets
+Fix NPE when searching from profile or messages
+Fix not able to select saved profile things
+Fix subreddit results not showing loading symbol
+Rename container member names
+Rename container identifiers
+Use different container id for drawer
+Fix #225: fix a deadly typo
+Issue #225: rewrite refresh view animation code
+Issue #225: make drawer wider and optimize layout
+Remove unused strings and layouts
+Ignore lint warning about icon
+Issue #225: use drawer layout for smaller tablets
+Remove unused layout
+Fix #219: fix opening links for large screens
+Fix #134: finish single pane up button work
+Issue #219: disable drawer when previewing
+Issue #134: clean up ThingActivity a bit
+Issue #219: make subreddit links work again
+
+Links to specific things don't work yet still.
+Add vertical divider to button bar
+
+I swear this was there...
+Remove popup progress when adding account
+Some clean up
+Fix crash when changing to subreddits tab
+Remove black background for videos
+Fix #220: enable paging for search results
+Remove more dead code
+Remove even more unused code
+Remove more unused code
+Remove some unused methods
+Fix blank screen when no subreddit results
+Remove unused swipe code
+Fix #210: make selecting subreddits in search work
+Issue #210: fix up UserProfileActivity
+Issue #210: fix subreddit search config change bug
+Issue #210: fix up search for small screens
+Issue #210: refactoring fragment control
+Remove some dead code
+Remove ThingListActivity
+Issue #216: don't show add if not enough accounts
+Issue #216: use dialog rather than custom view
+Fix #215: add share to search sub action bar
+Fix NPE when selecting home menu item
+Fix #216: add copy subreddit action
+Some SidebarActivity refactoring
+
+Add search and copy url items. Move the menu code into the fragment.
+Don't let an error clear all the existing items
+Remove ThingProviderListFragment
+Issue #210: add back sbureddit cab items
+Issue #214: remove some more toasts
+Fix and suppress various lint warnings
+Delete unused BaseLoaderAdapter
+Remove unread messages icon code
+Rename AccountAdapter to AccountMailAdapter
+Issue #210: fix subreddits not updating
+Issue #210: tweak place button background
+Issue #210: change place button background
+Issue #210: add subreddit places button
+Issue #210: highlight selected account
+Issue #210: rename NavigationAdapter
+Issue #218: show YT player at top for portrait
+Issue #210: fix navigation fragment background
+Issue #210: combine places into one row
+Issue #210: show account name in action bar
+Issue #210: fix home up for tablets
+Issue #210: some fixes to get large screen up
+Issue #210: various clean up and fixes
+Issue #210: more clean up
+Issue #210: remember the last place
+Issue #210: fix title for profiles and messages
+Issue #210: make account places somewhat work
+Issue #210: highlight selected subreddit
+Issue #210: add account places again
+Issue #210: add subreddit category divider
+Issue #210: make filters work again
+Issue #210: make selecting subreddits work again
+Issue #210: make account items clickable
+Issue #210: use single fragment with many adapters
+Issue #210: show app storage account name properly
+Issue #210: show accounts in subreddit fragment
+Issue #210: remove DrawerFragment
+Issue #210: fix front page display in filter
+Issue #210: fix drawer account selection
+Issue #210: push filter code to abstract class
+Issue #210: fix navigation bar race condition
+Issue #210: make filters take affect
+Issue #210: add equality check to swap fragments
+
+Fragment overrides the equals method so we have to define our own
+interface.
+Issue #210: sort of make the title bar work
+Issue #210: replace fragment on subreddit select
+Issue #210: show subreddit things on first screen
+Issue #210: cram SubredditListFragment into drawer
+
+This is going to get very messy...
+Issue #210: hack to allow initial account select
+Issue #210: make account places selectable
+Issue #210: remove account items from menu
+Issue #210: temporary hack to set a background
+Issue #210: show account places for only accounts
+Issue #210: some drawer appearance tweaks
+Issue #210: use a fragment for the drawer
+
+The drawer is going to get complicated so create a fragment for it.
+Issue #210: add background and some dividers
+Issue #210: add accounts and places to nav drawer
+Change ellipsis to show more of the uris
+Issue #210: add shadow like NavigationDrawer demo
+Fix #206: show current search when being edited
+Fix #213: don't show toast when favoriting
+
+The star is enough to reflect something happened.
+Issue #210: add an empty navigation drawer
+
+It doesn't do anything yet.
+Allow negative scores for things
+Upgrade to support library v13
+Some clean up in the listing classes
+Remove a TODO and fix potential shadowing issue
+Fix exceptions when loading messages
+Fixes to mark new messages again
+Don't allow collapsing the header comment
+Remove updating comment count on thing list
+Fix a couple bugs in insertComment
+Add landscape layout for composing form
+Make compose activity full screen
+Add some helper array functions to clean code
+Fix empty karma counts from appearing
+New untested comment reply implementation
+Show placeholder comment when action bar is used
+Move action bar comment reply code to call method
+Show placeholder messages when action bar is used
+
+Writing a new message in a thread would not appear if you created it via
+the action bar menu item. Now it does by searching for matching sessions
+and updating them all.
+Move message reply to provider call method
+Change bitmap cache size criteria to count
+Make existing controllers implement interface
+Use AbstractListFragment for SubredditListFragment
+Extract a common ListFragment base class
+Fix more message menu items
+Fix some more menu items
+Fix broken karma loading code
+Remove unused reply icon resources
+Use edit icon for reply message action
+Get messaging from the action bar working again
+Fix some menu jank by hiding initially
+Fix author and subreddit menu items for messages
+Don't show link and comments icons for messages
+Get messages to appear again
+Use edit icon everywhere for composing
+Make comment replies work again for messages
+Properly align karma counts and format the counts
+Fix padding around filter category row
+Show comment karma in dropdown
+Show domain in thing context menu
+Fix endless loading after exceptions
+Improve YouTube url detection
+Fix strict mode error about cursor
+Only use split action bar for some activities
+Fix new comment item on action bar
+Reinstate the select method that was being used
+Fix view comments option by removing it
+Move ThingBundle to app package
+Show title after discovering it
+Make links work again
+Fix random subreddit name resolution
+Fix NPEs from strict mode fix
+Don't wrap null cursors
+Fix strict mode warning about unclosed InputStream
+Fix exception when clicking on links
+Make links to comments from profiles work
+Fix #75: add embedded YouTube player
+Fix bug where items remain selected
+Preliminary save implementation for ThingFragment
+Rearrange thing menu items
+More sidebar header image fixes
+Put header image to the left
+Display sidebar header image if available
+Don't show description row if not available
+Fix lint warnings and remove unused resources
+Don't show view menu item
+
+Allow users to click the header row to view the subreddit though.
+Make SidebarActivity full screen
+Add share option for sidebars
+Remove clearTaskOnLaunch flag
+Code conistency clean up between controllers
+Set all activities to use split action bar
+Extract ThingProjection class to hold constants
+Remove one dependency on ThingListProviderFragment
+Fix broken voting
+Remove unused protected inner* methods
+Fix raw type warnings
+Move creation of adapter into controllers
+Move controller creation to sub classes
+Create separate classes for ThingListFragments
+Renaming classes to be consistent
+Move action mode handling to separate controllers
+Move menu preparation code to controller class
+Create separate classes of SubredditListFragment
+
+Move getQuery to the search specific fragment.
+Reset more id after loading it once
+Rename some constants
+Fix empty list after orientation change
+Fix endless scrolling once again
+Fix for expanding and collapsing
+
+...and a lot of extra refactoring that came with it.
+Move expand and collapse into ThingProvider
+Update swapCursor to return boolean like others
+Fix more onLoadFinished called twice issues
+Properly restore pager state on config changes
+Don't save state in Loaders
+
+Also refactor CommentListController to match the other controllers to
+have the session id explicitly.
+Fix messages endless scrolling and more clean up
+Make messages list appear again
+Rename Message constants
+Change single choice flag into explicit boolean
+Clean up SubredditListFragment arguments
+Fix AndroidRuntimeException when viewing profiles
+Add AccountSubredditListLoader
+Move index constants to Loader
+Rename some classes
+Remove unneeded methods on SubredditAdapter
+Fix selected subreddit highlighting
+Remove loader methods from subreddit adapters
+Rename SearchSubredditListController
+Make subreddit search results appear again
+Show subreddits again
+Start adding controllers to SubredditListFragment
+Add factory method for SubredditListController
+Rename flags argument getter
+Rename search fragment factory methods
+Add factory methods for SubredditListFragment
+Make some constants private
+Add type argument to create ThingListFragments
+Fix searching for things
+Fix profile loading and scrolling
+Fix database exception when loading profiles
+Fix redundant subreddit label
+Strip out unnecessary fields from ThingListAdapter
+Shove all adapter code into the controller
+Add save and restore state methods to controllers
+Get endless scrolling working somewhat again
+Wrap session creation in database transaction
+Hide insertComment call method behind method
+Some more clean up of constants
+Rename local hidden column and reorder projection
+Remove some unused constants
+Use 0 for no session id
+
+SQLite will start with row ids from 1.
+Fix expanding and collapsing comments
+Use static Uri instances instead of methods
+Fix session creation in ThingProvider
+Fix no such column error when loading comments
+Fix no such column error when viewing a subreddit
+More refactoring madness...
+
+...it compiles. I think everything is broken though. The idea here is
+to move the network logic out of the providers into the loaders and to
+move the loader and fragment logic out of the adapters and into
+controller classes. Things will be broken for a while, but at least, we
+can sort of iterate now.
+Shorten name of CommentListFragmentController
+Remove unused title and url arguments
+Huge initial refactoring attempt
+
+- Move Loader logic out of adapters and most fragment logic into a
+  separate controller class to keep adapters and fragments cleaner.
+
+- Move out fetching of content out of the provider and into the loaders.
+  The ContentProvider can only do its CRUD operations.
+
+There is probably some unnecessary code that was added due to the huge
+undertaking. It's going to take a while to clean this all up.
+Add a count parameter to CommentListing
+Create new loader for ThingFragment
+
+Extract BaseAsyncTaskLoader from AccountLoader and use that base class
+for loading the ThingBundle for ThingFragment. The loader will be used
+to fetch info about a thing when it is missing like when just a raw
+url is provided.
+Rename joined saved and vote columns
+Issue #207: change saved icon visibility condition
+Remove thing_menu_menu which is not needed anymore
+
+Copy the remaining items that need to be dealt with to thing_frag_menu.
+Issue #205: fix hide menu item visibility
+Issue #205: add unhide menu item
+Remove incorrect comments
+Issue #205: add hidden column to sync updates
+Issue #205: fix loader queries for hidden things
+Alphabetize JsonParser class
+Issue #205: store thing attributes when hiding
+
+This is the first step in showing pending hidden items in the hidden
+tab. It doesn't quite work, because the query to show the hidden items
+hides the new pending hidden ones due to joining with the action table.
+Issue #205: add hidden tab to user profile
+Deprecate some more thing columns and clean up
+Issue #205: fix edit provider method
+Issue #205: more fixes to content providers
+Issue #205: update syncer code
+Issue #205: make basic comment viewing work again
+Issue #205: use comments table in CommentAdapter
+
+Also deprecate some columns in the things table that we no longer need
+after splitting them into the comments table. Leave them there for
+documenting history.
+Issue #205: use comments table in CommentListing
+
+Also add saved column to BaseThingColumns to track the remote saved
+state of a thing when either hiding or saving it.
+Issue #205: add base thing columns to some tables
+
+The comments table has to implement BaseThingColumns, because we want
+the user to be able to save or hide via the header comment.
+Issue #205: create the comments table
+Issue #205: define separate table for comments
+
+Use a separate table to scope deletions when hiding easier.
+Issue #205: allow subreddits to be dismissable
+
+Even if you don't have an account, you should be able to delete
+locally stored subreddits.
+Issue #207: rename some adapter classes
+
+Rename ThingAdapter to ThingListAdapter, because we want to create a
+class called ThingAdapter for ThingFragment. Rename
+SubredditListingAdapter to SubredditListAdapter to follow the convention
+too.
+Issue #207: some minor refactoring
+
+I want to rename some classes, so I'm just checking in some small
+changes here. Nothing noteworthy...
+Issue #207: replace ViewPager with FrameLayouts
+
+Our fragment holds the ViewPager now, so we can just use a FrameLayout
+in all these layouts.
+Issue #207: use ThingFragment in ThingActivity
+
+...and get rid of ThingMenuFragment and the crud needed in LinkFragment
+and CommentListFragment that was needed to support it. I still left
+behind some code in CommentListFragment that I will need to refer to
+when adding back the new comment and save menu items.
+
+Going to comments first is broken by this change.
+Issue #207: keep removing ThingMenuFragment refs
+
+This makes the menus hide the account menu items properly.
+Issue #207: readd add subreddit menu item
+Issue #207: add share menu item
+Issue #207: add user and subreddit items
+Issue #207: add back link and comment menu items
+Issue #207: implement open and copy url menu items
+Issue #207: make AccountAuthenticatorActivity work
+
+Copy AccountAuthenticatorActivity and make it extends the support
+library's FragmentActivity to make it work with support fragments.
+Issue #207: add a menu resource for ThingFragment
+
+The plan is to convert all the menu items from ThingMenuFragment.
+Issue #207: transition to support v4 classes
+
+getChildFragmentManager is only available in recent releases, so there
+is no choice but to migrate to the v4 support library which has it.
+So convert everything possible to use v4 Fragments and Loaders.
+Since you have to extend FragmentActivity, AccountAuthenticatorActivity
+no longer works at the moment. I'm sure there were other things I broke
+too...
+Issue #207: replace ThingPager with ThingFragment
+
+This is the beginning of a long attempt to put a ViewPager inside of a
+Fragment and eventually use a single Loader to get at a thing's metadata
+conveniently.
+Issue #207: upgrade to support library v12
+
+This has some ViewPager fixes. However, I'm now going to try using a
+ViewPager inside of a fragment which supposedly worked in V11 to
+address some janky menu item issues due to using the split action bar.
+Issue #205: set layer to hardware during animation
+Issue #205: allow swiping only in some situations
+
+Add a isSwipeDismissable method to the OnSwipeDismissListener for
+checking whether or not the swiped view is dismissable. Don't allow
+swiping when the user doesn't have an accounts. Furthermore, don't
+permit it on subreddits that don't have sidebars like front, all,
+and random and those that are search results.
+Issue #205: rename SwipeTouchListener class
+
+Rename it to SwipeDismissTouchListener, since that name indicates more
+of what animations it will perform. Also rename undoAnimation back to
+resetAnimation, because it is easier to say.
+Issue #205: remove ViewPager on single pane search
+
+Posts are already swipable so being able to swipe between tabs makes it
+more confusing and glitchy. It's also more consistent, because the large
+screen search doesn't allow you to swipe between tabs.
+Issue #207: remove unused strings and icons
+
+The queue icon wasn't good for the add subreddit action, and we never
+added a "Help" function anyway.
+Issue #207: the menu fixes never end
+
+- Resurrect add subreddit item since it's convenient
+- Hide new post icon when searching a subreddit
+Issue #207: some more menu rearrangement
+
+- Add subreddit info cab menu item.
+- Use edit icon instead of plus sign when posting and commenting.
+- Remove the queue icon for add subreddit with old plus icon.
+- Remove add subreddit icon when viewing things.
+- Make search icon priority again
+Issue #205: reset animate listener to fix flings
+
+After the first fling, any movement on a view would get dismissed.
+Apparently, the dismiss listener would remain on the view even if a new
+animation was scheduled. So set the listener to null to get rid of the
+prior listener to fix the issue. Tricky.
+Issue #205: eliminate thumb flicker and more
+
+Eliminate the thumbnail flicker by only animating the thumbnail alpha
+when a thumbnail is set by the AsyncTask. If we already have a thumbnail
+sitting in the cache, then don't animate it to avoid flicker when items
+are shifted in response to dismissing something.
+
+Hook up the listener in ThingListFragment to hide things.
+Issue #205: add rudimentary hide context menu impl
+
+Add a context menu item that can hide posts. The syncer deletes all rows
+with a matching thing id, so the app will crash if you are viewing
+something that you have decided to hide. Ouch.
+Issue #205: add syncing and join code for hides
+Issue #205: add a table to track hide actions
+Issue #205: add RedditApi method for hiding
+Issue #205: remove shrinking and other fixes
+
+Remove the shrinking animation, because our db operations are
+asynchronous and could finish well after the view is snapped back to its
+original height. Since we're asynchronous just reset the view to its
+original state when binding new data.
+
+Remove the newVelocityTracker method in favor of just obtaining and
+recycling. It seems like clearing the data doesn't work for some reason,
+so this seems to fix the oversensitive dismissing. Change the condition
+to match Roman's code sample.
+Issue #205: add height shrinking code
+
+Add nasty code to animate layout height to 1. There is a problem in that
+our database changes are done asynchronously, so you can see a flash of
+the prior item returning to its original state.
+Issue #205: add OnSwipeDismissListener
+
+Add OnSwipeDismissListener callback that is executed when an item has
+been dismissed by swiping. There is no animation to shrink the view, so
+it looks abrupt at the moment.
+Issue #205: detect flings on swipable views
+
+Use velocity tracker to compute the swipe velocity for flings.
+There seems to be an issue where swiping from left to right is too
+sensitive but not sensitive enough when going right to left.
+Issue #205: add ability to horizontally drag views
+
+Add the ability to touch and drag views sideways. This code merges some
+fixes gleamed from Roman Nurik's swipable views gist. Specically, I
+couldn't figure out to send the cancel event to disable items from
+highlighting and long press from activating. I also added some code to
+use the Y movement to decide whether or not to activate swiping. Anyhow,
+this code doesn't dismiss anything yet. That will be addressed in a bevy
+of other changes...
+
+Also set the chosen state on views when clicking on them. Somehow
+calling the ListView#onTouchEvent in the touch listener causes the views
+to refresh too early and miss the drawable state change.
+Issue #207: include add subreddit icon if room
+
+Remove the new post icon on the small screen browser activity to make
+room for the add subreddit icon which is more relevant to the listview
+of subreddits. Add a flag to disable the debug menu so we can see how
+the menus will look like on non-debug builds.
+Remove one-time database cleaning code
+
+Killed processes can still be restored, so this cleaning code could
+delete the content we need to view. We'll have to come up with other
+way to keep the database clean.
+Issue #207: improve menu jank in ThingListActivity
+
+Commit the fragment when the list of accounts is loaded to avoid some
+menu jank that occurs if we wait for onNavigationItemSelected to be
+called later.
+Issue #207: enable split action bar when narrow
+
+We need to fix some jank caused by menu items shifting around.
+Fix #200: move SessionProvider into ThingProvider
+
+The code in SessionProvider is getting specific to ThingProvider with
+the one time cleaning code calling out specific tables. So move the
+SessionProvider code into ThingProvider. SubredditProvider didn't need
+to extend SessionProvider so make it just extend BaseProvider.
+Issue #200: add one time clean of the database
+
+Add a hook to remove residue in the database if the application was
+terminated abruptly.
+Issue #200: delete session after resetting loaders
+
+Hook into onLoaderReset to delete session data once the fragments are
+destroyed, so that our database doesn't keep growing without bound.
+Issue #200: change from temp to permanent tables
+
+The temporary tables used in database version 2 would disappear when the
+database was sometimes closed when the app was put in the background.
+Switch to permanent tables to avoid this issue. Now we need a way to
+occasionally clean up though to avoid endless expansion.
+Fix #204: don't be lazy and collapse the spans
+
+Before this change each line of a code block would have a separate
+TypefaceSpan object. Add code to detect when the current indented line
+is a continuation of the code block so we can have one span per code
+block instead.
+Fix #204: add todo to reduce spans for code
+
+This isn't a solution, but I'm going to leave a TODO for now.
+Issue #204: don't apply formatting in code blocks
+
+Don't apply formatting in code blocks except for non-destructive edits
+like raw or relative links.
+Issue #204: add rudimentary code block formatting
+
+Recognize indented lines and make them code blocks. This creates a new
+TypefaceSpan for each line, so it could be improved to apply only a
+single span for multiple lines to avoid allocating unnecessary memory.
+
+Furthermore, the Formatter will still apply formatting to the content
+that was placed in a code block.
+
+These two issues need to be fixed before marking this issue as fixed.
+Update user agent version string
+Fix #202: fix negative width in SubredditView
+
+I can't replicate the cause of this though...
+Set theme for SidebarActivity
+Set version to 2.3
+Change back to "Switch themes"
+Set dialog theme for dialog activities
+
+This fixes the black bars appearing around the dialogs.
+Remove a pair of save and restore calls
+Remove help menu item
+
+I was thinking of redirecting to a web site, but the experience is
+pretty poor. We can add this back when the content is ready.
+Add lines on the side of comments + fix rotation
+More menu tweaks
+Change help URL
+Add help menu item
+Add thumbnail scale up animations again
+Some menu fixes and rearranging
+Fade in thumbnails
+
+Also refactor some code to avoid setting the same thumbnail twice if an
+adapter appends more data and do object creation when setting a
+thumbnail during scrolling or animation.
+Some menu item fixes
+
+Disable account and switch menu items in preview mode.
+Remove thumbnail for opening links
+
+The experiment with using thumbnails to open links and anything else for
+comments didn't work very well. Remove all that and fallback to the
+contextual action bar comments menu item.
+Add comments cab item
+Scale bitmap to target density when loading
+Use a thumbnail scale animation
+More resources for thumbnal link icon
+Fix #167: show icon for links without thumb urls
+Issue #167: play sound when clicking thumbnail
+Issue #167: hook up pager to show correct page
+Issue #167: pass thumbnail clicks to listener
+Issue #167: hook up thumbnail click listener
+Issue #167: show thumbnail outline for links
+
+This is an experiment which may not work but present a clickable
+thumbnail for anything that has a link.
+Put Search before Switch Theme menu item
+Invalidate only thumbnail region
+
+The code invalidated the entire view when setting a thumbnail. Change it
+to only invalidate the thumbnail region to draw less while thumbnails
+load as the user is scrolling.
+
+Also fix a bug where the thumbnails weren't scaling properly. Make
+thumbnails scale completely to the square even if they don't have the
+height to do so. They look a bit stretched sometimes, but I think the
+overall appearance of a full thumbnail looks better...
+Invalidate only when shader is different
+
+I don't think this will improve anything, since setThumbnailBitmap is
+called when binding the data and once afterwards if there is a
+thumbnail.
+Undo lint damage
+
+textIsSelectable on spinner items makes them unselectable.
+Show search results from current subreddit first
+Share the same preferences instance for everything
+Extract base pref instance control to Prefs class
+Fix new lint warnings
+
+Some like the textIsSelectable don't seem to be useful warnings.
+Use secondary color attribute in filter row
+Hide ThemePref implementation
+Fix #3: add light resource for unread messages
+Issue #3: rename Prefs to ThemePrefs and move it
+Issue #3: fix incorrect style change detect logic
+Issue #3: shorten Preferences to just Prefs
+Issue #3: fix voting score style
+Issue #3: fix link title for different themes
+Issue #3: fix exception in content browser
+Issue #3: simplify button bar styling
+Issue #3: fix account name adapter colors
+Issue #3: fix button bar styles
+Issue #3: add light resource for new message
+Make text selectable to remove warnings
+Issue #3: add light resource for view icon
+Issue #3: add light resource for send icon
+Issue #3: add light resources for reply icon
+Issue #3: add light resource for edit icon
+Issue #3: add light resource for unsaved icon
+Issue #3: add light resource for delete icon
+Issue #3: add light resource for add icon
+Issue #3: support theme switching in custom views
+Issue #3: support dialog theme switching
+Issue #3: more light resources
+Issue #3: add some light resources
+Issue #3: rename ic_unread_messages
+Issue #3: setup attributes for some menu icons
+Issue #3: add custom extension of Holo themes
+
+This is for using different icon sets.
+Issue #3: push theme logic to Preferences class
+Issue #3: add menu item for switching themes
+Issue #3: add class to get theme preference
+Set version to 2.2
+Increase width for ellipsized titles
+Enable bitmap filtering on thumbnail paint
+Fix DbHelper context memory leak
+Update README.md
+Update README.md
+Update README.md
+Create README.md
+Fix #201: add rising filter and remove sort code
+Fix #199: fix UriHelper to return a tagged id
+Fix #198: fix /u/null from appearing when loading
+Add share item for things
+Add share item for comments
+Change unread mail icon and icon in spinner
+Fix another thumbnail loading bug
+
+Thumbnails provided by the cache were not resetting the tasks associated
+with them, so old tasks would overwrite the thumbnails!
+Rename method that was exposed in API 16
+Reenable activity animations
+Fix #197: show mail indicator in account spinner
+Fix #195: rewrite sequence number on insertions
+Issue #195: fix one case of mispositioned comments
+Issue #195: add unit test for CommentLogic
+Move CommentLogic to apps package since its logic
+Show timestamp and author for message details
+
+The messages JSON doesn't provide us with point information, so display
+timestamp and author instead on large screen devices.
+Fix #194: fix duplicated number of downvotes
+Fix #193: don't show voting arrows for messages
+Increment version to 2.1
+Merge comment actions from all accounts
+Don't copy preset subreddits when upgrading db
+Fix ThingListActivity janky menu shifting
+Relabel tab for searching within subreddit
+Fix adding of subreddits in search
+Make subreddit count test simpler
+Add missing add subreddit dialog for single pane
+Update Eclipse code formatter profile
+Support comment context urls
+Add support for user path
+Try to handle links without an intent chooser
+Fix broken test
+Fix action bar displaying wrong subreddit
+Don't restart ThingActivity when changing configs
+Use single view for AccountFilterAdapter dropdown
+
+A single view is reused over and over to draw the spinner items so use a
+single layout to avoid complicated logic that fought against the
+convertView convention.
+Split apart Result into a separate class
+Refactor LoginResult to be like AccountInfoResult
+Refactor SidebarResult to match AccountInfoResult
+Rename AccountResult to AccountInfoResult
+Show link karma of user when viewing their profile
+Fix some todos
+Rename results to result for consistency
+Add loader that grabs a user's info
+Add API method for querying user info
+Rename me method to aboutMe
+Clean up SidebarLoader a bit
+Show title earlier in UserProfileActivity
+Use AccountFilterAdapter in UserProfileActivity
+Rename StringUtils class to just StringUtil
+Fix #168: handle sometimes null webview url
+
+This is the real fix...
+Remove last profile and message filter pref
+
+There was a bug where the filter would get reset if the loader reloaded
+its data. The logic was getting too complicated, so I instead just
+removed the preferences which were confusing too.
+Only update accounts table if necessary
+Listen for changes to karma counts
+Fix FilterAdapter
+
+It should use a separate layout...
+Remove unnecessary Integer.toString()
+Clean up some spinner code
+
+I discovered the entire spinner dropdown is rendered 3 times for
+measurement and reuses a single view as much as possible to draw the
+entire list. This isn't good for our dropdown which has different view
+types which spinners aren't designed for it seems...
+Gross implementation of loading karma counts
+Some work to show karma counts
+Once again don't show account items all the time
+Add author item to message thread action menu
+
+Also regretfully clear the cab since it needs the author from the
+adapter. Clear the cab on config changes in other fragments to be
+consistent.
+Remove new comment item from message threads
+Only show reply item when destination is not self
+Show text for reply action item
+Remove nested layout
+
+This nested layout would cause the initial thing list to be drawn twice,
+because the ListView needed to measure the items to determine the height
+first...
+Reuse formatting string builder
+Reuse status layout objects
+Add back new post for single pane browser
+Remove unnecessary ThingBundle methods
+Fix missing open and copy url menu items
+Simplify saved menu item visibility
+Simplify new comment menu item visibility
+More menu refactoring
+Hide accounts menu item only
+Fix NPEs in single pane mode
+Fix #191: show subreddit options in search
+Fix #192: fix random subreddits
+Move UriHelper to net package
+Revert "Try pooling the ContentValues..."
+
+This reverts commit 9380e941f8c59e9654b2c6c57937c280820bae3b.
+Fix wrong preference usage for MessageActivity
+Try pooling the ContentValues...
+Copy private pool classes from Android framework
+Fix #188: use edited text in new listings
+Don't show copy url item for pending comments
+Issue #188: fix bad back reference and query scope
+Issue #188: rudimentary implementation of editing
+Issue #188: add edit item
+Rename new comment to reply
+Refactor CommentListFragment prepare action mode
+Fix #189: don't show profile item when deleted
+Alphabetize methods in MenuHelper
+Remove unused import
+Fix #91: clear out account data on adding account
+Fix #187: add add account layout for compose form
+Fix #190: make sure to use sync URI at least once
+Implement other AccountAuthenticator methods
+
+I'm not exactly sure what they do yet, but now they do something that
+will likely popup a dialog rather than hanging or crashing.
+Fix #184: fix hang when authtoken is missing
+Fix #117: more efficient thumbnail loading
+Some filter refactoring and no account scenario
+Fix rotation in SelfProfileActivity
+
+Amazingly MessageActivity and the profile activities are only a couple
+lines different...
+Fix blank subreddit list when changing users
+Show user name in context menu.
+Fix #162: show details for profiles and messages
+
+Refactor the code significantly to allow customization of what details
+show per row. Spread out the details evenly in cells rather than as one
+long ugly string.
+Increase subreddit list width a bit
+Use link title rather than body if missing title
+Fix title formatting
+Fix missing account name
+Fix a padding issue in compose form
+Split labels action item again
+Add back search to all places
+Restore add subreddit menu item
+More menu work...
+Encode user name
+Move link switch up
+
+The switch was taking too much width on small screens.
+Fix save item appearing for messages
+Reactivate new comment item for message threads
+Remove unused resources
+Add plural for messages
+Clean up comment cab menu
+Fix up thing cab menu
+Add new message item to profiles and messages
+Remove search from profiles and messages
+Some more menu work and app refactoring
+More menu experimentation
+
+This time create a "Me" group with quick access to profile, saved
+things, and messages.
+Hide subreddit sync adapter from user
+Use TimeUnit to specify sync durations
+Fix crash when doing sync now from settings
+Fix #185: only sync once per minute
+Issue #185: check mail when coming back to app
+Show account menu items in action bar
+Fix #179: show save items earlier
+Issue #179: don't enable new comments until ready
+Fix #150: add account spinner to ProfileActivity
+Issue #150: use filters in MessageActivity
+Issue #150: share filters in AccountFilterAdapter
+Issue #150: move filters to BaseFilterAdapter
+Issue #150: rename AccountSpinnerAdapter
+Fix #178: prune neutral items in liked/disliked
+Fix #177: ignore votes when collapsed
+
+This code needs some clean up in the future...
+Prune more things for searches
+
+The links to the next page don't seem to work.
+Ignore clicks on loading more items
+Issue #170: hook up menu items in ThingActivity
+Fix #170: add new comment item to message threads
+Issue #170: add new comment menu item
+Fix #171: adjust launcher icon a bit
+
+Move the alien head up and shrink the antenna a bit.
+Fix #172: don't require captcha if possible
+Issue #175: fix wrong column used in query
+Issue #172: rename compose callback method
+Don't show presets in subreddit suggestions
+Issue #172: remove code duplication of fragments
+Some refactoring to split apart SubredditAdapter
+Fix #50: auto complete subreddit suggestions
+Fix #175: check that sessions exists before using
+Fix #176: save self attribute for pending things
+Fix #169: fix unable to vote on comments
+Revert "Issue #174: add a test for urls missing schemes"
+
+This reverts commit 8c9e0ee74d8232d17859c377282db3388c5e76c7.
+Fix #174: try adding http scheme if no scheme
+Issue #174: add custom URLSpan to handle urls
+Issue #174: move custom spans to style package
+Issue #174: add a test for urls missing schemes
+Clean up more provider URIs
+
+Notify is on by default, so there is o need to create URIs with the
+parameter explicitly set to true.
+Fix broken provider uris
+Show pending likes and dislikes in user profiles
+Trivial clean up
+Only hide accounts menu due to technical issue
+Fix marking messages as read
+Fix delete operation
+Clean up some URI building code
+Update pending messages after actions are done too
+Fix bug where related sessions wouldn't update
+Draw hollow arrows for non votable things
+Update placeholders with timestamp once processed
+Refactor comment deletion code
+Record action in tables and remove uri commands
+Add liked and disliked profile sections
+Support endless scrolling in inbox listing
+Fix #164: make unread messages blue
+Fix messages not showing up in the correct thread
+Just append messages at the bottom
+Don't show new comment for pending items
+Issue #162: show ups and downs for comments
+Add subreddit search results uri
+Split apart subreddit search results again
+Fix #163: don't always put re: for message subject
+Issue #158: split apart read unread actions
+Fix #158: fix duplicate message due to query join
+Fix wrong parent id being sent in message replies
+Fix some single pane crash when clicking links
+Fix #161: fix crash after deleting header comment
+Do more formatting in a message thread
+Fix #160: use specific comment style for comments
+Add NSFW tag for comments
+
+We're retrieving it for saving things so might as well use it.
+Issue #159: use subject as link title
+Fix #112: don't shift author left when collapsing
+Fix #140: fix NPE in onBodyTouchEvent
+Issue #129: fix bounding box for thing bodies
+Close new message window after sending
+
+Throw up a toast to be consistent too.
+Remove unused string
+More menu changes
+
+- Rename "View profile" to "Author"
+- Move profile button back to ifRoom setting
+- Remove "New message" from context action menu
+Issue #157: prevent subreddit menu from appearing
+Query message actions with account name
+Fix #157: group all subreddit items under one menu
+Prevent all from being suggested
+Fix post item from appearing for non-accounts
+Use the same layout as AccountSpinnerAdapter
+Fix a comment
+Fix #152: cut down subreddit ops in half
+Rename subreddit provider methods
+Move remaining subreddit ops to Provider
+Clean up Subreddits class a bit
+Remove two completed TODOs
+Update saved menu item on successful load only
+Fix #152: add constraints to votes table
+
+The remaining tables can't have constraints, since you can have multiple
+replies to one thing.
+Use ContentValues for one op operations
+
+This should avoid allocating the ArrayList...
+Fix #148: show pending saves on first page
+Issue #148: add unique constraint to save actions
+Issue #148: add duplicate columns to save actions
+Alphabetize column names
+Issue #148: move saved handling to comment list
+Move constants to where they are used
+Fix #156: ellipsize titles that are too long
+Don't show timestamp for pending replies
+Fix #153: prevent input from covering up captcha
+Fix more lint warnings
+Fix #154: add tabbed new post and message wizard
+Issue #154: temporary check in of tabbed compose
+Issue #154: tuck link switch into previous row
+
+It looks ugly but the previous version wasn't pretty either.
+Remove unused imports
+Fix #155: don't always open up in overview mode
+Enable home up when previewing a subreddit
+Fix #155: add view profile menu item
+Fix #80: add context item to view subreddit
+ICS: add minimum height to account list dialog
+Some query fixes for SQLite in ICS
+Move unread message icon to BrowserActivity
+
+It wasn't part of the global menu at all anyways.
+Change insert to update for setting mail status
+Add link and comment karma columns to accounts
+Use constraints to reduce db ops for accounts
+Call AccountProvider to clear mail read status
+Fix typo
+Clear messages indicator when checking indox
+Make unread message indicator go away
+More menu fixes and subject extra for composing
+Rearrange some action menu items
+More menu item fixes
+More menu madness
+Move many global items out that weren't really
+
+The unread messages icon doesn't work at the moment.
+Don't show new message as icon
+
+It looks funny next to unread message icon.
+Fix #151: make BaseProvider more flexible
+Make comment body multiline
+Fix #149: don't crash without accounts
+Issue #149: fix exception when submitting
+Issue #149: listen to text send intents
+Fix #147: use callback to toggle save menu item
+Issue #147: add saved event listener method
+Fix #108: add search within subreddits
+Fix #118: change empty message
+Issue #118: switch accounts when clicking in list
+Fix #120: fix nav selection not being called
+Issue #118: use commitAllowingStateLoss to switch
+Revert "Issue #118: don't use DialogWhenLarge theme"
+
+This reverts commit 13dcc7044504e61f4ae16723e31320cc7d603ad3.
+Add and remove account listener properly
+Fix save menu items and show when viewing things
+Don't show save icon for messages
+Fix #116: show points for comments
+Issue #118: don't use DialogWhenLarge theme
+
+Adding or removing an account causes an exception as the loaders try to
+change accounts in the background. If we cover the entire screen, this
+won't happen, since they activites won't refresh their state until we've
+gone back to the browser activity.
+Reorder methods in ThingListFragment
+Change plural of things to items
+Issue #118: show count of selected accounts
+Issue #118: set activated background color on rows
+Add save and unsave items when viewing things
+Some menu reordering and refactoring
+Rename some menu items
+Fix NPE on single pane link submission
+Add add subreddit menu item to SidebarActivity
+Issue #118: add back cancel button again
+Revert "Issue #118: add cancel button"
+
+This reverts commit ef4321f9d406188be25c6a561ae5ed2fbfac36ae.
+Issue #118: add cancel button
+Issue #118: use DialogWhenLarge for accounts
+Rename mail layout to message
+Accounts add menu item icon
+Remove sync settings menu item
+Some more style refactoring
+Issue #118: style the account row
+Issue #118: delete unused fragments and resources
+
+...once more.
+Revert "Issue #118: delete unused fragments and resources"
+
+This reverts commit 408592d178ac970e1191ffa7f091568e48d85034.
+Issue #118: delete unused fragments and resources
+Issue #118: hook up item to delete accounts
+Issue #118: add action menu for accounts
+Issue #118: use list fragment for accounts
+Issue #118: more renaming..
+Issue #118: make sync settings a menu item
+Issue #118: rename settings menu resource
+Issue #118: rename settings activity
+Fix some lint warnings
+Don't add front page when adding account
+Issue #118: rename settings to accounts
+Issue #118: delete debug item in settings
+Issue #118: add app info menu item
+Issue #118: add debug menu to main menu
+
+This is only visible on debug builds.
+Fix #146: rename to "About Subreddit"
+Trivial style fix
+Issue #110: use isRandom helper where possible
+Don't show sidebar menu item for all
+Issue #110: don't restore preset subreddits
+Issue #110: don't allow deletion of presets
+Remove unused import
+Issue #110: uncapitalize special subreddits
+
+They just seemed like they were yelling at me.
+Fix save menu icon for items with pending saves
+Rearrange thing action menu items
+
+Remove comment reply item, prioritize profile over messaging...
+Issue #110: remove front page from default list
+Issue #110: capitalize the preset subreddits
+Issue #110: remove add front page checkbox
+Issue #110: add preset subreddits at the top
+Fix random subreddit
+
+Don't add a filter when the subreddit is random...
+Fix ThingSyncAdapter perodic syncing
+
+ThingSyncAdapter now handles syncing comments, messages, saves, and
+votes, so refactor it to sync as many votes, saves, comments, and
+messages until hitting the rate limit. Then schedule another sync at
+a time that obeys the rate limit.
+Remove unused import
+Fix #98: refresh messages table after marking
+Issue #98: don't mark as read when pending
+Issue #98: mark message read on thing list click
+
+Doing it in MessageThreadListFragment won't mark comments as read.
+Delete some unused constants in the Messages table
+Issue #98: fix wrong selection of prior messages
+
+Also clean up the MessageActions class a bit and add some more comments.
+Some trivial clean up
+Issue #144: first attempt at reading messages
+Issue #98: sync read and unread message ops
+Issue #98: add provider method for reading message
+Issue #98: add method for reading messages
+Issue #98: add urls for read and unread messages
+Fix #136: tapping colored votes undoes vote
+Fix #144: don't show submitted for random users
+Issue #144: some refactoring to support more urls
+Use a for loop for authority possibilites
+Fix a possibility of duplicate rows
+Issue #144: hook up activity to parse data uris
+
+Add a couple todos as well. We need to support urls like /r/pics/hot
+and /u/btmura/overview too, so we aren't done here yet.
+Issue #144: add a method to get the user from url
+Issue #144: extract uri matcher code
+Issue #144: add filters for no www links
+Issue #144: add intent filter for /u/ links
+Remove redundant handling of urls
+
+We can handle links to reddit now, so we don't need some of this special
+handling in Formatter.
+Use URL regex pattern from platform
+Issue #144: detect user links
+Issue #144: add UserSpan like SubredditSpan
+Issue #144: remove subreddit extra
+Fix #25: hide subreddit list when previewing
+
+This addresses #134 for tablets too...
+Fix #19: fix wrong views in account spinner
+Fix #126: add link detecting switch
+Issue #126: fix submit link exception
+Issue #126: remove redundant CommentReplyActivity
+Issue #126: remove redundant SubmitLinkActivity
+Fix #145: view profile overview by default
+
+Also view unread by default when clicking on the unread messages icon.
+Add back unread mail filter
+Fix inbox showing all loading symbols
+Fix #123: more refactoring work on adapters
+Fix #123: finish rough refactoring of adapters
+Remove some dead code
+Issue #123: remove MessageThreadProviderAdapter
+Fix typo
+Remove unused constant
+Issue #123: switch comment list to new framework
+Issue #123: share common pattern in subreddit list
+Issue #123: save and restore adapter state
+Issue #123: experiment with making common fragment
+Create separate fragment for message threads
+Issue #123: rename ThingPagerAdapter constants
+Issue #123: extract common ThingProvider code
+Fix #132: set parrent subreddit to resolved name
+Issue #132: restore random state on config change
+Issue #132: resolve subreddit for single pane
+Issue #132: tell main activity about subreddit
+Issue #132: return resolved subreddit to fragment
+Mark some constants package visible
+Fix ambiguous column exception
+Fix potential NPEs
+Issue #141: rename vote constants
+Remove unused class
+Fix #141: rename Saves to SaveActions
+Issue #141: rename Comments back to CommentActions
+Issue #141: rename Votes to VoteActions
+Delete more old methods
+Remove getRefresh method
+Fix #125: more duplicated code to patch things up
+Issue #125: fix more loading...
+Issue #125: make pagination somewhat work again
+Issue #125: add back session id
+Issue #125: make some tables temporary
+Issue #125: add messages uri to content browser
+Remove unused messages source column
+Issue #125: create separate table for messages
+Issue #125: fix expanding and collapsing comments
+Issue #125: fix viewing message threads
+Issue #125: merge MessageProvider to ThingProvider
+Issue #125: move message actions handling
+Fix some typos and rename a method
+Issue #125: more provider refactoring...
+Issue #125: changing URI design again
+Issue #125: remove old unused session methods
+Issue #125: replace things URI with tables URI
+Issue #125: add all type URIs for debugging
+Issue #125: remove deleteSessionData methods
+Issue #125: fix comment context listings
+Issue #125: fix inbox crashing
+Issue #125: fix up action table URIs
+Issue #125: get subreddit search working again
+Issue #125: get search for posts working again
+Issue #125: get comments working again
+Issue #125: update code to match URI docs
+Issue #125: add docs for planned URIs
+Issue #125: get user profiles working again
+Issue #125: get regular subreddits working
+Issue #125: get front page loading working
+Issue #125: refactor provider to use new sessions
+
+This compiles but none of it will work yet...
+Issue #125: add Listing#getKey method
+Issue #125: remove session id column name param
+Issue #125: rename thing id column to key
+Don't show view sidebar if subreddit is null
+Issue #132: make /r/random sort of work
+
+The sidebar and add subreddit dialogs still try to load info for
+/r/random rather than the randomly chosen subreddit.
+Fix #138: include version in user agent string
+
+Didn't want to complicate the code so I just wrote a quick test to catch
+the situation where I forgot to change the static string.
+Fix some lint warnings about uses-sdk
+Fix #137: add saved page to profile filters
+Issue #137: sync back saves
+
+The code is nearly identical to processing votes. Its probably worth
+combining all these ops into a single thingActions table.
+Remove duplicated posting code in RedditApi class
+Reorder params for subscribe query
+Issue #137: add url and api methods for saving
+Reorder subscribe params for consistency
+Move comment
+Issue #137: join things with both saves and votes
+Issue #137: add provider support for saving
+Issue #137: add saves table to track pending saves
+Issue #137: decide whether to show save or unsave
+Issue #137: don't show save icon all the time
+Issue #137: add things column for saved value
+Issue #137: add unsaved menu item
+Issue #137: add save menu item
+Issue #137: add icons for saving and unsaving
+More trivial clean up in AbstractBrowserActivity
+Some clean up in AbstractBrowserActivity
+Clean up select methods in AbstractBrowserActivity
+
+Hide the single vs multi pane methods behind protected select methods.
+We still expose the isSinglePane boolean, but this seems a little
+cleaner. Remove the unused position argument in the
+OnThingSelectedListener since we select by thing and link ID now when
+possible.
+Fix #135: handle thing links even better
+
+This fixes the thing pager being empty in landscape mode. A previous
+hack to reset the ThingPager in a separate runnable was erasing the
+pager. The approach in this change expands an existing method to
+setup the thing pager in one transaction. This also means pressing back
+will go back to the calling application which is nice. The remaining
+problem with the up button doing nothing in this case will be revisited
+in issue #134.
+Issue #135: make links work for multipane mode
+Remove thread safety comment from Urls
+
+It should be OK now, since new StringBuilders are used.
+Replace requestedThingId with requestedThingBundle
+Use Flag helper in two instances
+Issue #135: set title on discovery for not self
+Issue #135: add up button hack for thing activity
+Issue #135: handle more links for single pane
+Issue #135: reduce arg reqs to ThingMenuFragment
+Issue #135: support comments url a bit
+
+Still can't goto a specific thing yet.
+Issue #135: handle some basic subreddit links
+Remove unnecessary default intent filters
+Fix strict mode warning for requesting sync
+Fix #121: clean up Urls to be thread safe
+Fix #128: fix missing url for message replies
+Remove unnecessary logging
+Fix message item not reacting to clicks
+Add separate unread messages item
+Remove periodic sync for messages
+
+We sync on startup or when switching accounts, so that's probably
+enough so disable the periodic scheduling.
+Fix #133: special case all and random subreddits
+Hide some sync adapters
+Change mail menu item to use ifRoom
+Use more icons from the design pack
+Revert to prior messages icon and rearrange items
+Show messages icon only on unread mail
+Use read and unread icons from design pack
+More global menu tweaks
+
+Put messages icon to the left of search. Never show the profile icon.
+Invalidate options menu on account switch
+
+The mail icon wasn't disappearing when switching from an account to the
+app storage account.
+Fix ordering of menu items again
+Fix AccountAdapter NPE
+Fix #96: request mail sync when changing accounts
+Issue #96: use orange icon when mail arrives
+Issue #96: add unread messages icon
+
+It's tinted Holo orange. It is pretty ugly.
+Issue #96: implement AccountSyncAdapter sync
+Remove Message periodic sync
+
+This was back when we were syncing the entire inbox.
+Issue #96: add support for /api/me call
+Issue #96: add sync adapter for account info
+Issue #96: add AccountProvider
+Issue #96: add table for storing account info
+Issue #96: show messages icon in the action bar
+
+The idea is to make this orange when new mail is available...
+Fix #127: sync pending messages
+
+Copy code from ThingSyncAdapter to handle pending comments, since they
+both use the same API. We have to remove this code duplication and
+collapse all the pending code into a single sync adapter. This will
+happen when a bunch of refactoring issues are addressed soon.
+Issue #127: merge pending messages into thread
+Show message actions table in content browser
+Issue #127: insert placeholder messages
+Issue #127: set comment dialog title correctly
+Issue #127: use comment style for compose dialog
+Issue #127: show compose dialog for msg replies
+Issue #127: add reply to message menu item
+Switch inbox and sent listings to use session API
+Fold MessageParser into MessageThreadListing
+Fix #119: support composing from comments list
+
+We need to collapse CommentListFragment into ThingListFragment to avoid
+so much code duplication and extra work.
+Issue #119: don't show compose for app storage
+Issue #119: hook up context item to compose dialog
+Issue #119: add compose message context item
+Remove withText from view profile menu item
+Fix #97: call compose API method
+Issue #97: start hooking up submission code
+Set subreddit name filter in compose dialog
+Rename method parameter in CaptchaFragment
+Issue #97: add validation code for compose submit
+Issue #97: prepare buttons in compose dialog
+Issue #97: add title field for compose dialog
+Issue #97: setup edit text for message destination
+Issue #97: add account spinner to compose dialog
+Issue #97: add compose message title
+Issue #97: add stub for general compose activity
+
+The idea is to merge the other compose dialogs into this to reduce the
+amount of duplicated code we have.
+Remove misleading comments
+Issue #97: add compose menu item
+Clean up session selection modification code
+Use correct log tag in SessionProvider
+Smarter logic for handling sessions
+Fix #93: show message thread replies
+Issue #93: show something on message clicks
+
+This also introduces a new Sessions table to experiment with a new
+approach toward handling database data. The idea so far is that the
+fragments and adapters should have no idea that sessions exist, because
+that is the responsibility of the provider's underlying implementation.
+Fix crash when opening inbox
+Fix #113: fix disappearing subreddits after 25
+Fix #115: fix ArrayIndexOutOfBoundsException
+Handle subreddit searches in ThingProvider
+
+This merges all the session handling code under a single provider.
+Fix some lint warnings
+Remove VoteProvider after merging to ThingProvider
+Rename CommentActions to Comments now
+Delete Comments table after merge to Things table
+More provider fixes and renamings
+Check size since sometimes response is empty...
+Fix kind parsing in CommentListing
+Move VoteProvider method to Provider class
+More assorted provider fixes
+Merge CommentProvider into ThingProvider
+Remove CommentView class
+
+ThingView does everything that CommentView does. Now the code is
+centralized in one spot, so that we can optimize and clean it.
+Support expanding and collapsing in ThingView
+Support nesting in ThingView
+Use ThingView in CommentAdapter
+
+ThingView and CommentView have a lot of duplicate code so start merging
+the classes together.
+Remove unnecessary setDuration calls
+Make subreddit list a little wider
+Fix issue where add account would not appear
+Fix #5: make right hand pane slightly larger
+Increase message poll frequency
+
+This feature isn't complete yet so increase the frequency until we
+improve things first.
+Fix link menu item from prematurely appearing
+Fix #102: coordinate empty text across fragments
+Fix #90: fix NPE for SearchView
+Fix new lint warnings
+Issue #102: keep it simple with single empty text
+Fix #101: show view profile for one item only
+Check visibility before deduping sidebar menu item
+Fix #104: allow sending title and url early
+Remove some tedious duplicate code
+Move ThingBundle to widget package
+Issue #104: add comment url field to ThingBundle
+Fix #103: allow comments to have negative scores
+One comment addition and one comment removal
+Issue #5: fix thing pager visibility
+Remove unnecessary logging messages
+Issue #5: increase thing body width in landscape
+
+Also tweak the animations to make sure all the transitions are smooth.
+Issue #5: don't allocate animators til necessary
+Issue #5: remove vestiges of the side nav bar
+Issue #5: open and close subreddit list
+Issue #5: adjust thing body width measurement
+
+This allows titles in portrait mode to take the full width. I'm sure
+this will need adjustement for 10 inch screens, but this looks much
+better on 7 inch screens where too much was getting crammed.
+Issue #5: delete more dead side nav code
+Issue #5: Remove side bar navigation
+
+Having the side bar restricts the width of the text previews too much.
+Issue #93: reuse ThingAdapter for message threads
+Fix duplicate view sidebar menu items
+Fix #100: invalidate menu after loading
+Fix #99: implement copy url for most things
+
+The menu item was there, but it wasn't implemented!
+Extract common code for viewing user profile
+Move MenuHelper to app package
+Fix #89: update comments table in VoteSyncAdapter
+Issue #93: direct raw messages to stub fragment
+Move MenuHelper to view package
+Show profile and messages in single pane activites
+Fix #89: fix disappearing votes when paginating
+Fix #94: handle link discovery in single pane mode
+Issue #94: show link icon quicker when confirmed
+Issue #94: insert link page to pager after loading
+Avoid some allocations in modified pager adapter
+Move ThingPagerAdapter to app package
+Incorporate reorderable FragmentStatePagerAdapter
+
+http://code.google.com/p/android/issues/detail?id=37990
+Upgrade to support library rev 11
+Some unimportant refactoring
+Remove dead code
+Make ThingBundle behave like Things did
+Issue #86: make some messages clickable
+
+Define a generic thing bundle now that ThingAdapter can use data from
+different providers which have different schemas. This small bundle will
+just be used to set things like the title or copy urls. All other
+information should come from parsing the JSON.
+Make constants static
+Issue #86: add support for viewing sent messages
+Issue #86: add support for unread mail
+Issue #86: integrate votes to messages
+Some refactoring to clean up ThingAdapter
+Issue #86: get sync adapter to download mail
+Issue #86: sync messages automatically
+Issue #86: add messages provider to debug browser
+Issue #86: add stub sync adapter for messages
+
+The idea is that a periodic sync will make it easier for us to notify
+the user that new messages have arrived. However, there are some open
+issues like how much mail to sync.
+Issue #86: support multiple tables in ThingAdapter
+
+Another approach was to make ThingListAdapter take some sort of factory
+to create adapters, but this approach takes less code even though the
+switch statements make me cringe.
+Issue #86: add provider for messages
+Issue #86: add a messages table
+Issue #86: fix some issues in ThingView
+Issue #86: fix some rendering issues for messages
+Issue #86: use things table to store messages
+
+This will work for a while... although I wanted to use a separate table
+to be able to use mail offline. Perhaps later.
+Issue #86: more plumbing and renaming
+Fix typo in ThingListFragment
+Issue #86: add preference for mail filter
+Issue #86: add mail layout and filter spinner
+Issue #86: add stub mail activity
+Issue #86: add menu item for mail
+Fix #88: fix link title formatting
+Fix #87: fix stretched out link title
+Fix #81: display account spinner in subreddit cab
+Fix #79: show profile for current user
+Some unimportant refactoring in ThingView
+Fix NPE when title is not boring layout compatible
+Rename "View profile" to "Profile" for main menu
+Show view profile menu item with text
+Revert "Rename view profile to just profile"
+
+This reverts commit 2d94898fdf3a4ef3126e9ee44b7818334bcff059.
+Rename view profile to just profile
+Fix #82: add link title at the top of comments
+Fix #84: add copy comment context url
+Fix #83: use ups and downs for comment score calc
+Fix #85: hide comment count for comments
+Issue #76: reroute comments to context page
+
+I decided to undo the hack of issuing an extra RPC to get the
+information about the thing to figure out whether the thing has a link.
+Now, clicking on comments redirect to the comments and their context.
+How to improve this is an open issue...
+Issue #76: make additional api call to get link
+Issue #76: direct comments to comments page
+
+...links don't appear though...
+Issue #76: get title and permalink from adapter
+Issue #78: save last selected profile filter
+Fix #78: add filter to UserProfileActivity
+Issue #78: add profile filters to FilterAdapter
+Fix #77: support pagination in user profiles
+Refactor more argument to be after user argument
+Issue #76: make profiles work on single pane
+Issue #76: tablet browser for UserProfileActivity
+Fix #74: add profile menu item
+Issue #74: make links clickable in ThingView
+Issue #74: don't draw score for comments
+Issue #74: load accounts in UserProfileActivity
+Issue #74: render comment at the top for comments
+Issue #74: expand kind type to possible types
+Issue #74: add body field support to Things
+
+This allows showing comments in UserProfileActivity.
+Issue #74: hook up menu items to profile activity
+Issue #74: set title and enable home as up
+Issue #74: make thing list frag display anything
+
+This is a square peg in a round hole change. User profile listings can
+have links and comments, and ThingListFragment and ThingView are used to
+only rendering links... fix all the crashes until something sort of
+displays...
+Issue #74: add argument for specifying user
+Issue #74: reuse thing list for user profile items
+
+I'm not sure if this is going to be a good idea to reuse
+ThingListFragment for this...
+Issue #74: add stub activity for viewing profiles
+Issue #74: add menu item for viewing user profile
+Fix NPE where onPrepareOptionsMenu called early
+
+This was found in a monkey run.
+Can't dismiss in onLoaderReset
+Add unused expiration column just in case
+Don't insert deletion row for app storage accounts
+Make content browser content more readable
+Style the content provider URI rows
+Rename a lot of the debugging tools
+Make CaptchaFragment resilient to network errors
+Protect against NPE
+Add auto correct to some fields
+Add textCapSentences to some EditText fields
+Fix #41: add cab icon for adding subreddits
+Refactor comment reply arg passing
+
+Use a bundle instead of parsing a ton af arguments around. Also rename
+the variables to be more clear like replyThingId vs parentThingId to fix
+an issue where thingId was being used for both.
+Draw stroked arrows for pending comments
+Remove unused import
+Fix #67: add initial loading item to spinner
+Use layout margin instead of padding
+Fix #31: sync subreddits once a day
+Fix #72: only trigger sync for real accounts
+Fix some formatting issues in SubredditProvider
+Fix #71: update comment count on inserts/deletes
+Fix #70: use common filters for subreddit fields
+Fix some formatting in AddSubredditFragment
+Fix #30: add copy url to comment context menu
+Adjust numComments to reflect pending changes
+Fix #58: use DialogWhenLarge theme for replies
+
+I used an activity to work with the action bar easier...
+Fix #66: check isCancelled state in thumbnail task
+Fix #64: fix captcha field language
+Fix #42: make pending comments unvotable
+
+This will prevent background exceptions from happening.
+Update more code to use AccountPreferences class
+
+I'm not sure why this didn't break when I was testing this...
+Removed unused import
+Fix #17: set last account pref when adding account
+Don't show points if the voting arrows shows score
+Fix #35: don't show score in comment voting arrows
+Fix #55: clear choices on orientation change
+
+The comments context menu was showing the wrong items after changing the
+orientation, because the adapter wasn't loaded with data quick enough.
+For now just shutdown the action mode if we aren't ready. We should fix
+this in the future though.
+Show number of items selected for context menu
+Issue #41: add assets for edit and delete
+Fix content browser title
+Fix #62: use application context in retained frags
+Fix #61: speculative fix for no view found error
+
+Some suggestions on the net include making sure ids are unique in the
+app. Other layouts had a merge tag so copy that to maybe fix the problem
+in SubmitLinkActivity.
+Fix #63: show app storage in various spinners
+Fix some forms to offer suggest and others not
+
+- Captcha form shouldn't offer text suggestions.
+- Title and text for submit a link should offer suggestions.
+Fix #64: standardize language for edit text hints
+Avoid unnecessary allocation and work for score
+Issue #55: don't create italic span every time
+Issue #55: put status at the top of comments
+Issue #55: remove expand/collapse from action menu
+Issue #55: use single tap for expanding/collapsing
+Fix #59: restore current url in LinkFragment
+
+Should the share action provider be updated though?
+Fix lint warnings
+Fix string in submit link dialog
+Fix quota response parsing failure
+Improve logResponse to return fresh InputStream
+Fix RelativeTimeTest
+Small ResponseParser Test
+Fix #57: auto-detect whether text or link
+Some submit link fragment clean up
+Fix #53: Remove extra labels from add subreddit
+Fix #56: use DialogWhenLarge for submit dialog
+Fix problem of some replies not showing up
+
+CommentListing was only grabbing pending actions from the currently
+selected account name. However, the user could have used another account
+to make a comment and that wouldn't show up here. Thus, increase the
+scope of the CommentAction query to include all pending comments for the
+thing.
+Fix #22: add account spinner to reply dialog
+Properly set account name in submit a link dialog
+Issue #54: restore selected account name properly
+Issue #54: use AccountNameAdapter in add subreddit
+Fix #48: prepopulate subreddit field
+Fix #51: add radio group to select link or text
+
+I think a better approach is to just auto-detect whether it's a link or
+not though, but this will suffice.
+Use constant for captcha min height
+Fix #49: show progress bar before captcha loads
+Fix #47: format numbers with separator
+Rename menu resource
+Fix #46: Redo submit link functionality
+
+Split apart the activity into three modular fragments.
+SubmitFormFragment presents a form that the user fills out.
+CaptchaFragment displays a captcha and returns the user's guess.
+SubmitLinkFragment does the RPC to reddit and reports back what
+happened. SubmitLinkActivity coordinates all three fragments.
+Fix #43: italicize collapsed status text
+Fix subreddit search timestamp bug
+Fix #11: display nsfw tags for certain subreddits
+Fix #44: add missing ago after relative timestamps
+
+I decided to just add this to plurals, since time intervals are not used
+elsewhere yet.
+Remove unused strings
+Fix #39: always show points in comments
+
+The voting arrows will soon not show scores for points.
+Render only status for collapsed comments
+
+Issue #7
+Nasty expand logic implementation
+
+Issue #7
+Silly implementation of collapsing comments for #7
+
+We issue a query for each child comment that is collapsed. Maybe we can
+improve this in the future...
+Add logic to show expand and collapse items for #7
+Add column to indicate comment expansion for #7
+Add expand and collapse menu items for #7
+
+They don't do anything yet though.
+Fix #36: don't show submit link without accounts
+Fix #35: show points when no voting arrows
+
+Stop using a format string, since it is too difficult to juggle around
+all the optional items. This is no doubt bad for translation, but I
+don't expect there will ever be translations...
+
+Take the opportunity to reuse a StringBuilder to avoid extra allocations
+when the View is reused in a list.
+
+Also apply the same fixes to the long details text and fix the plural
+strings for ups and downs.
+Fix #37: fix quantity string
+Align spinner text with other text fields
+Spruce up the submit a link activity
+Fix #33: push global menu items at the bottom
+Remove one unused import
+Fix #24: save and restore last selected subreddit
+Fix #16: hide voting arrows when not a user
+Show developer options after accounts
+Fix #29: hide voting arrows for deleted comments
+Support mdash to fix #26
+Simplify session timestamp code
+Switch more Holo Light theme instances
+Fix another obvious NPE in Result class
+Update neutral score text color
+Update more menu resources
+Update some menu resources to dark theme
+Switch to Holo theme for a bit
+Fix NPE if there are no errors
+Don't allow replying to deleted comments
+Don't retry unless there is a rate limit error
+Refactor providers to extend base class
+
+These providers all do the same thing of processing the uri for
+additional commands and then executing the database query. Put all the
+common code in BaseProvider and then the uri specific commands in the
+sub class.
+
+Rename existing sync parameters to fetch to indicate that they fetch
+data from the server. Sync now always indicates that the content
+provider should wake up the SyncAdapter.
+Remove two unused strings
+Update appearance of deleting comments
+Rename insertPlaceholderInBackground
+Move CommentLogic to database package
+Fix and extract placeholder comment insert logic
+Refactor ThingProvider to match CommentProvider
+Fix synccing NPE for no accounts
+Add responses to bottom of list
+Fix insertion of comment into action table
+Rename some provider paths
+Remove SubredditSearchProvider
+
+Merge it into the existing SubredditProvider to reduce the number of
+content providers. Keep the separate table though for now, since it has
+a number of columns that aren't in the subreddits table.
+No need to make two arrays
+
+... :)
+Move provider selection statements to the table
+Rename SELECTION_* to SELECT_*
+
+It's easier to read.
+Some provider refactoring
+
+- Move array related method to Array utility class.
+- Remove unused selection methods.
+Use front page constant in table creation
+Remove SyncColumns interface
+
+I think it's better for each table to explicitly implement their own
+sync columns, since each table has slightly different requirements.
+Don't delete front page rows
+
+I need to think of a better way to remove this special case.
+Address remaining lint warnings
+
+- Ignore exported activity warnings because it prevents us from
+  launching the exported activities from Eclipse.
+- Ignore usability warning about always showing Share, since we want
+  that to show up all the time.
+Removed unused strings
+Add quantity string for subreddits changed
+New SubredditSyncAdapter implementation
+Refactor subreddit inserting and deleting
+Remove add combined, combine, and split operations
+Remove SyncOperationService
+
+Add a sync parameter to uris to indicate when to tickle the sync
+adapter which we will use instead of a service.
+Use singleton instance of DbHelper for providers
+Remove manifest entry for CommentReplyActivity
+
+There is no such activity anymore.
+Remove unused layouts
+Revert provider and sync adapter unification
+
+Revert "Move account token retrieval to SyncAdapter"
+This reverts commit 693870613cb0ba56ed8e878f2dbc6fcb590fe34d.
+
+Revert "Remove SyncOperationService"
+This reverts commit 5174001cab85c81192e4c86121242c803d3c7a87.
+
+Revert "Fix broken authority tag"
+This reverts commit 22dc86556e9441ad67415c99143e7b83004165eb.
+
+Revert "Move account initializing code to separate class"
+This reverts commit 53059f42a3830b2d3aacfb16f2a9501238af72bf.
+
+Revert "Unify the sync adapters"
+This reverts commit 7cce1d23f8ca5cd2297df389651c2a37b4fc69b6.
+
+Revert "Unify all the providers once again"
+This reverts commit 2ef3a23caec114edccc021fe2754ff8e550b1063.
+Move account token retrieval to SyncAdapter
+Remove SyncOperationService
+
+The correct way to do this is to use notifyChange with syncToNetwork.
+Fix broken authority tag
+Move account initializing code to separate class
+Unify the sync adapters
+Unify all the providers once again
+
+This will prevent database locked errors. Lot of refactoring ahead...
+Rename votes path to actions for consistency
+Add path to thing provider URI for consistency
+
+Also remove some matcher code since there aren't multiple URIs yet.
+Rename comments content URI to sessions
+Rename some URI constants
+Delete comments implementation
+
+Roll the CommentActionProvider into the CommentProvider to avoid
+database lock errors and to place inserts to comments and commentActions
+tables in a transaction.
+Reorder some methods in CommentListFragment
+Add delete item to comment action mode
+Refactor CommentProvider to support uri commands
+
+Add support for comment deletion.
+Add actions column to distinguish adds and deletes
+Rename more reply classes to comment actions
+Rename replies to comment actions
+
+This table is going to hold more than just new comments but also
+comments that are to be deleted.
+Things shouldn't implement SyncColumns
+
+This wouldn't happen if SyncColumns was not a tag interface.
+Remove unused columns from votes table
+Use periodic sync to avoid hitting rate limit
+Remove annoying log statement in settings
+Respect the rate limiting errors
+Fix subtle timestamp issue
+
+Endless scrolling could sometimes delete data, because the cutoff
+timestamp was after the timestamp set on the synced data.
+Add applications details to settings
+Clean up the content browser a bit
+
+- Provide a title and enable home the home up button
+Reorganize preference screens
+
+- Move sync settings to each account even though all accounts are listed
+  in the sync dialog in JB. I just find myself going into the account
+  preferences and expecting this to be there instead of in the general
+  category.
+
+- Add developer options and add the content browser.
+
+- Remove the debug menu option.
+Add initial support for syncing back replies
+
+It looks like I will have to be careful about breaking rate limits.
+Add stub sync adapter for Replies
+Flip SubredditSyncAdapterService inside out
+
+Put the Service inside of the Adapter like the VoteSyncAdapter.
+Move service inside of VoteSyncAdapter
+
+No need for a separate class this since it does very little.
+Fix vote coloring issues
+
+The logic for calculating the likes value was incorrect. If there is a
+pending local vote, then use that as the value for the likes and
+modify the score. Also don't show a negative score, since reddit
+doesn't seem to do that.
+Sync pending votes with reddit backend
+
+Votes are reflected in the browser but don't seem to be reflected
+in the app for some reason.
+Move Subreddit sync adapter to content package
+Add sync adapter for votes
+Add session timestamps to SubredditSearches
+
+Rename creation time to timestamps for other tables.
+Fix typo in Settings header
+Add content provider browser for debugging
+
+SQLite doesn't shrink after deleting. It merely adds to its free block
+list which it uses on subsequent inserts. However, this tools has
+allowed me to find a leak in SubredditSearch results not getting
+properly deleted.
+Fix refactoring and subtle state bugs
+
+- Fixed some silly bugs caused by reordering statements
+- Fix subtle issue where a multipane layout could change session IDs due
+  to ThingListFragment not always knowing what its supposed to load
+  until subreddits have been loaded.
+Don't show two spinners in multi-pane layouts
+Move BackupAgent to app.backup
+
+Now all the packages mirror the platform API.
+Fold fragments package into app package
+Rename activity to app package
+Refactor RedditApi a bit
+
+- Rename methods to be consistent
+- Order the methods alphabetically.
+- Remove Context argument from connect
+- Remove some code duplication for connecting
+Rename NetApi to RedditApi
+
+There will be more APIs in this package someday...
+Move SubmitResult to net package
+
+...and eliminate the entity package!
+Move LoginResult to net package
+Move NetApi related classes to net package
+Fold Subreddit class into db Subreddits class
+Replace Subreddit instances with String
+
+There is no need to wrap each subreddit name in an extra object.
+Distinguish fixed arguments and mutable state
+Don't highlight on single pane displays
+Use new chosen state in ThingListFragment
+
+Continuing to fix #18 but for things.
+Fix #18: add chosen drawable state
+
+Add a new drawable state to indicate selected subreddits even in a
+multiple choice modal state.
+Make CommentView extend CustomView
+
+Remove more redundant initialization code.
+Make ThingView extend CustomView to share resource
+Show subscriber count in subreddit search results
+Custom view for subreddit names
+Add clean up code for Comment sessions
+Add clean up code to delete expired session data
+
+Killing the app can leave rows in the database so add a mechanism to
+remove these expired rows. On the first sync to load a subreddit, delete
+rows that are older than the sync time. This assures that all rows that
+can't possibly be viewed are deleted.
+Fix extra syncs when restoring fragment state
+Remove dead code from ThingListFragment
+
+We will be rewriting the selection code anyways.
+Rename ArrayUtils class and methods to be shorter
+Add Eclipse code formatting profile
+Simplify comment and thing adapter and fragments
+
+Copy what the subreddit search classes do and hide the loader
+implementation from the fragment.
+Refactor listing objects to use same interface
+
+Combine both the instantiation and processing into a single static
+method like SubredditSearch does.
+Make subreddit search work again
+Some session handling clean up
+
+- Use application context within delete session methods instead of
+  relying upon the caller to use the right context.
+- Move deletion tasks to parallel thread pool to avoid blocking loading
+  that is done in the serial executor.
+Remove dead code in ThingProvider
+Add provider for subreddit searches
+Remove nested transactions in DbHelper
+
+SQLiteOpenHelper already wraps onCreate and onUpgrade in a transaction.
+Add separate table for SubredditSearches
+
+Subreddits is bound to the sync adapter, so I think it's best not to
+repurpose that table for subreddit searches.
+Fix bug where everything became a search
+Move Subreddits table creation out of DbHelper
+Don't unnecessarily close the database
+Remove Subreddit search content loader
+
+We will move Subreddit search results behind a provider just like we did
+for things and comments.
+Make searching posts work again
+Suppress Javascript security warning
+Don't allow commenting on pending replies
+
+...so you won't be allowed to talk to yourself for a while...
+Don't show creation time if missing
+Merge pending replies into session comments
+Insert reply row for every comment insert
+Don't create new sessions on config changes
+Insert new comment rows on reply callback
+Use ApplicationContext in case activity is gone
+Extract common CursorAdapter getter methods
+
+Create BaseCursorAdapter with methods that move position and then get
+a value by column index. Make the column indices public and don't
+calculate them at runtime (again).
+Fix another formatting issue in CommentProvider
+Fix formatting in CommentProvider
+Add extras argument to CommentReplyFragment
+
+CommentReplyFragment will pass this bundle of extras back to the
+listener when a comment is made. This makes it so that
+CommentListFragment doesn't need to maintain state what comment the user
+is replying to.
+Update CommentReplyFragment docs
+Add method for inserting fake comments
+
+This method inserts placehoders comments that haven't been synced back
+to reddity yet. Thus, adjust the creation time column so that it
+defaults to 0. We don't want to show a fake time to trick the user into
+thinking the comment has been posted.
+Don't allow empty comments
+Reduce CommentReplyFragment to only UI code
+
+CommentReplyFragment used to call the provider to insert the reply.
+Change the fragment so it merely handles the UI details, so that
+CommentListFragment can handle all the database modifications.
+Revert "Disable LinkFragment JavaScript"
+
+This reverts commit 1bf2b4575bcd938397e54cb48bae35a6a30d6c2d.
+
+Some imgur image collections don't render without JS...
+Suppress unnecessary layout lint warning
+
+This additional LinearLayout is necessary to get the desired
+button bar style.
+Format strings.xml
+
+Now that there are no more escaped space characters there is no need to
+feel afraid of pressing Ctrl + F in this file. :)
+Remove XML encoded space characters
+
+...just use quotes!
+Disable LinkFragment JavaScript
+
+Lint cited this as a security warning so disable this to see what sort
+of browsing experience we get. IT might be even faster on some sites...
+Make GlobalMenuActivity abstract
+
+Lint warned it could be instantiated...
+Remove unused resources
+Delete session data in onDestroy
+
+Use isChangingConfiguration in onDestroy to delete data when the
+fragment is being destroyed. Remove SessionCursor and the awkward
+methods to communicate to the cursor when it shouldn't delete the data.
+Some ThingView and CommentView enhancements
+
+- Fix missing details on large landscape screens
+- Remove unnecessary allocations in (Thing|Comment)View onMeasure
+  methods and don't keep fields that are used only once.
+More log statement refining
+Insert row into replies table
+
+Carefully fix data deletion issues after voting or replying. Also refine
+a lot of log statements that making the log hard to read.
+Revert "Use UUID for session ids"
+
+This reverts commit 3d1a30e3abd4e54f42efca0f3b8fd883b0595620.
+
+Strict mode caught me for generating UUIDs on the main thread.
+Add provider for replies
+Fix endless loading bug for small subreddits
+Add replies table to hold pending comment replies
+Rename some constants in Urls
+Move Urls to net package
+Move Flag to util package
+Move RelativeTime to text package
+Move Formatter and SubredditSpan to text package
+Move JsonParser to util package
+Always show settings menu option
+Show reply action mode only when using accounts
+Use UUID for session ids
+Reintroduce SessionCursor to clean up database
+
+SessionCursor deletes data after it is closed. This will be used to
+delete the temporary result sets created when viewing subreddits and
+comments. Residue can still pile up in the database if the app is
+terminated abruptly though.
+Replace Debug with generated BuildConfig class
+Display comment replies in CommentListFragment
+Show CommentReplyFragment with necessary args
+Remove CommentReplyActivity and Comment classes
+
+Also make thingId column nullable since replies will be sharing the same
+table...
+Add sequence column to Comments
+Fix some ThingView drawing bugs
+Use BufferedInputStream and clean up logging
+Fix ThingView NPE
+Show account name as title
+Close preference panel after removing account
+Add sync settings to general settings
+Enable home up on Settings
+Add remove account menu item
+Show accounts as preference headers
+List accounts in settings
+Add account menu option
+Add Settings header for Accounts
+Replace Manage Accounts with Settings
+
+JB no longer shows a list of accounts, so we need to create our own
+account listing. Might as well put this all together in Settings.
+Add sync columns
+Remove scrollbar when scrollig endlessly
+fold Thing bundle methods into Things class
+remove SessionCursor class
+
+Leave the rows in the database rather than deleting them immediately.
+Hopefully, we can take advantage of the work we did to put them
+in the database in offline mode.
+move table classes to database package
+Clean up after comments
+Remove unnecessary Thing methods
+Add status to comments
+Add comment formatting
+Reimplement endless scrolling
+Scope likes by account
+Make some Things table columns nullable
+Remove useless Listing interface
+Use InsertHelper to cut insertion time in half
+Share common table for votes
+Make voting arrows work for comments again
+Back comments with a provider and database table
+Combine prior likes with new results
+Update score when voting
+
+This may not be realistic but seeing the numbers change feels better.
+Reimplement voting by modifying database rows
+Fix RelativeTime for 1 second
+
+...the test actually caught something!
+Don't quite remove disapproval face span
+
+We still need to scan for encoded faces. However, we can replace them
+with a decoded face rather than setting an image span. This allows to
+avoid running anymore formatting on the main thread for the titles
+stored in the database.
+Revert "Remove disapproval face image span"
+
+This reverts commit 279088347854ae302f465b5b50709d6681ed33b7.
+Remove disapproval face image span
+
+JB has the font for disapproval faces, so there isn't need for this span
+anymore. It won't work in ICS of course...but I would rather not run
+this over every thing title on the main thread.
+Restore status messages
+
+They are no longer rendered on the background thread since data comes
+from a database rather than an in-memory object.
+Avoid creating a Bundle for each View
+ThingProvider for querying subreddits
+
+A subreddit's list of things used to come from an in-memory list. Now
+back the listing with database rows, so that we can mark things when
+they are voted upon and require syncing. Some features are now missing
+such as endless scrolling.
+Always show thumbnails to the right of arrows
+More thumbnail placement adjustements
+
+Keep the thumbnail pinned to the top of the content area and the bubble
+at the bottom to avoid overlapping each other.
+Fix some link handling in CommentView
+Make links clickable in CommentView again
+Add working voting arrows to comments
+Add color back to voting arrows
+Use VotingArrows in ThingView too
+
+We will need to reimplement thumbnails in VotingArrows.
+Add voting arrows to CommentView
+Fix responding to comments other than header
+Rudimentary comment implementation
+Add listener for replying to comments
+Set selector backgroundon CommentView
+Add comment action menu with reply item
+Enable multiple choice on CommentListFragment
+Restore endless scrolling
+Fix crash when voting without account
+Set link color in CommentView
+
+...doesn't mean the links actually work yet though...
+Support nested comments in CommentView
+Add padding between comment elements
+Padding for CommentView
+Stylize CommentView
+Show status in CommentView
+Show comment body in CommentView
+Show title in CommentView
+Empty custom view for comments
+Fix score color not changing on votes
+
+Also fix how the thumbnail outline wasn't showing at all.
+Remove points from comment status
+Fix comments quantity string
+Quantity string for comments
+Remove points from status messages
+Wire ThingClickListener to handle voting
+Add click listener for upvotes and downvotes
+Voting arrows and score display for ThingView
+Working implementation to submit links
+
+...there is a lot of clean up to do though still.
+Add captcha listener
+Remove title and rename button bar
+Captcha loader
+Scale captcha and add button bar
+Fragment for showing capcha images
+Parse submit response to get captcha id
+Add missing licenses
+Quantity strings for time
+Quantity string for subscribers
+Partial implementation of submit API call
+
+It looks like I need to download a captcha to present to the user...
+Hook up more fields in SubmitLinkActivity
+Submit link layout
+Submit link menu item
+Update thing appearance after voting
+
+Color the items immediately after upvoting or downvoting even though it
+is happening in the background and we may not succeed.
+Add rescinding votes
+Fix quantity strings for votes
+
+Add language for rescinding votes.
+Color status of items with orange or blue
+Support voting in SyncOperationService
+
+We delete the vote rows once we handle them.
+Remove some constraints and indices
+
+- Remove vote constraints since we will always insert new rows rather
+  than trying to update prior votes.
+
+- Remove subreddit index since we only need the primary id key to
+  process a row in the SyncOperationService.
+Provider work to support upvoting and downvoting
+Add types to ContentProvider
+
+This will allow the SyncOperationService to distinguish between
+different Uris.
+Fix crash during config change when adding account
+Fix wrong login and password being sent to reddit
+Fix config change causing dialog state to be lost
+Incomplete implementation for voting
+Move importing subreddits to SyncAdapterService
+Remove first sync code
+Move some Url constants to NetApi
+Refactor SimpleDialogFragment
+
+ProgressDialogFragment can be used for progress dialogs.
+Import subreddits in add account dialog
+
+It's too slow to wait for sync to complete it's initial run. Also sync
+could be disabled.
+Move authentication logic to AddAccountFragment
+
+Set retain instance so the login AsyncTask will persist across
+configuration changes.
+Consolidate login logic in authenticator activity
+Start refactoring account login
+Fix broken swiping to comments in SearchActivity
+Don't show home up as enabled if previewing
+Fix back stack behavior for ThingListActivity
+
+Tried TaskStackBuilder but it doesn't work as I expected...
+Make subreddit links work for single pane layout
+Make subreddit links work for multipane layouts
+Clean up log statements in AccountAuthenticator
+Make category rows gray
+Fix RelativeTimeTest
+Fix Formatter to not be static
+
+I think there were some subtle problems like the share provider
+resetting itself and some not so subtle crashes when two fragments in
+multipane mode were loading fragments that used formatters. Make
+Formatter non-static but try not to instantiate multiple ones.
+Remove more redundant calls to assureFormat
+Remove unnecessary call to assureFormat
+Move sidebar HTTP code to NetApi
+Move comment loading HTTP code to NetApi
+Defer filter population until account loads
+
+An empty spinner prevents onNavigationItemSelected from being called
+before we are ready...
+Sticky filters for ThingListActivity
+Some AccountSpinnerAdapter cleaning
+Show divider between account and subreddit filter
+Show subreddit name in combo spinner
+Multipane account and filter spinner
+Add optional filters to account spinner
+Fix first search in single pane layout
+Fix hardware search button again...
+
+...I thought I fixed this already.
+Some single pane search clean up
+Fix browser for phones
+Remove search animations for subreddit list
+
+Strangely causes graphic corruption and it's pretty ugly when the side
+nav is open in portrait tablet mode.
+Fix thing body width measurements on tab change
+Pop back stack on tab reselection
+Fix search subreddit list on orientation change
+Don't dump thumbnail url on exception
+Pop back stack before running animation
+Reorder search tabs
+Fix search title jankiness
+Animations for opening and closing subreddit list
+Make the home up button work again...
+Remove LoaderIds class
+
+Loader ids are not scoped globally, so there is no need for this class.
+Clean up debugging flags
+
+It's easier to have one global switch and local debugging flags.
+Solution to avoid posting subreddits loaded
+
+The prior code would commit a SubredditListFragment and then post a
+loaded event that would commit a ThingListFragment. Now we initially
+commit a SubredditListFragment and a ThingListFragment at the same time,
+so there is no chance of something popping up in the face of the user.
+Fix subreddit recommendations in search
+Support entering a new query
+Fix action bar title
+Fix search results not appearing
+Fix ThingPager visibility when switching tabs
+More work on separating browser and search
+Remove old BrowserActivity classes
+Properly close input streams
+Incomplete attempt to make tablet search work
+Fix ThumbnailLoader NPE
+Fix hardware search button
+Fix search home button
+Handle searching again
+
+Create a search query listener to keep SearchView related logic
+isolated to GlobalMenuFragment. Returning true from the listener
+indicates that GlobalMenuFragment shouldn't bother launching a
+separate search activity.
+Tabbed search results for small screens
+Point search to LoginBrowserActivity
+
+Instead of creating an inheritance hierarchy, I will try creating a big
+monolithic class. It doesn't sound like a good idea...
+Fix incorrect menu when selecting new thing
+Copy animations from AbstractBrowserActivity
+Copy more refresh code from AbstractBrowserActivity
+Fix bizarre crashes...
+
+...I guess the old code wasn't so bad after all!
+Add some thumbnail loading synchronization
+
+That was quite broken...
+Fix orientation change issues
+Fix thing body measurements and padding
+Fix add subreddit recommendations
+Protected against a malformed JSON array
+Hide duplicate menu items
+Invalidate options menu on ViewPager swipe
+Rename getThingBodyWidth to better match interface
+Enable single choice for tablet layout
+Set thing body width to restrict title width
+Fix backstack behavior when selecting subreddits
+Upgrade to support library rev 9
+
+This seems to fix some issues with ViewPager like how the ViewPager
+would show stale content even after setting a new adapter.
+Add back home up button support
+Fix back stack behavior
+Show and hide ThingPager
+Add back thing menu
+
+Icon for switching between comments and link doesn't seem to work
+though...
+Show ThingPager when selecting things
+Add back transitions
+Clean up ThingListActivity code
+
+Probably fixed some orientation change bugs...
+Remove AccountNameHolder class
+
+Set the account name as a fragment argument instead. Otherwise restoring
+fragment state can get tricky.
+Start reworking browser to work on tablets
+Remove subtitle since it looks funny
+Add account name to spinner
+
+It looks pretty ugly...
+Add account spinner to ThingListActivity
+
+The only page that would change would be the front page if you changed
+accounts. However, it's nice to know what user you are viewing things
+as.
+Send cookie to get correct front page
+
+...should the front page of a user with no account be a multi-reddit?
+Handle front page addition
+
+Get rid of state fixed so we don't have to add special cases everywhere.
+Just have the SyncOperationService ignore it, so it won't it won't
+expire for now.
+Add front page and clear old rows on initial sync
+
+Create a new "fixed" state that doesn't permit the sync to delete it.
+Use OK for button text to avoid redundancy
+Don't show spinner when there are no accounts
+Fix add subreddit dialog losing state
+Dialog labels for account and subreddit
+Remove no account label with app name
+Add account spinner to add subreddit dialog
+Show manage accounts only on subreddit list
+Make subreddits selectable in LoginBrowserActivity
+Make cancel button work in add account dialog
+Don't always commit SubredditListFragment
+Fix another last account selection bug
+Fix last account selection
+Start syncing faster after adding accounts
+Don't sync ops for no account
+Make "No account" option always appear
+Better SyncAdapterService implementation
+Move SyncAdapter within SyncAdapterService
+Disable split and combine for real accounts
+Added sync ops for combine
+
+It doesn't seem you can subscribe to multireddits though through the API
+which makes sense...
+Add sync op for deletes
+Only backup subreddits if no account provided
+Add SyncOperationService to update subreddits
+Fix combine (again) and split operations
+Fix combine subreddits option
+SubredditProvider fixes
+
+- Remove the account and specific subreddit uris, since their
+  functionality can be described with the main subreddit uri with
+  additional selection arguments.
+
+- Fix the broken update query that wasn't correctly limiting its
+  selection.
+
+- Make the ContentProvider operations stick to the contract, but make
+  the helper methods do things like marking rows as deleted instead of
+  actually deleting them.
+Mark rows deleted rather than removing them
+
+The SyncAdapter will do the actual deleting when it analyzes what has
+been removed.
+Fix SubredditProvider delete usage
+
+Delete actually has to mark rows deleted rather than delete though.
+Rudimentary add subreddit support
+
+Updates and inserts a row for an account.
+Make NetApi package visible only
+Remove unnecessary class
+Rename Provider to SubredditProvider
+
+It looks like there should be a provider per SyncAdapter, so rename
+Provider to SubredditProvider. Label it "Subreddits" show it shows up as
+"Sync Subreddits" in the sync settings.
+Show synced subreddits per account
+
+Adds a new content uri pattern for accounts.
+Very dumb sync implementation
+
+- Move SyncAdapter and SyncAdapterService to provider package to use
+  NetApi class and query account subreddits.
+- Implemented onPerformSync to always insert subreddits.
+Add stub SyncAdapter
+Restrict accounts to rbb type
+
+Pass a nifty extra when launching the ACTION_SYNC_SETTINGS.
+Migrate Subreddits V1 to V2
+
+V2 adds additional columns for accounts and syncing.
+Move DbHelper to separate class
+Make "Manage Accounts" go to sync settings
+
+If no such intent is supported... I don't know.
+Show no account item when spinner is empty
+
+Show "reddit by brian" in the title and one item that says "No account"
+in the spinner when there are no accounts. This is cleaner than the
+prior way of making a custom view that swapped between two views.
+
+Had to add a title back to the activity or it doesn't appear in the
+recents panel...
+Rename to AccountSpinnerAdapter
+Fix janky title to spinner transition
+Guard authentication service with a permission
+
+This fixes a lint warning.
+Remove Accounts and SyncTasks tables
+
+Android account infrastructure will take care of tracking of accounts.
+SyncTasks will be replaced by another table that mirrors the state of
+a reddit account instead of just the differences.
+Delete account manager interface and activities
+
+Don't need this since we will be using Android's account infrastructure
+which provides a central location for managing accounts.
+Add global LoaderIds file
+Display subreddit list
+Clean up AccountLoader a bit
+
+Hide all the preference manipulating in the loader.
+Rename BrowserLoader to AccountLoader
+Sort Account List
+Update last login and loader on changes
+Populate spinner with Account instances
+
+Remove the hacks to display the label if there are no accounts. There
+will always be one item that says "Add Account"...
+Save cookie and modhash as separate auth tokens
+Demo of launching authenticator activity
+Add account type for reddit.com logins
+Some SyncService refactoring and bug fixes
+Rename AccountSubredditService to SyncService
+Use db table rather than in memory cache
+Query both net and db for subreddit list
+Make AccountSubreddits a real table
+Refactoring to separate db and net functions
+Add service to process subreddit requests
+Rename AccountData* classes
+Expire subreddit list after 60 seconds
+First attempt at Subreddit cache
+Move SubredditCursor and SubredditParser out
+Rename NetProvider to AccountDataProvider
+Extract method to subscribe and unsubscribe
+Make NetProvider methods database independent
+Extract methods for setting cookies and more
+Extract method for setting common headers
+Move Provider to its own package
+Add user agent header to some requests
+Limited delete subreddit for account support
+
+It looks like some sort of cache will be needed as updates don't occurr
+fast enough.
+Move adding subreddits to account to Provider
+Get subreddit list from Provider
+
+A separate loader used to be used to get an account's subreddit list.
+Initial attempt at adding subreddits to accounts
+Add modhash column to Accounts table
+Try to fix more strict mode warnings
+
+...but they aren't going away.
+Adding back some features to LoginBrowserActivity
+
+- Fix add subreddit NPE so the dialog appears
+- Make subreddits clickable again
+Don't always replace subreddit list fragment
+
+Only replace the fragment if the cookies are different.
+Refactoring to isolate account switching quirks
+
+The account switcher widget relies on a one element cursor to symbolize
+no accounts to make sure that the onItemSelected method is fired all
+the time. Hide all this logic in AccountSwitcher and
+AccountSwitcherAdapter and expose an interface that reports when
+accounts are selected.
+Update dropdown view layout
+Fix some strict mode violations
+
+- Use ApplicationContext for Loader rather than Activity
+- Properly close JsonReader after parsing response
+Show subreddits for no account
+Always return non-null BrowserResult
+Recall last selected login
+Load subreddits from selected spinner item
+Enabled Strict Mode defaults when debugging
+Fix reading from closed cursor
+
+BrowserLoader code wasn't checking that the cursors were different
+before closing them.
+Add Debug class to control logging
+Replace event loop with commitAllowingStateLoss
+
+- Also reroute main activity to LoginBrowserActivity for testing
+  purposes. LoginBrowserActivity will become the old BrowserActivity
+  once we are done.
+Start over from scratch with LoginBrowserActivity
+
+It is too difficult to bolt on multiple login support to the existing
+activity code, so I will start from scratch again with
+LoginBrowserActivity. I hope it is not too bad, since the fragments
+do not have to change much.
+Add spinner to single pane browser
+
+Create a custom view for the ActionBar that switches between a text
+label and a spinner. The text label just shows "reddit by brian"
+for people who haven't added any accounts yet. The spinner appears
+when the user has added some accounts. The spinner doesn't do
+much yet, but it will soon show reddits for that account.
+Add activity to list subscribed subreddits
+Save cookie to database rather than password
+Tablet fixes for account manager
+
+- Rename AccountBrowserActivity to AccountManagerActivity.
+- Apply dialog on large screen theme and set minimum dialog height.
+- Move add account button to the bottom.
+- Update button bar style to be all caps.
+Add LoginFragment with LoginLoader
+
+LoginLoader returns a cookie and modhash given a login and password.
+LoginFragment displays a progress bar, logs in, and then dismisses
+itself.
+Refactor Urls class
+
+- Return URL instead of CharSequence
+- Use a common StringBuilder
+- Add SSL login URL
+Rename accounts menu item
+Add fake logging in progress dialog
+Add remove account support
+Replace account preferences with account browser
+
+My initial idea was to just have a list of accounts you could
+configure in settings. However, we actually want an interface
+to view inboxes in addition to managing accounts!
+Work in progress for removing accounts
+Use preference classes instead of list fragment
+Remove log statement in ThingView
+Fix ensuring array capacity in adapters
+Add table to hold account information
+Add errors to add subreddit dialog
+
+- Extract a common layout for add button bars.
+- Show an error when empty subreddit names are entered.
+Create dialog for adding accounts
+Add PreferencesActivity for managing accounts
+Fix clickable sidebar links
+Increment version to 1.1
+Split sidebar into header and description rows
+Fix #8: Show subscriber count in sidebar
+Switch to smaller font sizes
+
+This slightly smaller size provides a little more breathing room.
+Maybe the 3 pane tablet layout is just fine with this size.
+Make SidebarActivity a dialog on large screens
+
+SidebarActivity will now take the full screen on smaller screens
+with an action bar.
+Fix relative timestamps
+
+Clarify that the current time should be passed as milliseconds while
+Reddit timestamps are in seconds by renaming the method arguments.
+Fix #6: Simplify url pattern matching
+
+Don't capture links that end with ., !, ?, or ), since people end up
+putting them after a link even those are valid characters in a url.
+Remove unnecessary code from ThingAdapter
+
+There is no longer any need for the ViewHolder, since ThingView is a
+single custom view.
+Move thing and comment formatting to background
+
+This makes scrolling on Nexus S quite a bit smoother. Of course, this
+will add some additional loading time on large posts.
+Fix #6: Wrong links for URLs in parentheses
+Allow Subreddits with Underscores
+
+...with I had defined this in a central location.
+Move FilterAdapter
+
+I looked for it in widgets first, and it wasn't there!
+Fix Font Scaling Bugs
+
+ThingView wasn't respecting the global font scaling, while the ActionBar
+was following the scaling when the it actually shouldn't.
+
+I'll probably rely upon the built in font scaling rather than building
+a setting for it.
+Remove Log Statements
+Use ApplicationContext
+
+...I didn't detect a memory leak though...
+Missing Search Asset
+Replace Magic Number
+Always Display Search
+Remove Subreddit Completion
+
+It's too slow and doesn't return good results.
+Use 8dp for Element Padding
+
+...I think this is what Android Design recommends...
+Suggest Subreddits in Dialog
+Crazy for Padding
+More Add Subreddit Dialog Fixes
+Misc Fixes
+Support Endless Search Results
+Simplify Add Subreddit Dialog
+Even More Add Subreddit Fixes
+More Add Subreddit Fixes
+Fix Rotation Bug
+Some Add Subreddit Dialog Fixes
+Add Subreddit Dialog
+Fix Filter Option
+
+Clicking a subreddit defaults to What's Hot for now. It should be sticky
+though...
+Fixed Missing Add Actions
+Fix Subreddit Action Items
+Fix Duplicate Search Menu
+Fix Subreddit List Visibility
+Share Tablet Code for Browser and Search
+Change Search Tab Ordering
+Some Search State Fixes
+Single Pane Search
+
+...and moving of files which should have been done in a separate change.
+Stretch Images to Fit
+Moving and Renaming Stuff
+Always Show Search Menu Item
+Support Add Button
+Remove Refresh Menu Item
+Fix Dual Pane Subreddit Links
+Fix Single Pane Subreddit Links
+Fix Back Stack Behavior
+Fix Home Button
+Fix Search Key
+Some Dual Pane Work
+Fix Single Pane Search
+GlobalMenuFragment Search Support
+Split Single Pane Mode into Multiple Activities
+
+The ActionBar doesn't like changing navigation modes so split apart
+BrowserActivity into separate activities when using a single pane.
+Also start using fragments to shard menus for reuse rather than
+making a menu for each activity.
+Use Standard Navigation Mode
+Use SearchView Action Views
+More Sidebar Viewing Improvements
+Support Search Button
+
+The IME does not seem to appear though when the search button is
+used though. :C
+View Sidebar Menu Item
+More Search Stuff
+Search Tabs
+Prepare for General Search
+More Formatting Fixes
+Fix Subreddit Url Pattern
+Some Formatting Fixes
+Squash ViewPager Bug
+NSFW Tags
+More Portrait Tablet Animation
+Some Improved Language
+Fix Duplicate Thing Selection
+Show More Details in Landscape Mode
+Fix Some New Warnings
+More Landscape Tablet Layout Work
+Source Code Formatting
+Show Domain if Space Available
+Some Landscape Tablet Layout Work
+Fix Padding
+Even More Side Nav Animation Work
+More Portrait Tablet Animation Work
+Tablet Layout Enhancements
+Fix More Formatting Issues
+Activate Thing by Name
+
+...instead of position which may get stale.
+Rename Search View Layout
+Custom View for Things
+Add Singular Relative Timestamps
+Fix Formatting Bug
+Apply Apache License
+Backup Agent for Subreddits
+Package Reorganization
+
+Use an activity alias to avoid broken shortcut icons.
+Fix Provider Toasts
+Format Things and Comments in Adapters
+More Timestamp Work
+Some Timestamp Work
+Ugly Hack for ViewPager Problem
+Preview Subreddit Icon
+
+It's supposed to be a monocle...
+
+Remove the ldpi assets, since I'm not testing them.
+More Disapproval and Formatting Fixes
+Fix Rotation Bug
+Fix Lint Warnings
+Restrict Subreddit Search Back Stack Behavior
+Don't Hide Subreddits During Preview
+Some Fine Tuning
+Fix Phone Home Button Behavior?
+Formatting Fixes
+Details Formatting
+Fix Raw Link Regex
+Fix Named Links with Nested Brackets!
+Fix Restoring State
+ViewPager for Link/Comments
+More Disapproval Support
+Formatter Update
+Custom Span for Subreddits
+More Subreddit Linking
+Subreddit Preview Placeholder Icon
+
+...thanks to asset studio.
+Show Add Button During Subreddit Preview
+Allow Subreddit Search Everywhere
+Add View Menu Item
+Some Code Cleaning
+Rough Preview Subreddit Implementation
+More Formatter Fixes
+Some More Icon Work
+Fix Named Links with Nested Parens
+Some Formattig Fixes + Test Project
+Some ActionBar Work
+Hide Refresh Button
+Combine and Split Subreddits
+Remove FragmentManager Reference
+
+Trying to figure out why the app sometimes is not responsive
+after being left to sit over night.
+Add Combine Subreddits Feature
+Thing Row Minimum Height
+Animate Layout Changes
+Toast for Number of Deleted Subreddits
+Change Bitmap Cache Units + Adjust Loading Trigger
+Back Stack Changes
+Redo Thumbnail Placeholder + Fix Loader Bug
+Thumbnail Placeholder Assets
+Add Front Page Option
+Remove Header Gap
+Some Thumbnail Fixes and Refresh Button
+Tiny Fixes
+Tweak Portrait Tablet Layout
+Shrink ProgressBar More
+Fix Search for Subreddits Visibility
+Fix Thumbnail Typo
+Load More Sooner
+Some Thumbnail Clean Up
+Some Thumbnail Work
+
+We need to rewrite this as a custom view someday.
+Revert "Revert "Remove Loading of Initial Subreddit""
+
+This reverts commit eeb89716d369497ad66c12f590879f53978ba081.
+Revert "Remove Loading of Initial Subreddit"
+
+This reverts commit 8efb4b29ab3f44d1c2f9234113741ca776176774.
+Fix Formatting Bug
+Remove Loading of Initial Subreddit
+Revert Clipboard Activity + Rename Add Subreddits
+Some More Thumbnail Fixes
+Delete Unused Interface
+Fix Adapter Selecting
+Load More After Scrolling
+Don't Show Share Action by Default
+Thumbnail Display Implementation
+Use Loader for ThingListFragment
+Separate Comments from Entity Classes
+Replace Copy Url with Lightweight Clipboard
+Some Action Bar Fixes
+More Add Subreddit Bug Fixes
+
+...Android is hard...
+Default Subreddits
+Name Change Again
+More Add Subreddits Work
+More Subreddit Info
+Show Subreddit Descriptions
+Use Bulk Insert
+Some SearchView Tuning
+Add Subreddits Implementation
+Fix WebView Memory Leak
+Redesign Spinner Item
+Add Style for Slim ProgressBar
+Add Share Action Provider
+Change ProgressBar Style
+Fix Front Page Title
+More Custom Subreddit Fixes
+More Subreddit Fixes
+Use Database to Store Subreddits
+Some Loader and ActionBar Fixes
+Combine Subreddit and Filter in Spinner
+Fix Tablet Layout
+Add Subbreddit Loader
+Renaming Topic to Subreddit
+Fix ActionBar for Phones
+Fix Info Lines Again...
+Add Filter Spinner to ActionBar
+More Info Line Improvements
+Remove Load More Comments Remnants
+Add Comment Count
+Refactor MainActivity
+More Refactoring for Loading More Comments
+Tweak Tablet Layout
+Fix Menu Bug
+Remove Duplicate Code in CommentListFragment
+Extract Endless Scrolling from ThingListFragment
+Some Fragment Lifecycle Cleaning
+More Back Stack Changes
+Revert "Revert "Change Comments Back Stack Behavior""
+
+This reverts commit e9b4c77bc6fe74dbe353f0fa063ff11736ac360b.
+Revert "Change Comments Back Stack Behavior"
+
+This reverts commit d736cc9cb3efa6c350fb10f66dc69e0db272a6cb.
+Change Comments Back Stack Behavior
+Some Refactoring
+Use Arguments in ControlFragment
+Fix Title Formatting
+Bullet Formatting and Link Fixes
+New Icon!
+Some Clean Up
+Remove Redundant Library
+
+...the same API is part of the platform!
+Some Code Simplification
+Format Thing List
+Formatter Optimizations
+
+Shaved off 50 ms!
+Add Some Time Logging
+Endless List Improvements
+Some Formatting Fixes
+Initial Endless List Implementation
+Fix Topic#writeToParcel
+Thing List Load More
+Formatter Clean Up
+Replace Breadcrumbs with Simple Title
+Some Formatting Fixes
+Don't Show Empty Links
+Try SetRetainInstance(true)
+Fix More Formatting Issues
+Strikethrough Support
+Copy Reddit Link Functionality
+Don't Show Options for Self Things
+Add Ups ands Downs
+Fix Title Visibliity
+More Layout Work...
+Add Author to Comments
+Use Same Layout for All Entities
+Add ViewHolder
+Support Bold Formatting
+Add Some Custom Layouts
+Restore List Position and Unescape Some Characters
+Fix Header Styling
+Move Text Parsing to Separate Thread
+Some Regex Fixes
+Attempt at Linkifying Text
+Use Entity and EntityAdapter for Thing List
+Redo JSON Parsing to Fix Comments Display
+JSON Parsing Corrections and Text Formatting
+More Lifecycle Fixes
+Remove Incremental Reloading
+
+The problem is that updating the list as items come in forces the list
+to redraw and scroll back to the top. This can be annoying when
+loading the comments for a thing.
+Split ThingFragment into Separate Fragments
+More ThingListFragment Lifecycle Improvements
+Add Separators in Tablet Layout
+Remove ControlFragment Logging
+Improve Fragment Lifecycle Code
+Fix Typo and Menu Strings
+Fix Progress Bar Display
+Indent Nested Comments
+Support for Nested Comments
+Save and Restore ThingFragment State
+Rudimentary Comment Loader
+Use Common Parsing Code in Thing List
+Fix WebView to Not Always Reload
+Remove Unnecessary Fragment Removal Code
+Max Crumbs + Name Change
+More Home Button Work
+
+The phone version has one more up level compared to the tablet
+version, since the tablet version always shows the thread list
+because it has more screen space.
+Remove Separate Thing Activity
+Enable On Demand Plugins
+Use FragmentBreadCrumbs
+Fix Lifecycle for ThingFragment WebView
+Decode Escaped Thread Titles
+Smooth Home Up Behavior
+Phone Support + View in Other App Function
+Tweak Portrait Mode
+
+...and ignore a directory I use to store APKs.
+More Stuff for Mike
+
+- Remove nested fragments which is not supported and caused
+  occasional blank web views.
+
+- Add ability to copy links
+
+- Add up behavior for home icon
+
+- Add some more subreddits :-)
+Some Improvements for Mike
+Portrait Tablet Layout Fixes
+Use Intent Chooser
+Remove Unused Icons
+Fire Browser Intent for YouTube Links
+Subreddit Menu Item
+Format Layouts and Fix Lint Warnings
+Updated Phone Support
+Fragments Overhaul and Tabbed Thing Viewer
+Use onAttach to Set Listeners
+
+This assures when a fragment is recreated it's listeners will be
+properly attached!
+View Links within Tablet Layout
+Fix Selection Bugs
+Phone Support
+Add Portrait Tablet Mode
+Landscape Tablet Client with Back Stack Support
+Some Fragments
+Initial Commit

@@ -1,0 +1,2334 @@
+Updated translations
+Updated changelog
+Factored out base URL from ExternalURLs
+Syntax highlighting for curl import
+More cleanup
+Migrated date and time picker dialogs to Compose
+Migrated rich text and image dialogs to Compose
+Migrated Slider variable dialogs to Compose
+Migrated Quick Settings tile dialogs to Compose
+Migrated Realm error dialog to Compose
+Migrated text input action dialogs to Compose
+Migrated text input & select variable type dialogs to Compose
+Migrated color picker action and variable type dialogs to Compose
+Migrated first batch of dialogs to Compose
+More meaningful error message when no app was found for browser shortcut
+More meaningful disabled state for test button
+Updated translations
+Don't replace empty strings with null when transforming code
+Animate shortcut list and grid
+Loosened restrictions on loop prevention
+Show timestamp seconds in event history when expanded
+Only use Compose for Snackbars
+Migrated execution progress spinner to Compose
+Removed a lot of obsolete stuff
+Minor tweaks for cert pinning dialogs
+Scale code editor to full height when there is only one
+Remember previously used color in icon color picker
+Adjust icon color to dark mode in icon picker
+Fixed status bar color
+Made meta info in response screen selectable
+Migrated Main Screen to Compose
+Bumped version number
+Updated translations
+Allow selecting and toggling linebreaks in response display
+Removed more dead code
+Migrated Voice screen to Compose
+Migrated Deep Link screen to Compose
+Migrated Secondary Launcher screen to Compose
+Migrated Share screen to Compose
+A big round of deleting obsolete stuff
+Migrated Request Body editor screen to Compose
+Initialize VariablePlacerholderProvider
+Nicer ripples for shortcut icons
+Migrated Response settings screen to Compose
+Updated Realm
+Migrated Execution Settings screen to Compose
+Migrated Advanced Settings screen to Compose
+Migrated IconView to Compose
+Handle empty state in variable picker dialog
+Migrated ShortcutEditor screen to Compose
+Migrated TriggerShortcuts screen to Compose
+Migrated Authentication screen to Compose
+Migrated BasicRequestSettings screen to Compose
+Migrated ResponseHeaders screen to Compose
+Migrated VariableEditor to Compose
+Removed obsolete layouts
+Migrated DisplayResponseActivity to Compose
+Made CodeTransformer more resilient
+Store response directly into designated directory if possible #344
+Use ErrorFormatter also for errors logged into Event History
+Moved Event History into Troubleshooting section
+Updated documentation
+Removed wallpaper category background feature
+Migrated Variables screen to Compose
+Use correct thread when showing toast
+Clarified error message
+Added support for certificate pinning #335
+Fixed Realm initialization
+Bugfix: Handle response charset properly #341
+Improved color picker
+Migrated Scripting screen to Compose
+Tweaked syntax highlighting
+Migrated Global Scripting screen to Compose
+Configured keyboard options for curl import screen
+Use disabled state instead of hiding action buttons
+Improved dividers in code snippet picker
+Migrated Code Snippet Picker to Compose
+Switch away from black automatically in color picker when changing hue
+Migrated Categories screen to Compose
+Migrated Category Editor screen to Compose
+Migrated Settings screen to Compose
+Moved activities
+Migrated Icon Picker screen to Compose
+Migrated Widget Settings screen to Compose
+Migrated Information screen to Compose
+Migrated Acknowledgment screen to Compose
+Migrated Contact screen to Compose
+Migrated Documentation screen to Compose
+Fixed typo in documentation
+Migrated import-export screen to Compose
+Don't try to apply icon to category shortcut when there isn't one
+Use Material3 for Compose text fields
+Migrated Remote Edit activity to Compose
+Introduced more reusable components
+Introduced base class for Compose-based activities
+Migrated curl import screen to Compose
+Migrated event history screen to Compose
+Be more lenient with database version matching when importing
+Track shortcut cancellation in event history
+Completed migration from java.util.Date to Java 8 date APIs
+Detach variables from Realm so that they can be modified in-memory in VariableManager
+Update build.gradle.kts
+
+Bumped version number
+Keep a copy of the old Realm file, just in case
+Migrated to Realm-kotlin
+Updated translations
+Fixed crash on older versions of Android
+Allow coloring category icon
+Updated translations
+Updated changelog
+Updated documentation
+Allow picking icon for category
+Allow user to choose whether stored files will overwrite existing files
+Bugfix: Storing response into file requires that the response is kept in the first place
+Updated changelog
+Updated translations
+Fixed handling of content-disposition header
+Allow storing response into file
+Run shortcut without starting ExecuteActivity from QuickTileService if possible
+Renamed model classes
+Avoid using runBlocking in QuickTileService
+Bugfix: Always initialize the ScriptingExecutor when needed
+Updated translations
+Resolve referenced variables as soon as possible
+Added support for curl flag --data-raw #336
+Bugfix: Don't emit outdated text from text listener #337
+Use same version of GSON and OkHttp in all modules
+Improved tests & testing setup
+Bumped version number
+Updated translations
+Adjusted time correction
+Fixed exceptional crash logging
+Prevent multiple repetitions in parallel for the same shortcut
+Bumped version number
+Updated translations
+Periodic Execution
+Updated changelog
+Updated translations
+Fixed tests
+Updated dependencies
+Added shareText function #327
+Bugfix: shareIntent can now set dataType without having to set dataUri
+Disable HTML escaping for JSON-pretty-printing #325
+Use NO_WRAP for Base64 encoding to avoid trailing newline characters #326
+Generate new keys for variables more defensively
+Updated translations
+Updated changelog
+Keep NDK symbol table
+Bumped version number
+Don't use headless mode when file uploads are needed
+Updated Realm and AGP
+Added logEvent function
+Fixed tables in built-in documentation
+Made shortcut ID a required parameter
+Better quotation marks
+Added privacy policy to documentation listing
+Updated translations
+Heuristically redact secrets out of headers in event history
+Removed (hopefully) obsolete broadcast receiver
+Allow setting stored value of variable without setting resolved value of variable
+Use stored value as default only when 'Remember value' is enabled for Date & Time variables
+Changed name of generated APKs
+Improved determining of file type
+Updated changelog
+Hide ExecuteActivity from Recents after shortcut execution #322
+Updated translations
+Use headless mode more defensively
+Added additional logging
+Updated translations
+Updated dependencies
+Defined behavior of Action button for curl import text field
+Allow submitting text input dialogs with Enter and Action button
+Bumped version number
+Provide image meta data for Scripting
+Log external requests
+Bugfix: Fixed animation on input fields for proxy settings
+Updated changelog
+Bumped build number
+Treat read timeout as success when streaming #321
+Updated translations
+Added secondary launcher app #318
+Allow switching back-and-forth between active execution and other apps
+Added Tasker Plugin Library to acknowledgments
+Fixed error reporting for Tasker integration
+Run clean up tasks only when conditions are right
+Added missing margin
+Updated changelog
+Improved FAQ
+Updated translations
+Improved privacy policy
+Show instructions when configuring Tasker
+Added documentation for some advanced use cases
+Allow setting result passed back from executeShortcut or to Tasker
+Added another blacklisted user ID
+Updated changelog and readme
+Allow copying history events through long-press
+Added missing imports
+Always resolve variables lazily #298
+Schedule by delay instead of absolute date
+Ignore errors from problematic users
+Run important workers as expedited on Android 12+
+Updated translations
+Added Event History
+Bumped version number
+Treat errors in IconView as non-critical
+Bugfix: Fixed handling of UnknownHostException
+Bugfix: Disable editor UI after cancelling
+Include trigger in logging
+Fixed placeholders in translations
+Bumped build number
+Updated translations
+Moved icons around some more
+Updated changelog
+Updated translations
+Bugfix: Don't run in headless mode when network is restricted
+Updated documentation
+Set default color in color picker to white
+Added promptPassword, promptColor, promptDate and promptTime
+Reduced need for synthetic accessors
+Updated version number
+Allow passing message as byte array to HMAC #314
+Added support for SOCKS proxies #312
+Updated dependencies
+Bugfix: loosened content-type checks in RequestBuilder #317
+Bugfix: Fixed crash when trying to share response from dialog
+Updated translations (added Mexican Spanish)
+Improved validation of model ids #313
+Moved launcher icons into mipmap directory #310
+Added alias for getWifiSSID()
+Don't try to read file name when query returns no results
+Log full class names
+Revert changes to commitTransaction due to questionable thread management in executeTransactionAwait
+Bugfix: Handle case where base64 Bitmap can not be decoded
+Bugfix: Fixed handling of arguments in sendMqttMessages() #309
+Fall back to toasts if error can't be displayed in a dialog
+Don't log UserExceptions in headless mode
+Updated changelog
+Don't log OutOfMemoryError in IconView
+Run Realm transactions using executeTransactionAwait
+Improved post-execution handling
+Added more logging
+Bugfix: make sure PendingIntents for widgets are distinct #306
+Improved handling of cancellation
+Fixed typo
+Improved logging
+Bugfix: fixed crash when using multi-select multiple choice variables
+Bugfix: fixed compile error in "release" build #305
+Bumped version number
+Bugfix: Account for Shortcut.responseHandling being null
+Fixed Tasker integration
+Shut up, Linter!
+Fixed spelling of Wi-Fi
+Bumped build number
+Updated Tasker plugin
+Use getParcelable everywhere
+Updated translations
+Simplified gradle dependencies
+Removed obsolete code
+Improved handling of intent extras
+Updated docs
+Fixed some TODOs, in particular got rid of some hardcoded error messages
+Bugfix: update view state when changing execution settings
+Don't show progress dialog if remote edit upload/download is super quick
+Improved documentation
+Bumped build number
+Avoid overwriting global code or title on import
+Updated translations
+Updated changelog
+Improved headless execution for Android 13
+Bugfix: fixed intent-filters for Android 13
+Bugfix: Fixed displaying of dialogs in QuickTileService
+Bugfix: Allow setting global code to empty string #303
+Bugfix: Fixed importing of global code #303
+Use the right context in all actions
+Consistently use snackbar instead of toast for variable validation errors
+Removed EventBridge
+Improved communication between VariableEditorViewModel and child viewmodels
+More British!
+Refactored communication between MainViewModel and ShortcutListViewModel
+Improved SessionMonitor
+Minor code improvements
+Fixed edge cases of ExecuteShortcutAction
+Fixed build config
+Updated translations
+Updated changelog
+Added typealias for executionId
+Allow nested executions
+Bugfix: destroy documentation webview
+Bugfix: use correct context with correct theme for alert dialogs
+Document wifi SSID check step
+Removed Ipack support
+Bugfix: added missing inject
+Bugfix: properly apply initial state of menu items
+Bugfix: don't show action checkboxes in Response Handling screen when set to run silently
+Run simple shortcuts in headless mode
+Cleaned up passing of variable values and files to HttpRequester
+Factored execution logic out of activity
+Improved handling of coroutine cancellation
+Separated framework code out into module
+Replaced RxJava with coroutines
+Improved error handling for XML parsing
+Updated Android gradle build plugin and dependencies
+Fixed text color on slider variable dialog
+Check for any camera
+Handle missing activity more gracefully
+Ignore UI events in editor when already finishing
+Added Paho to acknowledgments
+Updated dependencies
+Bumped version number
+Updated documentation
+Added option to send MQTT messages
+Added option to send TCP packets
+Handle case where webview not installed, don't show changelog dialog
+Updated translations
+Bumped build number
+Make file sharing more robust
+Bumped version number
+Updated changelog
+Improved color picker
+Allow configuring the visible buttons in the response window
+Updated dependencies
+Updated translations
+Allow using image from camera app that sends back wrong result code
+Include generated HTML files in repository to allow building without access to the repository root
+Removed obsolete strings
+Bumped build number
+Updated translations
+Updated changelog
+Allow configuring the action on the response display dialog
+Added RGB hex color input field to color picker #290
+Factored out color picker dialog
+Updated translations
+Improved handling and displaying of bundled documentation
+Always run complete execution in foreground
+Remember previous color in built-in icon color picker #290
+Preserve order of selection in multi-select variables #288
+Bugfix: Update launcher shortcuts when duplicating or deleting shortcuts #289
+Allow configuring available actions for window and dialog response display type (minus config UI)
+Bugfix: Display correct title
+Updated documentation
+Updated documentation
+Bumped build number
+Updated translations
+Updated changelog
+Bugfix: don't delay enqueued shortcuts twice
+Bundle documentation into app #287
+Updated gradle wrapper
+Added animation to variable share options UI
+Updated translations
+Allow adding quick settings tile directly from app
+Minor reordering of settings
+Bugfix: Don't treat user cancellation as error
+Bumped version number
+Updated changelog
+Re-added language picker
+Added language declarations
+Added monochrome icon
+Updated dependencies
+Added special deep-link to cancel all pending executions
+Removed unnecessary synchronization from lazy initialization
+Show "Wait for connection" option only for regular shortcuts
+Disable OK button in multi-shortcut add dialog when nothing is selected
+Updated changelog
+Made VersionUtil injectable
+Bugfix: allow deleting variable/shortcut placeholders as a whole #286
+Fixed crash on pre Android N devices
+Updated dependencies
+Added layout transition animations
+Allow picking custom color for unicolor icons
+Updated translations
+Bugfix: resolve variables properly when fetching favicon or exporting to curl #284
+Bugfix: Check requireConfirmation field when comparing shortcuts #285
+Bugfix: Handle invalid base64 in <img> tag
+Bugfix: Handle <img> tags without a src attribute
+Bumped version number
+Added donate button
+Improved code style for changelog sync task
+Updated documentation
+Updated changelog
+Simplified change log display logic
+Updated version number
+Updated translations
+Added some debounce to avoid accidentally running a shortcut multiple times
+Allow navigating to FAB with DPAD even when shortcut list is empty
+Fixed typo
+Better error handling for unsupported image URLs
+Fixed Bugsnag config
+Improved DPAD support
+Temporarily downgrade appcompat library to fix crashes in webviews
+Fixed menu in ImportExportActivity
+Show loading state when processing file(s) for sharing
+Set image dimensions properly
+Further improved loading of images in dialogs
+Bumped version number up to 2.21.0
+Updated Kotlin version
+Updated translations
+Added support for <img> tags in dialogs #281
+Updated dependency
+Bugfix: Properly disable Bugsnag build plugin when not needed
+Bugfix: Make sure to only access clipboard from main thread
+Disable changing theme option when dark mode is enabled
+Bumped build number
+Bugfix: emit the correct event for inserting variable placeholders into response message field
+Added documentation for new variable types
+Minor code improvements
+Updated translations
+Don't log error when sharing is cancelled
+Make ResilientEditText more resilient
+Bumped build number
+Updated lifecycle dependencies
+Bugfix: empty state in variables list no longer flickers in during initialization
+Removed outdated smoothprogressbar dependency
+Updated translations
+Bumped build number
+Updated changelog
+Improved search state handling
+New variable types: Clipboard Content and UUID
+Removed border from Play Store icon
+Updated changelog
+Updated translations
+Fixed layouts for proper RTL support
+Allow adding multiple shortcuts at once to a multi-shortcut
+Removed restriction of allowing each shortcut only once in multi-shortcuts
+Added search feature to code snippet picker
+Actually, let's make the user-agent even better
+Bugfix: avoid mismatched parenthesis in User-Agent
+Improved test framework, fixed broken tests, and added some new ones
+Updated changelog
+Improved BaseIntentBuilder
+Dispose RealmObservables on the correct thread
+Extended options to set titles and messages for dialog based variables
+Removed ";" from code snippets that return a value
+Allow querying clipboard via Scripting #121
+Bumped version number
+Updated Picasso
+Improved code example for XML parsing
+Removed Stetho
+Removed obsolete multidex library
+More minor code improvements
+Some code clean-up around NetworkUtil
+When exporting, include only those custom icons and client certs that are actually needed
+Disable linter warning for missing translations (because there are plenty)
+Added option to define prefix and suffix text for number slider variables
+Pick shortcuts first, file second, when exporting shortcuts
+Some dependency updates
+Updated translations
+Fixed color of checkboxes in selection dialogs
+Bumped build number
+Show shortcut icons in export dialog
+Export only those variables that are needed
+Disable Export button when no shortcuts are selected
+Show progress dialog while loading shortcuts for export
+Bumped build number
+Migrate gradle file to Kotlin
+Standardized gradle file syntax, part 3
+Standardized gradle file syntax, part 2
+Standardized gradle file syntax
+Updated translations
+Allow selecting which shortcuts to export #177
+Bugfix: multiple-choice variables now store correct viewstate
+Tiny code improvements
+Updated documentation for categories
+More Bri'ish
+Prepare for partial exports
+Updated translations
+Updated changelog
+Use view bindings in dialogs
+Refactored variable buttons to preserve dialog state
+Added descriptions to variable types picker
+Updated image cropping library
+Bugfix: display error using the correct display type #280
+Added TODO comment
+Improved resilience of migration
+Allow sending UDP packets #199
+Bugfix: don't create shortcuts in hidden category
+Updated screenshots
+Updated dependencies
+Bumped version number
+Separate use of Google Play Services out of 'release' build
+Fixed issue with table in docs
+Updated screenshot for docs
+A bit of clean-up
+Bumped build number
+Added option to sort variables alphabetically
+Fixed triggering of shortcuts while screen is off
+Added help button to Import/Export page
+Made the translator call-to-action itself translatable
+Ignore exceptions from Miui
+Updated translations
+Reorganized About screen
+Use DI for Settings
+Deep-linking support for importing
+Migrated gradle file to Kotlin
+Added more spacing to the right of the icon in the shortcut editor
+Updated changelog
+Compacted shortcut editor layout
+Updated translations
+Updated Privacy Policy to reflect changes to use of Location permission
+Bugfix: update launcher shortcut order when shortcuts have been moved
+Allow querying device's location
+Fixed dependency injection for vibrate action
+Mentioned Web Editor in Scripting doc
+Fixed header import bug in curl parser
+Added support for 'Barcode Scanner' app
+Added note about toast limitations
+Added support for Binary Eye #151
+Added more spacing between authentication method selector and client auth button
+Updated changelog
+Bumped version number
+Implemented support for scanning bar codes
+Reduced size of all PNGs
+Upgraded to Android SDK version 33
+Upgraded to Kotlin 1.7
+Improved documentation
+Updated translations
+Refactored ExecuteActivity into viewmodel a little bit more
+Fixed accidental rename from half a decade ago (guess no one's using this, huh...)
+Improved URL interception and cleanup for changelog and acknowledgment webviews
+First step of moving execute logic into viewmodel
+Show better error message when using invalid URL schemes
+Destroy webview when closing response display window
+Updated screenshots
+Scripting: Set `response` to `null` when not available
+Bumped build version
+Added `uuidv4` function
+Added "Network" section in code snippet picker
+Bumped version number to 2.17.0
+Updated changelog
+Updated translations
+Updated dependencies
+Allow decimal numbers in number slider variable
+Updated acknowledgments
+Merge pull request #275 from granoeste/feature/NDEF_DISCOVERED
+
+Deep link into DeepLinkActivity by NFC tag
+Added NDEF_DISCOVERED intent-filter
+Bugfix: separators in menu list dialogs are no longer clickable
+Bugfix: category background is now properly reapplied when switching tabs
+Bugfix: added missing dismiss listener to changelog dialog
+Updated changelog
+Added basic logging for HTTP requests and file picker
+Allow cancelling running shortcuts with the back button
+Minor tweaks in ExecuteActivity
+Initialize ScriptExecutor only once, run code blocks separately
+Evaluate variables in Scripting lazily
+Updated translations
+Improved documentation
+Updated translations
+Bumped build number
+Fixed disappearing dialog
+Updated Android build tools
+Customized Tasker notification
+Updated changelog and documentation
+Simplified file IDs
+Updated translations
+Only show recovery dialog when there are actual changes to recover
+Added button to access Xiaomi permission settings
+Updated splash screen
+Improved language picker
+Updated compat library
+Updated translations
+Updated gradle
+Allow forwarding files from one shortcut to another
+Introduced Dagger
+Updated Material library
+Added option to recover unsaved changes to shortcuts
+Added icons to easily access function documentation from code snippet picker
+Added `parse JSON` and `parse XML` options to code snippet picker
+Added XML parser
+Bumped version number
+Default to dialog output instead of toast when not defined
+Updated translations
+Removed logging of warning for legacy use of JS actions
+Fixed grid layout import
+Just a bit of code cleanup
+Refactored dialogs for adding/editing string parameters and headers
+Updated translations
+Updated changelog
+Bumped build number
+Updated translations
+Updated changelog
+Renamed "String" to "Text" for parameter types
+Added option to use camera for file parameter
+Introduced enum class for parameter type
+Allow picking image from camera as request body
+Updated translations
+Bugfix: delay persisting of selected icon if viewstate is not ready yet
+Bugfix: file picker no longer allows choosing more than one file when only one is needed
+Added loading spinner to response settings screen
+Disable input while saving shortcut in editor
+Updated translations
+Re-introduce backwards compatibility for calling _runActions in scripts directly
+Bumped build number
+Include version code instead of version name in debug meta data
+Moved color picker dialog for widget into view state
+Added option to set a custom background color for categories
+Use consistent capitalization
+Added missing imports
+Updated metadata
+Updated translations
+Updated changelog
+Updated documentation
+Some bugfixing and fine-tuning around remote editing
+Added support for different densities for grid layout
+Allow overriding the shortcut click behavior per category
+Added a description to widget
+We Swiss don't need no Eszett
+Updated translations
+Added category editor activity
+Use dropshadow on text when using wallpaper background in category
+Show hidden categories with reduced alpha in categories list
+Make sure all Localizable implementations have a reasonable equals()
+Aggressively try preventing the app from crashing on memory pressure on icons
+Prevent MainActivity from opening again after displaying a response
+Bumped targetSdkVersion to 32
+Time for some updates
+Show browser name instead of package name in editor for Browser Shortcuts
+Some more love for Jetpack
+Replace custom 'View.visible' extension with Jetpack's 'View.isVisible'
+Renamed letIf & friends to runIf to be more in line with the Kotlin standard library
+Improved Tasker error mitigation
+Improved shortcut list UI updating
+Redesigned code snippet picker as standalone activity
+Improved view model initializations
+Replaced suggestion edittext with a dropdown for browser package name selection
+Improved documentation
+Query for available browser and suggest package names for browser shortcuts
+Fixed crash caused by instruction dialog for deep-linking
+Limit length of error response
+Bugfix: automatically set method to POST in CURL import when using -F
+Improved documentation of prompt() and confirm()
+Simplified declaration of built-in JS functions
+Introduced typealias for shortcut id, variable id and category id
+Fixed initialization of Realm in ExecutionsWorker
+Bumped version number
+Added option to programmatically change a shortcut's description
+Refactored LauncherShortcutManager into an injectable class
+Wrapped up migration to ActivityResult contracts
+Migrated DisplayResponseActivity to use ActivityResult contract
+Moved client cert option to Authentication settings screen
+Improved loading and dark mode support for changelog and acknowledgments screen
+Refactored file pickers to use ActivityResultContract
+Refactored icon picker to use ActivityResultContract
+Don't try to show snackbars while executing shortcuts
+Fixed issue with missing positional arguments in localized strings
+Consider also temporary shortcut's scripting sections when checking if custom icons are unused
+Fixed grid layout for built-in icon picker dialog
+Bumped version number
+Updated changelog
+Updated translations
+Refactored icon picker dialogs
+Safeguard against early view model access in VariableEditorViewModel
+Restored grid layout
+Fixed infinite loop when switching tabs while moving mode is active
+Log dialogs
+Fixed build
+Updated translations
+Updated changelog
+Added option to change title to Settings screen
+Refactored more dialogs
+Refactored RemoteEditActivity
+Migrated ImportExportActivity to MVI
+Removed misleading hint
+Use buildList and buildSet instead of mutableListOf and mutableSetOf
+Introduced ShortcutAuthenticationType enum
+Renamed all model classes
+Upgraded Markdown library for Changelog generation
+Upgraded Gradle plugin
+Refactored dialogs in Settings screen
+Bumped build version
+Increased resilience against invalid viewmodel access
+Updated docs
+Fixed grid layout calculations
+Fixed dark mode in changelog dialog
+Updated translations
+Updated changelog
+Refactored more dialogs
+Bugfix: prevent crash on screen rotation while dialog is visible in settings screen
+Refactored more dialogs
+Bugfix: Disable shortcut context menu when app is locked
+Allow sharing title into variables instead of just text
+Indicate which variables are unused
+Improved loading state for variables screens
+Updated documentation
+Added "trim()" option to code snippet picker
+Added option to define custom package name for browser shortcuts
+Added Favicon grabber
+Refactored main context menu and shortcut moving dialogs
+Bugfix: Properly initialize text fields when autofocused
+Refactored dialogs in VariablesActivity
+Refactored dialogs in CategoriesActivity
+Merge pull request #265 from Waboodoo/icon-picker
+
+Improved custom icon selection
+Disabled automatic running of tests, as it needs some rewriting first
+Improved custom icon selection
+Refactored some more dialogs
+Refactored Shortcut info dialog
+Refactored CURL export dialog
+Refactored dialogs of MainView to preserve their state on config change
+Fixed copy-paste error in AuthenticationViewModel
+Respect dark mode in AcknowledgmentActivity
+Prevent re-initalizing ShareViewModel
+Proof-of-concept for state-retaining dialogs
+Bugfix: handle icons that are too large to draw with an error instead of crashing the app
+Improved logging in shortcut editor
+Bumped version number
+Prepared patch release
+Updated translations
+Bugfix: Preserve state of Acknowledgments activity on screen rotation
+Bugfix: Ignore problematically large custom icons in icon picker
+Bugfix: Allow removing deleted shortcuts from multi-shortcut
+Add resilience against translator mistakes in format strings
+Simplified some code
+Added loading state to ShortcutEditorActivity and VariableEditorActivity
+Added loading state to MainActivity
+Bugfix: Handle correct exception for large responses
+Bugfix: Account for cookies with empty value
+Bugfix: overwrite file if it exists when exporting
+Updated version number
+Don't log error when shortcut not found
+Updated documentation
+Updated translations
+Load response text from file instead of passing as intent to avoid crash
+Ignore NoSuchElementException when execution a pending shortcut, as it is expected that it might have been cancelled
+Added basic support for HTML formatting in toasts
+Show variable types under variables in picker dialog
+Dropped the term "Constant" to reduce confusion
+Renamed triggerShortcut to enqueueShortcut
+Fixed tests
+Clean up progress indicator, prevent it from showing up after activity finishes
+Bumped build number
+Updated translations
+Updated changelog
+Improved colors and sizing of help texts and copyable texts
+Improved styling and UX of curl import
+Show discard warning when importing from CURL
+Hide progress spinner before showing response
+Added back missing title field for password and number variables
+Updated translations
+Bumped build number
+Show "Multiline" option only for text variables
+Fixed swapped minimum and maximum for slider variable
+Initialize viewmodel sooner in fragments
+Moved method to a better place
+Fixed migration
+Don't try to set viewstate.isAppLocked before the view model is initialized
+Added missing imports
+Always display location permission dialog from UI thread
+Bumped some version numbers
+Schedule execution via worker instead of blocking a thread
+Improved initialization of ShortcutPlaceholderProvider
+Improved UX of request body input box
+Reduced min size for scripting input box to increase visibility of code snippet button
+Improved initial state rendering of shortcut and variable editors
+Tweaked shortcut creation dialog
+Show name of variable in title of deletion dialog
+Updated translations
+Updated changelog
+Refresh list of categories before updating launcher shortcuts from it
+Silently initialize shortcut editor view models to avoid rendering of partial view state
+Suppress auto-closing of display window when saving file
+Updated documentation
+Added getWifiSSID() function
+Bugfixing time
+Added cleanup worker to reduce size of Realm DB file
+Convert ResponseHandling model into embedded model
+Allow Realm to be compacted when needed
+Automatically close response display window after 8 seconds in the background
+Added some logging
+Added helper functions openUrl and openApp
+Fixed premature recomputing of view state
+Removed unused asset
+Moved private class
+Improved displaying of variable placeholders in variable option lists
+Fixed wonky drag-reordering
+Updated translations
+Merge pull request #260 from Waboodoo/mvi-refactoring
+
+Refactored (almost) everything to MVI architecture pattern
+Refactored (almost) everything to MVI architecture pattern, + loads of general improvements
+Added missing permission for wifi switching and improved error message
+Tiny tweaks
+Some tweaks for icon handling
+Added another example for the `sendIntent` function
+Added FAQ entry about sharing
+Load custom icon images with Picasso for better memory and thread management
+Updated documentation
+Adjusted version name
+Allow setVariable for all types of variables
+Use switches instead of checkboxes in settings screen
+Linter time!
+Removed dexOptions setting
+Prepared changelog
+Bumped version number
+Update ALL the dependencies #yolo
+Updated gradle version
+Fixed wait() action deadlock when used multiple times
+Added error handling for export from ListFragment
+Updated libraries
+Treat 3xx status code as success
+Updated changelog and bumped version number
+Updated translation
+Use https by default
+Rearranged icons
+Handle import validation errors
+Improved tests
+Fixed issue with -d parameter in curl parser
+It's update time! Kotlin 1.6 is here!
+Fixed link in acknowledgments
+Improved error message for 'save as file'
+Added credit for Japanese translation
+Handle error when client cert picking not supported by system
+Allow full backups
+Only publish docs when merging into master
+Fixed issues with github actions
+Added jobs for publishing docs
+Fixed README
+Improved documentation
+Added documentation files
+Ignore IllegalStateExceptions in EditText
+Fixed changelog
+Updated changelog
+Updated translations
+Added option to pick previously used custom icon
+Bumped version number to 2.11.0
+Treat cookies and headers as multi-map to allow multiple entries with the same key
+Updated lifecycle dependency
+Fixed passing of variables values to triggerShortcut
+Fixed error handling for wakeOnLan action
+Fixed disabling of bugsnag in release build
+Removed obsolete translation
+Fixed some warnings
+Updated GSON
+Replaced bindView with view bindings in all viewholders
+Replaced bindView with view bindings in all activities
+Improved vibrator handling
+Removed dead code
+Migrated to view bindings for views and fragments
+Fixed incorrect use of RxPermissions
+Fixed minification issue
+Updated string
+Updated changelog
+Handle links on changelog dialog
+Added translation acknowledgment
+Updated dependency
+Updated translations
+Added "if" and "if else" options to code snippet picker
+Added toString and toHexString functions
+Bugfix: allow empty form parameters
+HMAC and Base64Decode return byte array instead of hex string
+Generalized base64encode and hmac to also accept byte arrays as input
+Generalized type system for scripting functions
+Improved error message for importing from newer version
+Fixed exposing response headers to Scripting
+Moved "Delay when offline" option to Execution Settings
+Updated translations
+Renamed "Misc Settings" to "Trigger & Execution Settings"
+Disallow negative delay
+Replace color picker, got rid of jcenter dependency
+Updated Kotlin version
+Updated build tools
+Updated dependencies
+Removed dependency on usefulviews library
+Update OkHttp and raise minSdk version to 21 (Lollipop)
+Bumped version number
+Localized error messages for wakeOnLan action
+Updated translations
+Bumped build number
+Allow selecting multiple options in Multiple-Choice variables
+Allow selecting multiple values in Multiple-Choice variables
+Updated Kotlin language version to 1.5
+Updated translations
+Updated changelog
+Allow specifying custom delay for 'triggerShortcut'
+Separate PendingExecution for requiring network and not requiring network
+First step of refactoring scheduling
+Updated Java target version
+Updated Changelog and Readme
+Minor code improvements
+Prepare for Android 12
+Updated version number
+Updated Realm
+Updated translations
+Added wake-on-lan functionality
+Include line number in JS error message (if available)
+Updated dependencies
+Updated changelog
+Updated translations
+Sanitize number input
+Reduce alpha of shortcut list when in moving mode
+Use shortcut's name for Quick Settings Tile
+Curl: Set method to POST if there is a request body
+Bugfix: detect changes when editing variables
+Simplified deep-link URLs
+Bumped version number
+Use mDNS only as a fallback
+Updated changelog
+Giving up on mDNS a little more
+Allow pinning categories to the home screen
+Updated translations
+Bugfix: when sharing a single shortcut, only export that shortcut and its variables
+Long-pressing tab opens category settings
+Handle error for devices that don't support opening image picker
+Handle error for devices that don't support overlay settings intent
+Exclude FileUriExposedException from logging
+Bumped build number
+Treat JSON errors as JS errors
+Updated translations
+Show error message as toast when no other option applies
+Have Tasker integration fail faster
+Improved reordering of shortcuts
+Updated translation
+Allow moving shortcuts by dragging
+Bumped build version number
+Fixed embarrassing bug in Quick Settings Title feature
+Updated README
+Updated translations
+Updated dependencies
+Added troubleshooting option for Tasker integration
+Prevent ResponseWebView from requesting favicon
+Added support for mDNS
+Bumped material library version
+Tweaked error formatting
+Avoid casting error
+Resilience to invalid icons
+Bumped version number
+Bumped build number
+Improved Realm initialization
+Updated changelog
+Experiment: Wait for ExecuteActivity to finish before reporting back to Tasker
+Updated translations
+Improved help texts
+Allow multiline input for Text variable
+Fixed password input
+Removed icon migration
+Updated Realm and Kotlin versions
+Added rerun button
+Updated translations
+Fixed import migration for empty lists
+Bumped version number
+Added missing cleartext connection spec
+Updated translations
+Removed some dead code
+Added instruction text to response handling section
+Refactored 'mapIf' and 'mapFor' helpers
+Added "playSound" function
+Adjusted visibility of F-Droid link
+Added info dialog
+Fixed capitalization of some strings
+Make query parameter parsing for deep-linking more resilient
+Show changelog when there are breaking changes
+Revamped Tasker integration (finally rid of Java!)
+File-base client certificate support
+Fixed Basic Auth encoding
+Updated translations
+Added support for TLSv1.3
+Minor fixes
+Added missing icon to menu
+Update README.md
+Updated translations
+Handle Base64 decode error
+Bumped version number to 2.4.0
+Update Robolectric
+Include link to F-Droid
+Fixed remote edit upload
+Some code improvements and some cleanup
+Updated translations and changelog
+Added support for HMAC
+Just some minor tweaks
+Loosen type restrictions
+Updated translations
+Support for client auth certificates
+Update Kotlin
+Resolve variables from getVariable
+Display images in dialog
+Include icons referenced in code in the export as well
+Update README.md
+Updated shield badges in README
+Updated changelog
+Updated translations
+Refactored icon into a proper class
+New export format, including custom icons
+Don't log SecurityException from SendIntent
+Updated version number
+Allow negative values for number slider
+Removed unnecessary top margin in About screen
+Reduced output text limit
+Updated translations
+Fixed triggering shortcuts with variables
+Better error handling for "showSelection"
+Updated translations
+Added base64 encoding and decoding
+Removed obsolete exception handling
+Fixed app unlocking
+German is weird
+Use same user agent for webviews as for HTTP requests
+Updated translations
+Integrate poeditor plugin for easier pushing of translations
+Added validation for changing remote edit server URL
+Silly me, I forgot to change the versionName...
+Updated version number
+Updated changelog
+Updated translations
+Tweaked error handling
+Replaced image picker & cropper for custom icons
+Don't restrict browser shortcuts to http(s)
+Detect use of `getVariable` also when using singlequotes instead of doublequotes
+Improved empty state help texts for shortcuts and variables
+Updated Kotlin version
+Updated translations
+Fixed changelog display
+Bumped version number to 2.1.0
+Truncate displayed text to avoid running over Intent size limit
+Preserve file name when sharing files into app
+Be more defensive in getCurrentSsid
+Updated translations
+Fixed some wording
+Small code improvements
+Fixed (?) sharing files into app
+Minor tweaks
+Minor tweaks
+Disabled image caching
+Fixed casing
+Updated translations
+Separated 'About' section out into its own page
+Added instructions to "Allow Share" checkbox
+Broaden support for image types
+Fixed progress bar when saving response as file
+Bumped build version
+Allow passing in variable values when triggering shortcut via deep link
+Update target SDK version to 30
+Allow toggling line-wrapping in JSON formatted output
+Mark location feature as optional
+Updated translations
+Minor code improvements
+Allow long texts to wrap to 2 lines in menu dialogs #german
+Updated changelog
+Updated translations
+Expose selected file meta data to scripting context
+Improved file name lookup
+Updated translations
+Don't show options for sharing/saving as file when response is empty
+Update acknowledgments
+Allow sharing response as file when it's too large to be shared as text
+Update Realm
+Merge pull request #210 from crasu/wificheck
+
+Check wifi network when sending a http request
+Merge branch 'develop' into wificheck
+Minor adjustments to code style, wording and UI
+Made window the default response ui type
+Display images in response window
+Store response in cache file, allow exporting to file system
+Review comments
+Do not compose completeables together as the permissions could be missing when calling getSSID
+Reformat stuff
+Added wifi check for shortcuts
+Show deleted shortcuts in list of trigger shortcuts to allow removal
+Allow triggering shortcuts via deep-linking
+Allow setting global scripting code to run before every shortcut execution
+Make variable editor value input multi-line
+Allow picking custom icons in Scripting Snippet Picker for changeIcon action
+Hide icons in overflow menu
+Updated dependencies
+Removed legacy data migrations
+Bumped version number to 2.0.0
+Fixed rounding issue with large numbers in scripting
+Improved link styling in HTML files
+Crash app deterministically when Realm not available
+Updated translations
+Bumped build number
+Updated changelog
+Raise error when accessing variable that does not exist
+Updated translations and changelog
+Increase max length of variables
+Allow setting the remote editing server address
+Improved remote edit import
+Updated changelog
+Updated translations
+Re-architectured remote editing
+In Debug, I put the letter D on the icon.
+Set applicationIdSuffix to allow the debug and release to be installed at the same time
+Improved edit server
+Filter invalid characters from User-Agent
+Don't track errors from image cropper
+Don't track ANRs and NDK crashes
+Added remote editing capability
+Some tweaks to the meta data
+Update version number and README
+Updated translations
+Localized error message
+Improved scrolling in webviews
+Added support for common hashing functions
+Additional fixes for sharing text & files
+Added some trailing commas
+Allow sharing text and files at the same time
+Some small fixes
+Fixed naming of metadata files
+Updated strings
+Fixed form-data content-length calculation
+Updated Turkish translation
+Upgraded Bugsnag
+Made import migrator more resilient
+Upgraded Realm
+Bumped version number
+Updated translations
+Updated changelog
+Added "showSelection" to code snippet picker
+Added links to documentation to Categories and Shortcuts
+Updated gradle wrapper
+Updated changelog
+Updated Turkish translations
+Skip saving shortcut if it cannot be found
+Added showSelection() action
+Updated changelog and version number
+Make import migration more resilient
+Minor tweaks to strings
+Allow changing the User-Agent
+Improved English GB
+Moved meta data files so hopefully F-Droid can pick them up
+Added F-Droid link to Readme
+Improved error handling for imports
+Mitigate crash when saving shortcut
+Exclude session tracking from Bugsnag
+Fixed changelog sync task
+Translations updated
+Added support for storing cookies
+Added support for British English
+Moved in-app documentation over to online docus
+Moved Changelog source-of-truth out of app and into markdown file
+Bumped version number
+Make importing more resilient and give better error messages
+Updated build number
+Updated translations
+Updated changelog
+Allow exporting single shortcuts
+Improved Import/Export to allow partial imports
+Upgrade Realm
+Trailing commas :D
+Update translations
+Code cleanup
+Redesigned "Response Handling" options
+Update pr-tests.yml
+Make links in dialogs clickable
+Use monospace font for <pre> in dialogs
+Update pr-tests.yml
+Updated translations
+Bump version number
+Run tests on PR
+Updated version number in README
+Bumped build number
+Updated changelog
+Improved language switching
+Added Korean translation
+Updated translations
+Added "Force Foreground" option
+Update dependencies
+Don't log errors that I can't fix
+Added "sendIntent" action
+Added support for -G/--get in cURL parser
+Update Realm
+Bumped version number
+Added triggerTaskerTask action
+Updated translations
+Removed unnecessary LinkMovementMethod
+Bumped build number
+Updated translations
+Added additional safeguards
+Added error handling for illegal bearer auth tokens
+Updated translations
+Bump build version
+Consistently use CR + LF in form body
+Updated acknowledments
+Compute and include Content-Length header in all requests
+Various small code improvements
+Added dark mode support to changelog
+Updated changelog
+Updated translations
+Moved action params out of action classes and into action type classes
+Inline exception handling functions
+Moved 'confirm' function into its proper action class
+Redesigned code snippet picker, added wait action
+Refactored actions, replaced wifi IP address variable type with wifi IP address action
+Be more frugal with version codes
+Revert "Revert "add wifi ip type and change response to response""
+Revert "add wifi ip type and change response to response"
+Fixed import export error
+add wifi ip type and change response to response
+Fixed legacy shortcut placement
+Fixed scroll/resize behavior of contact screen
+Improved color contrast for variable/shortcut placeholders in night mode
+Fixed response registering for scripting
+Updated version number
+Don't show "speak" action on pre-Lollipop devices
+Prevent save button from triggering multiple saves in parallel
+Reduced response size limit
+Added better error handling
+Enforce stricter validation when importing
+Updated version number
+Include distributionSha256Sum for gradle wrapper
+Changed default language for meta data to en-US
+Changed generated APK name
+Small code improvements
+Updated translations
+Don't show Russian warning on startup anymore
+Added store meta data
+Log when Realm binary not found
+Merge pull request #181 from Waboodoo/issue-templates
+
+Added issue templates
+Added issue templates
+Updated translations
+Updated tooling
+Updated changelog
+Disallow triggering current shortcut
+Added trigger shortcut activity
+Fixed file sharing
+Added separator after 'constant' in variable type picker
+Added base for multi-shortcuts to more easily trigger other shortcuts
+Ignore BadTokenException
+Add colored span for shortcut placeholders in scripting editor
+Improvements to scripting editor
+Moved crash reporting logic out into special build variant
+Added missing libraries to acknowledgments
+Renamed "key" to "name" for variables
+Added shortcut picker for actions that target a shortcut
+Show shortcut icon in selection dialogs
+Replace quick settings tile icon
+Show type of shortcut in toolbar subtitle in editor
+Moved actions into scripting package
+Added Text-to-speech action
+Don't show options to change layout or background for hidden categories
+Make all pre-defined action functions readonly
+Improved error handling for scripting actions
+Made splash screen dark mode friendly
+Completely disable crash reporting when opted out
+Another attempt at making the EditText more resilient to crashes
+Fixed "Run" option in editor for scripting shortcuts
+Added additional built-in icons
+Don't show cURL export for scripting-only shortcuts
+Added splash screen
+Updated README
+Don't run Realm file migration for every Realm instance
+Added option to create scripting-only shortcuts
+Added option to pick file and use it as a request body
+Smaller icon
+Pick a random icon when creating a new shortcut
+Allow triggering the same shortcut multiple times and properly queue them
+Time for a new logo
+Don't treat cancelling as error during cURL export
+Added Hungarian translations
+Updated version number
+Updated version number
+Removed in-app privacy policy and replaced it with link
+Fixed bug where title was not translated
+Updated translations
+Removed "Support this App" option
+Updated translations
+Updated link to FAQ page
+Don't log expected exception
+Only run icon migration if Realm is available
+Added a broadcast receiver to allow triggering shortcuts externally
+Include meta data file when contacting developer
+Added fallback for import from curl
+Updated changelog
+Updated acknowledgments page
+Improved stability of import & export
+Improved URL detection in curl parser
+Make sure minification info is pushed to Bugsnag
+Updated README.md
+Updated changelog
+Added support for curl import/export of bearer auth and proxy settings
+Updated translations
+Added support for HSV format in color picker
+Allow passing variables when triggering other shortcut
+Don't log IOExceptions
+Added error handling for failing digest auth
+Restructured variable editor to disallow changing or variable type
+Variables are properly resolved for cURL export
+Use requireContext in fragment
+Fixed changing language back to system settings
+Exclude untranslated strings from translation files
+Updated translations framework
+Enforce maximum shortcut name length of 50 characters
+Removed unnecessary string from strings file
+Minor code improvements
+Replaced translation call-to-action
+Begone, trailing and leading whitespaces!
+Exclude fields with default values from export
+Use constructors instead of static methods for model object creation
+Updated kotlin version
+Updated build tools
+Automatically disable crash logging when app is older than 3 months
+Ignore unavoidable exceptions
+Allow widget icon to scale
+Prevent PNG generation to reduce APK size
+Added support button
+Improved dependencies
+Removed duplicate icons and used tinting instead
+Added 10 new icons
+Replaced all flat grey icons with vector drawables
+Merge pull request #174 from Waboodoo/revert-170-revert-png-to-drawable
+
+Replace pngs with vector drawables
+Revert "Revert replacing pngs with vector drawables"
+Prepare for using vector drawables
+Configure Bugsnag for minification
+Enable minifying
+Improved exception handling
+Bumped version number
+Fixed widget for Android 10
+Fixed version number
+Replace constant variables with their values in curl export
+Updated translations
+Bugfixes
+Fixed bug with widget creation
+Tighten URL verification
+Bump version number
+Bumped build number
+Updated translations
+Bugfixing time
+Try to make scripting editor more stable
+Refactored error handling
+Updated changelog
+Improved error handling
+Improved URL validation
+Minor improvements based on crash logs
+Show warning when deleting variable that is still in use
+Share export as file instead of plain text to avoid intent size limit
+Improved error handling for invalid URLs
+Don't show Translate button for languages that are fully translated
+Don't show export option prior to Android Kitkat because it's not supported
+Make bold more resilient
+Added validation for header name and values
+Updated Russian warning
+Updated "Contact Developer" text
+Added basic support for widgets
+Fixed bug where inserting text beyond size limit crashes the app
+Improved error handling and fixed recursive triggering of shortcuts
+Updated Readme and screenshots
+Updated Readme and screenshots
+Updated translations
+Added language picker
+Update translations
+Some spring cleaning to get started with version 1.30.0
+Fixed text color when using wallpaper background but permission not granted
+Adapted Russian warning
+Bump build number
+Don't log IOExceptions
+Added back read permission because it's needed for wallpapers on categories
+Fixed order of execution for scripting
+Include more detail in displayed error messages
+Bumped build number
+Updated translations
+I'm so sick of you beeline guys...
+Tightened error logging to avoid unnecessary tracking of exceptions
+Added proxy support
+Updated changelog
+Better error handling for VariableView
+Adapted curl import & export to support file parameters
+Improved loading indicator and response display
+Fixed naming of shortcut duplicate
+Improved file pickers for import & export
+Removed obsolete warning dialogs
+Use FilePickerUtil for import
+Support for file uploads
+Improved error handling for imports
+Don't read response if it's not needed
+Added "Debug" option to display response meta information (headers, status code, ...)
+Only change title when it actually changed
+Replaced PNGs with vector drawables
+Improved shortcut triggering and delaying
+Validate shortcut ids when importing
+Separate request execution from displaying response
+Disable autocorrect for scripting input
+Include installedFromStore information in crash reports
+Added alert(), prompt() and confirm() for scripting
+Update kotlin version
+Updated version number
+Trim URL when saving
+Handle RealmNotFoundException also in activities
+Updated translations
+Enabled APK split
+Exclude MIPS architecture when building APK
+Show Russian warning on Import
+Update Russian warning
+Updated changelog
+Updated changelog
+Updated translations
+Moved all scripting settings into same activity
+Revert to older versions of support library because bugs(?)
+Android file system is the worst
+Show error message when Realm not present
+Added validation of category IDs in import
+Update version number in Readme
+Update launcher shortcuts more frequently
+Various small code improvements
+Remove all legacy actions
+Better display or errors in settings
+Don't include charset in Content-Type header
+Update README.md
+Escape < and > in cURL command exporter
+Give credit where credit is due
+Update version number
+Handle exception when dialog can't be shown
+Merge pull request #170 from Waboodoo/revert-png-to-drawable
+
+Revert replacing pngs with vector drawables
+Revert replacing pngs with vector drawables, as it apparently causes problems on certain phones :/
+Downgrade to okhttp3 to fix Android 4.x support
+Bump version number
+Fixed curl export for form parameters
+Removed sending of unnecessary empty parameter
+Added missing content type for form parameters
+Bump build version number
+Improved offline check
+Added warning for confused Russians
+Replaced icon for Quick Settings Tile
+Added more icons and replaced some existing icons with vector graphic versions
+Fixed toolbar title editing when app is locked
+Updated translations
+Updated changelog
+Added HTTP status message to error messages for more clarity
+Changed default response type to "Toast"
+Removed obsolete action type titles
+Added "changeIcon" action
+Added "abort()" as an option to code snippet picker
+Schedule shortcuts in sequence instead of all at once to make it possible to trigger multiple shortcuts at the same time
+Fixed dialog colors in dark mode
+Improved picker for execution delay
+Added 20 new icons
+Added better support for bearer authentication
+Updated Readme
+Added Quick Settings Tile
+Added abort()
+Added abort()
+Removed Volley from HTTP stack
+Update HTTP stack
+Bugfix
+Added option to change title on toolbar
+Fixed categories showing wrong content after update
+Added option to hide categories
+Updated to latest Realm
+Updated version number
+Added ScrollView
+Made "Contact Developer" feature foolproof
+Make changelog not crash the app
+Update README.md
+Upgraded dependencies to fix bugs
+Handle empty responses
+Updated changelog
+Updated translations
+Undo upgrade of okhttp
+Minor improvements
+Updated dependencies
+Added missing translator comments
+Code improvements
+Updated changelog
+Made translation help requests more foolproof
+Updated external URL of FAQ page
+Updated link for FAQ page
+Fixed URL validation
+Allow specifying Content-Type header on GET
+Updated Kotlin and Realm
+Bumped version number to 1.26
+Fixed CURL export method
+Fixed theme
+Updated translations
+Improved slider for timeout
+Various bug fixes
+Improved resilience to battery saver and data saver
+Updated Acknowledgments page
+Minor fixes around dark mode
+Increased font size of response
+Minor bug fixes
+Dark mode for syntax highlighting
+Updated changelog
+Fixed bug: variable value changes from pre-request actions are now properly reflected in current execution
+Merge pull request #157 from Waboodoo/dark-theme
+
+Dark theme
+Updated translations
+Updated some dependencies
+Add option to settings to select how dark mode is used
+Add support for dark theme
+Updated Realm version
+Updated version number to 1.25
+Updated to Android 10
+Update README.md
+Various fixes for 1.24.2
+Fixed crash at startup
+Reduce triggerShortcut delay to 300 milliseconds
+Updated translations
+Updated changelog
+Don't show advanced options for browser shortcuts
+Disable Realm encryption
+More bugfixes
+Added back headless execution (finish activity immediately)
+Bump version number
+Fixed variables in request body
+Fixed variable resolution
+Update README.md
+Update README.md
+More minor bugfixes
+Fixed bugs from crashlogs
+Bugfixing time!
+Updated target SDK version to 28
+Don't collapse toolbar when there's only 1 category
+Updated German translations
+Extract variables also from JS code
+Marked obsolete variables as deprecated
+Improved code snippet picker for variables (e.g. when there are none)
+Enabled basic HTML formatting
+Updated translations
+Minor tweaks and bugfixes
+Updated changelog
+Extended translation email text
+Show HTML responses in webview
+Prevent crash when ExecuteActivity is minimized before request is finished
+Added action to copy to clipboard
+Various minor fixes
+Added link to JS code help page
+Various minor improvements
+Removed some obsolete code
+Improved code snippet picker
+Increase variable length
+Added code snippet picker
+Sketched out changelog
+Merge pull request #131 from hdelei/develop
+
+Fixed some accents and misspellings
+Added LiquidCore to acknowledgments
+Improved variable resolution, added JS aliases for actions
+Expose response object and network error in JS context
+Removed unused stuff
+Added action editor back for JS
+Fixed some accents and misspellings
+
+Fixed some accents and misspellings and added some translations that are missing
+Updated kotlin version
+Added feedback type UI, improved error handling
+Fixed crash
+Removed duplicate code, + various minor tweaks
+Replaced JDeferred with RxJava, added Dialog action
+Kotlinize curlcommand module
+Replace actions with JS code execution
+Added missing action migration (variableKey -> variableId)
+Added "Misc Settings"
+Show more meaningful error message for import failures
+Removed unused strings
+Implemented advanced shortcut settings
+Fixed variable button showing up when it shouldn't
+Fixed DELETE and OPTIONS requests not sending a request body
+Added option to create browser shortcuts
+Only change text while not typing
+Show warning when name or icon changed
+Added content type and request body fields to editor
+Bumped dependency versions
+Added parameter editor
+Added authentication editor
+Improved curl import and export
+Fixed curl import
+Wrapped up header editor
+Tweaked strings
+Added header settings
+Moved stuff around
+Minor fixes
+Added remaining editor activities
+Use Title Caps in dialog options
+Dialogs use RxJava instead or Promises
+Fixed curl integration
+Show 'value' when no 'label' given for Select variable
+Reference variables by ID instead of key
+Added URL and Method editor
+Remove default category if its empty on import
+Fixed moving across categories
+Only animate icon in shortcut editor
+Update editor viewmodel when name or description changes
+Improved import & export
+Reject import from newer version
+Update README.md
+Update README.md
+Added option to follow redirects
+Improved empty states
+Added translator comments
+Minor improvements to strings
+Added option to change background per category
+Added dynamic section subtitles in editor
+Loosened restrictions on variable names
+Added shortcut validation
+Added PanelButtons to editor
+Fixed broken settings actions
+Added icon change animation. Because I can.
+Re-implemented icon selection
+Added functionality of "test" button
+Added startActivity extensions
+Use UUIDs instead of Long for all IDs
+Decoupled ImportMigrator from actual model classes
+New editor: fixed changing name and description of shortcuts
+All kinds of changes.. Should have split this up into multiple commits..
+Fixed broken tests
+Minor code improvements
+Disallow non-positive step sizes
+Improved URL validation, added first unit tests
+Minor improvements
+Removed obsolete EventSource class
+Updated README
+Migrated VariableEditor to use a ViewModel
+Migrated to use ViewModel, started rebuilding shortcut editor
+Prepared changelog
+Renamed directory 'java' to 'kotlin'
+Code improvements
+Started migrating to Gradle Kotlin DSL
+Added warning dialog for data saver / battery saver
+Bump version number to 1.24
+Code style improvements
+Fixed incorrect version in export
+Updated changelog
+Updated translations
+Merge branch 'develop' of github.com:Waboodoo/HTTP-Shortcuts into develop
+Added link to FAQ page
+Update README.md
+Fixed color picker
+Updated changelog
+Updated filepicker
+Updated to AndroidX
+Added app lock feature
+Updated strings
+Execute shortcuts in foreground if data saver of battery saver is enabled
+Added option to require confirmation before execution
+Minor code improvements
+Improved strings (translator comments)
+Minor bugfixes
+Bumped version number to 1.23
+Allow cleartext traffic
+Updated build tools and dependencies
+Updated translations
+Updated changelog
+Update README.md
+Merge branch 'develop' of github.com:Waboodoo/HTTP-Shortcuts into develop
+Allow longer timeouts
+Added fallback option for placing shortcuts
+Use CRLF for form-data
+RxJava experiment
+Update README.md
+Removed obsolete notification channel declaration
+Fixed crash when adding variable placeholder
+It's bugfixin' time
+Bugfix: always have a requirement for JobScheduler
+Fixed occasional crash
+Fixed bug in cURL parser: detect user-agent
+Fixed crash on startup on pre-Lollipop
+Updated strings
+Updated changelog
+Update README.md
+Fixed a crash
+Added translations acknowlegement
+Updated changelog
+Removed invalid Portuguese translations
+Updated translations
+Fixed JSON parsing
+Fixed handling of gzipped responses
+Added some more translator descriptions to strings
+Added "Trigger Shortcut" action
+Fixed constant variable picker empty state
+Fixed constant variable picker empty state
+Don't try to update dynamic shortcuts if there are none
+Fixed delayed execution & wait-for-network
+Removed "experimental" part from cURL import description
+Random minor improvements
+Allow to open shortcut in browser instead
+Bugfix: Don't save headers & parameters when testing shortcut
+Added "Set Variable" action
+Added "Extract Body" action
+Added "Extract Cookie" action
+Added "Extract Header" action
+Added "Extract Status Code" action
+Improved variable placeholder support
+Improved editing/removing of actions
+Fixed nullability bug
+Finished implementation of Vibrate, Rename and Toast actions
+Added action type selector dialog
+Merge branch 'develop' of github.com:Waboodoo/HTTP-Shortcuts into develop
+Basic implementation of actions (without UI for editing)
+Update README.md
+Merge pull request #96 from edufolly/develop
+
+Brand new translation to Brazilian Portuguese.
+Brand new translation to Brazilian Portuguese.
+Don't show Toast if Activity is finishing
+Don't init Realm in Application class
+Fixed potential crash when switching variable types
+Replaced syntax highlighting library
+Updated README.md
+Merge branch 'develop' of github.com:Waboodoo/HTTP-Shortcuts into develop
+Enabled support for multipart/form-data
+Added shortcut actions to model
+Fixed crash due to invalid Realm access
+Fixed creation of shortcut icon on Oreo
+Fixed crash when operating on invalid Realm data
+Fixed crash when cancelling Plugin settings
+Bumped version number
+Update README.md
+Updated screenshots
+More minor pre-release fixes
+Minor pre-release fixes
+Added drag&drop reordering of "toggle" variable options
+Added drag&drop reordering of "select" variable options
+Added variable support to toggle variable type
+Updated translations
+Improved Changelog
+Added variable buttons to Constant and Select variable editors
+Recursive variable resolution
+Various small improvements
+Allow reordering categories & variables via drag&drop
+Added proper input of Content-Type / request body, + some code improvements
+Updated changelog
+Inherit variables from Tasker
+Added variable insertion/formatting for headers & parameters
+Refactored variable selection/formatting, + a lot of other small changes
+Allow multiline input for parameter values
+Updated icons
+Added button to promote translations needed
+Bumped version number to 1.20
+Merge branch 'develop' of github.com:Waboodoo/HTTP-Shortcuts into develop
+Fixed crash
+Update README.md
+Mitigated problem with running service on Oreo
+Fixed broken encryption
+Fixed exception handling for external intents
+Fixed creation of new variables
+Fixed Dex
+Final preparations for 1.19 release
+Merge pull request #92 from Waboodoo/encrypt-realm
+
+Encrypt Realm
+Encrypt Realm
+Fixed dialogs
+Added network security config
+Merge pull request #91 from Waboodoo/realm-upgrade
+
+Realm upgrade
+Upgraded to latest Realm version (4.3.3)
+Make fields non-nullable
+Improved image picker
+Update README.md
+Merge pull request #89 from Waboodoo/code-improvements
+
+Fixed crash on orientation change
+Fixed crash on orientation change
+Merge pull request #88 from Waboodoo/code-improvements
+
+Code improvements
+Replaced image picker library
+Code Improvements
+Migrated OkHttpStack to Kotlin
+Fixed nullability of models
+Code improvements
+Merge pull request #87 from Waboodoo/kotlin-improvements
+
+Code improvements
+Code improvements
+Improved menu
+Allow sign and decimals in number input
+Code improvements
+Updated version number and changelog
+Added new variable type "Slider"
+Added notification channel for pending executions
+Fixed dependencies of aboutlibraries
+Update README.md
+Updated strings
+Updated version number to 1.18, updated changelog
+Fixed shortcut creation for Oreo
+Apply Kotlin magic
+Upgrade to compileSdkVersion 26
+Changed strings for settings
+Added privacy policy
+Added crash reporting opt-out option
+Updated dependencies
+Bugfixes
+Updated translations
+Code improvements
+Update README.md
+Merge pull request #80 from Flavien06/patch-1
+
+Add French translation
+Add French translation
+
+A suggestion for French translation
+Exclude CAMERA permission
+Increased version number
+Rearranged icons
+Fixed permission management of custom icon picker
+Rearranged bitsies icons
+Bugfix
+Bugfix
+Bugfix
+Bugfix
+Bugfix
+Update README.md
+Bugfix
+Updated version number
+Another Bugfix
+Bugfix
+Moar Kotlin magick
+Improved code with Kotlin magic
+Updated translations
+Use UTF-8 as default response encoding
+Only show changelog dialog for major and minor version updates, not for patch or build
+Fixed some more Kotlin NPEs
+Hotfix for crashes
+Updated version number to 1.18
+Fixed broken date format
+Updated translations
+Merge remote-tracking branch 'origin/develop' into develop
+Make notification icon white
+Update README.md
+Added some translator comments to strings file
+Added some translator comments to strings file
+Added variable type "time"
+Added some translator notes
+String updates
+Added option to delay shortcut execution
+Updated changelog
+Imported translations from Loco
+Added missing German translations
+Merge pull request #74 from Waboodoo/date-variables
+
+Date variables
+Added date formatting for variable date type
+Added basic date input variable type
+Merge pull request #73 from Waboodoo/service-refactor
+
+Service refactor
+Added retry with exponential back-off
+Refactor ExecutionService
+Handle error when response too large for sharing
+Fixed change detection for variables
+Fixed change detection for shortcuts
+Kotlinize remaining classes
+Fixed a bug and improved code style
+Kotlinize remaining Activities
+Merge branch 'develop' of github.com:Waboodoo/HTTP-Shortcuts into develop
+Kotlinize some of the Activities & Fragments
+Update README.md
+Update README.md
+Merge pull request #72 from idmadj/develop
+
+Get launcher icon size from system values
+Get launcher icon size from system values
+Merge pull request #71 from edufolly/develop
+
+Portuguese translation
+Portuguese translation
+Kotlinize Adapters
+Kotlinize Dialogs
+Kotlinize Import/Export
+Kotlinize Plugin and KeyValuePairs
+Kotlinize Variables
+Kotlinize Realm
+Kotlinize everything even moar!!!!!1
+Kotlinize everything!!!!!1
+Kotlinize everything!!!!!1
+Various code improvements
+Provide roundIcon
+Update README.md
+Loosened restrictions on URL validation
+Added alias activity for backward compatibility
+Update README.md
+Added UUID to Header, Parameter and Option to fix import bug
+Fixed some strings, updated version number
+Fixed duplicating of shortcuts
+Fixed crash due to useragent
+Rearranged inputs in editor
+Updated version number to 1.17
+Moved all activities into package
+Update README.md
+Send custom User-Agent
+Added some null checks for sanity
+Fixed bug with crashes on Marshmallow
+Fixed bug with empty state animations in grid layout
+Fixed bug where request body is required
+Fixed crash with launcher shortcuts
+Updated version number
+Improved version number generation
+Fixed crash on API 20 and lower, improved version number generation
+Allow publishing with missing translations
+Updated changelog
+Fixed another bug for empty state
+Merge pull request #69 from Waboodoo/launcher-shortcuts
+
+Launcher shortcuts
+Merge branch 'develop' of https://github.com/Waboodoo/HTTP-Shortcuts into launcher-shortcuts
+Allow to create selection variable with only 1 option
+Minor string and color improvements
+Fixed lists in UI not updating in realtime
+Fixed empty state with grid layout
+Various small bugfixes
+Updated changelog and german translation
+Support for Marshmallow Launcher shortcuts
+Various small improvements
+Moved SelectionMode
+Make sure that imported data is migrated as well
+Include version number in base
+Added Bugsnag to track crashes
+Updated change log
+Corrected capitalization of cURL
+Updated GSON
+Restructured depencencies
+Update LICENCE
+Update README.md
+Added support for HEAD, OPTIONS and TRACE
+Merge pull request #68 from Waboodoo/digest-auth
+
+Added support for Digest Auth
+Updated German strings
+Updated acknowledgements
+Added digest authentication support
+Update README.md
+Update README.md
+Update README.md
+Removed public modifiers
+Added icon to highlight category highlight type
+Refactored Request to use builder pattern
+Use Volley library from repo instead of jar
+Added support for grid layout type in categories
+Updated change-log
+Decluttered move menu
+Fixed translation
+Updated version number
+Updated translations
+Improved menu and empty state
+Fixed bug in creating categories
+Make sure backslashes are escaped
+Merge pull request #65 from Waboodoo/realm3
+
+Upgrade to Realm 3.0.0
+Upgrade to Realm 3.0.0
+Bugfix: don't generate id 0.
+Don't show changelog dialog on first start
+Merge branch 'develop' of https://github.com/Waboodoo/HTTP-Shortcuts into develop
+Merge pull request #64 from Waboodoo/curl-export
+
+Curl export
+Merge branch 'develop' of https://github.com/Waboodoo/HTTP-Shortcuts into develop
+Potential fix for not being able to create multiple shortcuts
+Updated changelog
+Added option to export shortcuts as CURL commands
+Curl command builder
+Introduced Builder to CurlCommand module
+Renamed CURL module
+Merge remote-tracking branch 'origin/develop' into develop
+Update change log and version number
+Update README.md
+Fixed CURL parser handling of method change
+Update README.md
+Merge pull request #61 from yuanrunmao/develop
+
+Add Chinese translation
+Add Chinese translation
+Merge branch 'develop' of https://github.com/Waboodoo/HTTP-Shortcuts into develop
+Extended CURL parser
+Update README.md
+Added missing German string
+Updated string
+Merge pull request #59 from Waboodoo/curl-import
+
+Curl import
+Updated changelog
+Added German strings
+CurlParser data is copied to shortcut, added more supported curl options
+Added CurlParser
+Added CommandParser
+Added infrastruction for curl import
+Fixed a broken import
+Merge pull request #58 from Waboodoo/imprved-export
+
+Improved import and export
+Updated German strings
+Allow import from Documents
+Allow export through sharing
+Rearranged theme colors
+Merge branch 'develop' of https://github.com/Waboodoo/HTTP-Shortcuts into develop
+Updated changelog and version number
+Merge pull request #57 from Waboodoo/themes
+
+Themes
+Added alternative themes
+Added alternative themes
+Merge pull request #56 from Waboodoo/format-response
+
+Syntax highlight JSON and XML responses
+Added acknowledgement for CodeView
+Changed layout of editor
+Pretty print JSON
+Syntax highlighting for JSON and XML responses
+Bugfix: hide progress spinner when finished loading
+Merge branch 'develop' of https://github.com/Waboodoo/HTTP-Shortcuts into develop
+Bugfix: show discard warning on back button in variable editor
+Update README.md
+Removed old screenshot
+Merge pull request #55 from Waboodoo/icon-update
+
+Icon update
+Bugfix: don't try to hide progress dialog if there is no shortcut
+New app icon
+Merge branch 'develop' of https://github.com/Waboodoo/HTTP-Shortcuts into icon
+Fixed help text for variables
+Merge pull request #54 from Waboodoo/share-into
+
+Share text into variables
+Wraped up share-into feature
+Replace 'internal variable' concept with variable flags
+Added internal variable 'share'
+New icon
+Prototype implementation of "Share into..." variable
+Merge pull request #53 from Waboodoo/color-variable
+
+Added new variable type: color
+Updated changelog
+Added acknowledgement for color picker library
+Added new variable type: color
+Refactored variable resolution
+Updated version number
+Experimental implementation of voice activation
+Updated changelog
+Updated some versions
+Merge pull request #52 from Waboodoo/cancel-wait
+
+Added icon to shortcuts that are pending
+Code improvements
+Pending shortcut execution is now cancellable
+Added icon to shortcuts that are pending
+Use random initial icon
+Merge pull request #51 from Waboodoo/variable-input-remember
+
+Remember/forget variable input value
+Added German translations
+Make sure variable value is reset after use
+Added "remember value" option to text, number and password variable types
+Update README.md
+Merge pull request #50 from Waboodoo/feedback
+
+New response options
+Updated German translations
+Bugfix
+Some refactoring
+Fixed response output
+Improved dialog and window feedback options
+Fixed bug with closing Realm at the right time
+Basic setup to show response in dialog or activity window
+Updated model with new feedback type (dialog)
+Update README.md
+Added variable screenshots
+Disabled translation for help dialog (for now)
+Added validation to toggle and selection variables
+Update README.md
+Merge pull request #41 from Waboodoo/variables
+Added German translations
+Added help dialog for variables
+PendingExecutions store resolved variable values
+Fixed importing of variables
+Added editor for select variable type
+Update README.md
+Update LICENCE
+Toggle options can be added, edited and removed
+Fixed 2 icon-related bugs
+Bugfix: Content-Type Header no longer ignored when written in lower case
+Added json/url encoding
+Added more variable types
+Minor improvements
+Fixed theme in dialog
+Implemented first prototype of complete variable resolution
+Added synchronously resolvable variable types
+Added input validation for variable editor
+Fixed empty marker for variable list
+Added discard warning to variable editor
+Added type fragments for variable editor
+Upgraded tool and library versions
+ExecuteActivity closes immediately if no variable input required
+Added json encode and url encode checkboxes
+Added title input for variables
+Added more fields to variable model, added variable deletion
+Added dialog template for querying for variables
+Added extraction of required variable names
+Added input restriction for variable names
+Fixed title
+Added type to list of variables
+Added basic variable editor
+Added variable resolver
+Added variable formatter
+Added variables to schema, added variables activity
+Updated change log
+Updated version number
+Merge pull request #36 from Waboodoo/plugin
+
+Integrated plugin support
+Integrated plugin support
+Updated version number and changelog
+Bugfix: No longer crashes on save when categories are not loaded
+Merge branch 'develop' of https://github.com/Waboodoo/HTTP-Shortcuts into develop
+Shortcuts are also removed from homescreen when deleted
+Update README.md
+Updated changelog
+String changes
+Added option to move shortcuts to different categories
+Merge pull request #33 from Waboodoo/menu-dialogs
+
+Improved menu dialogs
+Category context menu only shows valid options
+Added util to build menu dialogs
+Fixed mail intent to contact developer
+Fixed typo in German translation
+Made sure ExecuteActivity is not added to recent activities
+Updated compat library to fix FAB-Snackbar movement bug
+Merge pull request #32 from Waboodoo/categories
+
+Added Categories
+Added shortcut icons to category list
+Added German translations
+Improved import for categories (merge instead of clear and add)
+Added Category editing (create, move, delete)
+Added Category rename action
+Added common base class for list adapters
+Added Category list activity, Added Destroyer pattern
+Upgraded to Realm 1.1.0
+Licenses (#31)
+
+Added "acknowledgments" screen
+Update README.md
+Merge pull request #30 from Waboodoo/screenshots
+
+Updated screenshots
+Updated screenshots
+Update README.md
+Merge pull request #29 from Waboodoo/more-icons
+
+More icons
+Added flat icons
+Added bitsies icons
+Merge pull request #28 from Waboodoo/accept-all-certificates
+
+Accept all certificates
+Added option to accept all certificates to UI
+Added unsafe http client, added field to accept all certificates to model
+Updated version number
+Merge pull request #26 from Waboodoo/header-content-type-fix
+
+Fixed incorrect HTTP content type headers
+Fixed incorrect HTTP content type headers
+Update AndroidManifest.xml
+Merge pull request #24 from Waboodoo/dialog-improvements
+
+Added "Don't show again" checkbox to name/icon change warning
+Added "Don't show again" checkbox to name/icon change warning
+Merge pull request #23 from Waboodoo/orientation-crash
+
+Fixed crash when rotating screen before creating shortcut
+Updated change log
+Fixed crash when rotating screen before creating shortcut
+Merge pull request #22 from Waboodoo/suggestions
+
+Added suggestions to Headers
+Fixed bug in changelog checkbox
+Added suggestions to Headers
+Fixed bug with labelledspinner:labelledspinner
+Changelog update
+Merge pull request #20 from Waboodoo/realm
+
+Migrated to Realm, improved UI
+Added warning for icon/name changes
+Improved execution retry
+Re-implemented import feature
+Various code improvements
+Re-implemented export feature
+Fixed state-loss on screen rotation
+Various code improvements
+Standardized icon backgrounds
+Fixed change detection in editor
+Changing method properly shows/hides the parameters/custom body
+Basic migration to Realm, upgraded gradle version to 2.0.0
+Added tab layout for categories
+Improved realm schema to support categories and make shortcuts sortable more easily
+Fixed editing of shortcuts
+Changed navigation bar color to primary dark
+Added Realm to replace SQLite database (without migration, import and export)
+Merge pull request #18 from Waboodoo/orientation_change_bug
+
+Code improvements and bugfixes
+Fixed bug related to custom body content
+Refactored lists for custom headers and post parameters
+Updated changelog and version number, moved changelog into its own file
+Merge pull request #17 from Waboodoo/material-design
+
+Upgraded to be more Material design
+Updated launcher icons
+Updated strings and german translation
+Added Stetho, improved layout of EditorActivity
+Fixed Snackbar not moving FAB
+Replaced last AlertDialogs with MaterialDialogs
+Improved icon selection dialog through use of MaterialDialog library
+Improved icon selection dialog through use of RecyclerView
+Modified spacing of list items
+Added/updated icons, changed back icon to clear icon for editor
+Replaced toasts with snackbars, modified some strings to be more material design
+Updated discard warning to use MaterialDialog library
+Updated preferences to use MaterialDialog library
+Updated changelog dialog to use MaterialDialog library
+Moved empty marker into ShortcutAdapter
+Replaced delete dialog with new material dialog
+Added FAB for create action, changed theme colors, replaced ListView with RecyclerView
+Merge pull request #16 from Waboodoo/ok_http
+
+Replaced deprecated apache library with OkHttp library
+Replaced deprecated apache library with OkHttp library
+Merge pull request #14 from Waboodoo/material-design
+
+Updated to use support library v23
+Fixed string translations
+Fixed color of up arrow, + some code optimizations
+Upgraded to support library v23
+Update .gitignore
+Merge pull request #13 from Waboodoo/butterknife
+
+Added Butterknife library
+Added Butterknife library
+More unified code-style and indentation
+Unified code-style and indentation
+Merge remote-tracking branch 'origin/master'
+Migrated project form Eclipse to Android Studio
+Migrated project form Eclipse to Android Studio
+Added toast 'shortcut duplicated' for beter UX
+Removed debug statement
+Bugfix: Shortcuts without a name are referred to as "Shortcut" instead
+of using an empty string in the toast messages
+Added "View in Play Store" button to settings
+Some refactoring for the execution of requests to remove duplicate code
+Renamed main theme
+updated "What's new" message
+Added missing German translations
+Added retry policies to allow shortcuts to be delayed until internet
+connectivity becomes available
+Added "What's new?"/"Changelog"-Dialog
+Added an 'about' section to the settings screen
+Labels angepasst
+Added possibility to change request timeouts (3, 10, 30 or 60 seconds)
+Updated version number
+Bugfix: Authorization no longer breaks HTTP request headers
+Update README.md
+
+added screenshots and updated the bullet point list with the new features of 1.6.0
+added screenshots
+bugfix: when duplicating shortcuts headers and parameters are duplicated
+as well
+bugfix: corrected mutual exclusiveness of post parameters and custom
+request body content
+added feature to test shortcuts before saving them
+Bugfix: added missing statements to mark the shortcut as having unsaved
+changes
+added icons to preferences
+modified 'feedback' descriptions
+added additional request methods PUT, DELETE and PATCH
+added feature to specify custom request body content
+Bugfix
+added import feature
+added German translations
+Extended a string
+Added export-feature
+Added settings activity with option to choose what should happen when a
+shortcut is clicked, plus placeholders for import / export
+Fixed a NullpointerException that occurred when no icon was selected
+Built-in white icons are always displayed on a black background
+Added backwards compatibility for shortcut ids on the home screen
+updated error strings
+Shortcut intents store the id in the data part, rather than in the
+extras, in hopes of no longer losing data on app update
+updated version number
+added support for custom HTTP headers
+added some more built-in icons
+updated icon selection dialog
+post parameters are now properly stored and retrieved from the database
+Update README.md
+Added missing German translations
+added validation rules to POST parameter dialogs
+added dialogs to add and edit POST parameters
+Added container for POST-parameters in EditorActivity
+small improvement in error handling when calling HTTP server
+Removed debug-statement
+committed previously missing PostParameterTable
+- added extra table to store POST parameters
+- shortcuts are no longer Parcelables but instead are passed by id
+- shortcut id is now a long
+- updated version number
+updated manifest
+added built-in icons and icon selector
+updated version number in manifest
+idle connections will be closed after execution
+Implemented shortcut descriptions (as a replacement for displaying the
+URL in the list activity)
+extended shortcut table with an additional column 'description'
+added HTTP header to close the connection after use
+Updated version number in Manifest
+Added Ipack-support to icon selection
+Subtext is always displayed on a single line, overflow is hidden with
+ellipsis
+Updated version number in Manifest
+- Removed 'save' button and moved save action to action bar
+- Bugfix: empty URLs now correctly rejected
+added 'copy' string to resources for creating duplicates of shortcuts
+Removed 'create' button and moved the create action into the action bar
+Default click action now is to execute the shortcut, instead of opening
+the context menu
+Removed debug statement
+list of shortcuts is now sortable (by position, through context menu)
+Merge branch 'master' of https://github.com/Waboodoo/HTTP-Shortcuts.git
+Merge pull request #3 from i2shar/master
+
+Setting retries to 0
+Setting retries to 0
+Changed how icon names are generated
+Removed Protocol as a separate spinner. Protocol is infered from URL,
+which is now a proper URL input field
+Bugfix: HTTPS Protocal was not displayed
+Added new strings to german language file
+Updated version number
+Added additional feedback type 'errors only' and improved display of
+error messages
+Fixed bug where icon could not be changed on KitKat and added Toast to
+inform the user about such errors.
+Create LICENCE
+Create README.md
+Initial commit

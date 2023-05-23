@@ -1,0 +1,2635 @@
+small visual bug fix
+disable adsb sua and clean up of sua info
+added USB out autopilot
+fixed plate tagging
+removed coarse location
+10.2.7
+10.2.6. updated help.
+Merge pull request #489 from apps4av/JohnW4SBA-patch-Help2
+
+Update help.html
+Update help.html
+
+Thanks to lots of excellent work by Sam Hoskins, I was inspired to potentially mess that work up by editing it with my own "improvements" since he's on vacation. Presumably before this replaces the in-app Help, he and others will review it further. Even if it's added as-is after ensuring it doesn't somehow mess up the app, I'm confident it's a major improvement on the inconsistent and error-ridden file that has evolved in the years since a last full review. I'm burnt out, and probably won't find time to edit again in the near term. So feel free to munch away at it yourself. I'm going to try attaching Sam's Help-2 file that I've edited.
+Merge pull request #487 from shanelenagh/aa_2.0
+
+Audible Alerts 2.0
+Added try/catch blocks around free-form preferences, for safe defaulting and execution continuation upon bad user input
+Added Ludicrous Fast speaking speed
+Restored old (but compile-failing) unit tests, along with Gradle dependencies they had
+Removed dead code from audible alerts changes
+New unit tests for audible alert changes, paricularly low-level message parsing
+  and Json-serializing of new fields
+Tweaked ADSB Ground Traffic Display preference verbiage
+Shortened "within" sound clip a bit
+Added new Alert Speaking Rate/Pitch feature
+Changed from (the ICAO standard of) "decimal" to (the FAA standard of) "point" for decimal distances
+Setting default for ADSB ground traffic display on location view for true (current system behavior)
+Corrected and cleaned up some ownship vertical speed code
+Some cleanup (removed 2 dead methods, and access-restricted another)
+Added missing preference glue for new number format preference
+Another pref verbiage conciseness change (for smaller screens)
+Style, var naming, and commenting, with one access modifier restriction to private
+Several preferences cleanup items (text conciseness/clarity, and defaults)
+Changed label of pref to plural for consistency with others
+Optimization: Move retrieval of ground traffic display properly outside the loop
+Broke out numerical format from distance callout, as it applies to seconds as well (having nothing to do with distance)
+Made invocation of audible alerts far more efficient in cases of multiple traffic items by passing only the new/updated traffic data, not forcing iteration through the whole traffic cache every time when no other traffic changed
+Made closing alert cancel entire alert if ultimate "closing time" is found to be 0 (previously it left an odd remnant of "within x miles" even though seconds alert was cancelled due to being 0)
+Adding filter for alerts that are to a traffic object with a callsign that matches the configured ownship callsign/tail #
+Made distance callout description more concise, to allow to fit better on pref's screen
+Merge branch 'aa_2.0' of github.com:shanelenagh/avare_audible into aa_2.0
+Micro-optimization (yes, I know) and cleanup
+Micro-optimization (yes, I know) and cleanup
+A few micro-optimizations (yeah, I know): 1.) properly use the volatile keyword, and 2.) replace if-else with switch where possible in enum conditionals
+Numerous optimizations and tweaks: 1.) much smarter wait/notify synch logic, proven through logged testing; 2.) memory optimization (data structure conversion from LinkedList to ArrayList to minimize Node references with delayed GC); 3.) fixed mandatory wait time between alerts and fixed bug with calculating true runtime of audio clips
+More optimization of thread wait/notify synch; one preference spelling correction
+1.) Added new full callsign traffic ID option (with new/refactored preference to support it), and 2.) several small optimizations (factored down method sizes to support inlining and ART native compilation, a smarter producer notification when alerts are running, etc.)
+Moved var setting that was causing ref issues with lambda, prevending GC
+Restoring chirp file that was incorrectly removed
+Moving synch code to outside of traffic handler loop, to prevent repeated synch acquisition overhead, and updated one method name for consistency
+No reason this variable (set once) can't be final too
+Put in default for vspeed to indicate not available (e.g., IO data interfaces other than GDL90 that do not have it)
+Only retrieve closing alerts preferences if needed (small optimization)
+Fixed a couple preference titles, and optimized preference retrieval in main traffic handling loop
+Tightened up the 'at' audio
+Added some comments on the new 'cylinder' checks for the base audible alerts, as well as the (possible) enclosed closing/TCPA alerts
+Made critically close alerts respect the mininumum alert separation (750ms) as well, to keep alerts distinct and clear
+Final (FLW) alert queue fairness tweaks, and two audio file fixes
+New sound samples--somewhat muted (pop filter was too aggressive), but better than previous
+Baselining latest WIP, including preference re-org (everything but new audio ready for PR)
+Changing audio stream ident to notification, to give separate control over this volume vs. music (per Jeff Ross)
+Ungroomed AA 2.0 WIP (got colloquial alerts working, with added supporting audio files)
+Removed erroneous comment that I put in (thought it was there from upstream)
+Various fixes and changes to add vertical velocity in alert calculation, as a WIP for providing inner 'cylinder' of incursion for TCPA closing event alerts
+Made CE method final, for performance (and should not be overriden anyway)
+Fixed bug in new number-speaking method, and adjusted UT's to cover it
+Snapping WIP of AA rewrite using shorter clips, and several fairness and code refactoring/re-architecting items
+Pushed sound sequence duration logic to new method on soundPlayer; also, allow it to account for different playback speed, if that constant is ever changed or added as a config
+Minor cleanup and refactoring
+Increase accuracy of closing (TCPA) alert by subtracting time to speak the alert clips prior to the "# seconds" section to give a more accurate time to CPA
+Added mininum speed audible alerts preference (and fixed one bug with knots conversion since new constant introduced)
+Added preference (defaulted to false) to selectively enable ground traffic in audible alerts, using newly exposed boolean of airborne status in traffic object; some post-upstream cleanup/factoring of audible alerts class as well
+Avare-371 (https://github.com/apps4av/avare/issues/371): Have ADSB message parsing pull "is airborne" bit from GDL90 message, and use it to drive a configurable display setting to show/hide ground traffic
+removed runway bitmap sizing as it was crashing the app.
+release 10.2.4
+fix to ownship as some GPS receivers will not send icao.
+10.2.3 release
+Stop bug fix in audible alert. 10.2.2.
+Merge pull request #477 from apps4av/revert-469-logger
+
+Revert "Logger"
+Revert "Logger"
+improved weather color, release 10.2.1
+Update AudibleTrafficAlerts.java
+
+fix a crash in audible alerts
+ownship fixes for traffic. added detection of own icao
+fix merge
+Merge pull request #476 from apps4av/improve-adsb
+
+improve traffic cache
+Merge branch 'master' into improve-adsb
+fix to audible alerts
+Merge pull request #473 from shanelenagh/master
+
+Adding audible traffic alerts feature
+Made base handler called by view spawn an async thread, to further minimize UI impact of feature being enabled
+A number of reversions of aa branch changes to produce a minimal pull request, and clean up some inadvertent changes (and some intentional ones, like the danger altitude config)
+Added critical setting of location to traffic cache in storage service, and fixed a label capitalization issue
+Further organized audible preferences, and adopted standard TCPA term, with explanations, in preference test for 'Closing Alerts'
+1.) Made max alert frequency (per ICAO callsign) a preference, 2.) organized all audible alert preferences better, in a single screen
+Removed superflous negative closing seconds check, since forcing it to abs value
+A couple comments, both for explanation and one to give proper source credit
+Changed metadataretriever scope (and method that used it) to allow for proper cleanup and mem management of its resources
+Two optimizations for initial feature sound load time
+Update AudibleTrafficAlerts.java
+
+Should be final too
+Various CRC and scoping changes, as well as some general cleanup
+Removing some old cruft (from previous testing) in the mainline Avare code
+Synchronizing shutdown around alertQueue, the monitor object for all of the other synch and notification
+Various thread and resource safety/memory improvements, as well as some other minor cleanup
+Added critical % chirp feature and preference config, as well as some style and safety cleanup items
+Added more (up to 30 seconds) of closing time audio
+Added copywright+disclaimer, and basic class Javadoc
+Several style updates, some CRC refactoring, and maybe 1 or 2 material concurrency/sychronization safety enhancements
+Massive fix/cleanup of the sound player thread architecture and design--uses Android handlers for start and stop, nearly completely freeing up UI thread
+Sound player changes that use Androids Looper thread runner, to eliminate
+  UI delays with using Thread sleep and the soundpool overtaking the main
+  thread for the duration of the alert sequence
+Numerous optimizations to the alert update loop
+Added measured distance to audible alert class
+Added test for small distances on location after time method
+Fixed two egregious bugs in the closing time method, as well as the UT's
+  the colluded to allow them
+Little style items
+'Final' (current) version of SoundPool-based audible alerts, for now.  Threading might be optimized in a later release
+SequentialSoundPlayer WIP
+SoundPool conversion WIP
+Adding up to 20 seconds of closing alerts audio
+Completed addition of closing alerts preferences
+Removed old debug print statments
+Beginning of closing time config
+Moving closing time alert to start of audio alert, to allow for warning
+before location is announced
+Various IDE and style cleanup items
+Changing immutable and interface media datatype to List, rather than array
+Adding all GPWS audio files for landing alarms
+Adding 'over' audio prefix when closing seconds is more than the 'seconds' audio numbers available
+Adding audio files for later dev work
+Fixed closing seconds min/max boundary bug, and add UT's to confirm fix
+Several dependency upgrades to get all legacy tests to compile
+Fixed bug in seconds array min/max logic
+But for prefs and more 'seconds' audio files, feature-complete version of 'closing time' audible warning
+Wip of closing event code, without audio
+Fixed major, stupid bug in point-over-time method, and added UT to confirm fix
+Adding latitude-dependent longitude difference to closest approach time calc too, to similarly account for earth's curvature
+Added locationOverTime func, with some accomodation of variation in lon location change due to circular nature of earth
+Adding start of "closing time" (not the bar song) change--only time part and UT's for now
+Cleaned up preference label for conciseness
+Simplified interface to audible alerts instantiation and state menagement
+Refactored to pull most all new audible alerts code into single class (CRC)
+Made labels for audible settings readable without scrolling on smaller devices
+Trimmed high altitude, to prevent awkward delay
+Downsampled (bitrate and channels to mono) audio files for space efficiency
+Full, high-quality audio sources for clock positions, high/low/level, bogey/traffic, and phonetic alphabet id's
+Clean up
+Adding phonetic Id (though audio not yet updated), Top Gun "bogey" lingo mode, and various cleanup items
+Audible alert code cleanup and formatting
+Cleanup: 1.) added thread name for easier tracing, 2.) moving code to logical places, 3.) commenting and naming cleanup
+Made sequential media player use monitor object (using the alert queue) to allow more immediate notifation of play completion
+Using Thread.interrup/isInterrupted to control runnable flow, per Java
+concurrency best practices, rather than a gating boolean (Goetz 2006, et. al.)
+Allowed for new traffic information to update alert queue before it has been
+played, rather than forcing it to wait to be played and updated on next cycle
+Closer to a fair, threadsafe traffic alert structure (but you know what they say about 'close'--only in horshoes and darts...)
+1/2 fixed (still isn't fair for multiple-traffic reports) a synchronization/concurrency
+issue with reports getting shouted on top of each other; will address fairness
+(using fair general semaphore, or the like) in a later commit; also
+fixed some non-private declarations, and added in "o'Clock" to the call,
+as originally intended
+Consolidated and micro-optimized variables in great circle distance formula and a bearing method
+Added Top Gun style clock position and high/low/level position indication to audible alerts
+Made audible alerts distance and altitude proximity danger distance configurable in preferences
+Removing Google services dependency that is not ostensibly needed, and presents issues for build, debugging, and deployment to phone hardware
+Finished adding preference for audible alerts to preferences screen
+First rough WIP of traffic audible alerts (still cruft to remote and things to refactor)
+fix location bugs
+improve traffic cache
+bug fixes
+Merge pull request #471 from apps4av/replace-service
+
+stop bug fix. 10.1.9
+stop bug fix. 10.1.9
+Merge pull request #469 from apps4av/logger
+
+Fixes to cache logger messages until the view is created
+Merge pull request #470 from apps4av/replace-service
+
+Replace service
+added user drawing save
+memory and cpu optimizations. moving obsracles outside service singleton and removing threads in it. fixes to tools screen for tracks delete and scroll.
+more cleanups
+plate centers and more cleanup on service
+bunch of cleanup
+more storage cleanup
+removed Storage service
+10.1.8
+Merge pull request #468 from apps4av/cleanup_location_view
+
+Cleanup location view
+If we don't have the view for display yet, then cache the message. Several startup log messages were getting discarded. Once the view has been set, display all of the cache.
+Merge pull request #467 from apps4av/BTFix
+
+Clear out the "lastconnected" value when the connection is DISconnected.
+more cleanups
+more cleanup
+clean up of airport info dialog
+Clear out the "lastconnected" value when the connection is DISconnected.
+clean up of airport info dialog
+added the latest usb serial library.
+removed writing
+Merge pull request #465 from apps4av/wx-on-find
+
+Wx on find
+fixed write
+Merge pull request #464 from apps4av/LoadApproach
+
+Load approach
+Clean up the shape drawing
+Move the drawing of the "directTO" and "plan" shape to the TrackShape object out of the general base Shape object.
+Optimizations and cleaning.
+There is the the possibility of a "future" track being the same as the current or prev track, as would be the case if an approach came in from a VOR, then the missed approach goes back to the same VOR, or a VOR used in a procedure turn. This can result in the "current" leg being displayed by one in the wrong color. This situation can be handled by cycling through the list twice and drawing them in 2 passes. This problem is most relevant when a VOR approach is loaded into the flight plan and activated.
+When resolving an approach plan, the "most recent" cache should not be used. This could lead to an airport being selected as the waypoint instead of the VOR. The ACT VOR/DME 32 "ACT IWOHO IWOHO" is an example of where it would fail to parse correctly.
+added wx on find screen
+Merge pull request #463 from apps4av/KML-revert-time
+
+revert time and added flush to write
+Merge pull request #461 from apps4av/write
+
+able to write now
+revert time and added flush to write
+able to write now
+added google services dummy json file
+fixed drawing when zooming
+Merge pull request #458 from apps4av/distTDZ
+
+New status field "Distance to Touchdown Zone". If we're on an active …
+10.1.6
+Merge branch 'master' of https://github.com/apps4av/avare
+  Increase in max zoom
+  Stop bug fix
+  Preferences can be exported / imported / deleted
+  3D center button fix
+New status field "Distance to Touchdown Zone". If we're on an active approach and the runway is known, the distance from the "current location" to the touchdown zone can be optionally displayed.
+Merge pull request #456 from apps4av/platesWork
+
+Plates approach elevation
+Merge pull request #457 from apps4av/adsbTargets
+
+Add a new display field to show how many ADSB targets we are tracking.
+Add a new display field to show how many ADSB targets we are tracking.
+No need to wait for the base lookup to finish before setting the name.
+Had to add a comment about what CIFP means.
+When parsing a procedure name string, only append the "-" if there is no C/L/R suffix to the runway number.
+Add VSI to plates page. Parse ALT info from produres.db and set in approach flight plan.
+10.1.5
+Merge pull request #454 from apps4av/deleteKMLGPX
+
+Delete kmlgpx
+Merge pull request #455 from apps4av/GPXAltParse
+
+Gpx alt parse
+When getting a directory contents, pass the filter recursively.
+Refresh the external plans & waypoints after import/delete actions
+bug fix when invalid elevation
+Ability to delete user defined waypoints and plans in GPX/KML format
+Parse Elevation from user defined waypoint files
+fix GPS simulator
+Auto connect of various equipment on start
+Merge pull request #453 from apps4av/TracksDir
+
+Move tracks back to "files" area from cache
+Move tracks back to "files" area from cache
+Merge pull request #452 from apps4av/improve-ptz
+
+Improve ptz
+improve ptz, ready for merge
+auto start wifi listening
+more fixes to PZ
+fix to android permissions based on OS version
+more bug fixes
+Merge branch 'master' into HEAD
+BT bug fixed. 10.1.3
+Add bluetooth connect permission to manifest
+removed external multitouch
+more fixes
+more fixes
+jumpy map fix
+general better behavior
+general better behavior
+general better behavior
+new ptz
+10.1.2
+Merge pull request #359 from vancinad/master
+
+Added waypoint ID to "Delete Waypoint" dialog.
+Merge pull request #450 from lyusupov/master
+
+'white-list' few more of USB ACM devices
+'white-list' few more of USB ACM devices
+Merge pull request #449 from apps4av/emailtracks
+
+Emailtracks
+Minor tweak
+Minor tweaks as a result of testing. Change status msgs to be clearer
+Expose file permissions and shared file provider
+Restored the emailing of the KML tracks file ability after android changes to force protected storage
+removed Save due to space constraint
+Added move navigation buttons (Save and CSUP) to chart popup and Search
+10.1.2, up target to 32, and added ability to delete tracks and data
+Merge branch 'master' of https://github.com/apps4av/avare
+No need for the BTOutConnection.java file
+Merge pull request #448 from apps4av/integrate-io
+
+Integrate io now houses bluetooth autopilot handling
+Autopilot functionality moved to the IO tab
+Move autopilot code over to the bluetooth IO module
+bug fix for 10.1.1.
+10.0.1, moved import/export, null pointer bug fixes, portland tac merge
+Merge branch 'apps4av:master' into master
+Merge pull request #446 from apps4av/445-add-portland-tac
+
+Adding Portland TAC boundaries and download location
+Adding Portland TAC boundaries and download location
+10.1.0
+Merge pull request #443 from apps4av/106-change-udp-port
+
+[106] changed port to 4000
+[106] changed port to 4000
+Merge pull request #442 from apps4av/merge-faa
+
+combined file and faa
+combined file and faa
+Merge branch 'apps4av:master' into master
+Merge pull request #434 from shisheng-1/Modify_GRADLE_1
+
+Improve GRADLE build Performance
+Merge pull request #441 from apps4av/integrate-io
+
+Integrate io
+fixes to play and BT out connection. Still need Ron's fix to Out
+final integration complete.
+integrate satellite ativity with io
+final integration
+added missing files
+more integration. ui is integrated
+more integration
+added everything except code
+briefing now self contained in app. no browser needed
+removed acra and added firebase crashlytics, analytics
+Improve GRADLE build Performance
+import / export data scoped access
+scoped storage happy code. now sd cards are not supported
+stop bug fix and shape file memory optimization
+Merge pull request #425 from BradWalker/update_tests
+
+Get the tests running again..
+Merge pull request #430 from reddn/patch-1
+
+Adds a leading "0" when adsb targets that are 9 hundred feet or less from current pressure altitude
+adsb traffic altitude now shows in two digits 
+
+leading "0" is added to make it always display 2 digits for altitude of other traffic
+Update help.html
+fix crash bug. 10.0.7
+10.0.7
+added chart legend
+glide ring fixes
+removed coarse location as it interferes with NMEA
+fix 2 crash bugs
+add add/delete/insert to weather db
+10.0.6
+plans can be deleted now
+10.0.5. backed out weather translate changes.
+wac and area plates will not expire. fixes for weather. 10.0.4
+fixes to weather file
+fixed email of KML files
+added external plates - my plates
+Get the tests running again..
+
+A lot of bugs are coming in and it would very helpful if Avare was able to use
+automated means for testing. This should help increase code quality and decrease
+bug reports.
+
+Some tests will still fail and those will be fixed individually.
+10.0.3
+screen orientation crash fix.
+shows altitude diff in 100s of feet now
+removed legacy import of user data, added option to draw traffic as circles.
+tabs to spaces
+tabs to spaces
+10.0.2 trial
+added ability to upgrade user databases
+plates tags now in user database
+bug fix where UDW change was not showing in sim mode. changed file seprators from "/" to File.separator.
+bunch of refactoring to clean up legacy names of external and internal folders.
+added GCJ compile for Cycle.java
+added cycle check code.
+Merge branch 'master' of https://github.com/apps4av/avare
+change of plate tagging function. more general purpose now
+rm unused files
+gametfr added more stadiums
+new radar script
+new radar script
+new radar script
+Merge pull request #419 from BradWalker/remove_unused_imports
+
+Removed unused imports.
+10.0.1 fix for checklist crash
+Removed unused imports.
+release 10.0 to store.
+minor text changes
+fixed to lists and wnb delete and load
+remove app reset, added permission message.
+asking for permissions at start. this makes things more predictable.
+GPS security exception added
+checklist and wnb overwrite now
+Moved recents to user database. Now there are only two folders, internal and external. They both come from Preferences. Internal is maps folder, external is downloads folder. User can change them. Lots of clean up of legacy code under stringpreferences.
+move checklists, wnbs, and plans to a database outside the app folder using contentprovider
+added foreground service and declared GPS use as required by store
+9.0.3. fixed nexrad speed
+removed game tfr download
+added timer for nexrad 500 ms
+fixed ondestory
+9.0.3. storage changes for tracks.
+some dead code removal regarding storage service
+sd card android 10 flag added
+fixed ACRA, some SD card changes, game tfr database read disabled.
+9.0.2
+fixed various bugs including weather in breifing
+fixed plan presentation and added altitude
+date fix. 9.0.1
+accounting for true wind direction from metar winds for plan
+bug fixes in Cifp and wind correction with station wind in destination
+9.0.0
+start approach from current position : cifp
+removed background service as this causes complaints from users. flip side is the app will take longer to start and GPS may be lost.
+8.1.2
+fix null pointer exception
+added moving nexrad
+improved glide profile to include surface winds
+separate out wind calculation using metar
+fixed to show all takeoff minimums
+8.1.11
+8.1.10
+fix a crash bug
+glide profile fix, GNGGA, and 8.1.9
+nmea listener deprecated. tool version forced to 29 by google store.
+8.1.8
+add airspeed for verify
+next release
+made glide profile a distance ring
+added glide profile
+Merge pull request #415 from fredmon3/flight_plan_buttons
+
+Add back inadvertently removed button text
+added reset preference
+by default app now starts with "leaving running in backgorund" off. updated google backup help
+Merge branch 'master' of https://github.com/apps4av/avare
+removed google drive backup and added app backup agent
+Update README.md
+added server weather scripts
+added server scripts for weather
+added server scripts for weather
+added gairmets
+fixed weather products
+Add back inadvertently removed button text
+backout code for rubberbanding PR
+Merge pull request #397 from jackwilliard/Issue372
+
+Closes #372
+Merge branch 'master' into Issue372
+Merge pull request #396 from jackwilliard/Issue368
+
+Closing issue $368
+Merge pull request #370 from jackwilliard/planning
+
+faster flight planning edits
+Merge pull request #403 from ryk346/rubberbanding
+
+Added navaids and reporting fixes to mid-plan rubberbanding
+Merge pull request #385 from IanJSeattle/master
+
+Modifying ICAO flight plan generation to work with non-ICAO airport identifiers
+Merge pull request #399 from BradWalker/cleanup_javadoc
+
+cleanup Javadoc mistakes..
+Merge branch 'master' into cleanup_javadoc
+Merge pull request #412 from BradWalker/cleanup_remaining_javadoc
+
+Cleanup the remaining errors with Javadoc.
+Merge pull request #411 from BradWalker/cleanup_copyright
+
+update copyright header..
+Cleanup the remaining errors with Javadoc. No more Javadoc errors remain
+after this.
+The copyright header is not readable. This change updates the copyright header
+so that it is now readable and presentable. Nothing other than indentations.
+
+Added: SPDX-License-Identifier: BSD-2-Clause
+as this line tells machine processors this code follows a particular
+license.
+Cleanup a bunch of misc. Javadoc mistakes..
+Closes #372
+
+This is a requested user feature.
+
+Addresses the issue that ICAO codes were called decimal, although they are hexidecimal.  The summary in the preferences field is confusing.
+
+Addresses the issue that user input is not capitalized in the preferences and FAA form. The form is already capitalized on submission, but this is not apparent to the user.
+
+An additional class very similar to an existing class was added to match the existing Android interface.  Note: this interface is deprecated.
+Closes #368
+
+The current preferences lack a persistent value ofr other info. Users request this capability to handle additional FAA required information.
+
+This commit adds a preference that persistently stores "other info" box for the user.
+Closes #374
+
+The current UI lacks a definative description of what this toggle does.
+
+This adds a better description for the user.
+Merge pull request #391 from BradWalker/clean_unthrown_exception
+
+cleanup exceptions that are never thrown
+Merge pull request #392 from BradWalker/cleanup_redundant_if_statements
+
+cleanup redundant if statements..
+Merge pull request #393 from BradWalker/cleanup_html_errors
+
+Cleanup several HTML errors
+Merge pull request #394 from BradWalker/cleanup_misc_issues
+
+Cleanup a bunch of small minor issues..
+Cleanup a bunch of small minor issues..
+
+1 - Aircraft is the plural form
+2 - should use .equals() on strings, not object comparison
+3 - minor Javadoc cleanup
+Cleanup several HTML errors.. There are still several so it needs someone with
+more HTML knowledge than I.
+A bunch of if statements are redundant and could be simplified. Android Studio 4
+has an inspection mechanism that finds this.
+
+For example, this
+
+        if(diff > expiry * 60 * 1000) {
+            return true;
+        }
+        return false;
+
+can be made into this
+
+        return diff > (expiry * 60 * 1000);
+Merge pull request #389 from BradWalker/cleanup_unneeded_semicolon
+
+Remove a bunch of extraneous semicolons..
+Remove a bunch of extranious semicolons..
+These methods never throw a SAXException exception. Therefore, remove
+the exception.
+
+Should make the code cleaner and the VM able to do better optimization.
+Merge pull request #388 from BradWalker/clean_unused_imports
+
+Removed imports that are unused in the source code..
+Removed imports that are unused in the source code..
+Updating the code which sets up the ICAO flight plan to properly deal with non-ICAO airport identifiers
+Added navaids and reporting fixes to mid-plan rubberbanding
+Merge pull request #361 from emaiannone/refactoring/aDoctor
+
+Refactor Member Ignoring Method smell in FisGraphics class
+Merge pull request #362 from BradWalker/update_tests
+
+Update the framework so that tests now execute.
+Merge pull request #379 from apps4av/HonoluluInset
+
+Adding Honolulu Inset.
+Update NetworkHelper.java
+
+Fix bug in cycle first date of 2021
+Adding Honolulu Inset.
+changed ADSB traffic circles to arrows. Re-add conus
+8.1.7
+navaid preferred over fix in airways now
+8.1.6. Crash fix in search. Distance track fix for ADSB traffic
+removed CONUS ADSB for 8.1.5
+8.1.4
+draw both conus and local, do not filter bitmap for nexrad, scale fix for nexrad
+Merge branch 'master' of https://github.com/apps4av/avare
+clearer code for nexrad block to lat/lon
+Makes it easier to edit flight plan by sync'ing text box with graphical plan.
+
+See Issue#367
+Merge pull request #369 from apps4av/SearchRecent
+
+Bug #363. Allow named GPS points to be searched for when creating plans.
+Bug #363. Allow named GPS points to be searched for when creating plans.
+8.1.3 release. position retained on chart flip
+now traffic draws for all, not just on screen
+Update the framework so that tests now execute.
+
+All tests pass except for the following tests (to be fixed in a future check-in)
+
+- LocationViewTest
+- WebAppPlanInterfaceTest
+Refactor Member Ignoring Method smell in FisGraphics class
+Added waypoint ID to "Delete Waypoint" dialog.
+Merge pull request #351 from EQXTFL/master
+
+Fix for small message buttons on Pie+.
+Merge pull request #348 from sergeant-wizard/android_x
+
+Migrate to androidx
+Fix for small message buttons on Pie+.
+8.1.2
+migrate too androidx
+Merge pull request #345 from apps4av/AFD
+
+Rename AFD to Chart Supplement.
+Merge branch 'master' into AFD
+Merge pull request #347 from apps4av/FontSize
+
+Font size
+Better fix for a prior crash if the BT name comes back NULL
+correct an exception handled case to return a non-scaled font size
+Allow 7 sizes of font scaling
+Remove OK button from field selection
+Clean up all the codescan warnings in infolines. Revert tab font back to system and slightly adjust size smaller than status lines - looks better.
+Add a configuration option to allow the info lines and tab bar to have their font size scaled with respect to the "default" value as defined in the "dimens" file. This allows the user to accept a smaller font size, yet gain data fields in the top two status lines without having to change the device global font settings.
+Rename AFD to Chart Supplement.
+fix for nearest airports, 8.1.1
+Merge pull request #343 from apps4av/btcrash
+
+Btcrash
+Bluetooth name can be null sometimes. Check that before adding it to our list.
+GPS pings come in about once a second. Adjust the sleep time to 500ms to avoid wasting cycles. Also, do a sleep if the work queue is empty.
+fixed links broken in FAA data
+Merge pull request #340 from apps4av/FontChoice
+
+Font choice
+Remove the unneeded io activity from the manifest file.
+Merge branch 'master' into FontChoice
+Merge pull request #339 from apps4av/WAOptions
+
+Remove duplicate entry of "24" from the winds aloft selection.
+crash fix for 3d, crash fix for ahrs, roll reverse option for ahrs
+Set the font face for the distance rings text to our custom one.
+Remove the debug tab - included in error
+Change our custom font to RobotoMono
+Remove duplicate entry of "24" from the winds aloft selection.
+Add helper method to make the font determination/creating. Adjust all the views to use this new method instead of creating the font directly.
+Move the font selection setting to "UI Configuration"
+Add new version of custom font LiberationMono
+Add config item to chose between custom and system font.
+Updating documentation associated with Stadiums.
+Changing 'Game TFRs' to 'Stadiums', bug #334
+8.1.0
+Merge pull request #336 from apps4av/BTCrash
+
+NULL check the name returned of the bluetooth device before using it.
+NULL check the name returned of the bluetooth device before using it.
+8.0.9
+3.0.9
+Merge pull request #335 from apps4av/InfoLines
+
+Prevent a divide by zero crash if there is only enough room for 1 fie…
+Prevent a divide by zero crash if there is only enough room for 1 field in the top status line area.
+NULL check the name of the bluetooth connection before using it during the reconnect logic.
+8.0.8
+Merge pull request #333 from apps4av/Flyway
+
+Adding Flyway charts.
+Merge pull request #332 from apps4av/webp
+
+Webp is the primary image format.  minSdkVerion=18. jpg images lowest…
+Webp is the primary image format.  minSdkVerion=18. jpg images lowest in order and deprecated.
+Adding Flyway charts.
+removed IO tab and auto start of ADSB receiver
+Merge pull request #331 from apps4av/gradleupdate
+
+Update gradle due to deprecation and failed builds.
+Updating deprecated dependency configurations
+Update gradle due to deprecation and failed builds.
+Merge pull request #330 from apps4av/BTAutoPilot
+
+Added native support to drive an autopilot over a bluetooth connection.
+Merge pull request #329 from apps4av/HelpUpdates
+
+Spelling corrections and correct cdi/vsi pref location
+Added help text about utilizing the "Early Passage" setting to smooth the autopilot turns after waypoint passage.
+Add the bluetooth operation and configuration steps to the help file.
+Added native support to drive an autopilot over a bluetooth connection.
+spelling corrections and correct cdi/vdi pref location
+foreground service permission. 8.0.7
+release 8.0.6
+crash fix by bringing service to foreground
+8.0.5
+added pitot static system of ilevil
+changed pitch sign
+added ilevil anagle of attack
+check in missing files
+added ilevil ahrs support
+renamed WXB to FAA, moved start service code to oreo specific fix only
+potential background service creation bug fix. added track line to plates
+added favorites
+fixed met color, border instead of text color
+Merge pull request #328 from danothemen/master
+
+Fixes issues 323,273
+Fixed bug that prevented drawings from scaling on plates, closes issues 323,273. Also removed label pointing users to avare.openaircraft.com because it's a dead url
+next release 8.0.4
+fixed plates timer
+added download of sectional with database for first time user
+more sample w&b added
+next release 8.0.3
+removed screen brightness control, sms send, improved sigmet color
+Update help.html
+
+Unify name pronunciation of Avare with other sources.
+Update README.md
+
+Unify pronunciation of Avare name, mention Manual Install option.
+added webp extension in getname, and release 8.0.2 with android 9 download issue fixed.
+8.0.1 IO fixed.
+fix to weather and pireps from FAA move
+Correcting private server bug.
+updated build target to 28, merged External IO app. Build 8.0.1
+added option to use nmea altitude. 7.9.0
+7.8.9
+7.8.9. bug fixes
+bug fixes. 7.8.8
+change http to https
+crash fixes in dialogs
+fixed to AP before 7.8.6
+fixed near. added looper.main to all handlers
+bug fixes. 7.8.5
+default A/FD images option, and hide menu on back press
+bug fix in dims on some phones. 7.8.4
+fixes. beta 7.8.3
+added screen size to tile num determination because heap detection is failing on S7
+removed lrucahce and used from support lib
+track color changed to cyan for next leg in plan, changed from white
+database transformation complete
+moved over to content provider
+moved over to content provider
+total database overhaul to content provider
+added game tfrs back in
+fixed bugs in content providers
+moved weather to content provider
+moved some dbs to content provider
+Merge branch 'master' of https://github.com/apps4av/avare
+7.8.2
+Merge pull request #314 from dark/master
+
+Fix typo in w&b example
+Fix typo in w&b example
+wxb fixes
+added w&b graph. 7.8.1
+added W&B graph
+added W&B sheets
+remove airport diagram geotag database
+added airport diag tags in file itself
+added airport diag tags in file itself
+fix typos
+7.8.0
+improved privacy layout, and improved permission ask order. 7.7.8
+bug fix
+changed registration method and permission ask sequence. 7.7.8
+sdk cannot be downgraded from 23 to 19.
+fixed more tests. bug in test
+fix test, downgrade api
+changed plan layout, auto change of layers on download. 7.7.7
+fixed layers. 7.7.6
+fixes to wxb
+updated wxb layout
+revised lists layout
+improved weather in plan
+added greenland shaded relief, moved weather to main app to remove browser dependency
+removed dependency of chart types on file extensions
+plates geotag ok for 1709.
+plates comment/geotag added to match current process
+7.7.4, comibned inet and adsb tfrs
+fixed game tfr help
+fix of crash bug in airway. fix of lmfs altitude type. added game tfrs back in. 7.0.3
+readded plates tagging. 7.7.2
+removed game tfrs
+added a new server
+added private server download option
+build 7.7.1
+release 7.0.0
+Merge pull request #309 from pasniak/weather_briefing_html_fix
+
+Weather briefing - fix html for proper rendering of sign plus (Heavy)
+Weather briefing - fix html for proper rendering of sign plus ("Heavy") and proper rendering in Firefox (not closed <font> tags cause HTML engine to stop rendering (see: https://support.mozilla.org/en-US/questions/846246 )
+added tfrs from adsb
+added airmets/sigmets from adsb
+added SUA from ADSB
+prep release 770
+Merge pull request #304 from dark/patch-1
+
+Fix punctuation in two strings from arrays.xml
+Fix punctuation in two strings from array.xml
+Merge pull request #300 from pasniak/fuel_planning
+
+Test plan calculations and format winds aloft in Plan
+Merge pull request #303 from dark/patch-1
+
+Fix two typos in arrays.xml
+Fix two typos in arrays.xml
+fixed wxb time entry
+Merge pull request #301 from EQXTFL/master
+
+Added option to hide ADSB provided callsigns.
+Updated option text for "Use ADSB Weather", as IO app is not required for every ADSB receiver.
+Added option to hide ADSB provided callsigns.
+tracks now start auto
+fixed more tests
+fixed test for GPS destination after change
+update help with new gps coordinates format
+changed ICAO format to simpler format for user ease of entry
+added videos to help
+Merge branch 'master' into fuel_planning
+Format Winds aloft with 2 or 3 digits in Plan
+Add test for plan operations
+Merge pull request #298 from pasniak/fix_icao_waypoint_regex
+
+Fix icao waypoint regex
+Restrict ICAO waypoint coordinates parsing to valid ranges and add tests with long plans
+Test fix: renamed Base to AIRPORT, Navaid to VOR/DME related to fix for #297, also removed duplicate tests
+Merge pull request #296 from pasniak/additional_wpt_formats6
+
+Add ICAO waypoint format with tests
+Merge branch 'master' into additional_wpt_formats6
+Merge pull request #293 from pasniak/fix_test_dependencies
+
+Add test task dependency on merge*Assets
+Merge pull request #294 from pasniak/add_location_view_test
+
+Tests: add Location View Test
+fixed test
+fix for #297
+Add ICAO waypoint format with tests to fix #283
++allow Copy-Paste in Plan Activity
+Add test task dependency on merge*Assets
+
+Note: assets error ("Font not found at") occurs due to a gradle bug
+ see https://github.com/robolectric/robolectric/issues/2647
+ and https://issuetracker.google.com/issues/37347564
+Tests: add Location View Test
+* test that long touch retrieves airport, info, sua, taf, metar, performance
+* test accesses LongTouchDestination and uses LocationActivity without MainActivity parent
+removed expedia
+Merge pull request #287 from pasniak/tests_fix2
+
+Fix WebAppPlanInterfaceTest failure by initializing ShadowedText lazily
+Merge pull request #290 from pasniak/tests_fix1
+
+Plan tests cleanup unzipped files after the test and show stack on Travis
+Merge pull request #289 from pasniak/calendar_fix
+
+Fix ETA ETE time and Destination update test by updating calendar wit…
+Select merge#269 #291
+Plan tests cleanup unzipped files after the test and show stack on Travis
+Fix ETA ETE time and Destination update test by updating calendar with current time
+Fix WebAppPlanInterfaceTest failure by initializing ShadowedText (which loads assets) lazily
+fixed pr284 issues
+fixed pr284 issues
+Merge pull request #284 from pasniak/dest_tests2
+
+GC/perf improvements and related Destination tests [take 2]
+Merge branch 'master' into dest_tests2
+Add Destination calculations tests.  Require Mockito and PowerMockito.
+Speed up ETA ETE formatting, wrap Calendar in CalendarHelper to allow testing
+added missing file and correct indent
+Merge pull request #281 from pasniak/travis2
+
+Run tests on Travis CI
+Merge pull request #282 from pasniak/plan_tests
+
+Test plan interface
+fixes for data prep
+Test plan searching and modifications
++ use robolectric to deal with AsyncTasks and simplify the test setup
++ use PowerMock (setup 1s faster than Mockito)
+Set  Gradle Daemon VM maximum memory ("mx") allocated to the Java virtual machine
+Run tests on Travis CI
+Add Mockito and PowerMockito dependencies to gradle
+Merge pull request #279 from spargonaut/master
+
+JS - update the android buildToolsVersion to work with the latest ver…
+JS - update the android buildToolsVersion to work with the latest version of android (Nougat 7.1.1); update the version for the android gradle tools in the travis file;
+added png reader code
+Merge pull request #277 from pasniak/travis
+
+Add continuous integration in Travis CI
+plates from FAA data. deleted tag activity. cleaned up code. will only run from release 1404
+Add continuous integration in Travis CI
+7.6.8
+7.6.8
+fixed 3d issues of constant reload, increase size of saved plan/list font
+separate out obstacles database. fix for plan sequence of gps points # 271
+Merge pull request #270 from pasniak/winds_aloft
+
+Winds aloft with JUnit tests
+split out afd and plate bitmap for newer plates
+Winds Aloft: add more unit tests WindsAloftHelper, cover case of winds string with temps only ("+00")
+Winds Aloft unit tests: split off HtmlAsserts to its own class
+Winds Aloft: add more unit tests for full coverage of WindsAloftHelper
+Winds Aloft: add unit tests
+Shorten Winds Aloft: add WindsAloftAltitude array
+Winds Aloft : Split out WindsAloftHelper class which formats WA as an HTML table
+Shorten the list of Winds Aloft by displaying winds up to the level set in Preferences
+3d fix with plate off edge issue, quicker loading, less memory, smaller area though
+release 7.6.7
+set large heap option, added back obstacles
+cleared up destination
+Add ELUS_HI.
+7.6.6
+updated wxb help
+fix airmets
+fix a delete bug in find
+Merge branch 'master' of https://github.com/apps4av/avare
+fix for issue 266
+Merge pull request #262 from mrieker/master
+
+update airport diagram georefs
+update airport diagram georefs
+
+...using data ending cycle 2017-02-02
+add two more transparency levels
+7.6.5
+fixed afd over map instead of plate
+plates also show over maps now. use layer feature Plate.
+damp inclinometer, bug fixes. 7.6.4
+added moving average to rates. fixed negative pfd tape on speed.
+fix for near in emergency
+improved PFD, and morse code. 7.6.3
+fixed bugs in pfd
+Merge branch 'master' of https://github.com/apps4av/avare
+added morse codes for vors.
+Update README.md
+7.6.2
+7.6.2
+next release prep
+added CDI to PFD
+more complete PFD
+added compass to pfd
+better pfd
+PFD optimizations
+Added PFD, partial
+added orientation interface
+added trends
+fix sign of variation
+bug fixes. 7.6.1
+fixed density altitude. 7.6.0
+7.5.9 is identical to 7.5.6. Backed out all changes as users were reporting issues in Plan page.
+download plate issue fix. 7.5.6
+fixed crash bug in plates, fixed type of navaids in radials and less verbose language, added caribbean 2, fix perl coding bug recently added to nav.pl for variation.
+Merge pull request #243 from pasniak/show_position_of_close_navaids
+
+Show position of close navaids (added elevation)
+show position of close navaids (add elevation)
+Merge branch 'show_position_of_close_navaids' of https://github.com/pasniak/avare into show_position_of_close_navaids
+7.5.5
+Merge branch 'master' of https://github.com/apps4av/avare
+fixed a bug where position:fixed in html will overwrite long press destination.
+Update README.md
+added test instructions
+update gradle
+7.5.4
+fix to js args
+move some things in merge for vor radials
+Merge pull request #241 from pasniak/show_position_of_close_navaids
+
+Show position of close navaids
+Merge pull request #242 from xargsgrep/lock-button-group
+
+keep button group locked in view when scrolling down
+Update map.html
+
+keep button group locked in view when scrolling down
+Add Help section
+Calculate VOR radials based on historical magnetic variation (3 new fields in nav table) + highlight VOR if too far + show (H) for HIWAS
+(https://i.imgur.com/LTa1k3y.png)
+fixed a crash bug
+fixed google drive issue
+show_position_of_close_navaids
+Merge pull request #230 from pasniak/Take_ID_out_of_Metar_translation_routine
+
+Take ID out of Metar translation routine; fix translation grammar and…
+Take ID out of Metar translation routine; fix translation grammar and meaning of CLR and PRESFR
+7.5.3
+added rating dialog
+change to colors match aviationweather.gov
+Merge branch 'master' of https://github.com/apps4av/avare
+change of met colors and color met text
+Update LICENSE
+Merge pull request #214 from stevecrozz/add-license-file
+
+add explicit BSD 2-clause license file, changes to file will be made after merge
+fix to reduce database queries
+undesired behavior from testing 220 and 221 PRs, see the PRs for more details
+Merge pull request #220 from tommywatson/savekmlonexit
+
+Save KML if app closed with swipe
+Merge pull request #221 from tommywatson/autostartkml
+
+Add preference to auto start tracking
+Add preference to auto start tracking
+Save KML if app closed with swipe
+7.5.2
+Adding Caribbean1 sectional chart.
+fixes for button transparency
+fix to pr
+fix to pr
+added expanding spiral to map load
+Merge pull request #218 from jamez70/TextMetarBranch
+
+Choice between text METARs (showing VFR, MVFR, etc) and a circle. The…
+Choice between text metars (showing VFR, MVFR, etc) and a circle. The circle now has a 1px black background to help it stand out
+weather expiry 10 mins is too low. removed
+button color change
+Merge pull request #1 from apps4av/master
+
+downmerge
+7.5.1
+new icons from google material
+converted V-ways to Fixes based
+reduced icon sizes for tabs, more tips, fixed help. 7.5.0
+UI config added for removing/adding buttons
+bug fixes, adjustments for tablets. 7.4.9
+removed bunch of icons
+removed bunch of icons
+7.4.8
+fix taf.
+UI fixes. unused icons deleted
+tablet button sizes. 7.4.7
+7.4.6
+more ui cleanup
+bunch of ui changes, mostly related to how buttons look
+fix for selectpicker on mobile. 7.4.5
+JS argument fix. 7.4.4
+removed fuel prices, and reviews. 7.4.3
+replaced popout adapter in map view, ui change to webview
+added missing files
+bug fixes, disable autocomplete, added toasts, 7.4.2
+fix of scripts link in html
+7.4.1 bug fixed
+fixes on 7.4.0 bugs
+styled array fix
+fixed last few issues. 7.4.0
+changed weather to use bootstrap, and fix of errors in plan show
+final ui change to list and plan before 7.3.9
+html format correction
+some fixes to plan, list layout
+add explicit BSD 2-clause license file
+
+Adding an explicit license file is helpful for people to see at a glance
+which license a project is using. Github even has some nice bonus
+features such as searching projects by license for people who opt in to
+this LICENSE file convention.
+
+I looked through the source code for this repo and the license pasted in
+file headers appears to be the BSD 2-clause license
+(https://opensource.org/licenses/BSD-2-Clause).
+
+More info on LICENSE files at
+https://help.github.com/articles/open-source-licensing/
+changed UI of Plan.
+changed theme to dark for night
+list updated to use bootstrap, UI change
+icao flight plan and change of ui in WXB
+new gradle
+fix a crash in emergency
+1609 new plates
+installable to sd card. 7.3.8
+fixed 3d sim bug
+fixed tab bug. added fuel burn
+added terrain clearnace in 3d. 7.3.7
+fixed LMFS brief email
+fix in game tfr time
+fixed emergency. 7.3.5
+7.3.5
+fixed game tfrs
+label the game tfrs
+added timed game tfrs
+should not crash if not able to send SMS
+added emergency button
+add colors to AFD for easy viewing
+traffic callsign separator
+added missing script
+fix in minimums find scripts
+fix bug in data script
+added game tfr downloading
+7.3.4
+fix bug in 3d
+added gulf coast heli for 1608
+changes for autopilot from Dean
+Merge pull request #209 from pballer2oo7/test-test
+
+Refactor Preferences boolean getters from shouldX to isX
+fixes #174. some strings tidying.
+starting on #174 and experimenting with github forking
+load data in background on 3D task
+drawing changes by Alex, BOD message for AP by Dean.
+back to old gradle version
+fix for position update bug introduced in 7.3.2.
+7.3.3.
+7.3.2
+Merge pull request #190 from xargsgrep/map-long-press
+
+Map long press. Merging, but there should be help on this. Its obscure. Maybe put it in startup tips.
+bring up chart type spinner when on Map view and "Map" is long pressed
+updating gradle version
+cosmetic changes dbquery is a bad function name as it does not query db anymore.
+re-add after backout of new touch
+Revert to 141dbc6
+last checkin before new multitouch backout
+256 tile size option added
+last check in before 256 charts
+fixes from touch and added AI to 3d
+Touch constants are not 3d constants.
+Merge pull request #188 from r-oleary/use_native_multitouch
+
+Use native multitouch
+Merge branch 'use_native_multitouch_fixed' into use_native_multitouch
+Revert "last commit before backout."
+
+This reverts commit 743c18e4b1ce34800a46ebd718c070314f38d0ee.
+Revert "reverted new touch"
+
+This reverts commit 08c0dcac9ab1e0313ae5a8d234320734fc9cfe3d.
+Attempt to fix up scaling and tile loading
+Fix rotation panning on PlatesView
+optimized scan line, updated help, zooming more in 3d
+7.3.1
+fixes in 3d, 7.3.1
+added nav info to 3D
+reverted new touch
+last commit before backout.
+Merge pull request #186 from r-oleary/multitouch_cleanup
+
+Multitouch cleanup
+Address structural feedback from ZK
+Merge remote-tracking branch 'upstream/master'
+Merge pull request #185 from r-oleary/auto_fit_plates
+
+Auto fit plates
+Change Plates and AFD View to auto-fit plates to screen and set the min scale to the auto-fit size
+Cleanup
+Update all the other views
+Update gradle version
+Fix up drawing
+WIP commit
+fix tips.
+7.3.0
+fixed flicker and position shift bug in 3D
+some improvements in 3D draw
+12 bits for elevation now
+fixed bit sizes for transfering data to glsl
+fixed bugs in 3d. 7.2.8
+half memory use on 3d view
+Merge branch 'master' into use_native_multitouch
+Update views to use native multi-touch
+fix of crash in 3d
+fix of crash in info lines
+added tips written by TR
+5.2.7
+fixed issues reported with plates button, crash, info lines 5.2.7
+terrain shape fix.
+7.2.5
+reduced memory use for map
+7.2.4
+more fixes for 3d
+plates track button separate from main button. moved stuff to opengl context
+reduced memory use
+cleanup of logs
+7.2.3
+7.2.3
+fixed not showing charts on 3d
+cleanup before tile sectioning
+removed elevation task (hence agl and obstacles from map) and do not draw ownship
+fixed obstacles
+fixed AGL
+fix for AGL calculation with new charts
+cleaned up messages
+modified formula for elevation
+Draft of new elevation calculation.
+new elevation tiles and fix of quantization
+added obstacles
+added own chart and center button for 3d
+fixed oragami effect
+removed elevation threshold bar. finalizing for release
+fine tuning for first person
+cleanup
+corrected rotation matrix
+added first person
+build 7.2.3beta
+added axis
+three d ships with heading now
+more fixes for camera angle for close ups
+cull face
+fixed bird eye view pan/zoom/tilt
+fix in crash
+removed unused files.
+final touches before merge
+connected traffic
+connected real tiles
+cleanup in ships
+added rot to model
+separate camera class
+separate camera class
+added camera
+added camera
+new working with some ships
+added ships and texture map
+added texture and ships
+initial
+3d from outerworld
+2.5.2
+icao address adsb filtering
+fixed a crash bug, added estonia, added N number display for ADSB traffic
+added israel and slovenia. 7.2.1
+fixed projection for israel
+charting for israel
+Merge pull request #179 from cyoung/master
+
+Use consistent values for Preferences.heightConversion.
+Use consistent values for Preferences.heightConversion.
+Update plates view to allow drawing
+Basically working
+Merge remote-tracking branch 'upstream/master' into use_native_multitouch
+Save some testing history
+fixed canvas rotation bug. 7.2.0
+7.1.9
+removed unnecessary getapplicationcontext() calls
+removed all spinners from code.
+added back tag button. added text to PG's link for plate verification
+7.1.8. Fixed server name
+added slovenia chart vfr
+fixed a bug at BLM metar
+fixed ADSB METAR related crash. Now 7.1.7
+added more enroute charts
+7.1.6
+fixed altitude feet, added crash reporting library
+fixed gps altitude. 7.1.5
+fixed ADSB crash and altitude. 7.1.4
+added SD card hard coded name to chart storage folder
+7.1.3
+metar map optimization
+adsb fixes for altitude and conus.
+fixed shape file load and removed airspace shape file download from apps4av
+added airspace shape files
+added tpc and moved terrain and topo to static folder
+7.1.2
+changed permissions asking method
+fix for bug 170, delete of plates
+7.1.2
+added android permissions for marshmellow
+fixed expiry of ADSB changed to configurable
+preparing 7.1.1
+added metar color map for adsb
+added configurable fuel timer
+added METAR color from ADSB
+fixed float altitude for adsb traffic
+fixed altitude display of adsb traffic. needs io 3.0.6 or above.
+removed track pref. enable tracks record, ADSB now draws Nex over CONUS, added count up timer
+more approaches with sorting
+7.1.0 with ILS plates to plan. KML revert.
+6.0.9 with western europe ONC
+6.0.9
+6.0.9 with western europe ONC
+fixed issues in EU chart dims
+Merge pull request #169 from raldred/europe_west_central
+
+Europe West & Central
+Europe West & Central
+Merge pull request #168 from raldred/uk_ireland_iceland_onc
+
+Added UK Ireland & Iceland ONC chart data
+added UK Ireland & Iceland ONC chart data
+7.0.9
+onc added
+charting scripts added for ONC charts
+added ONC charts for sout asia and europe
+changed kitepilot server name
+missing class added
+added approaches from CIFP, removed tagging button so it shows when plates password is set.
+added plates geo-referencing code from Mike Rieker.
+7.0.8 release with LRU cache moved in app, added help for marshmellow permissions. Removed sdk check for registration.
+fixed zoom out issue
+crash bug fix in gcdaemon and 7.0.7 beta
+crash fixed in met shape. 7.0.6
+ added 120 to data expiry time. release 7.0.5.
+Modify flight plan leg colors to conform with industry specs:
+WHITE - yet to be flown
+MAGENTA - current leg being flown
+GRAY - legs already complete
+added altitude to planning
+planning with wind now in simulation mode
+wxb and plan now use simulation mode to fill all fields except altitude. added airplan / pilot preferences
+added bunch of preferences for pilot/aircraft
+things expire and vanish. things: tfrs, weather and their shapes
+Merge pull request #166 from patricius972/master
+
+Do the computation only when update() is called.
+Do the computation only when update() is called.
+mrged common code in metshape and tfrshape
+Merge pull request #165 from patricius972/master
+
+Draw TFR and Met shapes only when showing on screen
+Cleaner code + comments
+Draw TFR and Met shapes only when showing on screen
+more cleanup in locationview class
+massive cleanup in locationview class
+Merge pull request #164 from patricius972/master
+
+Optimization drawtile and drawshape
+Optimize draw shape
+draw all the lines at the same time
+reuse offsetX and offsetY values.
+Optimization on DrawTile
+Reduced tile overhead to 20%, and release 7.0.4
+more changes to drawing speed and removed race condition
+Reduced tile overhead to 20%, and release 7.0.4
+Fixed chart showing issues and clean up of LRU class tilemap
+Fixed grey boxes issue.
+fix bug for sync colors of center button
+Merge pull request #157 from annerajb/kml2.2
+
+Kml2.2
+made center button reflect NU/TU. Fixed chart type not staying selected issue.
+7.0.3
+Merge pull request #162 from patricius972/master
+
+TrackUp fix moving plate and rotating info lines.
+TrackUp fix moving plate and rotating info lines.
+removed center zoom because it is causing issues with multi touch controller
+partial merge of plates rotation
+Merge pull request #161 from patricius972/master
+
+TrackUp Plates !
+TrackUp Plates !
+Merge pull request #159 from patricius972/master
+
+drawing trackup
+Map Trackup drawing fix.
+Merge branch 'master' of https://github.com/apps4av/avare
+center button now track/north up on long press
+fixed jumpiness in charts on tab change
+7.0.3
+Layers now share bitmap to reduce memory. Better layout of download menu
+Way to turn of layers
+added METAR map. Some cleanup.
+fixed radar expiry time and it does with expiry schedule in preferences
+minor change to gdrive
+fixed teleport to Kansas City, fixed Gdrive crash bug, moved around download items and added option to expire time.
+Revert "merging avare trunk into my fork"
+
+This reverts commit b62811a9f2ebd28e6470230e417bbb91c726511f.
+KML 2.2 format support
+Revert "Changed so cordinates are logged in a format that google maps can display track lines/ flight path."
+
+This reverts commit 9e9c670f5dcf9737afacd91b95ad9486db17f7c0.
+Revert "reverting change for debugging."
+
+This reverts commit 7fc20895c0633cf6d4fedbc2d1b2249881e80bb1.
+Revert "Removed loggin"
+
+This reverts commit d71629cfe5199bfdb2401163d548e7a1eec87d05.
+Revert "forgot the include"
+
+This reverts commit 8136748f909d1dd7d9d641dcd076c331c82bfa92.
+merging avare trunk into my fork
+Merge remote-tracking branch 'apps4av/master'
+forgot the include
+Removed loggin
+reverting change for debugging.
+Merge remote-tracking branch 'apps4av/master'
+Changed so cordinates are logged in a format that google maps can display track lines/ flight path.
+Merge pull request #3 from apps4av/master
+
+pull
+7.0.2
+Merge pull request #153 from patricius972/master
+
+Add Pan Tracking, little optimization rotateCoord.
+Merge pull request #2 from apps4av/master
+
+pull
+Add Pan Tracking, little optimization rotateCoord.
+7.0.1
+fixed radar
+Merge pull request #1 from apps4av/master
+
+pull from apps4av
+moved out multitouch code
+Merge pull request #152 from patricius972/master
+
+Add TrackUp longpress and double touch functionality.
+added Google Drive sync
+Add TrackUp longpress and double touch functionality.
+
+Signed-off-by: patrice <patnathanael@gmail.com>
+Update streets.py
+Update streets.sh
+folder reorg
+delete unused folder
+added scripts for data prep
+Fix for can topo, using polygons for missing chart names
+Fix for can topo, using polygons for missing chart names
+removed tiling name method, polygon method to be added later
+all accounts now accepted
+added extra CAN charts, and tiles without cycle in them
+changed folder name for newproj
+merge from NewCharts2
+Remove references to Skyvector plan for now. The SKV site has changed the format of their flight plan string. Will re-add this text when I have a fix checked in.
+5.1.0
+added notams in plan
+Add support for importing SkyVector created plans.
+Update help to describe process.
+Updating tile window size for higher memory, larger screen devices.
+Merge pull request #147 from EQXTFL/master
+
+Option for Distance Ring colors
+Distance Rings sometimes look too similar to airports, this change allows to select a different color.
+6.0.9
+fixed our-ap issue, now our-ap data has low priority in list of found airports
+fixed A/FD issue when it appears in many areas for same airport
+6.0.8 release
+6.0.8 release
+6.0.8 release
+increased timer button and text size
+added canada ads
+removed another eclipse file
+Merge branch 'master' of https://github.com/apps4av/avare
+deleted build folder
+Update README.md
+more changes
+more changes
+since google is moving all dev to Android Studio, Avare is moving to it.
+added a fix for reported crash
+Issue #141 - correct a time ring selection size
+merged some suggestions from postalservice14, and sped up drawing
+Merge pull request #137 from postalservice14/cap_grids
+
+Comment improvements for cap grids
+Fix spacing
+Comment improvements for cap grids
+6.0.7
+dashed line looks ugly on cap grids. removed
+final cleanup of CAP code, and test
+final cap grid touches
+Added cap grid fixed issue 105
+html back to assets, in raw were giving issues
+change SUA to show notes
+When the KML tracks file is closed, tell the mediascanner to refresh the file changes.
+show better use of resources in tools
+fixed a crash related to choosing the green aircraft icon
+added all airports show in near list
+moved html in res from assets
+6.0.6
+Don't draw the CDI/VDI if its size has not yet been initialized.
+crash bug fixes in CDI and in tile draw
+Merge remote-tracking branch 'origin/master'
+fixed performance calculations
+When in auto-orientation mode, the plan buttons were not displayed in the correct visibility state after rotating the device. Fixed.
+changed/deleted bunch of icons, moved fuel and reviews
+Mode the plan control buttons down so they fit on the smallest of screens when in Landscape mode.
+6.0.5
+Update help file with info for flight plan controls.
+Flip the plan play/pause display icons for consistency.
+Remove the activity reference from the location view - bad form.
+simple compile fix
+Modify the fuel timer to use the observer/observable design pattern - much cleaner that way.
+6.0.5 beta prep
+Defect #102. Added a fuel tank switch timer reminder.
+Fix CDI rounding in display when close to waypoint
+Add plan control buttons to chart display (optional)
+Plan legs color coded (gray for old, green for current, magenta for future)
+added area plate for canada
+rubberabnding now depends on zoom level
+mostly refactorying. now tracks disable shows dots.
+added green aircraft
+added green aircraft
+one final change for new popout
+back to the basics. layout changes for easier navigation
+now area plates are stored in separate folder, and delete now delete AFD
+misc. download and delete cleanups
+fix for issue 122
+made download failures more verbose
+users can now submit ratings for airports
+minor layout change for fuel
+now user can select email of their choice
+range checking the input, and added missing file
+fuel price complete
+various small bug fixes, and moved fuel into long press
+Reduced enroute passage distance
+changed asynctask to thread in map view
+code refactor. some packages were getting too big
+Merge code from head
+Merge branch 'master' of https://github.com/apps4av/avare
+added fuel cost get part
+Defect #116- Add refresh ability to the plan list. This will reflect any changes made to the externally stored plans that may have happened via an outside app.
+Defect #112 - no need to add a new image, code already handles the aircraft icon being null and will not display it. Add "None" selection to the configuration item "Display Icon"
+Make the EdgeDistanceTape instrument less calculation intensive during the draw cycle.
+sort crash bug fix. 6.0.4
+disable draw button in TU. Plan change font
+fixed GPS sim mode fly to dest
+font chnages dynamically based on wp name length
+added near aiport search in prefs for min runway length. 6.0.3
+When in sensor mode, when orientation changes the CDI/VNAV were disappearing due to an invalid resize request.
+Make the size of the VNAV and CDI displays based upon the size of the display area.
+6.0.2
+6.0.1
+Correct a bug with CDI when following a flight plan. It was not tracking proper offset beyond the initial way point.
+Merge pull request #110 from clementallen/master
+
+Update README.md
+6.0.0
+fix in expiry calculation once again!
+Update README.md
+
+Added more information about the app including a link to install it from the Google Play Store.
+added getting nav logs from LMFS.
+Waypoints and plans don't need the description or altitude attribute.
+Dynamically load the external plan waypoints at load time, and unload when told.
+5.9.9 Fixed HTML innerText to innerContent. Added blinking screen.
+fixed update of altitude in plates
+release 5.9.8
+rubber banding bug fix
+fixes with angular adjustment to time in plan.
+plan now flashes and also shows intermediate times
+5.9.7
+better weather color
+Merge remote-tracking branch 'origin/master'
+fixed HTML name issues
+Fix crash if the stored field settings are out of range of what we understand
+5.9.6
+fail safe input containing ' and " with converting plan input to uppercase
+now federal airways added
+better screen fit, bigger text
+added code to find airways. VOTs removed
+final integration with LMFS
+5.9.5
+Merge remote-tracking branch 'origin/master'
+better layout of plans and list
+One more help tweak for plan
+Remove help reference to "SHOW PLANS" button.
+Updated the help area to include the new first/prev/next/last and filter buttons.
+minor button changes in WXB
+Limit plan display area to 5 plans.
+Add First/Prev/Next/Last buttons to page thru plan list
+Add Clear Filter to remove the application of a filter in one press
+Fix plan DELETE action if no plan had ever been loaded
+simple change
+added WXB load and amend
+ability to file with GPS coordinates, update help
+Added help for trip
+Added help for trip
+fixed timeout in POST
+5.9.4
+catching exceptions in weather and fixed path
+lots of error checking for LMFS plans and brf
+fix bugs in WXB aircraft color
+release 5.9.3 candidate
+increase passage distance, fixed variation when plan is active
+more changes to handle null returns
+fixed errors in parsing of nas plans
+Added briefing from WXB
+One final touch before testing with LMFS
+Errors processed better
+color input of aircraft
+Flight filing works.
+move weather out of app into browser so it can be handled with graphics
+in separate app space
+disallow long press on web activities and fixed reported bug on add to
+plan
+If we attempt to delete the active plan, we need to first set is as inactive before deleting.
+Add comment property to both external GPX flight plans and external GPX flight plan waypoints.
+Add NavComments display area - used when an external flight plan is active and has comments.
+Fix delete of external plan.
+Pretty up the delete plan confirmation dialog
+New plan page was not seraching for UDWs when creating a plan.
+Various cleanup and refactor.
+some fixes for hang bug when weather data is too much.
+added help for lists
+added help
+now can move by clicking on screen
+hangup fixed in all three JS activities.
+sensor bug fix for list/plan reported by TV
+replace JS confirm with dialog
+complete move of WXB to WX
+several bug fixes after moving FAA plan to WX
+moved faa stuff in WX
+5.9.2
+minor change before beta
+all states work now for filing, activating, closing, cancelling, and
+list of plans
+Merge remote-tracking branch 'origin/master'
+now can change plan states
+Move the "Show Plans" button below the filter selection
+ability to get plans from FAA
+Merge branch 'master' of https://github.com/apps4av/avare
+merging with plan
+now filling route and success filing from the app
+An external flight plan needs to be told specifically when it's enabled/disabled in order to load/unload display/hide the waypoint names.
+Add the concept of a filter on the flight plan display to limit the number of plans shown.
+show account on register button
+Simple changes for plan filing
+Added dialogs to plan activities.
+simple change to fill dep dest
+some rearrangement of plan and lists, change of colors, and added plan
+form fill and clear.
+now plans total shown in table
+added storing LMFS plan
+added JSON parsing to plan. Not tested yet
+Merge branch 'master' of https://github.com/apps4av/avare
+Plan filing changes
+added more classes but JSON parsing is still not in.
+Added external plans to the new plan handling.
+Typo correction in traffic.
+Added flight planning with LMFS. Remove flight planned before release in
+plan.html till approved by LMFS
+fixed a crash bug
+max destinations in plan are now 50. plan algo now uses distance from final airport of intended landing as basis for passage calculation
+the focus issue on 2.3.7 OS seems to be fixed now.
+js now polls because of a bug in older android versions
+One last activity where last fix applied.
+fix on some phones that lose focus on webview and never get back. report
+by TV, confirmed on old G-1 phone.
+fixed cycle calculate date
+minor fix for GPS crash
+fixed a long existing plan simulate bug.
+plans must be magnetic
+some changes in text and made consistant
+more widget rearrangements for plan/list
+more UI efficiency improvement in Plan
+minor fixes with plan. Timer updates the plan now because updating from
+GPS can be trouble as GPS tick can be very fast
+fixed plan bug.
+lists working quite well now
+final touches for list
+finished create-plan
+redid lists. lists will be compatible with last versions
+more concise UI
+changed UI a bit for plan. create all does not work yet.
+fixes for small screen devices
+Added search to trip
+added back search of GPS and address
+changed weather screen to black
+should not add VOT to radial based search
+more changes, and now design complete with functionality except UDW and
+without KML/GPX plans
+More changes to make it at par with last plan
+overhaul of Plan
+overhaul of Plan
+latest html for plan
+added plan html, and weather html file.
+updated help for TFR
+5.9.1
+fixed a bug in cycle expiry check
+fixed a critical bug for 5.9.0
+5.8.9 release
+Merge branch 'master' of https://github.com/apps4av/avare
+fixed cycle algo
+Update readme.txt
+fixed a bad cycle calculation algorithm. was going to cause issues next
+cycle 1501
+moved plan buttons, and added ability to add points in plan.
+readying 5.8.8
+saving of hotel selections
+minor change
+added cycle range
+fix a crash
+added hotels from expedia in trip
+Merge branch 'master' of https://github.com/apps4av/avare.git
+1 crash bug fix, and allow zoom in help
+Correct divide by zero fault if the runway bitmap is zero in width - not a normal condition.
+removed french. it is quite old
+5.8.7
+added more metrics
+increase mem again, and adding stats
+removed hotwire for adding expedia
+hotwire wont work due to flash not working in webview. checking in for
+completeness
+auto filling hotwire forms
+more changes for better hotel interface
+now works with destination
+Merge branch 'master' of https://github.com/apps4av/avare.git
+added trip view
+Merge pull request #106 from Fly4TheKing/master
+
+Change tracks from DKGRAY to CYAN
+Change tracks from DKGRAY to CYAN
+
+Track was nearly indistinguishible from highways on sectional charts.
+added placeholder for trip
+auto override of auto brightness
+removed zoom code, added brightness trings
+added brightness control because its important in various flight
+conditions
+Ensure that the bitmap icon for the runway extension is no larger than 1/3 the size of min dimension of the display device.
+urgent zoom fix and 5.8.6
+5.8.5
+bunch of zooming issues fixed in pinch zoom
+replaced togglebutton with custom two state button
+added IFR area charts
+Plan passage back to same algo based on distance
+Hook in the volume +- control to do zooming of the charts and plates.
+fixed a crash on possible app exit
+changed videos to apps4av account in help
+fixed a zoom issue
+5.8.4
+Merge branch 'master' of https://github.com/apps4av/avare.git
+now ignoring ADSB time for traffic
+A bit of code optimization and cleanup.
+Use only width and height to determine display orientation.
+more zoom in
+fixed a tile display orientation issue although it will not change
+anything as tile display is square
+When screen orientation is set to SENSOR, the top status lines were being drawn incorrectly in some orientations
+backed out last commit
+
+5.8.3
+fixed passing in sim mode
+hiding led from toggle button to reclaim some space. led does not show n many platforms anyway
+some button size decreases in plan and lists
+Add GPS method to convert positions to DD MM SS.SSSS format.
+Add ability for shadowtext to position text relative to a defined quadrant about the specified center point. This will be utilized for intelligent waypoint labeling.
+Hopefully the final (for now) tweaks to the plan tab layout
+removed extra text view on list save
+fixed check lists layout
+modified check lists icon of saved lists
+modified check lists and cosmetic change to plans
+Wire up the drawer actions
+Wire up the next/prev waypoint buttons
+Auto hide the keyboard when some actions complete
+Clean up some prompts
+added plan drawer better layout
+added plan drawer
+added plan drawer
+make list look like plan
+layout for advance and regress of active waypoint
+Refactor PlanActivity - no functionality changes, optimization and clarity only
+fixed a bad string in plates
+Implement delete functionality for external flight plans.
+added option to disable rubber banding
+independently selects GPS position source
+fix of problem reported by TV
+5.8.2
+Keep "Map" for now.
+Add configuration ability to the bottom tab bar. Each tab except "Chart" on the left can be selectively enabled/disabled. It is accessed via the Preferences/Display/Tab Bar Content configuration page.
+fix of plan rferesh bug
+merge of externalflightplan for GPX flight plan import. 5.8.1 release.
+merge of externalflightplan for GPX flight plan import. 5.8.1 release.
+moved GPS tab to preferences
+improved adsb traffic drawing
+improved adsb traffic drawing
+timer now a button
+help file update
+minor changes with timer color
+added chronometer to plates
+game tfrs added
+added a class for game tfr areas
+next release 5.7.9
+dialog crash bugs fixed (window token invalid).
+5.7.8
+give user ability to show his own geotag ahead of downloaded geotag
+only certain users allowed to submit
+5.7.7
+5.7.7
+change of comment for sharing
+now drawing plate tagged confirmation on plate view
+added reporting mechnisms. removed mass tagging buttons
+added reporting mechnisms. removed mass tagging buttons
+added controls for submitting info to georef
+change of icon
+ability to download geotagged plates.
+Merge branch 'master' of https://github.com/apps4av/avare
+added distance clause for point passage
+Correct a compiler error due to moved class.
+Move the distance ring drawing code to inside that instrument class.
+Move the DR class to the instruments package.
+Refactoring only, no change in any behavior (other than should be faster drawing)
+Fix an edge case bug dealing with track up and canvas rotation
+User defined waypoints were not displayed correctly when in track up mode.
+5.7.6
+can now read CIFP from 1409
+now users can tag plates with one dimension
+Revert "Save the state of "TrackUp" vs "NorthUp" in preferences"
+
+This reverts commit 440ca973e283b17dfc450fa6c01cfb2b4c00a260.
+Save the state of "TrackUp" vs "NorthUp" in preferences
+5.7.5
+5.7.5
+fixed plate zooming in for tagging better
+could not solve the change of pan on scale on plates activity. fixing it makes pan at zoom * pan making hard to tag points with precision
+fixed plate zooming
+fixed plate zooming
+Fix possible crash when parsing files for waypoints related to directory being set as a file.
+fixed a bug in plate tagging
+Correct potential crash if the name or description of a user defined waypoint is not in the formatted file and results in being NULL.
+release 5.7.4
+about to release 5.7.4
+some more fixes
+bunch of verification
+sanity check
+5.7.4
+added GPS and onstacle based tagging
+added clear all and other bug fixes
+fixed crash bug
+added share all and 5.7.3
+fix of several reported bugs
+5.7.2
+fixed a few bugs with various things.
+added sharing of plates tagging
+release 5.7.1. minor change before release
+release 5.7.1. minor change to show which plate is tagged
+release 5.7.1
+Change the angular difference from 3 to 15 degrees. 3 is way to much clutter. 15 gives 24 samples per 360 deg turn
+plates tagged now show up
+plates tagged now show up
+Show the status lines last so they are over top of any other display item
+limiting what can be geotagged
+fixed some bugs in plates tagging
+added geo tag of plates
+fixed Nexrad. Temporary fix.
+fixed Nexrad. Temporary fix.
+fixed Nexrad. Temporary fix.
+Move userDefinedWaypoints to its own namespace for clarity
+Refactor classes for better encapsulation
+Minor tweaks to the factory base - further abstraction via the UDWParser base class
+Add support for GPX formatted data.
+Add placeholder for CSV formatted data.
+Move the UDW description to the resource file due to it being displayed to the user at various times
+added help for KML. 5.7.0
+Display a generic identifier/title as the description of the waypoint, not the "description" field from the KML content.
+Limit the number of UDW points to a hard coded 100 for now.
+Minor tweek to force the UDWs to reload when the config directory changes.
+Add concept of user defined waypoints. This is done via a class that scans a configured directory area for files that will be parsed in order to extract names/lat/lon of a waypoint. Initial support is for KML from GoogleEarth, implementation allows the simple addition of CSV, TXT etc via providing the class to the base factory.
+Pulled shadowText handling out of LocationView into its own class to make it accessible to more parts of the code. No functionality change.
+New ShadowText.java file/class
+Correct a couple of minor painting issues.
+Minor alterations to some configuration items.
+FIxed crash. 5.6.9 release
+5.6.8 release
+fixed altitude from ADSB receivers when NMEA is on
+added writing on plates
+more bug fixes
+bug fix
+more fixes to bring info lines to plates
+added fire and smoke chart
+added info lines to plates
+added sensor based orientation
+added more weather charts
+fixed a crash reported by TV
+generalizing infolines
+For an ETE that's less than 1 hr, display it as MM.SS. For ETE's >= 1hr, show as HH:MM
+5.6.7. fixed download bug
+fixed TFR download issue
+5.6.6.
+fix in Plan rubberbanding
+fixed a warning
+fixed typo in strings
+reduced adsb traffic timeout
+added ability to download previous and next chart cycles
+http can hang during download cancel on input.close() causing confusing behavior. fixed
+Merge branch 'master' of https://github.com/apps4av/avare
+added new charts and changed adsb traffic to enabled by default
+Refactoring only - break the VSI logic out of "LocationView" and into its own class in the instruments area. Completed flight testing.
+Changes to allow the location icon to be more open ended - beyond airplane/helicopter
+Add canard icons.
+fixed a crash bug 5.6.5
+5.6.4. Fixed bugs introduced in the last release. More zoom in for plates. Added option to calculate ETA without realtive bearing
+plan algorithm improved. 5.6.3
+fixed a crash bug, and added more translations from franco
+arranging plates in type order
+fixed adsb traffic cachce for more entries
+fixed strings and database find location
+removed de translation
+Merge branch 'master' of https://github.com/apps4av/avare
+fixed zip file directory entries issue
+Another minor edit since the display field is large enough to show distance as XX.Xnm
+Test should have been >=
+If distance to destination is less than 10 units, then display it in the X.X format to see fractional as we get closer.
+5.6.2
+Merge pull request #82 from rasii/flightPathReq
+
+Added Flight Path Required.
+fixed a crash
+Added Flight Path Required.
+some more improvements to rubber band, and weather screen.
+5.6.1 ready,
+added more charts. 5.6.1 ready
+rubberband improvement
+improved rubberbanding
+added rubberbanding
+minor changes in area and last
+5.6.0. release
+5.6.0.
+5.6.0. a few changes related to layout
+plates fill the screen on center button
+fixed the issue where switch between plates causes pan change
+added grabber by TV, rearranged Plan.
+Merge branch 'master' of https://github.com/apps4av/avare
+some changes
+some changes
+Added Kitkat+ default external folder option, changed runway externsions length to DPI. Faster downloads with new server.
+runway extensions length now depends on DPI
+5.5.8
+5.5.7
+some more completeness to ads screen
+some other changes to add Ads activity, and improve check list more
+some other changes to add Ads activity, and improve check list more
+5.5.6 release with lists
+can import check lists now which make like much easier
+more changes to check lists for user friendliness
+more input friendliness with lists
+more fixes to check lists
+removed spanish
+added checklists
+The single apostrophe needs a preceding '\' character in the resource string file.
+Match English version. Also corrected few typos
+Map jumpiness fixed. 5.5.5
+check marks on charts now stay.
+5.5.4
+some more map jumpiness improvement
+Merge branch 'master' of https://github.com/apps4av/avare
+some improvements in map jumpiness. zoom still has jumpy behavior, but pan is now ok
+Only update the last known gps fix if the save to the tracks file is successful.
+some rearrangement of prefs
+now support download resume
+5.5.3
+added best runway wind components
+added best runway for landing based on wind
+fixed a reported plan delete bug
+added density altitude
+removed support lib
+5.5.2
+removed GCM. I hate GCM now.
+fix for GPRMB
+fixed a crash bug in plan. added autopilot GPRMB support, added full screen plate view that will be used later for geotagging of plates.
+changed the message for register as JW said.
+fixed a GCM crash reported
+final message for 5.4.9
+more appropriate language and alignment for register
+moved logging to UI thread
+update to privacy policy and buttons
+final prep for 5.4.9
+online signup now mandatory
+added web.png
+merge long press on main tab
+Merge branch 'modLongPress' of https://github.com/rasii/avare
+help update
+AS merge
+final online addition
+change of button locations
+draw erase button was hard to find. its now visible
+added cloud service
+Give user double "slop" when doing long press.
+Begin closest airport search as soon as the user presses down, stop the
+search if they lift off or move far enough to get out of the slop area.
+Enhance the rangeCheck() method to ensure the nSelectedIndex being set is in range against the available list of options.
+5.4.8. merge from rasii VOR request
+Merge pull request #59 from rasii/issue52
+
+Plan NDB appears to be selected instead of VOR when both have same ID
+delete caused exception on a phone
+fixed a reported bug
+5.4.6
+removed database concurrent access during database update
+Merge pull request #56 from rasii/vsrChanges
+
+Changes to Infolines::Vertical Speed Indicator
+Change "Descent Rate to Destination" to "Vertical Speed Required" since
+this really isn't a VSI.
+Allow VSR to be displayed beyond 30 miles to destination.
+Change sign from always + to + or - (- indicates you need to go down).
+5.4.5
+fixed update bug
+Plan NDB appears to be selected instead of VOR when both have same ID
+Merge pull request #58 from rasii/afdAirportSpinner
+
+Added Airport Spinner to A/FD view.
+Added Airport Spinner to A/FD view.
+5.4.4
+Merge pull request #57 from rasii/platesChange
+
+Switch from ArrayAdapter to ArrayList to fix Night Mode issue.
+Switch from ArrayAdapter to ArrayList to fix Night Mode issue.
+The display string for "Instrumentation" needs to come from the resource string file.
+changed prefs from Ron
+Ensure the distance tape display paint object is left aligned. The status line text "Simulation" or "GPS Lost" messages were right aligning the paint object causing the text to shift left by 2 characters.
+Merge pull request #54 from rasii/platesChange
+
+Fix issue when changing airport to <Nearest> and it doesn't have plates.
+Fix issue when changing airport to <Nearest> and it doesn't have plates.
+The plates for the wrong airport could be displayed.
+merge from edge tape and preference to enable it. 5.4.3
+merge from edge tape and preference to enable it. 5.4.3
+Merge pull request #53 from rasii/platesChange
+
+Removed Spinners from Plates and added <Destination> and <Nearest>
+Removed Spinners from Plates and added <Destination> and <Nearest>
+Merge pull request #50 from rasii/FixCommaInFind
+
+Fix problem with comma in "address," Find field and share from Google Maps
+Fix problem with comma in "address," Find field and share from Google
+Maps.
+Merge pull request #49 from rasii/fixFindClosestAirport
+
+Fix DatabaseHelper.findClosestAirportID bug
+TV's help checkin
+Fix issue where findClosestAirport might return the wrong airport if
+multiple airports were within the 0.001 criteria.
+Added correctionFactor to distance calc as described here:
+http://stackoverflow.com/questions/3695224/android-sqlite-getting-nearest-locations-with-latitude-and-longitude
+5.4.2
+Merge pull request #48 from rasii/testing
+
+Fix animation issue on Nearest Tab with airport that doesn't have plates...
+Merge pull request #47 from rasii/removePlatesBtnFromList
+
+Remove plates button from airport list
+Fix animation issue on Nearest Tab with airport that doesn't have plates.
+Removed one to many lines with last commit.
+Remove plates button from airport list
+simple fix
+commit missin file
+separate elevation tile from tilemap
+merge from ras2
+Merge branch 'master' of https://github.com/apps4av/avare
+merge from ras2
+Update strings.xml
+cosmetic change
+fixed altitude
+moved glide ratio out of near. 5.4.1 ready
+tells user to download maps when they zoom and no tiles found
+fixed a fuel overwrite on Near, merged animate of label button from ras2, fixed jumpy Map
+fixed CDI color bug
+showCDI initial state was not matching. fixed.
+release 5.4.0 after crash "fix"
+one more fix to plan
+fix Plan, and update help
+Add new status line field - Freq Next. Displays the destination radio frequency for TWR (if available), or CTAF.
+drawShadowedText was not positioning the box/text correctly in the vertical. A minor annoyance, but I finally fixed it.
+Move updating of GPS data for various instruments to the background service. This allows updates to happen when not on the main chart screen.
+Issue #44
+fixed the CDI to auto switch to LOC near the airport
+fix CDI
+fix VASI
+allow planning in sim mode.
+first plan point is never a destination
+draw plan in sim mode, and not inactivate when adding to it from search, map
+added back radar time
+fixed nexrad and traffic time for ADSB. Now nexrad hides if older than 2 hours
+Correct the needle deflection direction for the VDI
+changes merged from rasii
+Fix a couple of TRACK_UP bugs for CDI/VDI and distance rings labels.
+Add CDI/VDI operation to the help file.
+Corrected a couple of minor issues in the help file.
+moved hobbsMeter to instruments
+deleted some files not needed. 5.3.8
+moved hobbsMeter to instruments
+added when to show vnav bars
+Correct spelling mistake in the string "ShowCDISummary"
+Change CDI correction needle offset direction 
+Move VDI to right side of display
+Only display CDI/VDI if we have GPS lock
+CDI now disappears with touch
+updated help for next release.
+merge from CDI
+fixed a reported bug with gps dest not recognized as gps
+changing tabs will not change pan anymore
+fixed nam mos. bugs in android webview!
+5.3.8 beta.
+now ability to set the glide ratio
+added math to find airports within glide distance
+added safety features and runway lengths to nearest list
+add altitude to the adsb traffic
+now touch to hide menu
+added forecast
+now menu stays om map screen
+animation made global
+new app cycle. new way to draw shape of track with circles at waypoints.
+heading to track
+back to eclipse
+back to eclipse
+Merge branch 'master' of https://github.com/apps4av/avare
+made nexrad trasparent
+Remove an unused parameter from the setTracks method call.
+Increase the default max tracking point interval time to 30sec - flying with this setting yields a less cluttered KML file when in steady state flight.
+Merge pull request #37 from steven676/patch-1
+
+Allow installation on devices without GPS/network location
+specifying versions in 2 locations is not acceptable. removed from build.gradle. If this can be done from one location, then its acceptable
+Changed text for database download.
+Merge pull request #36 from damccull/SideBySideInstall
+
+Add -DEBUG suffix to the version name. Changes to build.gradle to support
+Allow installation on devices without GPS/network location 
+
+The Google Play Store interprets the permissions ACCESS_FINE_LOCATION and ACCESS_COARSE_LOCATION as implying that GPS and network location are required, respectively.  With the External I/O plugin installed, though, Avare is useful on devices without GPS, so we should specify that these hardware features are not required.
+Add -DEBUG suffix to the version name. Changes to build.gradle to support.
+misc. small fixes.
+giving a alert dialog when no database
+fixed radial/distance discrepency
+Merge pull request #35 from damccull/SideBySideInstall
+
+Side by side install
+Bug #022.
+Ensure tracks file is properly closed on application exit.
+Minor tweaks to the KML file writing logic to lessen its size. 
+Correct an altitude change bug. 
+Remove some dead code. 
+Clean up some studio warnings.
+Build the available field list to allow only fields not currently in use to be shown. Add check to ensure that if a field is not on the visible display, it is removed from the definition so as to allow it to be selected in a different location.
+Added resources to visually differentiate debug build.
+Moved app_name string to its own file so we can overlay it with a string from debug resources
+Removed app_name string from translations because it is not different from default language.
+Allow debug package side-by-side installation with release package.
+
+* Modify build.gradle to add ".debug" to the package name
+* Modify layout/plan.xml to change the xmlns of custom control so gradle will insert the appropriate package name during each type's build.
+5.3.6
+Added app/app.iml to gitignore and removed from repo
+Merge pull request #33 from damccull/master
+
+Removed generated files from repo and updated gitignore. Updated buildtools version to 19.0.1
+Updated to newest build tools 19.0.1
+Added app/build and .gradle to gitignore.
+Removed app/build and .gradle from repo.
+now avare is a android studio project
+now avare is a android studio project
+Merge pull request #31 from damccull/master
+
+Another pull request
+fix for a crash bug
+Merge branch 'master' of https://github.com/apps4av/avare
+now plan does not need prefixes
+Merge branch 'master' of https://github.com/apps4av/avare
+added missing file Radial.java
+Add some ignores for Android Studio files to the .gitignore.
+3.5.5.
+Ability to enter single line flight plans. minor fix. releasing
+3.5.5.
+Ability to enter single line flight plans
+nwo can fly radials
+5.3.4, new nexrad method
+5.3.3
+next release 5.3.2 with nexrad
+added internet based radar
+5.3.1
+dynamic fields now permanent
+dynamic fields now permanent
+plan improved
+missing files
+merge from preferencetabwork
+5.3.0. with SUA, and track line thicker
+trasparent border in plan
+improved SAA
+added SUA
+minor borders in plan
+5.2.9
+fixed plan handling
+grabber icon not required
+fpm now part of alt
+5.2.8. merge from KML-Tweaks, start up no GPS now defualts to Kentucky. Fixed weather/TFR delete.
+release 5.2.7
+added traffic.
+added traffic.
+added traffic
+fixed adsb exclusion of internet weather
+fixed conus nexrad
+only RNAV for now
+fixed a sign issue
+added geo referenced RNAV plates
+sqlite open helper's help removed
+next release 5.2.6. adsb released.
+Update strings.xml
+added ADSB weather sweep method
+completed ADSB
+more adsb weather
+fixed long interger bug in time
+metar taf pireps winds
+max size added
+added time to discard old nexrad
+regional nexrad now shows
+nexrad bitmaps in avare now
+more zoom improvement 5.2.5.
+more drawing improvements in zoom.5.2.4
+more drawing improvements in zoom
+next release 5.2.3
+auto scale
+merge from stevecb2 branch
+changed grabber icon
+added AK ELUS/EHUS charts
+now GPS locked everywhere in the app
+added Zulu time
+simple warning fix for bitmap
+next release 5.2.2
+fixed bug with database access and black screen
+next release 5.2.1
+next release 5.2.0
+fixed a crash bug, fixed text chop off in pop out
+removed variation calculation
+5.1.9
+fixed elevation bug. 5.1.8
+next release 5.1.7
+further fixed agl
+made text better for agl
+fixed AGL
+AGL fixed crash
+AGL added.
+added vertical speed glide slope
+added vertical descent/ascend speed. fixed a minor issue with search text box test clearing
+release 5.1.6
+now sending data out to BT devices
+added bidirectional interface for plugins
+added missing files
+merge from dpi branch jm
+next release
+interface now json for easier parsing
+added prefs from preftabswork branch
+misc small fixes. also added reverse portrait and reverse landscape orientations in prefs
+added options from tracksRequests
+removed silly line notch on top of tfr/weather shapes
+#15: Distance and speed rings can be switched on and drawn independently from one another.
+GPS disabled warning removed
+now receiving and updating adsb position
+added aidl interface for helper app
+removed adsb from avare
+fixed headers
+fixed headers
+release 5.1.4
+Added emailing KML, and preferences now back to ListPreferences because summary was hidden
+fixed a crash with distance ring
+Merge branch 'master' of https://github.com/apps4av/avare
+drawing tracks with shape instead of calling new and re-implementing the shape code
+Change the scaling threshold values to better align to the static rings at the default zoom factor.
+merged from DistanceRingsV2
+added 4th ring
+Completed merge change for flight tracks.
+Removed some configuration options to make it less busy.
+removed seconds from the hobbs timer
+misc small fixes
+added KML from tracks branch
+added KML from tracks branch
+now same frequenceis are merged
+merged from branch flight_timer. needs testing
+merge from distance_rings branch. also added km.
+next release 5.1.3
+next release 5.1.2
+added way to browse for folder to store charts
+5.1.1, merged changes from branch preferencetabwork
+fixed unable to see TAC, fixed Pattern altitude
+release 5.1.0
+release 5.1.0
+fixed a bitmap size issue causing plane to appear of center
+delete not works for databases and weather and tfr
+fixed runway paint issue
+changed nochart to simple gray. easier to see shapes on it
+fixed ASOS linkify, fixed dangling ASOS frequencies in COMM, fixed NONE severity sigmets/airmets.
+added runway pattern code from branch shadeRunwayPattern
+added missing file
+added COMM to popout screen
+fixed regex from jm
+merge from awos branch
+added download failure cause
+wind now decoded
+removed path for chart store, and added distances for weather
+magenta not a good color for shape
+added winds/temp aloft
+added winds/temp aloft
+added a separate group for weather
+fixed a problem with db
+weather now comes from database. this is so much better
+fixed a few things suggested by JW
+added back route weather
+removed adsb support due to lack of ability to test
+minor changes
+mets are not selectable from prefs
+draws convective sigmets
+new help file from JW
+cache of weather updated with air/sig mets
+a little more layout arrangement
+fixed tfr
+removed WX screen cause its on main view now
+more integration of weather screen
+now a new layout with ability to show weather
+fixed weather airport with adding K
+metar cache now fully functional
+added metar so can use it to develop weather layout
+added airport report parser. use this as example do parse other weather
+added code to download weather from download menu
+merge from branch jm
+fixed dbase
+new location of charts
+Merge branch 'master' of https://github.com/apps4av/avare
+changed dbnames
+Test commit
+with new database scheme
+5.0.9
+5.0.8. Finished continental zoom.
+added continental scale zoom out
+this helps set the list updated
+added fix for plate name of any extension
+next release 5.0.7
+next release 5.0.6
+fixed pirep
+fixed plan entry move
+changing anything in plan will deactivate it
+A little rearrangement of plan
+change chart colors
+added move function to plan list
+checked in adsb integration. not sure if this will cause issues with WIFI.
+changed DOM to SAX. More memory optimizations.
+removed weather from nearest, and added elevation
+more drawing optimization
+deleted weather cahce and removed a lot of async tasks so we do not hang when network is down
+complete integration of adsb with code
+next release is png with 150 dpi plates
+no test file
+jpg
+can draw nexrad now
+can draw nexrad now
+constant image name
+5.0.5 release
+black bg is now default. fixed height of text in landscape mode
+fixed layout of mapview
+fixed a bug in id413
+added heli charts
+fixed drawing
+added ADSB to avare
+5.0.2
+Now menu brings out setting that need quick change
+Now menu brings out setting that need quick change
+added GDL90 code
+5.0.1 Layout changed to bring Pan/Draw button back. Changed WX so METAR/TAF/PIREP can be plain or tranlated, selectable from Preferences.
+fixed a few bug noticed in 5.0.0
+Update strings.xml
+5.0.0 release
+bottom up animation
+a lot of button arrangements
+removed weather images, and fixed a technical bug with location set
+added station weather, and added smoke map
+changed color of METAR to be not transparent, moved afd around
+draw has a clean button now. Dest has a clear button now.
+added metar codes, adde search to WX and help
+remarks separated
+added pirep decode 4.2.8 now
+added pirep decode 4.2.8 now
+gave up on webcore memory leak error. Now weather only loads current plan
+better weather performance on UI thread
+4.2.8
+now running weather get on async task
+decoding all taf codes
+next release 4.2.7
+4.2.6
+added weather
+removed network activity from the task
+more weather
+added weather images
+changed colors mostly
+improved plan, added ability to store plans,
+changed UI looks
+improved black area on sides
+now finding date of release not requires internet connection. fixed obstruction of chart type
+fixed TAC issue and general other missing chart issues. release 4.2.4
+release 4.2.3
+added chart delete function
+added grand canyon chart
+release 4.2.2
+improvements to plan feature
+fixed declination
+all directions magnetic
+release 4.2.1
+Update strings.xml
+a few final touches before 4.2.0. Fixed GPS view.
+charts segmented properly now. release 4.2.0
+new database allows auto chart downloading
+can clear the destination. 4.1.10 prepared.
+4.1.9 release. fixed a bug
+a change for eu charts so lat/lon are not restrcited to NW 4.1.9
+scale and pan reset with center button
+4.1.8. minor changes
+Update strings.xml
+4.1.7
+4.1.7
+4.1.6
+added doodle
+fixed plates sort order
+4.1.5. fixed bug in Plan
+fixed database for A/FD, added heli icon, release 4.1.4
+changes by JW
+fixed A/FD release 4.1.3
+releasing 4.1.2
+added A/FD picture
+finally fixed the elusive slow moving bar bug
+4.1.2
+added alternate and takeoff minimums. 4.1.2
+4.1.2 with more help
+Merge branch 'master' of https://github.com/apps4av/avare
+added shahed relief maps and terrain of all US
+Update strings.xml
+Update strings.xml
+target now android-17. trying to fix compatibility issue, and release 4.1.0
+4.0.2
+4.0.1.
+fixed plan distance
+fixed a search bug
+4.0.0
+fixed customs bug
+removed airport diag
+fixed download bug
+added station passage
+fixed some issues with plan
+improved planning screen
+added palnning UI elements
+fix a crash 3.7.6
+fix a crash
+3.7.5 after update fix
+readying 3.7.4
+3.7.4
+cleared up A/FD more
+3.7.3
+fixed a lot of issues for 3.7.3. Improved text A/FD
+next release 3.7.2
+next release 3.7.2
+new obstacle symbol
+new aircraft symbol
+added redundant server
+added ability to delete recent destinations
+added IFR HE charts. release 3.7.1
+3.7.0 release with bug fix
+3.7.0 release with bug fix
+3.7 release with bug fix
+moved UI 3.6.10
+releasing 3.6.10
+releasing 3.6.9
+added terrain for next release 3.6.9
+added terrain for next release 3.6.9
+added terrain maps
+fixed a crash bug 3.6.8
+fixed a crash bug
+Merge branch 'master' of https://github.com/apps4av/avare
+3.6.7 release
+3.6.7 fixed tearing problem
+Update strings.xml
+Update strings.xml
+3.6.6
+added obstacles
+night mode complete. release 3.5.6
+3.6.5. Legacy project will be forked from here on.
+fixed a crash bug reported on 3.6.3
+release 3.6.4
+released 3.6.3
+3.6.3. tile map changes to free up some memory. changes to UI
+3.6.3. tile map changes to free up some memory. changes to UI
+3.6.2. fixed a afd bug
+added night mode
+3.6.1 releasing
+3.6.0 releasing
+lots of changes for 3.6.0.
+3.5.10, added ES translation
+3.5.10, and added graphical A/FD the green books
+3.5.9 release. Fixed a crash
+Update strings.xml
+chnaged back dialogs
+next release 3.5.7
+next release 3.5.7
+next release 3.5.7
+tfr on demand , next release 3.5.6
+tfr on demand , next release 3.5.6
+tfr on demand now
+3.5.5
+moved hosting to dreamhost
+minor fixes
+release 3.5.3
+Update res/values-fr/strings.xml
+release 3.5.2
+release 3.5.1
+readying next release 3.5.1
+updated help file for 3.5
+release 3.5 now
+prepare for next release 3.5
+next release 3.4.8
+added track up albeit pan bug
+added track up albeit pan bug
+disabled obstacles
+a few bug fixes
+download button more viewable
+minor fix
+3.5 release readying. added obstacles. added new colors for visibility. improved yet again, database access methods.
+3.4.7 release
+now draws two tracks
+now draws two tracks
+next release
+now charts in expandable list. fixed some bug. first step towards plates
+fixed a minor exit bug
+fixed a nasty crash bug in tile calculation.
+removed complete exit. it causes segfault
+added some auto download features, added complete exit feature. moved altitude to gps etc.
+removed locks from database for faster access
+now can enter addresses direct
+fixed warning
+lots of clean up. and added entering of google maps
+changed text color
+fixed warnings
+added geo destination
+added packages
+added packages
+clean up of text display
+corrected headings display to 3 digits
+next release 3.4.4
+added runway extensions
+release 3.4.3 ready
+fixed math formula for bearing
+Merge branch 'master' of https://github.com/apps4av/avare
+great circle course now
+Revert "Added ratings bar"
+
+This reverts commit a3b2471acdb32e6be45b9615d1d9fb26b9ee1da4.
+Added ratings bar
+progress bar now shown in search
+preparing for 3.4.3
+added some graphics to search list
+minor syntax fixes
+added navaids and fixes
+scaling the aircraft now
+3.4.2
+orientation portratit by default. 3.4.1
+3.4.1
+new logo
+updated help
+search is better now.
+fixed query to search by name
+removed silly looking destination dialog, replaced by activity with search
+gearing for 3.4.1
+Revert "help file updated"
+
+This reverts commit acde11e21f34a7d24196cb46f45cc4caa36332af.
+help file updated
+deleted menu layouts
+more cleaning up of menus
+more cleaning up of menus
+removed menus. replaced with animation
+added image processing code that enables live taxi
+3.4 ready
+added ifr charts ready for 3.4
+3.3.2
+fixed broken multiple charts
+fixed broken multiple charts
+now tiles have embedded lon/lat for auto charting. airport diags. no need to geo tag
+made more responsive animation by separating it from weather download
+made more responsive animation by separating it from weather download
+fixed a crash
+fixed a crash
+change of some text
+fixed double touch continuous movement of params. added animation to nearest. fixed some text in prefs
+bad name of file changed. readying for 3.3 release
+show all other facilities too
+now double touch can be used as plotter, destination can be input via long press
+fix is 10 of a mile distance to nearest
+improvement to download of charts, and added miles/knots. database is now opened for every transaction
+now on faa data
+new directory
+new french strings and new help
+readying 3.3 with WAC charts
+fixed a crash in gps for device that do not have gps
+fixed a crash reported on store
+fixed a crash reported on store
+taf appendd to metar
+3.2.5
+more concurrent mod remove
+more verbosity, gps callback list now gaurded with concurrent mod. destination set input rate now limited.
+release candidate 3.2.5
+moved airport dia to service so switching to it is quicker
+greatly reduced metar fetch data rate. fixed nearest airport update time
+airport dia now 1/4 size
+tiles now align with proper orientation. fixed a timer bug
+metar text also full width
+fixed bug that tiles stay after download
+fixed bug that tiles stay after download
+many changes. biggest change is drawing optimization. auto determine the optimum screen size for all devices. save 2x memory by going to RGB565. weather color change. download bug chart not update bug exists.
+heap limit detection not accurate
+heap limit detection not accurate
+no need to restart with map size change now
+next release
+destination dia not found dialog
+allow backup
+for next release
+added donate option paypal
+added screen sizes. added donate option
+Merge pull request #1 from mnbob81/patch-1
+
+Make metar popup full width of display
+Make metar popup full width of display
+
+- Make the location popup the full width of device display
+- .trim() popup text
+next release after download made better
+some bug fixes where blinking gps in simu. also downloads charts when first boots
+3.2.1 to release
+new help
+gps fix for blinking
+new help, french strings, and gps fixes
+fixed track line and moved error text below
+fixed track line and moved error text below
+catching backspace now. dest now set from nearest.
+final touches before next release
+fix weather display
+fix weather display
+lots of bug fixes with new layout. gps fix, screen timeout fix, destination box fix, geotag box fix.
+name changes
+gps fix to start stop from service
+removed some warnings from lint. reduced size of calibrate box
+fine display of lat lon for marking
+changed tab height based on screen resolution. fixed a new gps module crash
+UI re-design with tabhost. major change to presentation.
+geo referenced taxi feature complete. needs test. added gps interface so that all activities can use a common gps interface
+better plates state machine
+changes of icons and better placement of afd
+now calibration stored in preferences.
+now plates show calibration. next need to save and retreive
+now plates show
+plates acquire complete. now to show gps on top
+plates will now be shown in their own activity. PDF to jpeg conversion complete for ADs
+cleaned up draw and updated help
+cleaned up draw and updated help
+added header
+initial check in in github
+Initial commit

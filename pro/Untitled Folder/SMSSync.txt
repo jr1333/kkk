@@ -1,0 +1,2655 @@
+Bump version code
+Update changelog
+Merge pull request #475 from ushahidi/fix-local-web-client-ssl-error
+
+Removed onReceivedSslError override
+Removed onReceivedSslError override
+
+In compliance with Google Play warnings about inherent security
+vulnerability.
+Add variant name to generated apk
+Remove automatic release task
+Bump version number
+Update changelog
+Merge pull request #474 from ushahidi/473-add-firebase-crash-reporting-support
+
+Fixes #473 - Add firebase crash reporting support
+Integrate Firebase crash reporting tool
+
+- Upgrade retro lambda to take advantage of new changes
+- Add a Crash tree to timber to send crash reports to firebase crashing reporting
+Merge pull request #472 from ushahidi/fix-duplicate-messages
+
+Fix issue with imported message getting synced multiple times
+Fix issue with imported message getting synced multiple times
+
+Pull pending messages from the db directly then sync them
+instead of getting them passed via the UI
+Upgrade build tools
+Add missing enum type
+Merge pull request #471 from ushahidi/fix-app-crashes
+
+Fix checkbox flipping animation
+Upgrade okhttp client
+Fix a crash when filtering by phone number
+Fix some more crashes
+Fix checkbox flipping animation
+Merge pull request #470 from ushahidi/466-add-link-to-privacy-policy
+
+Add preference item to about section that links privacy notice
+Add preference item to about section that links privacy notice
+Merge pull request #467 from ushahidi/461-fix-multiple-sync-of-a-message
+
+Fix multiple sync of a message
+Disable manual sync operation when background sync is active
+
+- Use broadcast receiver to update UI with respect to sync status
+- Upgrade Raiburari
+- Use progress bar to notify users of failed message with status count
+- Refactor how notification is built to make it more resuable
+- Fix builds on travis and wercker
+Remove depecrated Android SDK Manager
+Upgrade android build tools
+Upgrade build tools
+Merge pull request #446 from ushahidi/414-whitelist-causes-dup-sync
+
+414 whitelist causes dup sync
+Merge pull request #445 from ushahidi/410-remove-unused-fields
+
+410 remove unused fields
+Merge pull request #448 from ushahidi/420-dont-log-misleading-mesgs
+
+Log messages for gained and lost data connectivity
+Merge pull request #449 from ushahidi/415-remove-read-phone-state-permission
+
+Fixes #449  Remove read phone state permission
+Merge pull request #451 from ushahidi/447-upgrade-raiburari
+
+447 upgrade raiburari
+Don't run travis build in a container potential fix for a build failure
+Downgrade to build tool and upgrade bottomsheet library as it conflicts with sub libs version of bottomsheet
+On travis remove cache and listing of android tools version
+Add needed components to make use of latest tools in travis ci
+Upgrade to build tool to rc3
+Upgrade Raiburari and build tools
+Remove read phone state permission
+Log messages for gained and lost data connectivity
+Fine tune filtering logic so messages processed
+
+Make sure filter phone number has the appropriate filter status
+before proceeding to process the message.
+
+Make sure both blacklist and whitelist are not enabled before
+processing all messages. If either one is enabled apply the appropriate
+filter to it then process the message accordingly
+
+This should potentially fix issues #413 and #414
+Send whitelisted number once
+
+Add an `else if` clause to make sure the final block to post message is never called
+when whitelist is enabled
+
+Also add test to test the implementation
+Remove the SyncPendingMessages and it's related classes
+Remove ability to track sync state
+
+With the current UI and work flow, we no longer
+track synchronization of pending messages' state
+
+Remove `SyncPendingMesageState` class as it's no longer needed.
+
+Remove the ability to check if a service is running as it was being
+passed to the state class which is no longer relevant. Addresses
+the issue raised in #411
+Remove sync count fields. Not needed anymore
+Merge branch 'master' of github.com:ushahidi/SMSSync
+Upgrade android gradle plugin
+Upgrade build tool
+Merge pull request #385 from alxndrsn/384-syncPendingMessages
+
+Remove option to pass UUID to syncPendingMessages() methods
+Merge pull request #436 from alxndrsn/string-capitalisation
+
+Make string capitalisation safe
+Remove option to pass UUID to syncPendingMessages() methods
+
+Issue: #384
+(#435) Make string capitalisation safe
+Merge pull request #430 from alxndrsn/dead-code-in-alert-presenter
+
+Remove unused method `smsSendFailedRequest` in AlertPresenter
+Merge pull request #399 from alxndrsn/398_sms_scope
+
+Scope the `sms` reference more finely in SmsReceiverService
+
+Fixes #398
+Merge pull request #442 from alxndrsn/406-default-sms-app-comments
+
+Add comments to system-provided activities used for kitkat SMS support
+Merge pull request #407 from alxndrsn/sync-state-isRunning-simplification
+
+Simplify implementation of State.isRunning()
+Remove unused method `smsSendFailedRequest` in AlertPresenter
+Add comments to system-provided activities used for kitkat SMS support
+
+The activity classes ComposeSmsActivity and HeadlessSmsSendService are
+mysteriously provided by the OS.  They must be declared in `AndroidManifest.xml`
+to allow SMSSync to be set as the default SMS app on Android 4.4+ (kitkat or
+newer).
+
+Closes #405
+Scope the `sms` reference more finely in SmsReceiverService
+
+Issue: #398
+Merge pull request #402 from alxndrsn/401
+
+Remove unused properties from SmsReceiverService
+Merge pull request #441 from ushahidi/440-add-support-for-github-templates
+
+Setup github template
+Setup github template
+
+Let users fill in the template when the make attempt
+to submit an issue, a PR
+Merge pull request #439 from alxndrsn/remove-unused-service-constants
+
+(#438) Remove unused ServiceConstants
+Merge pull request #429 from alxndrsn/battery-consistent-scoping
+
+Use consistent scoping for similar variables
+Merge pull request #428 from alxndrsn/power-level-comments
+
+Remove stale comments
+Merge pull request #425 from alxndrsn/comment-fix
+
+Remove out-of-date comment
+Merge pull request #418 from alxndrsn/can-haz-uuids
+
+Use hasUUIDs() method instead of testing for null
+Merge pull request #412 from alxndrsn/dontUseThreadIdIfYouDontNeedTo
+
+Shift `threadId` check to before the variable is used
+Merge pull request #404 from alxndrsn/gradle-wrapper-building-instructions
+
+Remove 'gradle' requirement from build instructions
+Merge pull request #403 from alxndrsn/400
+
+Create statusIntent at point of use
+
+Fixes #400
+Upgrade Android gradle tool
+Merge pull request #397 from alxndrsn/395_option_A
+
+Check messages is not null before fetching first item
+
+Fixes #395
+Merge pull request #392 from alxndrsn/322-proguard-support
+
+Update proguard rules to workaround samsung compat support
+
+Fixes #322
+Merge pull request #387 from alxndrsn/386-post_message_sync_multiple
+
+Prevent pending PostMessages from synching multiple times
+
+Fixes #386
+Merge pull request #383 from alxndrsn/382_multiple-tweets-per-sync
+
+Bugfix: only forward each pending tweet once
+Fixes #382
+Merge pull request #381 from alxndrsn/correct-logging-message-in-tweetPendingMessage
+
+Correct logging message in tweetPendingMessage()
+Merge pull request #380 from alxndrsn/unused-keywords
+
+Remove unused variable
+Merge pull request #376 from alxndrsn/smssync_log-closing
+
+Don't close the `FileManager` on every write
+Fixes #375
+Merge pull request #374 from mandric/373-minor-build-tweak
+
+minor fixes to gradle config and build instructions.
+(#438) Remove unused ServiceConstants
+Use consistent scoping for similar variables
+Remove stale comments
+Remove out-of-date comment
+
+This method does not start a service, and does not spawn any threads or other background work.
+Use hasUUIDs() method instead of testing for null
+Shift `threadId` check to before the variable is used
+Simplify implementation of State.isRunning()
+Remove 'gradle' requirement from build instructions
+
+With the gradle wrapper, a separate gradle installation is not required.
+Remove unused properties from SmsReceiverService
+
+Issue: #401
+Create statusIntent at point of use
+
+Issue: #400
+Check messages is not null before fetching first item
+
+Issue: #395
+Update proguard rules to workaround samsung compat support
+
+Issue: #322
+Prevent pending PostMessages from synching multiple times
+
+Issue: #386
+Bugfix: only forward each pending tweet once
+
+Issue: #382
+Correct logging message in tweetPendingMessage()
+Remove unused variable
+Don't close the `FileManager` on every write
+
+Issue: #375
+minor fixes to gradle config and build instructions. Issue #373
+Fix NPE when app has low battery
+
+Check for null object from http client getReponse method call.
+This is a quick way to fix the NPE. In the future investigate
+why the getReponse call returns null.
+Bump version number
+Merge pull request #370 from ushahidi/364-secret-key-getting-duplicated
+
+A lot of bug fixes to previous release
+Update changelog
+A lot of bug fixes to previous release
+
+- Remove the use of robolectric for unit testing. Now android ships
+  native unit testing support.
+
+- Refactor entities to use getters and setters so they can be mocked.
+
+- Add test for post message.
+
+- Add test for single and multiple messages synchronization.
+
+- Fix #362 - Use the device's phone number for the `sent_to`
+  field instead of the `from` number.
+
+- Fix #369 - Set imported messages from the phone's inbox `type`
+  to `pending` and `status` to failure. This prevents the app
+  from crashing when an attempt is made to fetch messages from the app's
+  inbox.
+
+- Swipe to manually sync individual messages in the pending list is
+  is broken because there was no method call to cause the sync.
+  Made a call to `publishItem(int position)` when a swipe occurs.
+
+- Add test for IP based Integration.
+
+- When Test Ingeration button is hit, the app makes a request using
+  configured request method to the server. The test request doesn't
+  send the `message` and `from` variables to the server. This sometimes
+  causes validation error when the server is strict about those two
+  parameters. This sometimes leads to testing of the integration to
+  report invalid endpoint has been entered. To fix this, added a
+  hardcoded message and from values so those are sent along with the
+  secret values. This actually makes the test report that the
+  configured integration can actually receive messages from the app.
+
+- Upgrade android gradle plugin
+Bump version code
+Update changelog with v3.0.4 changes
+Merge pull request #359 from ushahidi/356-fix-sending-off-all-failed-messages
+
+Fix #359 - Sending off all failed messages
+Clear previously set http param to prevent duplicate
+Set on change listener on switchcompat
+
+This makes sure the changes to the switch state is caputured
+thus enables it be set on or off
+Merge pull request #358 from ushahidi/354-bug-fix-server-response-regression
+
+354 bug fix server response regression
+Fix process sms model mapper
+Fix #354 - Server response
+
+Call method that sends SMS when a request is successfully made
+Fixed task checking
+Fix so server response are sent as SMS
+Merge pull request #357 from ushahidi/353-bug-fix
+
+Fix #353 - Only send failed or unconfirmed messages
+Fix #353 - Only send failed or unconfirmed messages
+This was causing duplication where failed messages in the pending
+tray get reprocessed after they've been published
+
+Upgrade Raiburary which has android support library update
+Remove build dependency as it breaks the build system
+Bring back build depedency to isolate build issue
+Remove unused library projects from compilation
+Downgrade android gradle plugin trying to isolate an issue with the build system
+Downgrade git-gradle trying to isolate an issue with the build system
+Downgrade playstore publisher
+Update change log
+Upgrade to fix class not found bug my build system
+Update version code
+Update changelog
+Merge pull request #352 from ushahidi/340-fix-mobile-click-issue
+
+Fix #340 Forkme Badge on Mobile
+Hide forkme badge when on mobile
+
+Move inline style declaration for fork me badge
+to the css style then hide the badge when on a
+mobile device
+Merge pull request #351 from ushahidi/341-fix-many-problems-in-v3
+
+Fixes #341 - Fix many problems in v3
+Downgrade swipe to delete
+
+The new version breaks swipe to delete. The swipe background remains
+after an item has successfully been removed from the list
+Fix broken test
+Anchor snackbar view to footer action button when updating an integration
+Add extra condition to test if the payload has a success property
+
+This way it solidifys that the web service returns the correct response
+Make a POST request instead of a GET request to test integration URL
+
+For an integration to be valid it has to have a JSON string with a payload
+property in the JSON response.
+Convert log action bar icon to vector drawable
+Disable item press for web service list to make it possible to toggle a web service
+
+To update an existing web service you have to long press. Before you have to either
+long press or sing tap to update it but it conflicts with the toggle view making it
+impossible to toggle the custom service
+Merge pull request #350 from ushahidi/347-fix-all-crashes-and-anrs
+
+347 fix all crashes and anrs
+Only process sms when there is an intent. This prevents NPEs
+Make sure there is a response object before getting response code
+Don't use date format base on date settings on users device
+
+Using the set date format from users settings crashes the app on
+certain devices. Instead use a hardcoded date format as a workaround
+app id for retrieving messages recyclerview
+Merge pull request #349 from ushahidi/345-persist-imported-messages
+
+Fix #345 - Save imported messages into the local database
+Fix #345 - Save imported messages into the local database
+
+Remove logic for appending the imported message to the message list.
+Add method for saving the imported messages to the database then
+reload pending messages from the database and populate it into the
+incoming messages list
+Merge pull request #346 from ushahidi/339-bug-fix-frequency-broken
+
+Fix #339 - Fix a bug where selected time frequency is not saved
+Fix #339 - Fix a bug where selected time frequency is not saved
+
+- Add okay button to save the selected frequency
+- Remove debug log messages
+- Call dismiss on dialog to make sure it's dismissed when okayed
+- Also made the default frequency five minutes instead of 5 hours
+Bump verion number
+Bump version code
+Update changelog for hot bugfix
+Upgrade google playstore plugin
+Update changelog to fit Playstore character limit
+Update change log
+Rename splash screen to product tour
+Update screenshots in readme file to point to new screenshots on the website
+Update changelog
+Update playstore asset with latest screenshots
+Update changelog
+Make sure smssync service is enabled before starting a background service when connectivity changes
+
+Downgrade recyclerview as it's has a bug causing swipe to delete baackground
+to remain after it has successfully executed an action
+Programmatically set navigation header due to a bug in the latest version navigationview
+Upgrade android testing support libraries
+Upgrade to latest version of Raiburari
+
+Raiburari has been update with the new version of the support library
+Also remove redundant dependency declaration.
+Fix a call to renamed method in Raiburari due to a typo
+Add missing methods for mock data repository for internal flavour
+Fix so call for enable web services return the actual values not null
+Change Pending back to incoming
+Fix so app properly refresh screen when an action is acted on a message
+Cause a refresh when items is successfully published
+Rename incoming to pending. Makes more sense that way
+Make sure incoming messages are the only one fetched and published messages are saved
+Route received SMS received
+On item click launch form for editing web service
+Remove development branch reference
+Rename web service entity to syncurl for backward compability
+Lombo to fix retrolambda lint issue
+Upgrade retrolambda
+Upgrade cupboard
+Show a log message when upgrading database tables
+Fix broken links in readme file
+Remove the ability to merge master to develop branch from the release script as it doesn't exist anymore
+Add update to app launch icon to changelog
+Update change log
+Increase android version code
+Point app store images in readme file to the one saved in master branch
+Disable swipe to delete on pre-honeycombo devices. It just doen't work properly
+Remove unused activity
+Remove portrait constrain on the QR code reader
+Change to a new qr code library
+
+Drop support for minSDK 8
+Call fragment's start activity for resutls
+
+This way the fragment's onActivityResult get called. Doing this
+cause the result code returned from the QR code activity to be
+executed by the fragment.`
+Properly parcel _id field
+Update web service model variable to make it possible to deserialize via gson without annotations
+Update app launcher icon
+Upgrade android gradle plugin
+Merge pull request #337 from ushahidi/update-website
+
+Update website
+Upgrade hugo version on wercker
+Remove website's public directory from the repo
+Update web site look & feel
+
+- Add QR code generator to aid people in generating QR codes for their custom web service
+- Update screenshots
+- Fix broken footer tags. All footer html tags are closed now
+- Remove all references to deprecated methods in hugo
+- Fix so contributor list is pulled from the master's branch
+Add extra padding to log title
+Don't target Marshmallow for now
+Add extra padding for twitter integration title and description to properly align the title and description
+Remove unnecessary line rule between battery status the log list
+Rename web serive to custom service
+Relable message automation to just automation
+Make reply message in settings be dependent on enable reply response
+Add drag icon when attempting to delete an integration
+Upgrade android gradle plugin
+Show a specific empty view for published messages when list is empty
+
+Also change empty view icon to a light grey color. Looks great
+on a white background
+Initialize general settings views
+Fix broken search
+
+Don't put navigation drawer's fragments to the back stack since we don't pop
+them. Use the instance of the message fragment created when
+navigating to the message fragment. This way we use the same instance
+to for performing a search query.
+
+Make the search widget visible when user navigates to the incoming screen. It
+was set to gone making it not show
+Add  test for list fitler use case
+Add test for delete filter use case
+Add test for add filter use case
+Move domain entity test into their own sub package
+Test for sync entity
+Upgrade gradle wrapper
+Upgrade test depenencies
+Add test for web service entity
+Test message entity
+Add test for log entity
+Add test for Http Name Value Pair Entity
+Test filter entity
+Replace glassfish's with javax annotations
+Update changelog entries
+Fix enable or disable based on battery level changes
+Remove deleted activity references in the manifest file
+Merge pull request #336 from ushahidi/333-bug-fix-make-way-for-a-release
+
+Fixes #333 - Fix major obvious issues to make way for a release
+Fixes #333 - Fix major obvious issues to make way for a release
+
+- Use a different pacakge name for internal build flavour
+- Fix app navigation so the right menu itme is selected when user navigates through the app
+- Fix so user is prompted to enable service when it's disabled and user attempts to publish a message.
+- Add lint option to not abort build when lint check fails for sms-portal builds
+- Fix search so you on filter only incoming messages
+- Only show search icon on incoming fragment
+- Implement deletion of published messages
+- Change checkboxes to switch comapt for enabling or disabling an action
+- Implement a custom divider decoration for recyclerview items
+- Show dividers and properly align log items
+- Fix few issues that may cause NPEs
+- Bump db version number
+Merge pull request #335 from ushahidi/334-bug-fix-port-old-settings-implementation
+
+- Upgrade Android plugin
+- Use PreferenceFragmentCompat from the Support Library 
+- Replace CheckboxPreference with SwitchPreferenceCompat
+Fix #334 - Port Old Settings Implement to Use PreferenceFragmentCompat
+
+Though it has eased some of the manual way of handling the state
+of the settings controls it poses it own issues. Mostly they are
+bugs because of the support library. For instance the fonts are huge
+and had to implement a workaround to display a nice looking background
+color.
+
+Add a service based scope for DI to inject classes scoped for background service.
+Remove all thirdparty libraries that aimed at providing support for preference
+fragment.
+Replaced all checkboxes with switch preference compat.
+Update android gradle plugin
+Merge pull request #331 from ushahidi/320-bug-fix-add-mock-data
+
+320 bug fix add mock data
+Fix #320 - Add mock data for internal releases
+
+- Add mock data for logs.
+- Add mock data for web service.
+- Add mock data for filters.
+- Add more mock data for messages
+
+Add static data for logs
+
+Add log sample data
+Merge pull request #329 from ushahidi/311-fix-implement-filter-screen
+
+Fix #311 - Implement filter screen
+- Implemented a custom view for showing the keywords and phone numbers.
+- Remove lombok support as it was causing duplicate issues with dex files.
+- Upgrade build tools and fix broken travis builds.
+Fix #311 - Implements filtering
+Implemented a custom view for showing the keywords and phone numbers
+Remove lombok support as it was causing duplicate issues with dex files
+Upgrade build tools and fix broken travis builds
+Use lombok to provide support for retrolambda lint checking
+Merge pull request #328 from ushahidi/318-bug-fix-implement-message-sync
+
+Fix #318 - Implement message sync
+Remove unneeded todo comment
+Fix 218 - Refactor message model to include missing fields
+Publish message as tweets when user is logged.
+Use builders to create object for message processing class
+
+Rename twitter app to client to reflect what it does
+Refactor class for processing messages to make it more modular
+
+Abstracted process message class so it can be extended by other
+service providers
+Update message status using a background service
+Use message update use case to update messages
+Update message status when sms's status is sent or delivered
+Post message to twitter and clean up utility for starting background services
+On travis skip release signing validation as it fails due to signing key not being available
+Remove unused class
+Remove unused class
+Delete message by uuid
+Use static method call to get app components
+Process task and message synchronization when there is a change in connectivity
+Port Debug and alert notifiers
+Ask user to authorize app instead of hard coding the access tokens
+Use stacktrace flag instead for debugging
+Use the latest gradle wrapper
+Add debug flag to travis build commend to get more info for debugging the build
+Set layout for the getting started fragment in the default constructor
+Provide default compulsory constructor for fragments. Breaking builds
+Enable and disable background services
+Port service for synchronizing pending messages
+Port remaining receivers
+Port SMS receivers
+Rename receivers and services packages to make them consistent with the rest of the packages
+Import tasks and states
+Port background services for publishing failed messages
+Use new API from the design library to implement scroll aware fab behaviour
+Implement scroll aware fab
+Upgrade build tools
+Upgrade build tools on travis
+Use properly scaled icons for web service list
+Show right prompt when item is published
+Implement import to append item to the existing list
+Upgrade gradle plugins
+ Port task processing and message results API
+Port auto sync background service
+Set up DI for base services
+Port background services for receiving SMS
+
+Make sync icon function to trigger SMS import
+Fixes #302 - Implement sms import when sync icon is tapped
+Implement individual sync and batch deletion
+Fixes #321 - Launch getting started screen only when app is launch for the first time
+Delete logs
+Enable checkbox when log is enabled
+Show saved logs
+Process message when sync operation is initiated
+Fixes updating existing web service creates a new one
+
+The id wasn't being parceled so there was no ID to be updated by.
+Add id to be parcelable
+Update navigation drawer with set unique id and name
+Show phone status in logs
+Replace static version number from nav drawer and replace it with dynamic one
+Implement form validation
+Initial implementation of custom web service fields validation
+Test for smssync configuration when a web service is added or update
+Only delete a web service when it's disabled
+Update web service status when enabled / disabled from the list
+Import missing class in the flavour app component
+Enable checkbox when web service is added to the list
+Update integration fields
+Add synch scheme when adding a new integration
+Add missing fields for adding custom integration
+Start implementing message publishing
+Fix gitter link
+Add gitter badge to readme
+Add branching syntax
+Typo fix
+Update contributing doc with changes to branching flow
+Updating webiste...
+Merge pull request #324 from ushahidi/317-bug-fix-implement-message-search
+
+Fix #317 - Implement message search
+
+- Get search form on toolbar to work. …
+- Implement Filterable on message adapter for basic filtering
+by message body
+- Upgraded to use the latest version Raiburari
+- Bump android compile and target version to 23
+- Replace removed http related classes in Android M with custom ones
+Android Marshmallow removed a lot of depecrated http classes. Making
+compiling with v23 fail.
+- Get search form on toolbar to work.
+- Implement Filterable on message adapter for basic filtering
+by message body
+- Upgraded to use the latest version Raiburari
+- Bump android compile and target version to 23
+- Replace removed http related classes in Android M with custom ones
+Android Marshmallow removed a lot of depecrated http classes. Making
+compiling with v23 fail.
+Merge pull request #323 from ushahidi/312-bug-fix-form-for-adding-custom-web-service
+
+Fixes #312
+Travis yaml indentation
+Update travis output
+Use the final relase of build tools
+Upgrade build tools
+Capitalize message listing first characters
+Make nav drawer header when tapped to close the navigation drawer
+Update twitter icon
+Use common package for all app flavours
+
+This makes it easier to launch settings headers
+Add integration to getting started screen
+Streamline the navigation drawer menu
+Integrate QR code scanning when adding a custom web service
+Add empty view when there is no web service added
+Launch web service listing screen when custom service is tapped
+Upgrade android plugin
+Add integration related activities to enabled them to be launched
+Launch integration when tap from nav drawer
+Add layout for showing integrations
+Implement web service management
+Implement presenteres for web services
+Fix broken tests
+Add web service model's data mapper
+Implement sync scheme listing
+Rename integration to webserivce to match what it does
+Add web service related use cases
+Start implement custom web service management
+Replace scribe with twitter4j library for handling tiwtter authentication
+Hide unimplemented services
+Merge pull request #314 from ushahidi/310-bug-fix-implement-publish-list-view
+
+Fix #310 - Implement published message list view
+Refactor list published message usecase
+
+Pass the message status directly in the execution method.
+This prevent us from having to set it in the calling method
+- Launch publish list via nav drawer
+
+- Implement use case for listing published messages
+
+- Implement presnter for loading published messages
+Implement published messages list view
+Merge pull request #313 from ushahidi/303-bug-fix
+
+303 bug fix
+Show prompt when more action is tapped
+Change icon from deletion to upload for swipe to reveal
+Add action for uploading incoming messages to CAB
+Initial implementation of action mode view for multi selection
+
+Extend shape drawable to provide drawable with embedded text support
+
+This will allow replace rounded image view, as well as drawable with
+text
+
+Implement action bar mode menu to provide cab support
+
+Fix cab
+
+Add flip animation when check box is tick
+
+Replace sync icon with vertical more icon
+
+Remove unnecessary adapter based animation
+Enable swipe to delete for API 11 and above only
+Implement swipe to delete icon reveal
+
+Use the `ItemTouchHelper` from the support library to implement
+the swipe to delete feature. When you swipe left or right it reveals
+red background and white delete icon. Indicating the action being made.
+
+Todo: fix the icon showing when the swipe action is stopped
+Merge pull request #308 from ushahidi/300-bug-fix-getting-started-screen
+
+Fix #300 - Implement getting started screen
+
+- Implement activity for showing tutorials
+- Implement initial getting started page
+Add screen sliding support for sliding through the different
+screens
+- Implement welcome screen
+- Shows logo of the application, and what SMSsync is
+Fix #300 - Implement getting started screen
+- Implement activity for showing tutorials
+- Implement initial getting started page
+Add screen sliding support for sliding through the different
+screens
+- Implement welcome screen
+- Shows logo of the application, and what SMSsync is
+Merge pull request #307 from ushahidi/301-bug-fix-empty-view
+
+Update travis config to use the new infrustructure
+Update travis config to use the new infrustructure
+Merge pull request #306 from ushahidi/301-bug-fix-empty-view
+
+Fix #301 - Add an empty view when message list is empty
+
+The empty view allows the user to trigger an SMS import so they can
+publish it to the configured web services
+Add an empty view when message list is empty
+
+The empty view allows the user to trigger an SMS import so they can
+publish it to the configured web services
+Merge pull request #305 from ushahidi/288-bug-fix
+
+Fix #288 - Organize settings screen
+
+- Move different sections of the settings under headings and provide
+a high level screen to access the different sections.
+Feels more organized this way as it's easier to go to a particular
+settings.
+
+- Theme the toolbar so its text are light and that of its popup is dark
+- Fix #299 - Enable users to provide names for the device at settings screen
+- Fix #298 - Switch Automation with Settings in Navigation drawer
+Fix #288 - Organize settings screen
+
+Move different sections of the settings under headings and provide
+a high level screen to access the different sections.
+Feels more organized this way as it's easier to go to a particular
+settings.
+
+- Theme the toolbar so its text are light and that of its popup is dark
+- Fix #299 - Enable users to provide names for the device at settings screen
+- Fix #298 - Switch Automation with Settings in Navigation drawer
+Merge pull request #296 from ushahidi/295-bug-fix
+
+Fix #295 - Implement custom widget for displaying keywords
+
+- Make a widget for showing keywords
+- Use nineolddroid to provide animations on pre honeycomb devices
+- Make the widget configurable via xml
+- Supports icons and animations
+- Provide twitter keys via build scripts
+Fix #295 - Implement custom widget for displaying keywords
+
+Make a widget for showing keywords
+Use nineolddroid to provide animations on pre honeycomb devices
+Make the widget configurable via xml
+Supports icons and animations
+
+Provide twitter keys via build scripts
+Move ui package to the views
+
+Make sense it being there
+Merge pull request #294 from ushahidi/262-bug-fix
+
+Fix #262 - Integrate Twitter
+
+- Implement Twitter authlogin flow and session management.
+- Show logged user's twitter profile.
+- Add twitter request string for volley http based client.
+Fix #262 - Integrate Twitter
+
+- Implement Twitter authlogin flow and session management.
+- Show logged user's twitter profile.
+- Add twitter request string for volley http based client.
+Integrate twitter auth flow
+Upgrade dependencies
+Update java doc on process sms
+Upgrade gradle
+Merge pull request #292 from ushahidi/290-bug-fix
+
+Fix #290 - Provide HttpClient based on Volley
+
+- Use Singleton to instantiate the RequestQueue.
+- Automatically offer the correct HTTP Client depending on the Android version running on the device.
+Add documentation
+Provide request queue as singleton
+
+It automatically detects which underling http client to use based on
+the version of Android running on the device. Gingerbread and above
+uses `HttpUrlConnection`. It also specifies the directory name to be
+used by the disk based caching system of volley. Uses SMSsync version
+name as part of the user agent label.
+Merge pull request #291 from ushahidi/289-bug-fix
+
+289 bug fix
+Rename package
+Move SMS processing to its own library
+Merge pull request #287 from ushahidi/284-bug-fix
+
+Fix #284 - Port code over to new architecture
+Make cardview clickable
+Upgrade retrolambda and gradle plugins
+Implement view for adding a new integration service
+Use animators comapt to provide swipe to dismiss on old phones
+Use design support app compat textview to take advantages of the new APIs
+Initial implementation of messages listing
+
+This is based off the design concept. Use shape drawable to provide the
+rounded images.
+Add extra padding value for v21 to fix nav drawer header overlap
+
+The header text on the navigation drawer overlaps the status bar
+on v21 devices. Add a bigger dimen specific for those on v21 and above.
+Move app's version number below it's name
+Add extra margin at the top of the nav drawer.
+
+This fixes the nav drawer header text from overlapping
+the status bar.
+
+Made the version number to not span more than one line.
+Initial implementation of design concept
+
+So far, implemented the navigation drawer menu items per the design.
+Change actionbar menu icons to match design concept
+Upgrade to Raiburari v2.3.0
+
+This upgrades ButterKnife with incompatible APIs. Make use of the
+new APIs
+On travis build the entire app
+Add support repo to be downloaded by travis
+Properly configured dagger components to resolve dependencies for the different build flavours
+Configure sub-modules to use the globally configured build tools
+Use component name as identified on travis
+List sdk components on travis for debugging
+Remove pre-installed components on travis
+Use the right component when installing a component in travis
+Update travis to assemble internal releases
+Style app to match new design changes
+Change primary colors
+Fully add static data for internal flavours
+Add static content for internal flavours
+Inject data base on build flavours
+Implement dependency based on build flavours
+Fix refactoring with analytics flavours
+Set file name to be used for logging via the constructor
+Implement overall app structure
+Implement log use case
+Fully integrate message di modules
+Move list message view to the appropriate package
+Setup DI for injecting messages dependencies in the message fragment
+Add list message presenter
+Add presentation's data mapper for messages
+Add message data source factory
+Implement message data mapper
+Add message data mapper and rename filter data mapper
+Throw a not found exception when query for a message returns nothing
+Throw error when data base is closed for messages
+Implement database helper for messages
+Implement usecase for fetching messages
+Remove repository implementation to the right package
+Implement message fragments
+Implement list messages layout
+Implement app structure
+Implement fragment for filters
+Add adapter its layout for filters
+Implement filter listing use case
+Add data sources for filters and listing filters usecase
+Add base database
+Update travis to use jdk 8
+Setup base colors
+Update base code base to use raiburari
+Remove legacy code
+Add filter repo and usecase
+Port some of the models to the entities
+Upgrade build script dependencies and added few libraries to make development easier
+Implement barcode scanner
+Bump version number
+Update changelog
+Fixes #280 - Remove unecessary call to otto bus @Producers calls
+Fixes #279 - Register Otto bus in the onResume method. It's the recommended way to register for events
+Add hipchat secure token for travis build notifications
+Fixes #278 Call adapter data set refresh in the main thread
+Update changelog
+Update changelog
+Fix issue when messages received from server is empty.
+Update versio number
+Update changelog
+Remove alerts from website
+Remove alerts
+ Update otto to fix ignore synthetic bridge methods created by JDK 8.
+Update play gradle plugin
+Update version code
+Update changelog
+Update changelog
+Update changelog
+Add buid-type to repo
+Ignore build folders
+Switch to using string resource for defining app name for the different built types
+Generate app name string during build time.
+
+This should accommodate different names for the different build
+flavours and types
+Add a missing checklist
+Remove couple of checks from the release checklist as most the releases are done by a single dev
+Fix broken md formatting in the building updated doc
+Update building info to include release check list
+Merge pull request #259 from Sakirk/develop
+
+added my details to contributors list
+updated total contributors
+Update change log
+added my details to contributors list
+Merge pull request #258 from Sakirk/develop
+
+fix Battery level query(@30) returning result for server check (@20)
+fix Battery level query(@30) returning result for server check (@20)
+Remove unused code
+Minor code clean up
+Initial attempt at fixing fragment transation & activity stateloss
+
+Make sure selecting of a navdrawer item happens before fragment
+transaction commit method is called. For more info see this
+article. http://goo.gl/MN1NnE
+Unregister all otto services from onPause. It's more reliable that way
+Log http client response when logging is enabled
+Minor typo fix
+Clean up so app builds without in-app purchase pubkey and update doc to reflect correct changes
+Merge branch 'develop' of github.com:ushahidi/SMSSync into develop
+Upgrade android plugin
+Update BUILDING.md
+
+Remove old info for compiling the website
+Website build step from release script. This is now automated via wercker
+Remove hipchat notifications. Auth key doesnt work
+Trying hipchat notifications
+Revert to using the original github pages publishing steps
+Remove hardcoded repo name
+Use my fork of github pages deploy script
+Specifiy smssync repo
+Remove hipchat notifications. Still fails
+Fix invalid wercker config file
+Add hipchat notification
+Provide wercker source dir to specify where the public folder is located
+Minor code clean up
+Put back git token
+Remove hipchat notification. Authoken seems to be failing
+Use werecker source directory to specify where website-src lives
+Remove dot to see if werecker is able to read the source of the website files
+Put different flags on a different line
+Properly configure where hugo config file located in the repo
+Add wercker config support
+Add wercker config support
+Add Wercker config file
+Resize screenshots to for better loading experience
+Add alert header to missing pages
+Add alert partials to all pages
+Update badges on the download page
+Rename header and footer partials to match what they do
+Add alerts support to push announcements and alerts
+Fix badges links
+Fix badges links
+Link badges to internal images
+Add playstore f-droid and github badges
+Fix inconsistency with page titles
+Add hugo-bootswatch theme to git tracking
+Remove hugo themes
+Remove used files
+Remove final stage strategy
+Add final to release strategy
+Add need flag to compile website into a different location
+Upgrade apk publishing plugin
+Increase code version number
+Update playstore screenshots
+Update json changelog
+Update changelog for the app store
+Add final stage to release example doc
+Update release script to reflect changes in building the website
+Remove credit file as it's not more maintained
+Update building doc
+Port old site from ruhoh engine to hugo engine
+Upgrade android plugin
+Make sure results api have message uuids set before processing it
+Merge branch 'develop' of github.com:ushahidi/SMSSync into develop
+Fix message retries issue. Delete based on configured number of retries
+Remove restrictions for only java 1.7 build. This should enable those with java 1.8 to build the app
+Clean message retry attempt
+Save imported messages
+Merge branch 'develop' of github.com:ushahidi/SMSSync into develop
+Refresh list when item message status changes
+Fix so message retries deletion works upon reaching the set number of retries
+Merge pull request #253 from sorinpohontu/Contributors
+
+- Updated contributors
+Enable auto sync times when auto sync is enabled
+- Updated contributors
+Fix broken website
+Update changelog json
+Update version code
+Update changelog
+Minro code formatting
+Only update alert phone number changes the logs when a change happens
+
+Launching the settings screen always log an entry for the alert phone
+number field. Ideally it should only log an entry when there has been
+a change to the value of the field.
+
+To solve this, compare the saved value in shared preferences with
+the one currently entered in the field. If they don't match log
+the entry
+Remove condition to make delivery report a requirement
+
+Since some providers charge for sms delivery report, don't make
+it a requirement.
+Fix delete all sync urls so it prompts for deletion
+Reduce padding between donation title and the price
+Align the description to the left so it properly align in landscape mode
+Let donation item title wrap around the amount
+Let donation item title wrap around the amount
+Let donation item title wrap around the amount
+Set max width for donation title display so it spans properly
+Properly align donation list items and display the amount
+Fix sent messages data migration duplication
+Migrate the sync url key during the data migration process
+Manually fetch data in sent messages table and insert them into the cloned sent table.
+
+This is a workaround found for a bug found in an earlier version of the sent messages table.
+Log Http Response From Task Checking When JSON serialization crashes
+Make sure task and message results are started when enabled
+Refactor a method name to reflect its intentions
+Minor code clean up
+Make EditText hint color darker on API level 8 to 10
+
+The hint color on devices running Android 8 to 10 are
+lighter on a lighter background making it invisible. To fix this declare
+a style for EditText that overrides the hintTextColor to a
+more darker one for older devices.
+Set inputtype for alert phone field to phone
+
+Removed the 0-9 restriction on the alert phone number field and
+change type phone to allow internation phone number input and
+text based phone number
+Remove start of task and auto sync service from a background thread
+Minor code clean up
+Remove global number check validation
+
+Since now the app processes failed SMS, it makes sense to let the
+web service handle validation of phone numbers.
+Remove needless semicolon
+Sort contributors list
+Update files with copyright info
+Merge branch 'develop' of github.com:ushahidi/SMSSync into develop
+Minor code refactor
+Merge pull request #251 from blackcat42/patch-3
+
+Update contributors.json
+Merge pull request #250 from blackcat42/patch-2
+
+Update PendingMessages.java
+Update contributors.json
+
+Added myself, thanks for the welcome!
+Update ProcessSms.java
+Update ProcessSms.java
+
+Refactored to return boolean values (in the same patch as the Pending Messages' update).
+Update PendingMessages.java
+Update PendingMessages.java
+
+Changed ImportMessagesTask's protected status variable to a Boolean to fit the refactoring of ProcessSms.java
+Minor code clean up
+Add time when phone device is shutdown to the log entry about shutdowns
+Upgrade Android Gradle plugin
+Increase version number
+Update changelog
+Set package name explicitly so it works on lollipop devices
+Minor code clean up
+Make sure retry stops after it reached the set number
+Fix redundant check for device version number
+Append intent flags to logs
+Set special flag for retrieving pending service intent
+Set special flag for retrieving pending service intent
+Define the version number for kitkat and use that to test for kitkat and above devices
+Delete when retry is equal to the configured retry number
+Minor clean up
+Delete messages from pending list from the background
+Fix retries so it only deletes pending message when it's enabled
+Use custom implmentation of alarm receiver to to run
+scheduled tasks
+Make use of thirdparty library for handling background services
+Increase version code
+Update changelog
+Comment out alert debugging for now
+Minor code clean up
+Update developer doc stating the correct json response to return when message uuids are empty
+Properly refresh list when a new sync URL is added
+Fix so settings changes are added to the log entries
+Enable logs
+Style actionmode background to be dark with light text
+Return string array
+Make sure retry is enable before processing retries
+Fix debug alerts breaking because of refactor
+Call thread's looper so it can post to the main thread
+Properly cache failed and sent messages
+Use the support lib for testing
+Fix inconsistencies with docs and code outputs
+Call the right publish taks
+Fix minor typo
+Increase version code
+Update change log
+Add translations for Japanese, Germany and Indonesian
+Add japanese translation
+Disable minification for now
+Update json changelog
+Update change log
+Match against the appropriate date format order
+Set a default date format for the log file name
+Add proguard rules for the third party libraries
+Fix minor type in example code for running the release script
+Update release shell script to accommodate release automation
+Fix play upload automation. Call the right task
+Increase version number
+Integrate gradle git to automate versioning
+Use app name when renaming apk for distribution
+Update static pages date
+Setup Google play publisher to automate apk uploads
+Hide donation button when its state is unknown
+Fix message retry so it delete message after it exceeded configured retry number
+Remove redundant set of task type on messages
+Don't asynchronously fetch for enabled sync url in the check task service
+Restart message result api after the device reboots
+Upgrade android gradle plugin
+On Travis CI don't create an emulator
+Create an emulator with android-21 as the target
+Disable predexing when running on Travis CI
+Install android extra and support repositories on travics ci
+Call the removed fields from the Calender class
+Upgrade build tools to v22.0.0
+Remove needless comment
+Upgrade build tools
+Make sure async purchase isn't in progress before attempting to initiate another payment
+Setup in app purchase
+Switch to using listview to display donation amount
+Renable in-app purchase for donations
+Fixes #243. Make sure http client is not null
+Fix broken tests
+Fix broken tests
+Implement database upgrade from 7 to 8
+Refactor how syncing is done to accommodate multi sync url and failure retries
+Load pending items off the main ui thread
+Add message type and statues
+Clean up settings code
+Design settings for setting number of retries for pending messages
+Update exiting message when it fails than creating a new message
+Filter by works
+Post background services result to the main thread
+Fully refactor db query to make use of cupboard library
+Delete legacy models
+Implemented database helper for syncurl and filter
+Implement database helper for sync urls
+Convert Message cupboard
+Implement cupboard integration with messages
+Implement background executors
+Initial cupboard integration
+Add cupboard support
+Add ID for models
+Minor clean up
+append items to logs in the background
+Fix auto enable issue
+Validate message result api and sms delivery report statues
+Fix potential null pointer exception when there is no payload set
+Fix possible thread violation when setting a value for preferences
+Fix reading log files in the main thread
+Abort on lint error for pay-me library
+Fix disk voilation policy error when fetching counter number
+Upgrade build tools
+Enable fully qualified name receivers and services
+Support android 21
+Use relative path for services and activities in the manifest file
+Upgrade gradle plugin
+Update contributors json file
+Merge branch 'develop' of github.com:ushahidi/SMSSync into develop
+Switch to old http client
+Remove unused http wrapper files
+swtich back to old http client to support lower devices
+Implement test for testing json response
+Refactor controllers to use http client wrapper
+Fully integrate http wrapper in base http client
+Integrate http client wrapper
+Fix potential null pointer value from sms sent receiver
+Get response as string
+Create wrapper for creating object of the http client to use on the android system
+Implement wrapper for okhttp
+Refactor name for http client wrappers
+Add http client support for 2.2 devices
+Add needed files for ssl support
+Providing http client support for legacy devices
+Minor fix to how bus are registered
+Minor code clean up
+Fix bug where intent receivers trys to register another intent
+Merge branch 'master' of github.com:ushahidi/SMSSync into develop
+Use class for log events instead of a primitive boolean value
+Merge pull request #234 from arthurbuliva/patch-1
+
+Update contributors.json
+Revert "Minor code clean up"
+
+This reverts commit b6c1b69c03a87fe09671bf1db000e08f448ffd1d.
+Update contributors.json
+
+Added myself to contributors list for work regarding Drupal and SMSSync
+Minor code clean up
+Revert "Minor code clean up"
+
+This reverts commit ca19ebb2b65f2d20e3e8ec8465ca4094e455b3e7.
+Minor code clean up
+Merge branch 'develop'
+Clean up release script and made changelog json validate
+Merge branch 'develop'
+Update changelog with latest entry
+Update curl example to include all the required post variables
+Fix minor issue with sample code
+Merge branch 'develop'
+Minor clean to release script
+Fix website compilation script
+Update building doc to use bundle to execute ruhoh compile
+Use bundle to execute ruhoh
+Update gemfile to include required dependencies
+Revert "Update changelog file"
+
+This reverts commit 199900cf7ecf9d1a9dd83068199de6f6c3c337bf.
+Updating webiste...
+Updating webiste...
+Updating webiste...
+Updating webiste...
+Updating webiste...
+Updating webiste...
+Updating webiste...
+Updating webiste...
+Merge branch 'develop'
+Copy cname config to compiled html
+Merge branch 'develop'
+Update changelog file
+Remove old changelog file
+Update date stamp on website src files
+Bump version number up
+Add commands for compiling website in the release script
+Fix potential crash on certain devices
+Include any error messages that may be present up a execution of a task
+Add more task debug info to the logs
+Minor code clean up
+Refactor smsresponse to make use of the message module
+Refactor message model to be reusable by sms response object
+Put the call for sending sms into a convenient method
+Fix issue with server not sending sms from server
+Attempt to fix prefs object not being initialized
+Remove debug comment
+Remove real email address from test cases
+Annotate oncreated activity with override
+Remove needless unit test
+Retrieve payload error from smssync response model
+Minor code clean up
+Do not call method for initializing feedback dialog
+
+Eventually remove all code related to the feedback dialog
+Minor code clean up
+Refactor most test case to make use of mock objects for testing
+Fix message enable deserialization issue
+Fix so message result api processes the response
+Set default http method when it's not set
+Change time out to 20 seconds
+Switch to using gson for json manipulations
+Initialize prefs object in time preferences constructor instead of passing it as a constructor param
+Work with reponse body not the response itself
+Huge refactor to how settings values are saved and retrieved
+Refactor preferences class to remove code duplication
+Change to correct package
+Add mockito testing framework
+Minor cleanup
+Minor cleanup
+Delete needless files
+Switch to using okhttp client
+Update build tools to v2.1.2
+Fix broken sync scheme's configurations
+Upgrade Android gradle plugin
+Merge branch 'develop'
+Bump version number
+Merge branch 'develop'
+Let release script to push to tags to remote repo
+Remove signing of new tags
+Update date stamp on website doc
+Update changelog
+Remove beta tag
+Upgrade build tools
+Replace base notification icon with the new ic_notify icon
+Replace app widget icon with the new launcher icon
+Fix a bug in developer doc
+Update demo code which fixes couple of bugs
+Refactor add messages function to remove duplicate code
+Remove unused icons
+Rename addmessages function to add message
+Refactor sent message processing to make use of the message object
+Add a useful ultitliy for writing the apps db file to the sd card
+Fix potential null pointer value for db cursor object
+Use same frequency set on task checking for result api
+Log failed sms result api details to log file
+Merge branch 'develop' of github.com:ushahidi/SMSSync into develop
+Upgrade gradle version
+Merge pull request #226 from bergo/develop
+
+Some fixes, Fix result API params + table
+[change] result api interval
+[fix]  result api uses wrong database table
+[fix] prevent null pointer
+[fix] wrong result api param
+[add] secret param to result api request
+Merge pull request #225 from shtrih/develop
+
+Contributors, fix NullPointerException
+Fix: var `response` may have a value MessagesUUIDSResponse or NULL
+Contributors
+Minor documentation fix
+Update website demo code
+Merge branch 'develop'
+Update website to reflect changes in message result API
+Update changelog
+Update build date
+Merge branch 'develop'
+Changelog update
+Update version number
+Remove debug info
+Post to Google docs off the main UI thread
+Update developers documentation showing how to use the message result API
+Set json headers when communicating message results to the server
+Let setEntity to make use of StringEntity class instead
+Update travis. Don't run emulator for now
+Upgrad gradle plugin and disable proguard run for sms portal
+Upgrade build tool to the latest and update changed dsl properties
+Only validate email address if positive button is tapped
+Remove annotated serialized name
+Update documentation to match message's uuid property name
+Change from message_uuid to uuid to make it easier to be compatible with old releases
+Change failed notification icon to the new notification icon
+Minior code clean up to message result api
+Merge branch 'develop' of github.com:ushahidi/SMSSync into develop
+Merge pull request #221 from shtrih/develop
+
+Some fixes
+Fix: changing url of object syncUrl causes incorrect urls in tasks (i.e. http://…/?task=send?task=sent)
+Issue #220
+Merge branch 'develop' of github.com:ushahidi/SMSSync into develop
+Upgrade gradle plugin
+Merge pull request #219 from shtrih/develop
+
+Issues #216, #217
+Update version number
+Issue #217. Fix urls for tasks `sent` and `result`
+Fix: issue #216. Class TaskMessage expecting from server json field "uuid" but server sent "message_uuid" as documented.
+Update GA with the correct code
+Merge branch 'develop'
+Fix broken changelog json entry
+Merge branch 'develop'
+Updated version number
+Add few more entires to the change log
+Update change log
+Disable sms portal for this release
+
+Those functionality exist, it hasn't been tested well enough
+to be confident about it. Commented out all code related to enabling
+this feature at the Settings screen. In future release we'll have
+this tested and enable it back.
+Documents Message results api
+Add favicon support
+Document Alerts feature
+Change app name to the new branding
+Fix contributors map not loading fetched contributors list
+Update website with new logo
+Change the app name to match the new branding
+Remove commented out code
+Remove commented out code
+Add feedback form. Fixes #203
+Update app icon. Fixes #202
+Indicate an item in listview has been selected when long pressed
+Remove old launcher icon
+Update launcher icon
+Merge branch 'develop' of github.com:ushahidi/SMSSync into develop
+
+Conflicts:
+	smssync/src/main/java/org/addhen/smssync/Prefs.java
+Compare real value instead of using the summary value
+Merge pull request #213 from KamilKalfas/issue-11
+
+Added message result API.
+Fix merge conflict
+Merge pull request #212 from vorburger/SomeMinorLoggingImprovementsInCaseSendingFails
+
+Better logging in SmsSentReceiver
+Implement ability to enable or disable sms delivery reports. Fixes #198
+Added database message results fetching.
+Updated settings for Message Results.
+Added Message Results scheduler task.
+Message Results API is now available in settings.
+Added new controller for MessageResultsAPI handling.
+Added sending request to web server every time when sms has been sent or delivered.
+Initialize CAB object. Fixes #201
+Fixed build error, and clarified Q based on @eyedol's code review comment
+Use the correct get to get the device_id value. Fixes #210
+Fixed SmsSentReceiver to fully log even the default failure case (so this does more than just make the code look more readable - note how before this fix, default: did NOT toastLong nor logActivities)
+Just refactored copy/pasted code to make SmsSentReceiver easier to read (no real changes, yet)
+Clear log just in case sendTo is not a global phone phone number
+Update survey dialog so it pops up after two days of installing the app
+Update menu resources with the correct xml namespace so the menu icons shows
+Fix #208. Calling readlogs causing app to crash
+Update app icon
+Update survey dialog content and title
+chmod the wait for emulator script to be executable
+Include wait for emulator script in the repo.
+Update travis to use the official way of setting up the android dev for travis
+Update travis to work with changes to the android setup on travis ci
+Adjust layout to properly fit content for the autocomplete dropdown view
+Update survey dialog message
+Refactor URL helper class to make it testable
+Read form url from gradle properties file
+Ignore lint check for untranslated strings and don't abort build when lint check fails
+Update test case to properly validate the right function
+Refactor how URL helper is implemented
+Add hipchat nofitication to travis
+Bold email label
+Add auto-complete capability when entering email address
+Implement form for asking for users email address
+Implement layout for asking user's email address
+Successfully submits to google forms
+Move survey dialog to the libraries directory
+Minor code reformat
+Implement URI helper class for posting to email address to Google docs
+Remove Link to the google play store
+Set up enum for http methods
+Add HTTP client for posting to google services
+Add Android-Rate library as a module
+Merge pull request #195 from KamilKalfas/issue-182
+
+Fixes #182 Add support for sms-portal
+Merge pull request #196 from KamilKalfas/issue-160
+
+Fixes #160 Implements Alerts & Debug feature
+Added missing bracket. Changed tabs for space chars.
+Issue#160: Added missing brackets. Minor fixes.
+Added debug controller
+Added working alert controller
+Added alert phone number in settings
+Issue#160: Added Debug controller.
+Issue#182: added sms-portals and modified gradle to build flavors
+minor changes to sms portals settings.
+
+made summary more concise and variable naming more consistent.
+
+doc updates coming soon.
+
+Conflicts:
+	smssync/src/main/java/org/addhen/smssync/Settings.java
+	smssync/src/main/res/values/strings.xml
+	smssync/src/main/res/xml/preferences.xml
+Issue#157: Now when we check "Use Sms Portals" option application send messages throuh installed Sms Portal packages.
+
+Conflicts:
+	smssync/src/main/java/org/addhen/smssync/Prefs.java
+	smssync/src/main/java/org/addhen/smssync/Settings.java
+	smssync/src/main/java/org/addhen/smssync/messages/ProcessSms.java
+Merge pull request #191 from rafalsliwinski/issue-180
+
+Added backward compatibility with v2.5
+Added backward compatibility with v2.5
+Disable some tests temporarily
+Use the right task for running test for all available flavours
+Use new system image for the android versions
+Install SDK android-sdk_r23.0.2
+Install platform-tools not sure if it's needed
+Hardcode target android version for the emulator to be created
+Fix malformed travis yaml file
+Update travis script to get it to work with current setup
+Merge pull request #185 from rafalsliwinski/issue-173_2
+
+Fix value of sent_to, fixes #173
+Issue #173 value of sent_to is taken from device_id in case of no registered phone number
+Upgrade to build script to use gradle 0.12
+Update coordinate values for soldevelo
+Merge branch 'develop'
+Trim whitespace for unique id
+Update website
+Increase version number
+Override to string for the messages model
+Update change log
+Remove beta tag. Matured than a beta software
+Add doc for the device id
+Remove debug log message
+Fix #177 Add device ID support.
+
+Read the unique ID set at the setting screen to identify
+which device sent the message to the webserver
+
+Make the param key configurable from the edit scheme form
+Don't show wrong toast information when starting the smssync service
+Fix #178 Make sure uuid property is set in task payload before getting its value
+Change deprecated way of renaming package names in the build file
+Use resValue to define GA tracking code
+Properly format sync status message to make it more readable
+Change seconds to hour
+Persist set frequency time and reinitialize timepicker with set time
+Configure so ruhoh ignores the CNAME file when compiling
+Add cname for github pages
+Update script for making a release
+Upgrade to build script to use gradle 0.11
+Merge branch 'develop'
+Increase version number
+Update changelog for v2.6
+Remove attempt to highlight selected section
+Space out li data
+Clean up contributors info
+Fix #174 invalid sample JSON response string
+Fix to a minor typo
+Nicely format curl demo command
+Let the info about securing SMSSync read easily
+Fix invalid sample JSON response string
+Merge pull request #175 from KamilKalfas/issue-164
+
+Issue #164: Migrated from ActionBarSherlock to ActionBarCompact.
+Issue #164: Migrated from ActionBarSherlock to ActionBarCompact.
+Point to the new smssync forum URL
+Include a sample curl run for the demo code
+Don't ask for all possible values before passing validation
+
+Only validate the from and messages value. Provide a response
+when the validation fails
+Upgrade to GA v3
+Update gradle travis ci build
+Change instrumentTest to androidTest to conform to the new changes with the build system
+Upgrade build script to use latest build tools libraries
+Add android sdk manager plugin support
+Merge branch 'develop' of github.com:ushahidi/SMSSync into develop
+Merge pull request #171 from KamilKalfas/issue-101
+
+Issue Fixes #101: Added time picker as a frequency setter.
+Merge pull request #172 from KamilKalfas/issue-163
+
+Fix #163: Renamed readLogs method to readLog.
+Issue #163: Renamed readLogs method to readLog.
+Issue #101: Added time picker as a frequency setter.
+Merge pull request #167 from KamilKalfas/issue-164
+
+Secret key is now properly trimmed #164.
+Updated docs.
+Merge pull request #169 from KamilKalfas/issue-155
+
+issue-155: Removed unnecessary connection checking.
+Merge pull request #168 from KamilKalfas/contributors
+
+Updated contributors list.
+issue-155: Removed unnecessary connection checking.
+Secret key is now properly trimmed #164.
+Updated contributors list.
+Upgrade to using the latest build tool
+Update gradle plugin to 1.12
+Merge pull request #161 from tstalka/develop
+
+#120 - Tasks for sending sms should appear in pending tray, before going to sent tray.
+#120 - Tasks for sending sms should appear in pending tray, before going to sent tray.
+Merge pull request #154 from tstalka/develop
+
+#151: Added 'selected' suffix
+Merge remote-tracking branch 'upstream/develop' into develop
+151: Added 'selected' suffix
+Merge pull request #153 from 123725/develop
+
+Changed label in sent messages form "pending" to "sms"...
+Issue number 149. Changed label in sent messages form "pending" to "sms", as requested.
+
+https://github.com/ushahidi/SMSSync/issues/149
+Merge pull request #146 from ushahidi/android-4.4-sms-support
+
+Android 4.4 sms support
+Merge branch 'develop' into android-4.4-sms-support
+Remove all untestable codes
+Remove all untestable codes
+Simplify method for changing the default SMS app
+Remove package name when including dummy receiver classes
+Merge pull request #145 from snkashis/patch-2
+
+Fix config 404 and typo
+Fix config 404 and typo
+Add support so SMSSycn is listed as a default sms app
+Merge pull request #144 from snkashis/patch-1
+
+Update developer link in readme
+Update developer link in readme
+
+currently 404s.
+Adding kitkat support
+Select which receiver to use based on the android version running
+Install system image v19 as well
+Continue to build when lint errors are found
+Update travis to use latest build tools
+Specify java 7 as the compiler to use
+Upgrade build tools
+Update analytic code
+Merge branch 'develop'
+Update changelog
+Remove comments
+Close #138 Show proper message when sync URL has never been initialted
+Fix issue #137
+Increase version number
+Fix a typo
+Merge changes
+Read changelog and contributors from master repo
+Update changelog entry
+Merge branch 'develop' of github.com:ushahidi/SMSSync into develop
+Remove base path as it's causing assets not be loaded with the main site
+Merge pull request #134 from ushahidi/build-flavours
+
+Add ability to build different flavors. one with analytics support or wi...
+Add info about CLA to contributing doc
+Merge branch 'develop' of github.com:ushahidi/SMSSync into develop
+Add info about CLA doc
+Update README.md
+Merge pull request #136 from bitdeli-chef/master
+
+Add a Bitdeli Badge to README
+Add a Bitdeli badge to README
+Minor clean up
+Update Ukrainian translation
+Add test for keywords with korean strings
+Disabled donation menu again. Still haven't been able to create a Google wallet merchant account yet
+Include content of the log file when sharing
+Add ability to build different flavors. one with analytics support or without it
+Update to contributors list
+Minor update to how to compile smssync website
+Update building doc
+Enable google analytics
+Fix a typo on sync scheme how to
+Add how to for configuring a sync scheme
+Update features list
+Update screenshots with new UI
+Remove duplicate code for reading changelogs
+Fix bug with changelog json file
+This time changelog json file validates
+Pull the right changelog json file
+Make sure changelog json file validates
+Update change json entries
+Rename history to changelog
+Restructure configure page so it's easier to navigate through the various sections in the howto
+Remove unused js file
+Switch to using cdn hosted version of twitter bootstrap
+Change configure content from markdown to html. Writing more html than markdown
+Add website src to main repo
+Remove method redundant call
+Change phone number field to accept string
+Ignore gem lock file
+Remove unused po files
+Major clean up
+Remove unused code
+Clean up to release info
+Add latitude and longitude support to country names
+Add contributors as json file
+Fix history json file
+Update website
+Move changelog to a json format
+Update website
+Add gh pages
+Restore gitignore entries
+Fix wrongly registered event bus
+Fix issue with scheduler not being able to be turned off
+Refresh log listing view when a log happens in the background
+Properly formatted error message to make more sense
+Merge pull request #130 from ushahidi/logviewer
+
+Logviewer
+Fix #129 typo
+Fix #129 issue with task check no working when there is not secret set.
+Log messages related to scheduled services
+Log settings values
+Fix log messages messy formatting
+Minor fix to base http client
+Merge branch 'develop' of github.com:ushahidi/SMSSync into logviewer
+
+Conflicts:
+	smssync/src/main/java/org/addhen/smssync/messages/ProcessMessage.java
+	smssync/src/main/java/org/addhen/smssync/net/MainHttpClient.java
+	smssync/src/main/java/org/addhen/smssync/net/MessageSyncHttpClient.java
+Log preference changes
+Log device shutdown
+Log device reboot state
+Log state of a battery
+Fix connectivity log message
+Log network activities
+Add more meanginful log messages when a message fails to be sent to the server
+Refine error messages when sms fails to be sent
+Log sms received
+Minor edit
+Merge pull request #127 from mandric/develop
+
+http client refactor fixes
+fixed bugs in MainHttpClient with string comparison.
+fixed html syntax in howto.
+Merge pull request #126 from mandric/http-client-refactor
+
+adds basic auth support and refactored MainHttpClient class.
+changed example urls to https again.
+changed example urls to https.
+added example URL in howto on basic auth.
+removed stacktrace comment.
+added basic auth test, bit more MainHTTPClient refactor.
+
+Changed SyncSchemeTest tests to use try/catch since now
+client.getRequest() will throw an exeption on encoding errors.
+
+Removed `addHeader` using `setHeader` and HashMap.
+removed `getFromWebService` method from MainHttpClient
+
+added helper method `execute` that takes String method arg.
+continued MessageSyncHttpClient refactor.
+
+Changed constructor signature for MessageSyncHttpClient, added message
+and phone. Updated tests.
+
+Fixed call to `getFromWebService` in ProcessMessage, use MainHttpClient
+instead.
+
+Fixed bug in base class for request in MainHttpClient, use
+HttpRequestBase instead of HttpUriRequest.
+
+Removed executeGet/Post/Put, use setEntity, setMethod and executeRequest
+separately.
+
+Added `getRequest` to MainHttpClient for easier testing and backwards
+compatibility.
+
+Renamed `executeRequest` to `execute` to cover base class call.
+
+Fixed bug in `String.format` calls.
+refactored ProcessMessage and MessageSyncHtptClient classes.
+
+Using new helpers in MainHttpClient.
+
+added set/getClientError even though it's not being used yet, should
+probably hook into wherever `getServerError` is called.
+added getParams, setEntity to MainHttpClient class.
+
+also fixed bug with setting entity correctly.
+indentation/style tweaks.
+adds basic auth support and refactored MainHttpClient class.
+
+fixes ushahidi#17
+
+This handled adding user-agent and basic auth headers to all requests.
+Allows easily adding query params or headers via `addParam`. and
+`addHeader`.
+
+Planning to reuse this class a bit more in some related callback
+features. Also was planning to refactor MessageSyncHttpClient and use
+the new methods to simplify a bit and show how to use the API.
+
+I replaced the poorly named `getText` function with a `getResponse` and
+`convertStreamToString` static method.
+
+Also added `$` to URL_PATTERN in case you have that in your basic auth
+password.
+Add more logging information for debugging and troubleshooting
+Add lable to show the absolute path to the log file
+Add battery level value when sharing
+Add sharing support
+Minor clean up to java docs
+Add battery info and connection status
+Add info about status of the phone
+Update copy right info
+Add log nav drawer menu item
+Add log viewer fragment
+Increase version number
+Merge branch 'develop' of github.com:ushahidi/SMSSync into develop
+Merge pull request #121 from aksalj/develop
+
+Update CREDITS
+Update CREDITS
+Added link to Ushahid forums
+Merge pull request #119 from aksalj/develop
+
+Add ability to customize sync HTTP method, data format and payload keys
+Minor update, sync scheme tests.
+Small fix
+
+Setup default sync scheme as was in original code
+Update DB structure and UI
+Messages can be synced via PUT or POST as JSON or XML; Now can add more formats and update UI.
+Add ability to customize sync scheme i.e HTTP method, data format and payload keys.
+Fixed a typo
+Fixed a typo
+Minor clean up
+Remove sonatype repository
+Roll back to build tools 17
+Redo setup
+Download lastest sdk instead
+Install android sdk 14
+Remove debug info
+Update pay library to be built by the latest build tool
+Create missing folder
+Add debug info
+Trying to get travis to work again
+Update smssync website
+Update changelog
+Clean how nav drawer menu items are initialized
+Update manifest with latest version
+Update changelog
+Update website with latest changes
+Update website doc
+Update changelog
+Increased version code number
+Simplified tag name
+Update building info
+Enable g analytics code
+Comment out g analytics code replacement for now
+Downgrade to android 17 to get travis ci to work again
+Fix build script failing when there is no property file available
+Disabled the donation menu item for now as there is no public key for it yet
+Fixed whitelisting issue
+Remove a bug in build script
+Fix sms being relayed regardless of status of smssync service
+Validate phone number deletion
+Add ability to delete blacklisted items
+Add edit phone number works
+Add phone number to db
+More clean up to the filter feature
+Add individual filtering and remove tab support
+Re-factor
+Add filter by tab
+Add nav drawer support to filter activity
+Adding filtering feature
+list available sdk for debugging
+Enable debugging for travis
+Fix typo
+Add menu icons
+Add donation activity to manifest file
+Add in-app billing support
+Add android 18 support
+Fixing travis build failure
+Add base code for in app billing
+Upgrade minsdk to version 8
+Add in app builling support
+Install android 18
+Minor clean up to travis
+Install build tools
+Close #117 - Fix broken get reply from server feature
+Close #117 - Fix broken get reply from server feature
+Upgrade build tools to latest releases
+Close #116 Add google analytics support
+Fully automated gradle build system
+Include release process in build script
+Include release process in build script
+Clean up how nav drawer items are refreshed
+Major optimization to background services and ui interactions
+Move heavy operations off the ui thread
+Off load db queries off the main ui thread
+Fix travis status image
+Minor clean up
+Remove unused code
+Fix broken test case
+Enable disabled test cases
+Add more test cases for syncing multiple sync urls
+Add sample test cases
+Add test case for process message
+Add test case for process sms
+Add test case for getting thread id
+Make test string more meaningful
+Add test code for testing sms filtering
+Add test cases for processing sms
+Remove unused class
+Add sync date test
+Update syncurl model test to work with the changes
+Major refactor to sync process
+Refactor sync process
+Remove unused code
+Fix build requirement
+Add installation of android support repository and remove custom gradle install
+Add more debug info
+Use the new base class
+Change permission on build script in before_script block
+Minor clean up
+Use build script instead
+Use build script instead
+More debug info
+Remove dependency
+Remove script that waits for emulator to run
+Remove oracle jdk requirement. not sure if that should get travis to not error out
+Merge branch 'develop' of github.com:ushahidi/SMSSync into develop
+Add debug info
+okay bring oracle jdk back.
+Remove oracle jdk requirement. not sure if that should get travis to not error out
+Merge pull request #114 from frontlinesms/issue-112
+
+FIX for issue #112 Secret is set on task http request
+Updated doc.mkd to be matchup to issue #112
+Merge github.com:ushahidi/SMSSync into issue-112
+Remove unused test suite
+Refactor base test name
+Refactor base test name
+Refactor util test name
+Refactor util test name
+FIX for issue #112 Secret is set on task http request
+Merge pull request #113 from ushahidi/testcases
+
+Testcases
+Add test case for testing date formatting
+Refactor method name for capitalizing first letter of a string
+Add more test cases to for util class
+Remove eclipse settings files
+Fix exception handling
+Use gradle wrapper for executing task
+Disable killing of emulator by the build script
+Major clean up, ability to check if emulator is running or not, create and run an emulator
+Reformt building info
+Allow main app to be built first then test
+Add creating emulator via the cmd
+Remove script that keeps cmd emulator running. Not really need now
+Change building info to a md format
+Change building info to a md format
+Remove travis script as it's no longer needed
+Major clean up to get test and build setups to cleanly work
+Included right package to enable testsuite to compile
+Update building info and update gradle build to include dependencies for test
+Update build script to validate required configuration
+Update building info to reflect the new changes
+Modify build script to make use of gradlew instead of ant
+Successfully builds with gradle
+Restructure code to work with gradle build system
+Restructure project follow gradle project convention
+Ingore more files that needs not to be in the repo
+Minor clean up
+Manually fix merge conflict
+Merge pull request #107 from ushahidi/multi-select-feature
+
+Multi select feature + Fixes to the sync process
+Refactor api util to publicly avail certain properties
+Revert to the ant build
+Manually install gradle
+Add abslib dependencies to gradle build script
+Switch to using gradle to handle travis build
+Add script to wait for emulator launch
+Manually download and install build-tools instead of using sdk manager
+Add build tools
+Remove filter so all components are installed. This is to get the build tools to be installed
+Downgraded to android sdk r21
+Add build tools to path variable
+Add build tools
+Generate .local file to get travis to work
+Attempt to get travis ci to work again
+Merge branch 'develop' of github.com:ushahidi/SMSSync into develop
+Update travis to use androi api 14 instead
+Merge pull request #108 from frontlinesms/required-secret-fix
+
+Required secret fix
+Removed requirement for empty secret in api response if no secret is set
+locally.
+Properly perform actions executed via cab
+Merge pull request #106 from frontlinesms/build.sh-fixes
+
+Build.sh fixes
+Fixed order of test build and real build - obv test depends on main
+project.  Also fixed check for local.properties so it looks in the right
+directory.
+Clarified prompt for android sdk update.
+Added option to build.sh to update android sdk, or skip that step
+Updated build.sh to check for android config.
+Made check for local.properties more explicit
+Added quicker failure to build.sh when local.properties not found.
+Refine notification title for sync progress
+Launch main activity from the notification prompt instead of the tab activity
+Show proper notification title when a sync is in progress and when it's completed
+Remove unused defined sync type
+Remove unused defined state
+Show localized string when an exception is thrown during the sync process
+Fix xliff formatting which shows wrong status figures
+Provide meaningful status update when a sync process is completed
+Show status of individually failed items
+Determine when a sync fails
+Revert back to single select for sync url list view
+Sync individual message via CAB
+Delete selected pending messages
+Refactor sync url and sent messages action mode listeners to make use of the action mode listener base class
+Refactor action mode listener to make use of the base class
+Add a base action mode listener for other action mode listeners to extend from
+Add a base action mode listener for other action mode listener to extend from
+Change listview selection to a multiple mode
+Re arrange actionbar menu items
+Document nav drawer item classes
+Minor clean up to nav drawer item implementation
+Show number of items in the list view
+Show navigation drawer
+Add test suite. though it's failing to run
+Add more test cases for sync url model
+Add test cases for sync url model
+Show counter for number of items in the list view
+Base setup for nav drawer feature
+Update website with new content
+update to changelog
+Fix sync test code
+Fix sync test code
+Close #90 Update website with change log
+Close #91 - Add ushahidi logo to the footer
+Update footer with current year
+Close #93 - Change version scheme
+Refresh sent inbox after a message is successfully sent
+Remove sync menu from the actionbar
+Minor clean up to how notifications are displayed
+Remove unneeded broadcast receiver
+Restore broadcast receviers for the scheduled services
+Fix a typo
+Major refactor to task services
+Switched task check to using the new sync implementation
+Major refactor to classes that handles sync and task checking
+Refactor autosync service
+Remove updating thread state
+Remove updating thread state
+Minor clean up
+Close #89 - add user agent to post header
+Move task execution to the new sync implementation
+Add inline documentation
+Add missing copright info
+Add inline documentation to state class
+Provide in line comments for Sync Task class
+Add stric threading policy for debugging purposes
+Remove registered broadcast receivers
+Only refresh sent inbox when sync finishes or canceled
+Refactor how messages are routed
+Enable idle state when sync is initiated
+Allow posting of events regardless of which thread the event was registered
+Remove bus from tab activity
+Change idle state color to green
+Update via main thread instead
+Update views with sync progress
+Events are fired to subscribers
+Switch to using service class for event bus
+Create new service
+Add internalization exception so exception messages can be localized
+Notify user about progress and status of the sync
+Include method to allow communication between backgroun service and main ui views
+Sync pending messages and update progress bar
+Update status of a sync with the correct date and the number of itmes syncd
+Add otto support for elegant bus support for android
+Redo sync ui
+Add sync status
+Remove redundant method call
+Refactor sync implementation to provide configurable objects and states
+Refactor sync state class
+Add a message type
+Add a message type
+Add state support
+Build synchronization engine from the ground up
+Switch back to using broacast receiver for updating sentmessages tab
+Fix indentation with travis config
+Don't update sent tab via broadcast intent
+Remove unused code in sent messages tab implementation
+Refactor how db cursors are handled
+Generate missing local properties for travis
+update to travis config file
+update to travis config file
+Refactor code to fix  #84
+Refactor test classes to be more consistent
+Close #88 - Fix incorrect display of timestamp for sent tab
+Add test cases
+Add debug info to see what dir are there
+Add debug info to see what dir are there
+Add debug info to see what dir are there
+Add debug info to see what dir are there
+Create missing folder
+Create missing folder
+Create a symlink to get necessay build tools in their right folder
+Revert the previous changes
+Major clean up
+Add correct target id use android-17 instead
+Say y on the cmd line
+Filter for only api level 17
+Add platform tools to path variable
+Add entry to get target ids
+Remove verbose flag
+Remove verbose flag
+Remove debug info
+auto generate local.properties
+Add debug info to fix travils failure
+Hopefully this should work with travis
+Use oracle jdk6 instead of 7
+Add a y to accept android sdk license agreement. Fix it at the right line
+Add a y to accept android sdk license agreement
+Tied the build script pieces together
+Add test build script
+Move build cmds to a separate script file
+Add ant targets
+Add email notification
+Update travis to use the new android sdk
+Add travis support
+Add build status image from travis
+Move contributing info to it own file
+Add contributing info
+A bit of code formatting
+Reformat code to androd coding standard
+Close a cursor at the right line.
+
+This prevents the app from crashing when importing huge data. Also added
+a base test file
+Add Greek translation
+update german translation
+Minor fix to prevent double charges of sms
+Add contributing info
+Remove contributing info from readme to a it own file
+Add gradle build script
+Add gradle build script
+Move a method call to it proper line
+Refactor how sms is process to fix a potential memory leak
+Add locale support when getting the case of a string
+Refactor code for posting messages to web and remove uneeded debugging code
+Add method to sync messages with a message UUID
+Fix potential sms spamming
+Minor update to readme file
+Merge pull request #83 from mandric/develop
+
+cleanup and bugfix
+remove unused param from routeSms() and cleaned up some comments.
+fixed bug when syncing pending messages but service is not running
+
+When sync service is not running if you sync pending messages it will
+clear the list even though they did not sync, as if it worked normally.
+
+Make default return value false on ProcessSms.routeMessages.
+
+Added error message when service is not running.
+minor cleanup
+
+fixed some variable names to be consistent and a few typos
+
+updated couple functions to be private for clarity since they are not
+called outside of the class
+
+added some log lines to help debug crashing when syncing large list
+of pending messages.
+Update credit file
+Bump version number up for the next release
+Finally got this gitingore
+And some more clean up
+More clean up to gitignore
+Clean
+Minor cleanup
+Remove gen file and ignore them
+Ignore bin folder
+Update gitignore
+Ingore bin and gen folders
+Fix minor issue with tag names
+Revert to the right database version number
+Fix sms duplication when importing from messaging inbox
+Made message descript span more than one line
+Update website changelog entry
+Minor typo fix to changelog and updates to the entries"
+Update website with latest info
+Closes #77 Add Russian, Ukrainian, Belarusian translations
+Add basic script to automate the release processes
+Switch to the right database version number
+Update changelog to include latest changes
+Minor clean up to source code
+Merge branch 'develop' of github.com:eyedol/smssync into develop
+Close #71 Add a confirmation prompt when attempting to import all sms
+Close 71 Add a confirmation prompt when attempting to import all sms
+Close #54 - Add messages sent via task checking to sent table
+Add message type to sent messages list view
+Change notification code to use notification.compact library
+Close #67 - Hide some of the actionbar menus
+Add regex to keyword hint message
+Merge branch 'develop' of github.com:ushahidi/SMSSync into develop
+Merge pull request #79 from olliebennett/develop
+
+User-Friendly errors and RegEx support
+Add guidance for creating first Sync URL.
+Show more useful HTTP and server error messages
+
+- display HTTP status code when not "200 OK"
+- display custom server "error" messages, if any.
+
+Significant code structure changes:
+- renamed extractPayloadJSON() to getJsonSuccessStatus()
+- overloaded showToast() to handle strings
+Added rudimentary regular expression support
+
+for matching incoming messages against a specified RegEx filter.
+Add guidance for creating first Sync URL.
+Show more useful HTTP and server error messages
+
+- display HTTP status code when not "200 OK"
+- display custom server "error" messages, if any.
+
+Significant code structure changes:
+- renamed extractPayloadJSON() to getJsonSuccessStatus()
+- overloaded showToast() to handle strings
+Added rudimentary regular expression support
+
+for matching incoming messages against a specified RegEx filter.
+Add minor formatting to readme file
+Add contribution info to readme file
+Add Ukrainian language
+Fix issue with auto sync failing
+Merge branch 'develop' of github.com:ushahidi/SMSSync into develop
+close #60 Replace message id with uuid
+Refactor code to make use of uuid instead of id. Part fix to issue #60
+Close #66 Disable unnecessary toast notifications when there is no task enabled. Instead log the message
+Minor code refactor to get message ID
+Refactor code to remove unused parameter
+Merge pull request #73 from ashowtimes/patch-3
+
+Update CREDITS
+Merge pull request #76 from ashowtimes/patch-4
+
+Add Ukrainian language
+Add Urkainian language
+
+--> SMSSync/smssync/res/values-uk/strings.xml
+Add Urkainian language
+Update CREDITS
+Merge branch 'develop' of github.com:ushahidi/SMSSync into develop
+upgrade abs
+Merge pull request #72 from olliebennett/master
+
+Improvements to documentation
+Disable excessive "no task enabled" notifications
+
+Fixes https://github.com/ushahidi/SMSSync/issues/66
+Streamlined and improved comments in PHP example.
+Improvements to documentation
+
+Clarified some points, fixed typos etc.
+Improved wording and fixed typos in string.xml
+
+... now conforms better to design guidelines at
+http://developer.android.com/design/get-started/principles.html
+
+Note: These changes will need to be migrated to Transifex to be
+retained.
+Renamed README to enable markdown parsing
+Merge branch 'master' of https://github.com/olliebennett/SMSSync
+Simplified README
+
+to remove duplicate information that can be found elsewhere.
+Merge pull request #62 from mandric/issue-56
+
+added isHeld() checks when acquiring wake and wifi locks in SmsSyncServices
+added isHeld() checks when acquiring wake and wifi locks in SmsSyncServices.
+Add new entry to the credit file
+Closes #56
+Closes #56
+Merge pull request #57 from mandric/issue-56
+
+patch for wifi lock issue observed in #56.
+Update credit file
+Update version number
+patch for wifi lock issue observed in #56.
+
+@eyedol went ahead and created a proper branch for this patch, hopefully
+more useful to you. tested in emulator on Android 2.3.
+Update website with latest info
+Close #49 - Add Swhahili translation
+Update changelog file
+Add eclipse settings files
+Supports smaller widget that resizes based on screen size
+Merge branch 'develop' of github.com:ushahidi/SMSSync into develop
+Readd abs upgrade files. Some files where left untracked
+upgrade abs to 4.2.0 and fine tune app widget to resize well on different devices
+upgrade abs to 4.2.0 and fine tune app widget to resize well on different devices
+Fix to issue #44 -- Need more testing to confirm the fix
+Remove unused class
+Write test cases to test autosync service
+Remove restriction to screen support
+Close #43 - Add Korean translation
+Bump up version number
+Revert to previous version number
+minor cleanup to release note
+Merge pull request #40 from ashowtimes/patch-2
+
+Update README
+Getting ready for v2.0.1
+Update README
+Merge branch 'develop' of github.com:ushahidi/SMSSync into develop
+Minor edit
+Update CREDITS
+Close #34 Add german translation
+close #33 #34 Add database upgrade to support old configured sync url and added 4 more translations
+Add Estonian translation
+Add Italian translation
+Add Italian translation
+Add Hungarian translation
+Add French translation
+Close #33 Upgrade smssync url
+Close #36 Fix sent message list not properly showing sync messages
+Close #37 Now validates when adding a new sync url
+Fix grammatical error with a prompt message
+Fix manifest file to remove annoying warning message
+Fix minor information on the how to page
+Add promo images to home page of smssync website
+Added external fonts to make the static web pages typographically appealing to the eyes
+Close #35 - Update static web pages to reflect the new changes in this new version
+Upgrade bootsrap to 2.0
+Add how to page and updated some of the document with latest changes
+Add new screenshots
+Close #31 #32 Remove keyword filtering from settings screen
+modified gitignore
+Close #20 Remove contraint on the number characters the unique ID should have
+Update changelog with the latest changes
+Send raw timestamp without formating this way the client side can decide how to format the timestamp
+Show appropriate status message when a Sync URL is deleted
+Add actionbar icons to settings menu and import menu
+Fix the ability to import existing sms
+Properly display a sync prompt message
+Change from using context menu to action mode
+Add a proper message when there is not sync url and the smssync service is attempted to be started
+Add a double check for SMSSync service status before disabling the last Sync URL
+Clean up pending messages listview item
+Move database structure for pending messages to the new code structure
+Solidify how services are enabled and disabled
+Properly stops background services
+Close #14 -- Fix Task checking issue
+Close #10 -- Fully added multiple sync url to SMSSync
+Editing a sync URL maintains it's current enabled state
+Add multiple sync url with keyword support
+Add the ability to enable and disable smssync service from multiple sync url screen
+Add mutlipe sync url support
+Removed unnecessary call to http client
+Add the ability to sync to multiple enabled sync urls
+Implementing multiple url support. Quite a challenge but getting there
+Add copyright information to all java source files
+Change status message after deletion of a sync url to be more meaniful
+Add sync url management
+Remove redundant way of defining a model
+Add entry to gitignore to ignore smssync bin directory
+Rename package data to database
+Add syncurl database schema
+Add syncurl database schema
+Adjust gitignore entry to exclude bin directories
+Clean up
+Revert
+Revert to a previous commit
+Moving to actionbarcampt
+Moving to actionbarcampt
+Add missing files
+Add abs lib
+Merge pull request #21 from swoertz/patch-1
+
+Update smssync/src/org/addhen/smssync/util/Util.java
+Update smssync/src/org/addhen/smssync/util/Util.java
+Implement sync url management
+Fix list item over flowing it borders
+Minor fix to a crash when importing sms
+Add gitignore file
+Start implementing sync url management
+Merge branch 'master' of github.com:ushahidi/SMSSync
+Add ICS support
+Merge pull request #13 from mandric/master
+
+minor
+Merge branch 'master' of https://github.com/ushahidi/SMSSync
+Static pages generation is fully automated
+Automates site generation
+Close #8 - Implement tool for generating smssync web pages
+
+Reads in markdown files and generates a fine html pages
+Implement script for generating smsync website
+missing project closing tag in build.xml
+Update document
+
+Changed the sample code from ecohing the content recevied from
+SMSSync to the browser to writing it to a file.
+Update building info
+Minor correction
+Add keystore file
+Update website
+Change Issue URL
+
+Becaused we've moved to github for tracking issues,this updates
+the website to reflect the URL for github's issue tracker.
+Update version numbers
+Update website
+Update website
+Reverted to previous version number
+Update gitignore
+Clean up
+Clean up
+Remove secure properties file
+Update gitignore
+Merge branch 'master' of github.com:ushahidi/SMSSync
+Clean
+Add build script and instruction
+Merge pull request #4 from mandric/master
+
+default couchdb response is 201 on successful POST
+added suport for 201 http response code, the default for a successful POST in CouchDB.
+Closes #2391  Add completed translation de it and ru
+Update credit file with new entries
+A minor fix to row count for messages
+Closes #2419 - Update website with new information
+Formats the strings xml to remove line breaks in the english strings
+Updated the changelog to reflect current changes
+Closes #2391 - Add 5 more translations
+
+Added French Japanese Russian Serbian and Danish to the existing
+translations.
+Closes #2390 Fix Improper display of values sent_timestamp
+
+Date and time displayed in the wrong 12-hour format ["mm-dd-yy-h:i"]
+without specifying the time of day (AM / PM), that is not possible to
+understand the morning or evening. Fix by changing hh to kk.
+Closes #2396 - Fix missing title
+
+The title for entering a URL at settings screen is missing. Added an
+existing title to the URL dialog
+Getting ready for next version development
+Updated website with release status
+Updated changelog
+Closes #2366 - Fix variable sent_timestamp sending the wrong month
+
+Variable sent_timestamp gives wrong value for month. eg 28-01-11-06:28
+mm-dd-yy-hh:mm where month value reflect as minute value please check,
+    Changed the format mm-dd-yy-hh:mm to MM-dd-yy-hh:mm and that fixed
+    it.
+Updates changelog
+Closes #2380 and #2368 - Fix filtering by phone number and sent to variable being set as a unique id
+Updated changelog file
+Fix https issue on certain devices
+Add sent_to to documentation
+Minor documentation fix
+Minor fix and making way for 1.0.9 development
+Update documents to reflect the new changes
+Minor clean up
+Closes #2355 Fix error message showing up with appwidget
+
+Removed the debug log info
+Minor fix to message id
+Add keyword filtering when importing existing SMS from stock SMS application
+Shows progress icon when synchronizing pending messages
+Put synchronization into it own service to improve responsiveness
+Add message id variable
+Formatted sent_timestamp value to 54-18-11-11:54
+
+This makes more sense than just 11:54
+Add proper date formmatting to pending message's date
+Closes #2352 Add more info to toast message that shows when sync fails
+
+Adds a bit more information to the toast message that shows up when a
+message fails.
+Added missing properties file
+Closes #2318 Add HTTPS support
+
+This allows HTTPS URLS to be configured on SMSSync.
+Fixed a wrong url in the docs files
+Minor clean up to the docs
+Cleaned up few typos in the docs
+Minor fix
+Adds news links
+Added LGPL license file
+Added more pages
+Added more flesh to smssync website
+Added one more entry to the credits list
+Closes #2305 - Added credits file and populated it with names and contact details
+Closes #2304 - Added UTF-8 support
+Closes #2216
+Fixed typos in the documentation
+removed un needed files
+Added smssync website to git
+Added hungarian,german, italian, dutch and swahili translations
+Updated changelog
+added support for importing translations
+Improved tabs UI
+Updated the wiki with new information
+Updated po file with the new strings
+Updated the changelog
+Closes #2238 - Adds sent_timestamp to post variable to allow web services to retrieve the timestamp of the message
+Added v to the version name
+Closes #2299 - Reads version name from the manifest file instead of the string file
+Closes #2270 - Implements the outbox feature
+Updated the changelog file
+Fixing sent messages so sent messages can be logged
+Closes #2272 -- Implemented response from server see #2272
+Closes #2272 - auto reply response can now be fetched from the server
+Closes: #2271 -- Implemented app widget support.
+Fixed keyword filtering bug
+Fix App Widget
+
+Adding widget support to smssync so it displays last 5 pending messages.
+see 2271
+Almost there with appwdiget implementation
+Changed 'Import' to 'Import SMS' to make it more meaningful
+Closes #2269 : Updated the changelog file
+Closes #2273: Implemented Adding of WiFi lock
+Disabled releasing of wifi lock to see if it keeps wifi awake
+Fixed po file issues
+Closes #2217
+renamed from pot to po
+Added pot file
+Fixed a bug that crashes the app when task checking is enabled
+Added WiFi Lock so the app can have wifi connection when the phone sleeps
+Added the ability to get a reply from the server and post as SMS
+Fixed a lot of issues
+Rearranged fields in settings screen to be more intuitive
+Improved background services and other functionalities of the app
+Automated services stop and start actions
+Increased version number to 1.0.7
+Merge pull request #2 from tobiasquinn/master
+
+Fixes crash when attempting to send blank message
+Do not send blank messages as this causes crash
+Merge pull request #1 from tobiasquinn/master
+
+Sending of multipart messages
+Added sending of multipart SMS
+Getting ready for 1.0.6 development
+Making way for a release
+Updated the wiki
+Updated the wiki
+For security purposes add check for the secret key before smssync sends an sms
+Removed debugging info
+More formatting to android coding standards
+Formatted code to android coding standards
+Fixed thread and UI issue
+Fixed typo in wiki entry
+Fixed typo in wiki entry
+Added missing files
+updated gitignore
+Started implementing unit test for the various codes
+Removed the test directory
+Added more comments to the code for easier future maintainability
+Removed duplicate wiki files
+Added wiki entry file
+Readded wiki
+Fixed a typo
+Added sensible heading
+Formatted json string to display correctly in the wiki
+Added documentation regarding the task feature
+Added context menu for deleting individual pending messages
+Changed the layout for listing pending messages a bit
+Implemented Task and improved validation process
+task works now
+Added missing files in git
+Started implementing task checking and executiong as well as importing messages from the messages inbox
+Scheduler now works with configured frequency
+Updated ignore to disallow eclipse pref config
+Added scheduler support
+Added more detail to changelog entry for 1.0.4
+Fixed offline mode issue
+Added flags to the notification to prevent it from being cleared
+Incresed version number in settings screen
+Incresed version number in settings screen
+Increased version number to 1.0.4 and updated changelog file
+Validates the callback URL
+Corrected typos and grammartical errors in the app's strings
+Fixed a minor issue when sending auto response
+Updated the changelog
+Fixed missing SEND_SMS permission from the manifest file
+Updated wiki and readme files
+Added a configurable option to allow auto response to messages.
+Made app to show appropriate message when there are no messages to be deleted
+Rearranged menu items and made app to show appropriate message when there are no messages to be sent
+Prefixes URL field with http://
+Now shows status of pending messages
+Made the synchronization of message a background thread that runs asynchronously
+Fixed a typo in the readme file
+Simplified the pending view screen
+Made deletion of messages from messages inbox configurable and modify the listview display
+Getting ready for a beta release
+Fixed sql error when fetching data from the database
+Changed notification icon to smssync's launch icon
+Added version number to settings screen
+Now fixed getting the same message id as thread id
+Now failed messages gets into the outbox folder
+Improved background service wake up call
+Almost there with real sync feature
+Fixed little issues with items showing in the listview
+Setup smssync on my backup machine
+Removed binary files
+Implemented outbox
+Removed binary entries
+Downgraded smssync to android 1.6
+Fixed a minor typo
+Fixing bad taging
+Fixed little typos and making way for a new release
+Added readme file
+Added a changelog file to keep track of changes
+Cleaned up code a bit
+Added a message_outbox table to hold unset messages
+Started implementing real syncing
+Added MMS and GPS settings page
+Started implementing features for 1.1
+More code clean up
+Fixed in more modification
+More enhancement
+Fixed issue with httppost request
+Removed classpath file
+Removed bin files
+Fixed
+Syncing now works
+Removed bin files
+Syncing now works
+Now can send smses to web service
+More clean up for a release
+Added keyword filter to settings page
+changed An to A as needed
+Added README file as requested by github
+Setting up settings window
+Renamed preferences back to settings
+Renamed Settings to Preferences
+Added license details to the files
+Added settings file
+Initial setup
